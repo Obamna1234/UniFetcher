@@ -48,6 +48,12 @@ import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.foundation.border
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.CardDefaults
+import androidx.compose.ui.graphics.Shape
+import com.unifetch.app.download.failureReason
+import com.unifetch.app.util.FailureReason
 import androidx.compose.material.icons.rounded.Warning
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.material3.FilledTonalButton
@@ -542,7 +548,12 @@ fun DownloadPageImplV2(
                         ) { (task, state) ->
                             with(state.viewState) {
                                 VideoCardV2(
-                                    modifier = Modifier.padding(bottom = 20.dp).padding(),
+                                    modifier =
+                                        Modifier.padding(bottom = 20.dp)
+                                            .statusBorder(
+                                                state.downloadState.statusBorderColor(),
+                                                CardDefaults.shape,
+                                            ),
                                     viewState = if (previewDisabled) copy(thumbnailUrl = null) else this,
                                     actionButton = {
                                         ActionButton(
@@ -570,7 +581,13 @@ fun DownloadPageImplV2(
                             span = { GridItemSpan(maxLineSpan) },
                         ) { (task, state) ->
                             VideoListItem(
-                                modifier = Modifier.padding(bottom = 16.dp),
+                                modifier =
+                                    Modifier.padding(bottom = 16.dp)
+                                        .statusBorder(
+                                            state.downloadState.statusBorderColor(),
+                                            RoundedCornerShape(12.dp),
+                                            innerPadding = 6.dp,
+                                        ),
                                 viewState =
                                     if (previewDisabled) state.viewState.copy(thumbnailUrl = null)
                                     else state.viewState,
@@ -1063,3 +1080,19 @@ private fun NeedsYouSiteList(
         }
     }
 }
+
+/**
+ * Quick overview colour for a download (spec 4a, 4e): red when it needs the user's action, grey
+ * when it was cancelled or failed, none otherwise (including "Already downloaded" skips).
+ */
+@Composable
+private fun Task.DownloadState.statusBorderColor(): Color? =
+    when {
+        needsUser() -> MaterialTheme.colorScheme.error
+        this is Error && failureReason() == FailureReason.ALREADY_DOWNLOADED -> null
+        this is Error || this is Task.DownloadState.Canceled -> MaterialTheme.colorScheme.outline
+        else -> null
+    }
+
+private fun Modifier.statusBorder(color: Color?, shape: Shape, innerPadding: Dp = 0.dp): Modifier =
+    if (color == null) this else border(2.dp, color, shape).padding(innerPadding)
