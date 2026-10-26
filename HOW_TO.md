@@ -200,6 +200,14 @@ A single video that's too big for the free space fails with a message saying how
 - See or delete saved sessions: **Settings → Network → Sites with saved sessions** (**Forget** one site, or **Forget all**). Turn the feature off with **Automatic site sessions**.
 - Cookies stay on your phone. Quick wipe deletes them.
 
+**"Needs you": human checks and logins.** If a site wants you to tick "I'm not a robot", solve a CAPTCHA or log in, its videos move to the **Needs you** tab on the download screen (you also get one notification). Everything else keeps downloading.
+
+1. Open the **Needs you** tab. Each site shows how many videos are waiting.
+2. Tap **Open** next to a site. It opens in UniFetcher's built-in browser.
+3. Pass the check (or log in), then tap **Done**. That site's videos retry by themselves.
+
+Nothing expires while videos wait there, even for days or after the app is closed: UniFetcher keeps only the page links, and the session is made fresh when you tap Done. UniFetcher never solves these checks for you.
+
 **Why a download failed.** A failed download shows one reason:
 
 | Reason | What it means | What to try |
