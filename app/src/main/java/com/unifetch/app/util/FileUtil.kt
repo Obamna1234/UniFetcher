@@ -13,7 +13,6 @@ import java.io.IOException
 import androidx.annotation.CheckResult
 import androidx.core.content.FileProvider
 import androidx.documentfile.provider.DocumentFile
-import com.unifetch.app.App
 import com.unifetch.app.App.Companion.context
 import com.unifetch.app.R
 import com.unifetch.app.util.PreferenceUtil.getString
@@ -130,10 +129,11 @@ object FileUtil {
 
     /**
      * Copies finished downloads from [tempPath] to the SD card or USB drive folder chosen in
-     * settings, then deletes each temporary file once its copy is complete.
+     * settings, deleting each temporary file once its copy is complete.
      *
-     * Never loses a download: if the drive is missing, full or not writable, the files are moved
-     * to the phone's download folder instead (without overwriting anything), and the user is told.
+     * Never loses a download and never falls back to another storage on its own (spec 4c): if
+     * the drive is missing, full or not writable, the files stay in [tempPath] and this fails
+     * with a clear message. Retrying the download then finds the finished file and copies it.
      */
     @CheckResult
     fun moveFilesToSdcard(tempPath: File, sdcardUri: String): Result<List<String>> {
@@ -163,34 +163,9 @@ object FileUtil {
         }
 
         if (notCopied.isNotEmpty()) {
-            // Fall back to the phone's download folder so nothing is lost.
-            val fallbackDir = File(App.videoDownloadDir).apply { mkdirs() }
-            val stillStuck = mutableListOf<File>()
-            notCopied.forEach { file ->
-                val target = uniqueFile(fallbackDir, file.name)
-                val moved =
-                    runCatching { file.renameTo(target) || (file.copyTo(target).exists() && file.delete()) }
-                        .getOrDefault(false)
-                if (moved) saved += target.absolutePath else stillStuck += file
-            }
-            if (saved.isNotEmpty()) {
-                MediaScannerConnection.scanFile(
-                    context,
-                    saved.filter { it.startsWith("/") }.toTypedArray(),
-                    null,
-                    null,
-                )
-            }
-            ToastUtil.makeToastSuspend(context.getString(R.string.sdcard_unavailable_saved_to_phone))
-            if (stillStuck.isNotEmpty()) {
-                // Leave the files where they are rather than deleting them.
-                return Result.failure(
-                    IllegalStateException(
-                        "Couldn't save to the SD card or USB drive, or to the phone. The file is " +
-                            "kept in ${tempPath.absolutePath}"
-                    )
-                )
-            }
+            return Result.failure(
+                IOException(context.getString(R.string.sdcard_copy_failed_kept))
+            )
         }
 
         tempPath.deleteRecursively()
@@ -216,18 +191,6 @@ object FileUtil {
         }
     }
 
-    /** [name] in [dir], or "name (1).ext", "name (2).ext"… if it already exists. Never overwrites. */
-    private fun uniqueFile(dir: File, name: String): File {
-        var candidate = File(dir, name)
-        val base = candidate.nameWithoutExtension
-        val ext = candidate.extension.let { if (it.isEmpty()) "" else ".$it" }
-        var n = 1
-        while (candidate.exists()) {
-            candidate = File(dir, "$base ($n)$ext")
-            n++
-        }
-        return candidate
-    }
 
     fun clearTempFiles(downloadDir: File): Int {
         var count = 0
@@ -251,13 +214,6 @@ object FileUtil {
             createEmptyFile(".nomedia")
         }
 
-    /**
-     * Where downloads for the SD card / USB drive option are written before being copied into
-     * the chosen folder. Uses UniFetcher's private folder on that same drive when Android makes
-     * it available, so the phone's own storage isn't needed. Otherwise falls back to the phone.
-     */
-    fun Context.getSdcardTempDir(child: String?): File =
-        (getDriveWorkDir() ?: getExternalTempDir()).run { child?.let { resolve(it) } ?: this }
 
     /** UniFetcher's private "tmp" folder on the drive chosen in settings, or null if unavailable. */
     fun Context.getDriveWorkDir(): File? {
