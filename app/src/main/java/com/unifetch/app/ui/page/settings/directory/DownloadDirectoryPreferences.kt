@@ -540,7 +540,7 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
                                 FileUtil.clearTempFiles(context.getConfigDirectory())
                                 count =
                                     TempStorage.clearAll(context) +
-                                        FileUtil.clearTempFiles(context.getInternalTempDir())
+                                        FileUtil.run { clearTempFiles(context.getInternalTempDir()) }
                             }
 
                         withContext(Dispatchers.Main) {
