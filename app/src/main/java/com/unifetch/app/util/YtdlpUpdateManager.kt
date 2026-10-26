@@ -105,18 +105,23 @@ object YtdlpUpdateManager {
      * Runs a yt-dlp process. If it fails with an error that a newer yt-dlp could fix, updates
      * yt-dlp (only in "Update automatically" mode) and tries once more.
      */
-    fun <T> runYtdlpWithAutoRetry(block: () -> T): T {
+    fun <T> runYtdlpWithAutoRetry(onStep: (String) -> Unit = {}, block: () -> T): T {
         try {
             return runYtdlp(block)
         } catch (e: YoutubeDL.CanceledException) {
             throw e
         } catch (e: Exception) {
             if (!YtdlpUpdatePolicy.shouldUpdateAndRetry(e.message)) throw e
+            onStep("yt-dlp couldn't read the site: checked for a yt-dlp update")
             val failedAt = System.currentTimeMillis()
             val result =
                 runCatching { checkAndUpdate(Trigger.RETRY, failedAt = failedAt) }
                     .getOrDefault(Result.FAILED)
-            if (result != Result.UPDATED) throw e
+            if (result != Result.UPDATED) {
+                onStep("No yt-dlp update was installed (${result.name.lowercase()})")
+                throw e
+            }
+            onStep("Installed a yt-dlp update and retried once")
             Log.i(TAG, "yt-dlp was updated after an extractor error; retrying once")
             return runYtdlp(block)
         }

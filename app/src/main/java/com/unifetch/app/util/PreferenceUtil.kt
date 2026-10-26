@@ -133,6 +133,8 @@ const val SECURE_SCREEN = "secure_screen"
 const val NOTIFICATION_DISCREET = "notification_discreet"
 const val STORAGE_MIN_FREE = "storage_min_free"
 const val TEMP_LOCATION = "temp_location"
+const val AUTO_SESSIONS = "auto_sessions"
+const val SESSION_SITES = "session_sites"
 
 private const val INTERVAL_DAY = 86_400_000L
 private const val INTERVAL_WEEK = 86_400_000L * 7
@@ -236,6 +238,7 @@ private val StringPreferenceDefaults =
 private val BooleanPreferenceDefaults =
     mapOf(
         SECURE_SCREEN to true,
+        AUTO_SESSIONS to true,
         FORMAT_SELECTION to true,
         CONFIGURE to true,
         CELLULAR_DOWNLOAD to false,
@@ -483,6 +486,11 @@ object PreferenceUtil {
     fun getSavedLinks(): Set<String> = kv.decodeStringSet(SAVED_LINKS) ?: emptySet()
 
     fun updateSavedLinks(links: Set<String>) = kv.encode(SAVED_LINKS, links)
+
+    /** Sites that have needed an automatic browser session (spec 4a). */
+    fun getSessionSites(): Set<String> = kv.decodeStringSet(SESSION_SITES) ?: emptySet()
+
+    fun updateSessionSites(sites: Set<String>) = kv.encode(SESSION_SITES, sites)
 
     private const val TAG = "PreferenceUtil"
 }

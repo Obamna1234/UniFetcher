@@ -118,7 +118,7 @@ object DownloadUtil {
                 }
             }
             YtdlpUpdateManager.checkBeforeFetch()
-            YtdlpUpdateManager.runYtdlpWithAutoRetry { execute(request, playlistURL) }.out.run {
+            SiteSessions.run(playlistURL, request, taskId = null) { execute(request, playlistURL) }.out.run {
                 val playlistInfo = jsonFormat.decodeFromString<PlaylistResult>(this)
                 if (playlistInfo.type != "playlist") {
                     jsonFormat.decodeFromString<VideoInfo>(this)
@@ -128,13 +128,14 @@ object DownloadUtil {
 
     @CheckResult
     private fun getVideoInfo(
+        url: String,
         request: YoutubeDLRequest,
         taskKey: String? = null,
     ): Result<VideoInfo> =
         request.runCatching {
             YtdlpUpdateManager.checkBeforeFetch()
             val response: YoutubeDLResponse =
-                YtdlpUpdateManager.runYtdlpWithAutoRetry {
+                SiteSessions.run(url, request, taskId = taskKey) {
                     YoutubeDL.getInstance().execute(request, taskKey, null)
                 }
             jsonFormat.decodeFromString(response.out)
@@ -186,7 +187,7 @@ object DownloadUtil {
                     addOption("--no-playlist")
                     addOption("--socket-timeout", "5")
                 }
-            return getVideoInfo(request, taskKey)
+            return getVideoInfo(url, request, taskKey)
         }
     }
 
@@ -823,7 +824,7 @@ object DownloadUtil {
                 }
                 .runCatching {
                     val request = this
-                    YtdlpUpdateManager.runYtdlpWithAutoRetry {
+                    SiteSessions.run(url, request, taskId = taskId) {
                         YoutubeDL.getInstance()
                             .execute(
                                 request = request,
