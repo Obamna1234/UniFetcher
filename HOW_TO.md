@@ -208,6 +208,13 @@ A single video that's too big for the free space fails with a message saying how
 
 Nothing expires while videos wait there, even for days or after the app is closed: UniFetcher keeps only the page links, and the session is made fresh when you tap Done. UniFetcher never solves these checks for you.
 
+**Colour code on the download list.** Download cards have a coloured border so you can see what's going on at a glance (also in the app: **⋮ → What the colours mean**):
+
+- **Orange:** needs your action (a site check or login). See "Action needed" above.
+- **Red:** failed and can't be downloaded. The card says why (see the table below).
+- **Grey:** you cancelled it.
+- **No border:** downloading, waiting or finished.
+
 **Why a download failed.** A failed download shows one reason:
 
 | Reason | What it means | What to try |

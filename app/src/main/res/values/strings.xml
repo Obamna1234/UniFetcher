@@ -100,6 +100,11 @@
     <string name="menu_resume_canceled">Resume stopped</string>
     <string name="menu_retry_failed">Retry failed</string>
     <string name="menu_clear_finished">Clear finished from list</string>
+    <string name="colour_key_title">What the colours mean</string>
+    <string name="colour_key_orange">Orange: needs your action (a site check or login)</string>
+    <string name="colour_key_red">Red: failed and can\'t be downloaded</string>
+    <string name="colour_key_grey">Grey: cancelled by you</string>
+    <string name="colour_key_none">No border: downloading, waiting or finished</string>
     <string name="menu_clear_failed">Clear failed and stopped from list</string>
     <string name="menu_clear_failed_confirm">Remove failed and stopped downloads from this list? Nothing on your phone is deleted, but you won\'t be able to retry them from here.</string>
     <string name="directory_not_on_phone">That folder is on an SD card or USB drive. Use \"SD card or USB drive folder\" further down this page instead.</string>

@@ -7,7 +7,7 @@ All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed her
 - **New "Action needed" tab** on the download screen for sites that want a "verify you are human" check or a login. Tap **Open**, do the check yourself, tap **Done**, and that site's videos retry automatically. Everything else keeps downloading, one notification tells you, and the videos wait as long as needed (even if the app is closed)
 - Failure reasons are remembered after the app restarts
 - The **Action needed** tab turns orange while anything is waiting, and an orange banner on the All tab points to it
-- Download cards have a quick colour code: **orange border** = needs your action, **red border** = failed, **grey border** = cancelled
+- Download cards have a quick colour code: **orange border** = needs your action, **red border** = failed, **grey border** = cancelled (key under **⋮ → What the colours mean**)
 - "Retry failed" leaves "Action needed" and "Already downloaded" items alone
 
 ## v0.1.8 - 2026-10-26

@@ -772,6 +772,7 @@ fun SubHeader(
 ) {
     var showMenu by remember { mutableStateOf(false) }
     var confirmAction by remember { mutableStateOf<BulkAction?>(null) }
+    var showColourKey by remember { mutableStateOf(false) }
     val text = buildString {
         if (videoCount > 0) {
             append(pluralStringResource(R.plurals.video_count, videoCount).format(videoCount))
@@ -836,9 +837,19 @@ fun SubHeader(
                         },
                     )
                 }
+                HorizontalDivider()
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.colour_key_title)) },
+                    onClick = {
+                        showMenu = false
+                        showColourKey = true
+                    },
+                )
             }
         }
     }
+
+    if (showColourKey) ColourKeyDialog(onDismiss = { showColourKey = false })
 
     confirmAction?.let { action ->
         AlertDialog(
@@ -1089,10 +1100,58 @@ private fun Task.DownloadState.statusBorderColor(): Color? =
     when {
         needsUser() -> ActionColors.accent()
         this is Error && failureReason() == FailureReason.ALREADY_DOWNLOADED -> null
-        this is Error -> MaterialTheme.colorScheme.error
+        this is Error -> FailedColors.border()
         this is Task.DownloadState.Canceled -> MaterialTheme.colorScheme.outline
         else -> null
     }
+
+/** Deep red for failed downloads (stronger than the theme's soft error colour in dark mode). */
+private object FailedColors {
+    @Composable
+    fun border(): Color =
+        if (LocalDarkTheme.current.isDarkTheme()) Color(0xFFE53935) else Color(0xFFC62828)
+}
+
+/** Explains the border colours on the download list (opened from the ⋮ menu). */
+@Composable
+private fun ColourKeyDialog(onDismiss: () -> Unit) {
+    val rows =
+        listOf(
+            ActionColors.accent() to R.string.colour_key_orange,
+            FailedColors.border() to R.string.colour_key_red,
+            MaterialTheme.colorScheme.outline to R.string.colour_key_grey,
+            null to R.string.colour_key_none,
+        )
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.colour_key_title)) },
+        text = {
+            Column {
+                rows.forEach { (color, textRes) ->
+                    Row(
+                        modifier = Modifier.padding(vertical = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Box(
+                            modifier =
+                                Modifier.size(22.dp)
+                                    .border(
+                                        2.dp,
+                                        color ?: MaterialTheme.colorScheme.surfaceVariant,
+                                        RoundedCornerShape(6.dp),
+                                    )
+                        )
+                        Spacer(Modifier.width(12.dp))
+                        Text(stringResource(textRes), style = MaterialTheme.typography.bodyMedium)
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDismiss) { Text(stringResource(R.string.got_it)) }
+        },
+    )
+}
 
 /** Orange "action needed" colours, readable in light and dark themes. */
 private object ActionColors {
