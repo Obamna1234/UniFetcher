@@ -13,6 +13,7 @@ Simple step-by-step help for installing, updating and releasing UniFetcher. Ever
 7. [Set up the signing key (one time)](#7-set-up-the-signing-key-one-time)
 8. [Release a new version](#8-release-a-new-version)
 9. [App lock and privacy settings](#9-app-lock-and-privacy-settings)
+10. [Saving to an SD card or USB drive, and temporary files](#10-saving-to-an-sd-card-or-usb-drive-and-temporary-files)
 
 ---
 
@@ -156,3 +157,35 @@ Everything here is in **Settings → Privacy & security**.
 - **Hide from recent apps and screenshots** (on by default): UniFetcher shows as a blank card in the app switcher and can't be screenshotted.
 - **Discreet notifications:** notifications only say "UniFetcher", with no video titles or links, and don't show on the lock screen. To turn download notifications off completely, use **Settings → General → Download notification**.
 - **Quick wipe:** clears download history, saved cookies and logins, built-in browser data, cached thumbnails and temporary files. Your downloaded files, settings and app lock are kept. It won't run while downloads are in progress.
+
+## 10. Saving to an SD card or USB drive, and temporary files
+
+**Where temporary files go.** While a video downloads, its unfinished video and audio pieces (and then the step that joins them) are kept in a temporary folder. A long video can need several GB. Each download has its own folder, which is deleted when the download finishes or when you remove it from the list. A stopped download keeps its pieces so it can carry on later, even after a restart.
+
+| Setting | Temporary files go to |
+|---|---|
+| **Same as download folder** (default) | Phone downloads: **Internal storage → Download → UniFetcher → tmp**. SD card / USB drive downloads: UniFetcher's own folder on that drive (`Android/data/com.unifetch.app/files/tmp`) |
+| **Internal storage** | **Internal storage → Download → UniFetcher → tmp** |
+| **SD card or USB drive** | UniFetcher's own folder on the card or drive. Only offered when one is plugged in |
+
+Change it in **Settings → Download directory → Temporary files location**, which also shows the free space for each choice.
+
+- UniFetcher's own folder on a card or drive needs **no extra permission**. Android deletes it if you uninstall UniFetcher, which is fine for temporary files.
+- If temporary files are on a different storage from the download folder, each finished video is moved across. That takes a little longer and briefly needs space on both.
+
+**Save downloads to an SD card or USB drive**
+
+1. Plug in the card or drive (for USB, through a USB-C adapter) and check it shows in your file manager. Use **exFAT** for drives: FAT32 can't hold files over 4 GB.
+2. In UniFetcher, go to **Settings → Download directory → SD card or USB drive folder**.
+3. Open the drive in the picker, choose or create a folder, then tap **Use this folder → Allow**. The switch turns on.
+4. Check **Temporary files location**. If it says the phone doesn't let UniFetcher keep temporary files on the drive (some phones, such as some Xiaomi models with USB drives), choose **Internal storage**. Finished videos still go to the drive, but each one needs room on the phone while it downloads.
+
+**When downloads pause**
+
+UniFetcher pauses the queue instead of letting downloads fail, shows a banner and notification, and carries on by itself once it's fixed:
+
+- **Storage almost full:** less free space than your limit where temporary files go. Free up space, or change **Pause downloads when free space is below** (2 GB, 1 GB, 500 MB or Off).
+- **SD card or USB drive removed:** plug it back in.
+- **Choose where temporary files go:** see step 4 above.
+
+A single video that's too big for the free space fails with a message saying how much it needs. Free space (or change the location), then tap **Retry**. If the drive was unplugged as a video finished, the video is kept safely in the temporary folder: plug the drive back in and tap **Retry** to copy it across.

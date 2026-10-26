@@ -2,6 +2,19 @@
 
 All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed here, newest first. Version numbers follow [Semantic Versioning](https://semver.org/).
 
+## v0.1.6 - 2026-10-26
+
+### Temporary files and storage space (spec 4c)
+
+- New setting **Temporary files location**: Same as download folder (default), Internal storage, or SD card / USB drive, each showing its free space
+- No more silent fallback to the phone: if temporary files can't go where they should, the queue pauses and explains what to do
+- Downloads pause (and continue by themselves) with a clear reason: storage almost full, SD card or USB drive removed, or the phone doesn't allow temporary files on the drive
+- Before each download, UniFetcher checks there's room for its temporary files when the size is known
+- If the drive is unplugged as a video finishes, the video is kept safely in the temporary folder; tap Retry once the drive is back
+- Leftover temporary files are deleted when a download finishes or is removed from the list; stopped downloads keep theirs so they can continue
+- **Clear temporary files** covers every location and only runs when nothing is downloading; quick wipe clears them too
+- New HOW_TO section: saving to an SD card or USB drive, and temporary files
+
 ## v0.1.5 - 2026-10-23
 
 ### Storage
