@@ -2,6 +2,12 @@
 
 All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed here, newest first. Version numbers follow [Semantic Versioning](https://semver.org/).
 
+## v0.1.8 - 2026-10-26
+
+- **Skip videos already downloaded** (on by default, Settings → General): uses your download history, so it recognises earlier downloads too, even from a different link to the same video. Skipped videos show "Already downloaded"; tap Retry to download one again anyway
+- Fixed: **Disable preview** didn't hide thumbnails on the download screen
+- The list view shows failure reasons too
+
 ## v0.1.7 - 2026-10-26
 
 ### Automatic cookies and clearer failures (spec 4a, 4e, 4i)
