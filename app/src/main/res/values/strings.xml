@@ -125,10 +125,11 @@
     <string name="reason_drm">DRM: not supported</string>
     <string name="reason_network">Network problem</string>
     <string name="reason_storage">Not enough space</string>
-    <string name="needs_you">Needs you</string>
+    <string name="needs_you">Action needed</string>
     <string name="needs_you_desc">These sites want you to pass a \"verify you are human\" check or log in. Everything else keeps downloading. Tap Open, do the check, then tap Done: that site\'s videos retry by themselves. They wait here as long as you need, even if the app is closed.</string>
     <string name="needs_you_banner_desc">Tap to see which sites need a quick check from you. Everything else keeps downloading.</string>
     <string name="needs_you_open">Open</string>
+    <string name="needs_you_view">View</string>
     <string name="needs_you_notification_discreet">Some downloads are waiting for you</string>
     <string name="site_check_hint">Pass the check or log in, then tap Done</string>
     <string name="site_check_done">Done</string>
@@ -574,8 +575,8 @@
         <item quantity="other">%d items</item>
     </plurals>
     <plurals name="needs_you_banner_title">
-        <item quantity="one">%d video needs you</item>
-        <item quantity="other">%d videos need you</item>
+        <item quantity="one">%d video needs your action</item>
+        <item quantity="other">%d videos need your action</item>
     </plurals>
     <plurals name="needs_you_sites">
         <item quantity="one">%d site</item>

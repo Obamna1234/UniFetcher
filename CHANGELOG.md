@@ -4,9 +4,9 @@ All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed her
 
 ## v0.1.9 - 2026-10-26
 
-- **New "Needs you" tab** on the download screen for sites that want a "verify you are human" check or a login. Tap **Open**, do the check yourself, tap **Done**, and that site's videos retry automatically. Everything else keeps downloading, one notification tells you, and the videos wait as long as needed (even if the app is closed)
+- **New "Action needed" tab** on the download screen for sites that want a "verify you are human" check or a login. Tap **Open**, do the check yourself, tap **Done**, and that site's videos retry automatically. Everything else keeps downloading, one notification tells you, and the videos wait as long as needed (even if the app is closed)
 - Failure reasons are remembered after the app restarts
-- "Retry failed" leaves "Needs you" and "Already downloaded" items alone
+- "Retry failed" leaves "Action needed" and "Already downloaded" items alone
 
 ## v0.1.8 - 2026-10-26
 

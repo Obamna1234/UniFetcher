@@ -48,6 +48,8 @@ import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material.icons.rounded.Warning
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.material3.FilledTonalButton
 import com.unifetch.app.download.needsUser
 import com.unifetch.app.util.SiteSessions
@@ -433,14 +435,26 @@ fun DownloadPageImplV2(
                                 .padding(horizontal = 20.dp)
                     ) {
                         Filter.entries.forEach { filter ->
+                            // "Action needed" stands out in the error colour while anything waits.
+                            val highlight = filter == Filter.NeedsYou && needsYouSites.isNotEmpty()
                             SelectionGroupItem(
                                 colors =
-                                    SelectionGroupDefaults.colors(
-                                        activeContainerColor =
-                                            LocalFixedColorRoles.current.tertiaryFixed,
-                                        activeContentColor =
-                                            LocalFixedColorRoles.current.onTertiaryFixed,
-                                    ),
+                                    if (highlight)
+                                        SelectionGroupDefaults.colors(
+                                            activeContainerColor = MaterialTheme.colorScheme.error,
+                                            activeContentColor = MaterialTheme.colorScheme.onError,
+                                            inactiveContainerColor =
+                                                MaterialTheme.colorScheme.errorContainer,
+                                            inactiveContentColor =
+                                                MaterialTheme.colorScheme.onErrorContainer,
+                                        )
+                                    else
+                                        SelectionGroupDefaults.colors(
+                                            activeContainerColor =
+                                                LocalFixedColorRoles.current.tertiaryFixed,
+                                            activeContentColor =
+                                                LocalFixedColorRoles.current.onTertiaryFixed,
+                                        ),
                                 selected = activeFilter == filter,
                                 onClick = {
                                     if (activeFilter == filter) {
@@ -962,30 +976,45 @@ internal class DownloadPageV2Test {
     }
 }
 
-/** Shown on the All tab when some downloads are waiting for the user. */
+/** Shown on the All tab when some downloads are waiting for the user. Meant to stand out. */
 @Composable
 private fun NeedsYouBanner(videoCount: Int, siteCount: Int, onView: () -> Unit) {
     Surface(
         modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
         shape = MaterialTheme.shapes.medium,
-        color = MaterialTheme.colorScheme.tertiaryContainer,
+        color = MaterialTheme.colorScheme.errorContainer,
+        border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.error),
         onClick = onView,
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(
-                text =
-                    pluralStringResource(R.plurals.needs_you_banner_title, videoCount, videoCount) +
-                        " · " +
-                        pluralStringResource(R.plurals.needs_you_sites, siteCount, siteCount),
-                style = MaterialTheme.typography.titleSmall,
-                color = MaterialTheme.colorScheme.onTertiaryContainer,
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Icon(
+                imageVector = Icons.Rounded.Warning,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.error,
+                modifier = Modifier.padding(end = 12.dp),
             )
-            Text(
-                text = stringResource(R.string.needs_you_banner_desc),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onTertiaryContainer,
-                modifier = Modifier.padding(top = 4.dp),
-            )
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text =
+                        pluralStringResource(R.plurals.needs_you_banner_title, videoCount, videoCount) +
+                            " · " +
+                            pluralStringResource(R.plurals.needs_you_sites, siteCount, siteCount),
+                    style = MaterialTheme.typography.titleSmall,
+                    color = MaterialTheme.colorScheme.onErrorContainer,
+                )
+                Text(
+                    text = stringResource(R.string.needs_you_banner_desc),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onErrorContainer,
+                    modifier = Modifier.padding(top = 4.dp),
+                )
+            }
+            FilledTonalButton(onClick = onView, modifier = Modifier.padding(start = 8.dp)) {
+                Text(stringResource(R.string.needs_you_view))
+            }
         }
     }
 }
