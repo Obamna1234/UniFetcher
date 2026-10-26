@@ -19,6 +19,7 @@ import com.unifetch.app.download.Task.DownloadState.Running
 import com.unifetch.app.download.Task.RestartableAction.Download
 import com.unifetch.app.download.Task.RestartableAction.FetchInfo
 import com.unifetch.app.download.Task.TypeInfo
+import com.unifetch.app.util.DuplicateCheck
 import com.unifetch.app.util.SiteSessions
 import com.unifetch.app.util.StorageGuard
 import com.unifetch.app.util.TempStorage
@@ -96,7 +97,8 @@ interface DownloaderV2 {
 
     /** Puts every failed download back in the queue. @return how many */
     fun retryFailed(): Int =
-        tasksWhere { it is Error }.count { task -> runCatching { restart(task) }.isSuccess }
+        tasksWhere { it is Error && it.throwable !is DuplicateCheck.AlreadyDownloadedException }
+            .count { task -> runCatching { restart(task) }.isSuccess }
 
     /** Resumes every stopped download. @return how many */
     fun resumeCanceled(): Int =
@@ -140,6 +142,10 @@ internal object FakeDownloaderV2 : DownloaderV2 {
 class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComponent {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val taskStateMap = mutableStateMapOf<Task, Task.State>()
+
+    /** Downloads skipped as already downloaded, and those the user then retried anyway. */
+    private val flaggedDuplicates = java.util.concurrent.ConcurrentHashMap.newKeySet<String>()
+    private val retriedDuplicates = java.util.concurrent.ConcurrentHashMap.newKeySet<String>()
     private val snapshotFlow = snapshotFlow { taskStateMap.toMap() }
 
     init {
@@ -237,6 +243,11 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
     override fun cancel(task: Task): Boolean = task.cancelImpl()
 
     override fun restart(task: Task) {
+        // Retrying a download skipped as "already downloaded" downloads it anyway.
+        if (task.id in flaggedDuplicates) {
+            flaggedDuplicates -= task.id
+            retriedDuplicates += task.id
+        }
         task.restartImpl()
     }
 
@@ -342,6 +353,15 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
         check(downloadState == ReadyWithInfo && info != null)
         if (type is TypeInfo.CustomCommand) {
             execute()
+            return
+        }
+        // Already downloaded? Skip it, unless the user tapped Retry on that skip.
+        if (id in retriedDuplicates) {
+            retriedDuplicates -= id
+        } else if (DuplicateCheck.isEnabled() && DuplicateCheck.isAlreadyDownloaded(info!!)) {
+            flaggedDuplicates += id
+            downloadState =
+                Error(throwable = DuplicateCheck.AlreadyDownloadedException(), action = Download)
             return
         }
         // Spec 4c: when the size is known, check there's room for the temporary files first.

@@ -35,6 +35,9 @@ object DatabaseUtil {
 
     fun getDownloadHistoryFlow() = dao.getDownloadHistoryFlow()
 
+    /** Download history entries for any of these links (duplicate detection). */
+    suspend fun findDownloadsByUrls(urls: List<String>) = dao.findByUrls(urls)
+
     /** Quick wipe: removes every download history entry (the downloaded files are kept). */
     suspend fun deleteAllHistory() = dao.deleteAllHistory()
 

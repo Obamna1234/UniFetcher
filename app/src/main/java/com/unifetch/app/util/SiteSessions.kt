@@ -338,10 +338,15 @@ fun FailureReason.label(context: Context): String =
             FailureReason.DRM -> R.string.reason_drm
             FailureReason.NETWORK -> R.string.reason_network
             FailureReason.STORAGE -> R.string.reason_storage
+            FailureReason.ALREADY_DOWNLOADED -> R.string.reason_already_downloaded
             FailureReason.OTHER -> R.string.status_error
         }
     )
 
 /** The plain failure reason for an error from a download. */
 fun Throwable.failureReason(): FailureReason =
-    (this as? SiteSessions.DownloadFailure)?.reason ?: FailureReason.classify(message)
+    when (this) {
+        is DuplicateCheck.AlreadyDownloadedException -> FailureReason.ALREADY_DOWNLOADED
+        is SiteSessions.DownloadFailure -> reason
+        else -> FailureReason.classify(message)
+    }

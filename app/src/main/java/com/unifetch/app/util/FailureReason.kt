@@ -18,6 +18,8 @@ enum class FailureReason {
     NETWORK,
     /** Not enough storage space (see [StorageGuard]). */
     STORAGE,
+    /** Skipped: this video is already in the download history. */
+    ALREADY_DOWNLOADED,
     OTHER;
 
     companion object {

@@ -32,6 +32,9 @@ interface VideoInfoDao {
 
     @Query("DELETE FROM DownloadedVideoInfo") suspend fun deleteAllHistory()
 
+    @Query("SELECT * FROM DownloadedVideoInfo WHERE videoUrl IN (:urls)")
+    suspend fun findByUrls(urls: List<String>): List<DownloadedVideoInfo>
+
     @Query("DELETE FROM CookieProfile") suspend fun deleteAllCookieProfiles()
 
     @Query("DELETE FROM DownloadedVideoInfo WHERE videoPath = :path")

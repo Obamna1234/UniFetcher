@@ -125,6 +125,10 @@
     <string name="reason_drm">DRM: not supported</string>
     <string name="reason_network">Network problem</string>
     <string name="reason_storage">Not enough space</string>
+    <string name="reason_already_downloaded">Already downloaded</string>
+    <string name="duplicate_skipped_msg">Skipped: this video is already in your download history. Tap Retry to download it again anyway.</string>
+    <string name="skip_duplicates">Skip videos already downloaded</string>
+    <string name="skip_duplicates_desc">Uses your download history, including earlier downloads. A skipped video shows \"Already downloaded\"; tap Retry on it to download it again anyway.</string>
     <string name="failure_reason_line">Reason: %1$s</string>
     <string name="failure_cookies_none">Cookies: not used</string>
     <string name="failure_cookies_manual">Cookies: added manually</string>
