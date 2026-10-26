@@ -42,6 +42,11 @@
         android:supportsRtl="true"
         tools:targetApi="tiramisu">
         <activity
+            android:name=".SiteCheckActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Seal"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".LockActivity"
             android:exported="false"
             android:launchMode="singleTop"

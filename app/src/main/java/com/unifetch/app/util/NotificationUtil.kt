@@ -299,6 +299,51 @@ object NotificationUtil {
         notificationManager.cancel(STORAGE_NOTIFICATION_ID)
     }
 
+    private const val NEEDS_YOU_NOTIFICATION_ID = 125
+    private var lastNeedsYouCount = 0
+
+    /**
+     * "Needs you" (spec 4a): tells the user some downloads wait for a human check or login.
+     * Only notifies when the number grows; clears itself when nothing is waiting.
+     */
+    fun updateNeedsYou(count: Int) {
+        val grew = count > lastNeedsYouCount
+        lastNeedsYouCount = count
+        if (count == 0) {
+            notificationManager.cancel(NEEDS_YOU_NOTIFICATION_ID)
+            return
+        }
+        if (!grew || !NOTIFICATION.getBoolean()) return
+        val openApp =
+            context.packageManager.getLaunchIntentForPackage(context.packageName)?.let {
+                PendingIntent.getActivity(
+                    context,
+                    NEEDS_YOU_NOTIFICATION_ID,
+                    it,
+                    PendingIntent.FLAG_IMMUTABLE,
+                )
+            }
+        val text =
+            if (discreet) context.getString(R.string.needs_you_notification_discreet)
+            else
+                context.resources.getQuantityString(
+                    R.plurals.needs_you_notification,
+                    count,
+                    count,
+                )
+        val builder =
+            NotificationCompat.Builder(context, CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_stat_unifetch)
+                .setContentTitle(context.getString(R.string.needs_you))
+                .setContentText(text)
+                .setStyle(NotificationCompat.BigTextStyle().bigText(text))
+                .setOnlyAlertOnce(true)
+                .setAutoCancel(true)
+                .applyPrivacy()
+        openApp?.let { builder.setContentIntent(it) }
+        runCatching { notificationManager.notify(NEEDS_YOU_NOTIFICATION_ID, builder.build()) }
+    }
+
     fun cancelAllNotifications() {
         notificationManager.cancelAll()
     }

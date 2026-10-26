@@ -125,6 +125,13 @@
     <string name="reason_drm">DRM: not supported</string>
     <string name="reason_network">Network problem</string>
     <string name="reason_storage">Not enough space</string>
+    <string name="needs_you">Needs you</string>
+    <string name="needs_you_desc">These sites want you to pass a \"verify you are human\" check or log in. Everything else keeps downloading. Tap Open, do the check, then tap Done: that site\'s videos retry by themselves. They wait here as long as you need, even if the app is closed.</string>
+    <string name="needs_you_banner_desc">Tap to see which sites need a quick check from you. Everything else keeps downloading.</string>
+    <string name="needs_you_open">Open</string>
+    <string name="needs_you_notification_discreet">Some downloads are waiting for you</string>
+    <string name="site_check_hint">Pass the check or log in, then tap Done</string>
+    <string name="site_check_done">Done</string>
     <string name="reason_already_downloaded">Already downloaded</string>
     <string name="duplicate_skipped_msg">Skipped: this video is already in your download history. Tap Retry to download it again anyway.</string>
     <string name="skip_duplicates">Skip videos already downloaded</string>
@@ -565,6 +572,22 @@
     <plurals name="item_count">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
+    </plurals>
+    <plurals name="needs_you_banner_title">
+        <item quantity="one">%d video needs you</item>
+        <item quantity="other">%d videos need you</item>
+    </plurals>
+    <plurals name="needs_you_sites">
+        <item quantity="one">%d site</item>
+        <item quantity="other">%d sites</item>
+    </plurals>
+    <plurals name="needs_you_waiting">
+        <item quantity="one">%d video waiting</item>
+        <item quantity="other">%d videos waiting</item>
+    </plurals>
+    <plurals name="needs_you_notification">
+        <item quantity="one">%d video is waiting for a quick check from you. Everything else keeps downloading.</item>
+        <item quantity="other">%d videos are waiting for a quick check from you. Everything else keeps downloading.</item>
     </plurals>
     <plurals name="session_sites_count">
         <item quantity="one">%d site</item>

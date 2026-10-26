@@ -254,6 +254,17 @@ object SiteSessions {
             (result == true).also { Log.i(TAG, "background visit finished: $it") }
         }
 
+    /**
+     * Called after the user has passed a check or logged in on [site] in the built-in browser:
+     * saves that session so the site's waiting downloads use it.
+     */
+    fun onUserSessionReady(site: String) {
+        CookieManager.getInstance().flush()
+        writeCookieFile()
+        rememberSite(site)
+        lastVisit[site] = System.currentTimeMillis()
+    }
+
     // ---- Settings: sites with saved sessions ----------------------------------------------------
 
     /** Forgets one site's automatic session and deletes its cookies. */

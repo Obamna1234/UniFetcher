@@ -48,6 +48,10 @@ import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.FilledTonalButton
+import com.unifetch.app.download.needsUser
+import com.unifetch.app.util.SiteSessions
+import com.unifetch.app.SiteCheckActivity
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.AlertDialog
@@ -141,6 +145,8 @@ private const val TAG = "DownloadPageV2"
 enum class Filter {
     All,
     Downloading,
+    /** Waiting for the user: a "verify you are human" check or a login (spec 4a). */
+    NeedsYou,
     Canceled,
     Finished;
 
@@ -150,6 +156,7 @@ enum class Filter {
         when (this) {
             All -> stringResource(R.string.all)
             Downloading -> stringResource(R.string.status_downloading)
+            NeedsYou -> stringResource(R.string.needs_you)
             Canceled -> stringResource(R.string.status_canceled)
             Finished -> stringResource(R.string.status_completed)
         }
@@ -167,8 +174,9 @@ enum class Filter {
                     else -> false
                 }
             }
+            NeedsYou -> state.needsUser()
             Canceled -> {
-                state is Error || state is Task.DownloadState.Canceled
+                (state is Error && !state.needsUser()) || state is Task.DownloadState.Canceled
             }
             Finished -> {
                 state is Completed
@@ -344,6 +352,17 @@ fun DownloadPageImplV2(
 ) {
     var activeFilter by remember { mutableStateOf(Filter.All) }
     val storagePaused by StorageGuard.paused.collectAsState()
+    // Sites with downloads waiting for the user, e.g. "example.com" -> its waiting tasks.
+    val needsYouSites by remember {
+        derivedStateOf {
+            taskDownloadStateMap
+                .filter { (_, state) -> state.downloadState.needsUser() }
+                .keys
+                .groupBy { SiteSessions.siteOf(it.url) ?: it.url }
+                .toList()
+                .sortedByDescending { it.second.size }
+        }
+    }
     // "Disable preview" setting: hide thumbnails on download cards.
     val previewDisabled by PreferenceUtil.previewDisabled.collectAsState()
     val filteredMap by
@@ -439,7 +458,11 @@ fun DownloadPageImplV2(
                                     }
                                 },
                             ) {
-                                Text(filter.label())
+                                Text(
+                                    if (filter == Filter.NeedsYou && needsYouSites.isNotEmpty())
+                                        "${filter.label()} (${needsYouSites.sumOf { it.second.size }})"
+                                    else filter.label()
+                                )
                             }
                         }
                     }
@@ -476,6 +499,25 @@ fun DownloadPageImplV2(
                     }
                     if (storagePaused) {
                         item(span = { GridItemSpan(maxLineSpan) }) { StorageLowBanner() }
+                    }
+                    if (needsYouSites.isNotEmpty() && activeFilter == Filter.All) {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            NeedsYouBanner(
+                                videoCount = needsYouSites.sumOf { it.second.size },
+                                siteCount = needsYouSites.size,
+                                onView = { activeFilter = Filter.NeedsYou },
+                            )
+                        }
+                    }
+                    if (activeFilter == Filter.NeedsYou) {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            NeedsYouSiteList(
+                                sites = needsYouSites,
+                                onOpen = { site, tasks ->
+                                    SiteCheckActivity.open(context, site, tasks.first().url)
+                                },
+                            )
+                        }
                     }
 
                     if (isGridView) {
@@ -915,6 +957,79 @@ internal class DownloadPageV2Test {
                     onActionPost = { task, state -> },
                     onMenuOpen = {},
                 )
+            }
+        }
+    }
+}
+
+/** Shown on the All tab when some downloads are waiting for the user. */
+@Composable
+private fun NeedsYouBanner(videoCount: Int, siteCount: Int, onView: () -> Unit) {
+    Surface(
+        modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
+        shape = MaterialTheme.shapes.medium,
+        color = MaterialTheme.colorScheme.tertiaryContainer,
+        onClick = onView,
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text =
+                    pluralStringResource(R.plurals.needs_you_banner_title, videoCount, videoCount) +
+                        " · " +
+                        pluralStringResource(R.plurals.needs_you_sites, siteCount, siteCount),
+                style = MaterialTheme.typography.titleSmall,
+                color = MaterialTheme.colorScheme.onTertiaryContainer,
+            )
+            Text(
+                text = stringResource(R.string.needs_you_banner_desc),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onTertiaryContainer,
+                modifier = Modifier.padding(top = 4.dp),
+            )
+        }
+    }
+}
+
+/** The "Needs you" tab: one row per site, with how many videos wait and an Open button. */
+@Composable
+private fun NeedsYouSiteList(
+    sites: List<Pair<String, List<Task>>>,
+    onOpen: (String, List<Task>) -> Unit,
+) {
+    Column(modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)) {
+        Text(
+            text = stringResource(R.string.needs_you_desc),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(bottom = 8.dp),
+        )
+        sites.forEach { (site, tasks) ->
+            Surface(
+                modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                shape = MaterialTheme.shapes.medium,
+                color = MaterialTheme.colorScheme.surfaceContainer,
+            ) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(text = site, style = MaterialTheme.typography.titleSmall)
+                        Text(
+                            text =
+                                pluralStringResource(
+                                    R.plurals.needs_you_waiting,
+                                    tasks.size,
+                                    tasks.size,
+                                ),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    FilledTonalButton(onClick = { onOpen(site, tasks) }) {
+                        Text(stringResource(R.string.needs_you_open))
+                    }
+                }
             }
         }
     }
