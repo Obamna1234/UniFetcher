@@ -57,7 +57,7 @@ private const val BETA = VARIANT * 2
 private const val RELEASE_CANDIDATE = VARIANT * 3
 
 /** Version used for everyday (non-release) builds. Releases take their version from the git tag. */
-val currentVersion: Version = Version.Stable(versionMajor = 0, versionMinor = 1, versionPatch = 6)
+val currentVersion: Version = Version.Stable(versionMajor = 0, versionMinor = 1, versionPatch = 7)
 
 /**
  * Turns a release tag such as "v1.2.3", "v1.2.3-beta.1" or "v1.2.3-rc.2" into a [Version], so

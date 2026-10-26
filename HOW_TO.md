@@ -14,6 +14,7 @@ Simple step-by-step help for installing, updating and releasing UniFetcher. Ever
 8. [Release a new version](#8-release-a-new-version)
 9. [App lock and privacy settings](#9-app-lock-and-privacy-settings)
 10. [Saving to an SD card or USB drive, and temporary files](#10-saving-to-an-sd-card-or-usb-drive-and-temporary-files)
+11. [Cookies, sessions and why a download failed](#11-cookies-sessions-and-why-a-download-failed)
 
 ---
 
@@ -189,3 +190,27 @@ UniFetcher pauses the queue instead of letting downloads fail, shows a banner an
 - **Choose where temporary files go:** see step 4 above.
 
 A single video that's too big for the free space fails with a message saying how much it needs. Free space (or change the location), then tap **Retry**. If the drive was unplugged as a video finished, the video is kept safely in the temporary folder: plug the drive back in and tap **Retry** to copy it across.
+
+## 11. Cookies, sessions and why a download failed
+
+**Automatic site sessions (on by default).** Some sites only let a real browser download their videos. When a site refuses a download (errors like "HTTP Error 403" or "410"), UniFetcher quietly opens that link in a hidden built-in browser, lets the site set its cookies, and tries once more. Sites that needed this are remembered, so their later downloads use the session straight away. While a download uses cookies, its progress shows a 🍪.
+
+- You don't need to add cookies by hand anymore. If you have, and they stop working, UniFetcher tries an automatic session once.
+- Logins and "verify you are human" checks are **never** done for you.
+- See or delete saved sessions: **Settings → Network → Sites with saved sessions** (**Forget** one site, or **Forget all**). Turn the feature off with **Automatic site sessions**.
+- Cookies stay on your phone. Quick wipe deletes them.
+
+**Why a download failed.** A failed download shows one reason:
+
+| Reason | What it means | What to try |
+|---|---|---|
+| Site not supported | yt-dlp can't read this site (or the site just changed). Cookies won't help | Wait for a yt-dlp update (automatic) |
+| Blocked by site security | A CAPTCHA, bot check or too many requests | Open the site in a browser and pass the check, try another VPN server, or try later |
+| Session rejected | A browser session was tried and refreshed, and the site still refused | The site may block VPNs or this kind of app. Try another VPN server |
+| Needs login | The video needs an account | Log in on the cookies screen (Settings → Network → Cookies), then Retry |
+| Video unavailable | Removed, private or blocked in your region | Nothing to fix. Check it plays in a browser |
+| DRM: not supported | The video is copy-protected | UniFetcher doesn't support DRM |
+| Network problem | The connection dropped or timed out | Check your connection or VPN, then Retry |
+| Not enough space | Not enough room for temporary files | See section 10 |
+
+**Copy diagnostic.** Tap a failed download and choose **Copy diagnostic**. It copies the reason, whether cookies were used, the steps UniFetcher tried, and yt-dlp's error, with cookie values and link tokens removed, ready to paste into a bug report.

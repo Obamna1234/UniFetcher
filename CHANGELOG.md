@@ -2,6 +2,18 @@
 
 All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed here, newest first. Version numbers follow [Semantic Versioning](https://semver.org/).
 
+## v0.1.7 - 2026-10-26
+
+### Automatic cookies and clearer failures (spec 4a, 4e, 4i)
+
+- **Automatic site sessions** (on by default): when a site refuses a download (e.g. HTTP 403 or 410), UniFetcher opens it in a hidden built-in browser to get its cookies, then retries once with the same browser identity. Sites are remembered; a failing session is refreshed once, never looped. Logins and "verify you are human" checks are never automated
+- Pop-ups, new windows and page-started downloads are blocked in those background visits
+- Failed downloads show one plain reason (site not supported, blocked by site security, session rejected, needs login, video unavailable, DRM, network problem, not enough space)
+- **Copy diagnostic** (was "Copy report"): reason, cookie source, steps tried and the error, with cookie values and link tokens removed
+- Downloads using cookies show a 🍪 in their progress
+- **Settings → Network → Sites with saved sessions**, with Forget and Forget all. Quick wipe forgets them too
+- New HOW_TO section 11
+
 ## v0.1.6 - 2026-10-26
 
 ### Temporary files and storage space (spec 4c)
