@@ -19,6 +19,7 @@ import com.unifetch.app.download.Task.DownloadState.Running
 import com.unifetch.app.download.Task.RestartableAction.Download
 import com.unifetch.app.download.Task.RestartableAction.FetchInfo
 import com.unifetch.app.download.Task.TypeInfo
+import com.unifetch.app.util.SiteSessions
 import com.unifetch.app.util.StorageGuard
 import com.unifetch.app.util.TempStorage
 import java.io.IOException
@@ -358,8 +359,14 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                             val progress = progressPercentage / 100f
                             when (val preState = downloadState) {
                                 is Running -> {
+                                    // A small cookie mark shows when the download uses cookies.
                                     downloadState =
-                                        preState.copy(progress = progress, progressText = text)
+                                        preState.copy(
+                                            progress = progress,
+                                            progressText =
+                                                if (SiteSessions.isUsingCookies(id)) "🍪 $text"
+                                                else text,
+                                        )
                                     NotificationUtil.notifyProgress(
                                         notificationId = notificationId,
                                         progress = progressPercentage.toInt(),

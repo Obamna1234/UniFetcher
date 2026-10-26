@@ -112,8 +112,10 @@ fun Number?.toBitrateText(): String {
     }
 }
 
+/** "Copy diagnostic": app and device info, the link (without tokens) and what was tried. */
 fun getErrorReport(th: Throwable, url: String): String =
-    App.getVersionReport() + "\nURL: ${url}\n${th.message}"
+    App.getVersionReport() +
+        "\nURL: ${url.replace(Regex("[?#].*$"), "")}\n${th.message}"
 
 @Deprecated(
     "Use findURLsFromString instead",

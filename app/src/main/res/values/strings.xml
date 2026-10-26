@@ -117,6 +117,25 @@
     <string name="storage_pause_no_app_folder">This phone doesn\'t let UniFetcher keep temporary files on your SD card or USB drive. Go to Settings → Download directory → Temporary files location and choose Internal storage to continue. Finished videos still go to your drive.</string>
     <string name="storage_not_enough_for_video">Not enough space for temporary files: this video needs about %1$s, but only %2$s is free. Free up space or change the temporary files location, then tap Retry.</string>
     <string name="sdcard_copy_failed_kept">Couldn\'t copy the finished video to your SD card or USB drive (not connected or full). It\'s kept safely in UniFetcher\'s temporary folder: plug the drive back in or free space, then tap Retry.</string>
+    <string name="reason_site_not_supported">Site not supported</string>
+    <string name="reason_blocked_by_security">Blocked by site security</string>
+    <string name="reason_session_rejected">Session rejected</string>
+    <string name="reason_needs_login">Needs login</string>
+    <string name="reason_video_unavailable">Video unavailable</string>
+    <string name="reason_drm">DRM: not supported</string>
+    <string name="reason_network">Network problem</string>
+    <string name="reason_storage">Not enough space</string>
+    <string name="failure_reason_line">Reason: %1$s</string>
+    <string name="failure_cookies_none">Cookies: not used</string>
+    <string name="failure_cookies_manual">Cookies: added manually</string>
+    <string name="failure_cookies_automatic">Cookies: automatic session for this site</string>
+    <string name="auto_sessions">Automatic site sessions</string>
+    <string name="auto_sessions_desc">If a site refuses a download (for example \"HTTP Error 403\" or \"410\"), quietly open it in a hidden built-in browser to get its cookies, then retry once. Logins and \"verify you are human\" checks are never done for you.</string>
+    <string name="session_sites">Sites with saved sessions</string>
+    <string name="session_sites_none">None yet</string>
+    <string name="session_sites_desc">These sites needed a browser session. Their cookies stay on this phone. Forget a site to delete its cookies.</string>
+    <string name="session_forget">Forget</string>
+    <string name="session_forget_all">Forget all</string>
     <string name="storage_low_title">Storage almost full: downloads paused</string>
     <string name="storage_low_text">Only %1$s free on %2$s, below your %3$s limit. Downloads already running carry on, and the rest start by themselves once space is freed. You can change the limit in Settings → Download directory.</string>
     <string name="storage_location_phone">the phone</string>
@@ -262,7 +281,7 @@
     <string name="restart">Restart</string>
     <string name="status_error">Error</string>
     <string name="copy_link">Copy link</string>
-    <string name="copy_error_report">Copy report</string>
+    <string name="copy_error_report">Copy diagnostic</string>
     <string name="video_resolution">Video resolution</string>
     <string name="video_file_size">Video file size</string>
     <string name="export_to_clipboard">Export to clipboard</string>
@@ -542,6 +561,10 @@
     <plurals name="item_count">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
+    </plurals>
+    <plurals name="session_sites_count">
+        <item quantity="one">%d site</item>
+        <item quantity="other">%d sites</item>
     </plurals>
     <plurals name="bulk_action_done">
         <item quantity="one">Done: %d download</item>

@@ -1,6 +1,20 @@
 package com.unifetch.app.ui.page.settings.network
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.outlined.Language
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.pluralStringResource
+import com.unifetch.app.util.AUTO_SESSIONS
+import com.unifetch.app.util.SiteSessions
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Bolt
@@ -59,6 +73,10 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
     var aria2c by remember { mutableStateOf(ARIA2C.getBoolean()) }
     var proxy by PROXY.booleanState
     var isCookiesEnabled by COOKIES.booleanState
+    var autoSessions by remember { mutableStateOf(AUTO_SESSIONS.getBoolean()) }
+    var sessionSites by remember { mutableStateOf(SiteSessions.savedSites()) }
+    var showSessionSitesDialog by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
     var forceIpv4 by FORCE_IPV4.booleanState
 
     Scaffold(
@@ -166,6 +184,34 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
                     }
                 }
                 item {
+                    PreferenceSwitch(
+                        title = stringResource(R.string.auto_sessions),
+                        description = stringResource(R.string.auto_sessions_desc),
+                        icon = Icons.Outlined.Cookie,
+                        isChecked = autoSessions,
+                        onClick = {
+                            autoSessions = !autoSessions
+                            AUTO_SESSIONS.updateBoolean(autoSessions)
+                        },
+                    )
+                }
+                item {
+                    PreferenceItem(
+                        title = stringResource(R.string.session_sites),
+                        description =
+                            if (sessionSites.isEmpty()) stringResource(R.string.session_sites_none)
+                            else
+                                pluralStringResource(
+                                    R.plurals.session_sites_count,
+                                    sessionSites.size,
+                                    sessionSites.size,
+                                ),
+                        icon = Icons.Outlined.Language,
+                        enabled = sessionSites.isNotEmpty(),
+                        onClick = { showSessionSitesDialog = true },
+                    )
+                }
+                item {
                     PreferenceItem(
                         title = stringResource(R.string.cookies),
                         description = stringResource(R.string.cookies_desc),
@@ -176,6 +222,57 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
             }
         },
     )
+
+    if (showSessionSitesDialog) {
+        AlertDialog(
+            onDismissRequest = { showSessionSitesDialog = false },
+            icon = { Icon(Icons.Outlined.Language, contentDescription = null) },
+            title = { Text(stringResource(R.string.session_sites)) },
+            text = {
+                LazyColumn {
+                    item {
+                        Text(
+                            text = stringResource(R.string.session_sites_desc),
+                            style = MaterialTheme.typography.bodyMedium,
+                        )
+                    }
+                    items(sessionSites.sorted()) { site ->
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(text = site, modifier = Modifier.weight(1f))
+                            TextButton(
+                                onClick = {
+                                    scope.launch(Dispatchers.IO) {
+                                        SiteSessions.forget(site)
+                                        sessionSites = SiteSessions.savedSites()
+                                    }
+                                }
+                            ) {
+                                Text(stringResource(R.string.session_forget))
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showSessionSitesDialog = false }) {
+                    Text(stringResource(R.string.close))
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    onClick = {
+                        scope.launch(Dispatchers.IO) {
+                            SiteSessions.forgetAll()
+                            sessionSites = SiteSessions.savedSites()
+                        }
+                        showSessionSitesDialog = false
+                    }
+                ) {
+                    Text(stringResource(R.string.session_forget_all))
+                }
+            },
+        )
+    }
 
     if (showConcurrentDownloadDialog) {
         ConcurrentDownloadDialog { showConcurrentDownloadDialog = false }
