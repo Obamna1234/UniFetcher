@@ -132,6 +132,7 @@ const val APP_LOCK_TIMEOUT = "app_lock_timeout"
 const val SECURE_SCREEN = "secure_screen"
 const val NOTIFICATION_DISCREET = "notification_discreet"
 const val STORAGE_MIN_FREE = "storage_min_free"
+const val TEMP_LOCATION = "temp_location"
 
 private const val INTERVAL_DAY = 86_400_000L
 private const val INTERVAL_WEEK = 86_400_000L * 7

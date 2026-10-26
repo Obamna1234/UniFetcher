@@ -25,9 +25,7 @@ import com.unifetch.app.ui.page.settings.network.Cookie
 import com.unifetch.app.util.FileUtil.getArchiveFile
 import com.unifetch.app.util.FileUtil.getConfigFile
 import com.unifetch.app.util.FileUtil.getCookiesFile
-import com.unifetch.app.util.FileUtil.getExternalTempDir
 import com.unifetch.app.util.FileUtil.getFileName
-import com.unifetch.app.util.FileUtil.getSdcardTempDir
 import com.unifetch.app.util.FileUtil.moveFilesToSdcard
 import com.unifetch.app.util.PreferenceUtil.COOKIE_HEADER
 import com.unifetch.app.util.PreferenceUtil.getBoolean
@@ -43,6 +41,8 @@ import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.util.Locale
+import java.io.IOException
+import java.io.File
 
 object DownloadUtil {
 
@@ -681,6 +681,22 @@ object DownloadUtil {
                             Throwable(context.getString(R.string.fetch_info_error_msg))
                         )
                 }
+            // Temporary files (spec 4c): one folder per download in the chosen location. Never
+            // falls back to another storage; if it isn't usable the download doesn't start.
+            val tempWhere = TempStorage.resolve()
+            val tempDir =
+                TempStorage.taskDir(videoInfo.id)
+                    ?: return Result.failure(
+                        IOException(
+                            context.getString(
+                                if (tempWhere == TempStorage.Where.DriveHasNoAppFolder)
+                                    R.string.storage_pause_no_app_folder
+                                else R.string.storage_pause_removed
+                            )
+                        )
+                    )
+            val tempOnRemovable = (tempWhere as? TempStorage.Where.Ready)?.onRemovable == true
+
             val request = YoutubeDLRequest(url)
             val pathBuilder = StringBuilder()
             val outputBuilder = StringBuilder()
@@ -765,12 +781,17 @@ object DownloadUtil {
                     }
 
                     if (sdcard) {
-                        addOption("-P", context.getSdcardTempDir(videoInfo.id).absolutePath)
+                        // The whole download happens in the temporary folder, then it's copied
+                        // into the SD card / USB drive folder.
+                        addOption("-P", tempDir.absolutePath)
+                    } else {
+                        addOption("-P", pathBuilder.toString())
+                        addOption("-P", "temp:" + tempDir.absolutePath)
+                    }
+                    if (sdcard || tempOnRemovable) {
                         // SD cards and USB drives (exFAT/FAT32) reject characters such as : ? |
                         // that are common in video titles.
                         addOption("--windows-filenames")
-                    } else {
-                        addOption("-P", pathBuilder.toString())
                     }
 
                     videoClips.forEach {
@@ -782,9 +803,6 @@ object DownloadUtil {
                     if (newTitle.isNotEmpty()) {
                         addCommands(listOf("--replace-in-metadata", "title", ".+", newTitle))
                     }
-                    if (Build.VERSION.SDK_INT > 23 && !sdcard)
-                        addOption("-P", "temp:" + getExternalTempDir())
-
                     if (splitByChapter) {
                         addOption("-o", OUTPUT_TEMPLATE_CHAPTERS)
                         addOption("--split-chapters")
@@ -826,6 +844,7 @@ object DownloadUtil {
                             videoInfo = videoInfo,
                             downloadPath = pathBuilder.toString(),
                             sdcardUri = sdcardUri,
+                            tempDir = tempDir,
                         )
                     } else Result.failure(th)
                 }
@@ -834,6 +853,7 @@ object DownloadUtil {
                 videoInfo = videoInfo,
                 downloadPath = pathBuilder.toString(),
                 sdcardUri = sdcardUri,
+                tempDir = tempDir,
             )
         }
     }
@@ -843,6 +863,7 @@ object DownloadUtil {
         videoInfo: VideoInfo,
         downloadPath: String,
         sdcardUri: String,
+        tempDir: File,
     ): Result<List<String>> =
         preferences.run {
             val fileName =
@@ -854,10 +875,7 @@ object DownloadUtil {
 
             Log.d(TAG, "onFinishDownloading: $fileName")
             if (sdcard) {
-                moveFilesToSdcard(
-                        sdcardUri = sdcardUri,
-                        tempPath = context.getSdcardTempDir(videoInfo.id),
-                    )
+                moveFilesToSdcard(sdcardUri = sdcardUri, tempPath = tempDir)
                     .onSuccess {
                         if (privateMode) {
                             return Result.success(emptyList())
@@ -868,6 +886,8 @@ object DownloadUtil {
                         }
                     }
             } else {
+                // yt-dlp moved the finished file out; remove anything left in its temp folder.
+                runCatching { tempDir.deleteRecursively() }
                 FileUtil.scanFileToMediaLibraryPostDownload(
                         title = fileName,
                         downloadDir = downloadPath,
