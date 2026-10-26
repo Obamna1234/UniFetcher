@@ -24,12 +24,15 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import com.unifetch.app.util.TEMP_LOCATION
 import androidx.compose.material.icons.outlined.DataUsage
 import androidx.compose.material.icons.outlined.Storage
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.material3.TextButton
 import com.unifetch.app.ui.component.PreferenceSingleChoiceItem
 import com.unifetch.app.util.StorageGuard
+import com.unifetch.app.util.YtdlpUpdateManager
+import com.unifetch.app.util.TempStorage
 import com.unifetch.app.util.STORAGE_MIN_FREE
 import com.unifetch.app.util.PreferenceUtil.updateLong
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
@@ -176,6 +179,8 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
 
     var sdcardDownload by remember { mutableStateOf(SDCARD_DOWNLOAD.getBoolean()) }
     var storageLimit by remember { mutableLongStateOf(StorageGuard.minFreeBytes()) }
+    var tempChoice by remember { mutableIntStateOf(TempStorage.choice()) }
+    var showTempLocationDialog by remember { mutableStateOf(false) }
     var showStorageLimitDialog by remember { mutableStateOf(false) }
 
     var showClearTempDialog by remember { mutableStateOf(false) }
@@ -245,6 +250,59 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
         if (Build.VERSION.SDK_INT > 29 || storagePermission.status == PermissionStatus.Granted)
             launcher.launch(null)
         else storagePermission.launchPermissionRequest()
+    }
+
+    if (showTempLocationDialog) {
+        // Free space for each choice, read when the dialog opens.
+        val internalFree = remember { StorageGuard.freeBytesAt(TempStorage.internalRoot()) }
+        val removableRoot = remember { TempStorage.removableRoot(context) }
+        val removableFree = remember { removableRoot?.let { StorageGuard.freeBytesAt(it) } }
+        val options = buildList {
+            add(TempStorage.SAME_AS_DOWNLOADS to null)
+            add(TempStorage.INTERNAL to internalFree)
+            // Only offered when an SD card / USB drive with an app folder is plugged in.
+            if (removableRoot != null || tempChoice == TempStorage.REMOVABLE)
+                add(TempStorage.REMOVABLE to removableFree)
+        }
+        AlertDialog(
+            onDismissRequest = { showTempLocationDialog = false },
+            icon = { Icon(Icons.Outlined.Storage, contentDescription = null) },
+            title = { Text(stringResource(R.string.temp_location)) },
+            text = {
+                Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                    options.forEach { (option, free) ->
+                        PreferenceSingleChoiceItem(
+                            text =
+                                tempChoiceLabel(option) +
+                                    (free?.let {
+                                        " (" +
+                                            context.getString(
+                                                R.string.temp_free,
+                                                StorageGuard.formatSize(context, it),
+                                            ) +
+                                            ")"
+                                    } ?: ""),
+                            selected = tempChoice == option,
+                        ) {
+                            tempChoice = option
+                            PreferenceUtil.encodeInt(TEMP_LOCATION, option)
+                            showTempLocationDialog = false
+                        }
+                    }
+                    Text(
+                        text = stringResource(R.string.temp_location_help),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showTempLocationDialog = false }) {
+                    Text(stringResource(R.string.cancel))
+                }
+            },
+        )
     }
 
     if (showStorageLimitDialog) {
@@ -373,13 +431,18 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
                 )
             }
             item {
-                // Recomputed when the drive option or folder changes.
-                val status = remember(sdcardDownload, sdcardUri) { StorageGuard.statusText(context) }
+                // Recomputed when the drive option, folder or choice changes.
+                val status =
+                    remember(sdcardDownload, sdcardUri, tempChoice) {
+                        StorageGuard.statusText(context)
+                    }
                 PreferenceItem(
-                    title = stringResource(R.string.storage_status),
-                    description = status,
+                    title = stringResource(R.string.temp_location),
+                    description = tempChoiceLabel(tempChoice) + "\n" + status,
                     icon = Icons.Outlined.Storage,
-                )
+                ) {
+                    showTempLocationDialog = true
+                }
             }
             item {
                 PreferenceItem(
@@ -470,17 +533,21 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
                 ConfirmButton {
                     showClearTempDialog = false
                     scope.launch(Dispatchers.IO) {
-                        FileUtil.clearTempFiles(context.getConfigDirectory())
-                        val count =
-                            FileUtil.run {
-                                clearTempFiles(getExternalTempDir()) +
-                                    clearTempFiles(context.getSdcardTempDir(null)) +
-                                    clearTempFiles(context.getInternalTempDir())
+                        // Only while nothing is downloading, so no running download loses files.
+                        var count = 0
+                        val done =
+                            YtdlpUpdateManager.runWhenNoDownloads {
+                                FileUtil.clearTempFiles(context.getConfigDirectory())
+                                count =
+                                    TempStorage.clearAll(context) +
+                                        FileUtil.clearTempFiles(context.getInternalTempDir())
                             }
 
                         withContext(Dispatchers.Main) {
                             snackbarHostState.showSnackbar(
-                                context.getString(R.string.clear_temp_files_count).format(count)
+                                if (done)
+                                    context.getString(R.string.clear_temp_files_count).format(count)
+                                else context.getString(R.string.quick_wipe_busy)
                             )
                         }
                     }
@@ -678,3 +745,13 @@ fun OutputTemplateDialog(
         },
     )
 }
+
+@Composable
+private fun tempChoiceLabel(choice: Int): String =
+    stringResource(
+        when (choice) {
+            TempStorage.INTERNAL -> R.string.temp_location_internal
+            TempStorage.REMOVABLE -> R.string.temp_location_removable
+            else -> R.string.temp_location_same
+        }
+    )

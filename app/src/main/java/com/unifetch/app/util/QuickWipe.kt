@@ -43,6 +43,8 @@ object QuickWipe {
                     clearThumbnailCache(appContext)
                     clearFolderContents(appContext.cacheDir, keep = THUMBNAIL_CACHE_FOLDER)
                     appContext.externalCacheDir?.let { clearFolderContents(it) }
+                    // Leftover temporary download files, wherever they are (spec 4c).
+                    TempStorage.clearAll(appContext)
                     // Leave an empty cookies file, as the app does on a fresh start.
                     runCatching {
                         DownloadUtil.getCookiesContentFromDatabase().getOrNull()?.let {
