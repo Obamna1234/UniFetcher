@@ -86,6 +86,7 @@ import com.unifetch.app.util.CUSTOM_COMMAND
 import com.unifetch.app.util.DEBUG
 import com.unifetch.app.util.DISABLE_PREVIEW
 import com.unifetch.app.util.DOWNLOAD_ARCHIVE
+import com.unifetch.app.util.SKIP_DUPLICATES
 import com.unifetch.app.util.FileUtil.getArchiveFile
 import com.unifetch.app.util.NOTIFICATION
 import com.unifetch.app.util.NotificationUtil
@@ -334,6 +335,7 @@ fun GeneralDownloadPreferences(onNavigateBack: () -> Unit, navigateToTemplate: (
                         onClick = {
                             isPreviewDisabled = !isPreviewDisabled
                             PreferenceUtil.updateValue(DISABLE_PREVIEW, isPreviewDisabled)
+                            PreferenceUtil.previewDisabled.value = isPreviewDisabled
                         },
                     )
                 }
@@ -353,6 +355,19 @@ fun GeneralDownloadPreferences(onNavigateBack: () -> Unit, navigateToTemplate: (
                     )
                 }
 
+                item {
+                    var skipDuplicates by remember { mutableStateOf(SKIP_DUPLICATES.getBoolean()) }
+                    PreferenceSwitch(
+                        title = stringResource(R.string.skip_duplicates),
+                        description = stringResource(R.string.skip_duplicates_desc),
+                        icon = Icons.Outlined.Archive,
+                        isChecked = skipDuplicates,
+                        onClick = {
+                            skipDuplicates = !skipDuplicates
+                            SKIP_DUPLICATES.updateBoolean(skipDuplicates)
+                        },
+                    )
+                }
                 item {
                     PreferenceSwitchWithDivider(
                         title = stringResource(id = R.string.download_archive),

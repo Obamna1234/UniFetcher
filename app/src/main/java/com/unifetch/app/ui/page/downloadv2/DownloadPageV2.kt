@@ -54,6 +54,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.collectAsState
+import com.unifetch.app.util.PreferenceUtil
 import com.unifetch.app.util.StorageGuard
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
@@ -343,6 +344,8 @@ fun DownloadPageImplV2(
 ) {
     var activeFilter by remember { mutableStateOf(Filter.All) }
     val storagePaused by StorageGuard.paused.collectAsState()
+    // "Disable preview" setting: hide thumbnails on download cards.
+    val previewDisabled by PreferenceUtil.previewDisabled.collectAsState()
     val filteredMap by
         remember(activeFilter) {
             derivedStateOf { taskDownloadStateMap.filter { activeFilter.predict(it.toPair()) } }
@@ -484,7 +487,7 @@ fun DownloadPageImplV2(
                             with(state.viewState) {
                                 VideoCardV2(
                                     modifier = Modifier.padding(bottom = 20.dp).padding(),
-                                    viewState = this,
+                                    viewState = if (previewDisabled) copy(thumbnailUrl = null) else this,
                                     actionButton = {
                                         ActionButton(
                                             modifier = Modifier,
@@ -512,7 +515,9 @@ fun DownloadPageImplV2(
                         ) { (task, state) ->
                             VideoListItem(
                                 modifier = Modifier.padding(bottom = 16.dp),
-                                viewState = state.viewState,
+                                viewState =
+                                    if (previewDisabled) state.viewState.copy(thumbnailUrl = null)
+                                    else state.viewState,
                                 stateIndicator = {
                                     ListItemStateText(
                                         modifier = Modifier.padding(top = 3.dp),

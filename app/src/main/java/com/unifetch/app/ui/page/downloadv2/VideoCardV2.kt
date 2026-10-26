@@ -492,15 +492,16 @@ private fun CardItemStateText(modifier: Modifier = Modifier, downloadState: Task
     val textStyle = MaterialTheme.typography.labelSmall
     val contentColor = Color.White
 
+    val context = LocalContext.current
     val text =
         when (downloadState) {
-            is Canceled -> R.string.status_canceled
-            is Completed -> R.string.status_downloaded
-            is Error -> R.string.status_error
-            is FetchingInfo -> R.string.status_fetching_video_info
-            Idle -> R.string.status_enqueued
-            ReadyWithInfo -> R.string.status_enqueued
-            is Running -> R.string.status_downloading
+            is Canceled -> stringResource(R.string.status_canceled)
+            is Completed -> stringResource(R.string.status_downloaded)
+            is Error -> downloadState.throwable.failureReason().label(context)
+            is FetchingInfo -> stringResource(R.string.status_fetching_video_info)
+            Idle -> stringResource(R.string.status_enqueued)
+            ReadyWithInfo -> stringResource(R.string.status_enqueued)
+            is Running -> stringResource(R.string.status_downloading)
         }
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
         if (downloadState is Error) {
@@ -512,12 +513,7 @@ private fun CardItemStateText(modifier: Modifier = Modifier, downloadState: Task
             )
             Spacer(Modifier.width(4.dp))
         }
-        Text(
-            text = stringResource(id = text),
-            modifier = Modifier,
-            style = textStyle,
-            color = contentColor,
-        )
+        Text(text = text, modifier = Modifier, style = textStyle, color = contentColor)
     }
 }
 
