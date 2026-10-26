@@ -97,6 +97,8 @@ data class Task(
         data class Error(
             @Transient val throwable: Throwable = Throwable(),
             override val action: RestartableAction,
+            /** The [com.unifetch.app.util.FailureReason] name, kept when the app restarts. */
+            val reason: String? = null,
         ) : DownloadState, Restartable
 
         @Serializable data class Completed(val filePath: String?) : DownloadState

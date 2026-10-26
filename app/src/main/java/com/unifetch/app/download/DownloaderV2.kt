@@ -20,6 +20,8 @@ import com.unifetch.app.download.Task.RestartableAction.Download
 import com.unifetch.app.download.Task.RestartableAction.FetchInfo
 import com.unifetch.app.download.Task.TypeInfo
 import com.unifetch.app.util.DuplicateCheck
+import com.unifetch.app.util.FailureReason
+import com.unifetch.app.util.failureReason
 import com.unifetch.app.util.SiteSessions
 import com.unifetch.app.util.StorageGuard
 import com.unifetch.app.util.TempStorage
@@ -47,6 +49,25 @@ import org.koin.core.component.KoinComponent
 private const val TAG = "DownloaderV2"
 
 private const val MAX_CONCURRENCY = 3
+
+/** A failed state that remembers its plain reason, even after the app restarts. */
+private fun errorOf(throwable: Throwable, action: Task.RestartableAction) =
+    Error(throwable = throwable, action = action, reason = throwable.failureReason().name)
+
+/** The plain reason a download failed (spec 4e). */
+fun Error.failureReason(): FailureReason =
+    reason?.let { name -> runCatching { FailureReason.valueOf(name) }.getOrNull() }
+        ?: throwable.failureReason()
+
+/** Failures only the user can fix (a human check or a login), shown under "Needs you". */
+private val USER_REASONS =
+    setOf(
+        FailureReason.BLOCKED_BY_SECURITY,
+        FailureReason.NEEDS_LOGIN,
+        FailureReason.SESSION_REJECTED,
+    )
+
+fun DownloadState.needsUser(): Boolean = this is Error && failureReason() in USER_REASONS
 
 interface DownloaderV2 {
     fun getTaskStateMap(): SnapshotStateMap<Task, Task.State>
@@ -97,7 +118,11 @@ interface DownloaderV2 {
 
     /** Puts every failed download back in the queue. @return how many */
     fun retryFailed(): Int =
-        tasksWhere { it is Error && it.throwable !is DuplicateCheck.AlreadyDownloadedException }
+        tasksWhere {
+                it is Error &&
+                    it.failureReason() != FailureReason.ALREADY_DOWNLOADED &&
+                    !it.needsUser()
+            }
             .count { task -> runCatching { restart(task) }.isSuccess }
 
     /** Resumes every stopped download. @return how many */
@@ -155,6 +180,14 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                 .map { it.countRunning() }
                 .distinctUntilChanged()
                 .collect { if (it > 0) App.startService() else App.stopService() }
+        }
+
+        // "Needs you" notification: how many downloads wait for a human check or login.
+        scope.launch(Dispatchers.Default) {
+            snapshotFlow
+                .map { map -> map.values.count { it.downloadState.needsUser() } }
+                .distinctUntilChanged()
+                .collect { NotificationUtil.updateNeedsYou(it) }
         }
 
         // While paused for storage, check every 30 seconds and carry on once space is freed.
@@ -337,8 +370,9 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                         if (throwable is YoutubeDL.CanceledException) {
                             return@onFailure
                         }
-                        task.downloadState = Error(throwable = throwable, action = FetchInfo)
-                        NotificationUtil.notifyError(
+                        task.downloadState = errorOf(throwable, FetchInfo)
+                        // Waiting for the user: covered by the single "Needs you" notification.
+                        if (!task.downloadState.needsUser()) NotificationUtil.notifyError(
                             title = viewState.title,
                             textId = R.string.download_error_msg,
                             notificationId = notificationId,
@@ -361,12 +395,12 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
         } else if (DuplicateCheck.isEnabled() && DuplicateCheck.isAlreadyDownloaded(info!!)) {
             flaggedDuplicates += id
             downloadState =
-                Error(throwable = DuplicateCheck.AlreadyDownloadedException(), action = Download)
+                errorOf(DuplicateCheck.AlreadyDownloadedException(), Download)
             return
         }
         // Spec 4c: when the size is known, check there's room for the temporary files first.
         StorageGuard.checkRoomFor(info!!)?.let { message ->
-            downloadState = Error(throwable = IOException(message), action = Download)
+            downloadState = errorOf(IOException(message), Download)
             return
         }
         scope
@@ -428,8 +462,8 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                         if (throwable is YoutubeDL.CanceledException) {
                             return@onFailure
                         }
-                        downloadState = Error(throwable = throwable, action = Download)
-                        NotificationUtil.notifyError(
+                        downloadState = errorOf(throwable, Download)
+                        if (!downloadState.needsUser()) NotificationUtil.notifyError(
                             title = viewState.title,
                             textId = R.string.fetch_info_error_msg,
                             notificationId = notificationId,
@@ -518,8 +552,8 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                         if (throwable is YoutubeDL.CanceledException) {
                             return@onFailure
                         }
-                        downloadState = Error(throwable = throwable, action = Download)
-                        NotificationUtil.notifyError(
+                        downloadState = errorOf(throwable, Download)
+                        if (!downloadState.needsUser()) NotificationUtil.notifyError(
                             title = viewState.title,
                             textId = R.string.fetch_info_error_msg,
                             notificationId = notificationId,

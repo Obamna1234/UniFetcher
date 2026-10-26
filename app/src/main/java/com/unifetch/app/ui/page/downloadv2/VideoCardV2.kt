@@ -61,7 +61,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
 import com.unifetch.app.R
-import com.unifetch.app.util.failureReason
+import com.unifetch.app.download.failureReason
 import com.unifetch.app.util.label
 import com.unifetch.app.download.Task
 import com.unifetch.app.download.Task.DownloadState.Canceled
@@ -416,7 +416,7 @@ fun ListItemStateText(
                 is Canceled -> stringResource(R.string.status_canceled)
                 is Completed -> stringResource(R.string.status_downloaded)
                 // One plain-language reason instead of just "Error" (spec 4e).
-                is Error -> downloadState.throwable.failureReason().label(LocalContext.current)
+                is Error -> downloadState.failureReason().label(LocalContext.current)
                 is FetchingInfo -> stringResource(R.string.status_fetching_video_info)
                 Idle -> stringResource(R.string.status_enqueued)
                 ReadyWithInfo -> stringResource(R.string.status_enqueued)
@@ -497,7 +497,7 @@ private fun CardItemStateText(modifier: Modifier = Modifier, downloadState: Task
         when (downloadState) {
             is Canceled -> stringResource(R.string.status_canceled)
             is Completed -> stringResource(R.string.status_downloaded)
-            is Error -> downloadState.throwable.failureReason().label(context)
+            is Error -> downloadState.failureReason().label(context)
             is FetchingInfo -> stringResource(R.string.status_fetching_video_info)
             Idle -> stringResource(R.string.status_enqueued)
             ReadyWithInfo -> stringResource(R.string.status_enqueued)
