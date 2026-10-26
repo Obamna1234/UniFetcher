@@ -20,6 +20,8 @@ import com.unifetch.app.download.Task.RestartableAction.Download
 import com.unifetch.app.download.Task.RestartableAction.FetchInfo
 import com.unifetch.app.download.Task.TypeInfo
 import com.unifetch.app.util.StorageGuard
+import com.unifetch.app.util.TempStorage
+import java.io.IOException
 import com.unifetch.app.util.DownloadUtil
 import com.unifetch.app.util.FileUtil
 import com.unifetch.app.util.NotificationUtil
@@ -222,7 +224,10 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
      */
     override fun remove(task: Task): Boolean {
         if (taskStateMap.contains(task)) {
+            val videoId = taskStateMap[task]?.videoInfo?.id
             taskStateMap.remove(task)
+            // Removed for good: delete its leftover temporary files (spec 4c).
+            scope.launch(Dispatchers.IO) { TempStorage.deleteTaskTemp(videoId) }
             return true
         }
         return false
@@ -336,6 +341,11 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
         check(downloadState == ReadyWithInfo && info != null)
         if (type is TypeInfo.CustomCommand) {
             execute()
+            return
+        }
+        // Spec 4c: when the size is known, check there's room for the temporary files first.
+        StorageGuard.checkRoomFor(info!!)?.let { message ->
+            downloadState = Error(throwable = IOException(message), action = Download)
             return
         }
         scope

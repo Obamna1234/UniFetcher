@@ -803,6 +803,8 @@ enum class BulkAction(
 
 @Composable
 private fun StorageLowBanner() {
+    val context = LocalContext.current
+    val reason by StorageGuard.reason.collectAsState()
     Surface(
         modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
         shape = MaterialTheme.shapes.medium,
@@ -810,12 +812,12 @@ private fun StorageLowBanner() {
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
-                text = stringResource(R.string.storage_low_title),
+                text = StorageGuard.titleFor(context, reason),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.onErrorContainer,
             )
             Text(
-                text = StorageGuard.lowMessage(LocalContext.current),
+                text = StorageGuard.messageFor(context, reason),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onErrorContainer,
                 modifier = Modifier.padding(top = 4.dp),
