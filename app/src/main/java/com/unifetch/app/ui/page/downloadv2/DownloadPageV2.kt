@@ -441,18 +441,16 @@ fun DownloadPageImplV2(
                                 .padding(horizontal = 20.dp)
                     ) {
                         Filter.entries.forEach { filter ->
-                            // "Action needed" stands out in the error colour while anything waits.
+                            // "Action needed" stands out in orange while anything waits.
                             val highlight = filter == Filter.NeedsYou && needsYouSites.isNotEmpty()
                             SelectionGroupItem(
                                 colors =
                                     if (highlight)
                                         SelectionGroupDefaults.colors(
-                                            activeContainerColor = MaterialTheme.colorScheme.error,
-                                            activeContentColor = MaterialTheme.colorScheme.onError,
-                                            inactiveContainerColor =
-                                                MaterialTheme.colorScheme.errorContainer,
-                                            inactiveContentColor =
-                                                MaterialTheme.colorScheme.onErrorContainer,
+                                            activeContainerColor = ActionColors.accent(),
+                                            activeContentColor = ActionColors.onAccent(),
+                                            inactiveContainerColor = ActionColors.container(),
+                                            inactiveContentColor = ActionColors.onContainer(),
                                         )
                                     else
                                         SelectionGroupDefaults.colors(
@@ -999,8 +997,8 @@ private fun NeedsYouBanner(videoCount: Int, siteCount: Int, onView: () -> Unit) 
     Surface(
         modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
         shape = MaterialTheme.shapes.medium,
-        color = MaterialTheme.colorScheme.errorContainer,
-        border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.error),
+        color = ActionColors.container(),
+        border = BorderStroke(1.5.dp, ActionColors.accent()),
         onClick = onView,
     ) {
         Row(
@@ -1010,7 +1008,7 @@ private fun NeedsYouBanner(videoCount: Int, siteCount: Int, onView: () -> Unit) 
             Icon(
                 imageVector = Icons.Rounded.Warning,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.error,
+                tint = ActionColors.accent(),
                 modifier = Modifier.padding(end = 12.dp),
             )
             Column(modifier = Modifier.weight(1f)) {
@@ -1020,12 +1018,12 @@ private fun NeedsYouBanner(videoCount: Int, siteCount: Int, onView: () -> Unit) 
                             " · " +
                             pluralStringResource(R.plurals.needs_you_sites, siteCount, siteCount),
                     style = MaterialTheme.typography.titleSmall,
-                    color = MaterialTheme.colorScheme.onErrorContainer,
+                    color = ActionColors.onContainer(),
                 )
                 Text(
                     text = stringResource(R.string.needs_you_banner_desc),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onErrorContainer,
+                    color = ActionColors.onContainer(),
                     modifier = Modifier.padding(top = 4.dp),
                 )
             }
@@ -1082,17 +1080,38 @@ private fun NeedsYouSiteList(
 }
 
 /**
- * Quick overview colour for a download (spec 4a, 4e): red when it needs the user's action, grey
- * when it was cancelled or failed, none otherwise (including "Already downloaded" skips).
+ * Quick overview colour for a download (spec 4a, 4e): orange when it needs the user's action,
+ * red when it failed, grey when the user cancelled it, none otherwise (including "Already
+ * downloaded" skips).
  */
 @Composable
 private fun Task.DownloadState.statusBorderColor(): Color? =
     when {
-        needsUser() -> MaterialTheme.colorScheme.error
+        needsUser() -> ActionColors.accent()
         this is Error && failureReason() == FailureReason.ALREADY_DOWNLOADED -> null
-        this is Error || this is Task.DownloadState.Canceled -> MaterialTheme.colorScheme.outline
+        this is Error -> MaterialTheme.colorScheme.error
+        this is Task.DownloadState.Canceled -> MaterialTheme.colorScheme.outline
         else -> null
     }
+
+/** Orange "action needed" colours, readable in light and dark themes. */
+private object ActionColors {
+    @Composable
+    fun accent(): Color =
+        if (LocalDarkTheme.current.isDarkTheme()) Color(0xFFFFB74D) else Color(0xFFE67E00)
+
+    @Composable
+    fun onAccent(): Color =
+        if (LocalDarkTheme.current.isDarkTheme()) Color(0xFF3D2200) else Color.White
+
+    @Composable
+    fun container(): Color =
+        if (LocalDarkTheme.current.isDarkTheme()) Color(0xFF4A2E00) else Color(0xFFFFE6C2)
+
+    @Composable
+    fun onContainer(): Color =
+        if (LocalDarkTheme.current.isDarkTheme()) Color(0xFFFFDDB3) else Color(0xFF4A2800)
+}
 
 private fun Modifier.statusBorder(color: Color?, shape: Shape, innerPadding: Dp = 0.dp): Modifier =
     if (color == null) this else border(2.dp, color, shape).padding(innerPadding)
