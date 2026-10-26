@@ -56,7 +56,20 @@ jobs:
           UNIFETCH_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
           UNIFETCH_KEY_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
           UNIFETCH_KEY_PASSWORD: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
-        run: ./gradlew assembleGenericDebug testGenericDebugUnitTest --stacktrace
+        run: |
+          set -o pipefail
+          ./gradlew assembleGenericDebug testGenericDebugUnitTest --stacktrace 2>&1 | tee build.log
+
+      # If the build fails, show the compiler and test errors on the run's summary page.
+      - name: Show build errors
+        if: failure()
+        run: |
+          errors="$(grep -E '^e: |error:|FAILED|What went wrong|> Task .* FAILED|Exception' build.log | grep -v 'Exception: \s*$' | head -n 40 | cut -c1-300)"
+          [ -z "$errors" ] && errors="$(tail -n 40 build.log | cut -c1-300)"
+          errors="${errors//'%'/'%25'}"
+          errors="${errors//$'\r'/}"
+          errors="${errors//$'\n'/'%0A'}"
+          echo "::error title=Build errors::$errors"
 
       - name: Remove signing key
         if: always()

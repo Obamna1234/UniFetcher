@@ -257,7 +257,7 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
         val internalFree = remember { StorageGuard.freeBytesAt(TempStorage.internalRoot()) }
         val removableRoot = remember { TempStorage.removableRoot(context) }
         val removableFree = remember { removableRoot?.let { StorageGuard.freeBytesAt(it) } }
-        val options = buildList {
+        val options = buildList<Pair<Int, Long?>> {
             add(TempStorage.SAME_AS_DOWNLOADS to null)
             add(TempStorage.INTERNAL to internalFree)
             // Only offered when an SD card / USB drive with an app folder is plugged in.
