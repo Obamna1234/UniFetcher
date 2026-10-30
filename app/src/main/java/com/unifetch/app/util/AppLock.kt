@@ -15,6 +15,7 @@ import com.unifetch.app.util.PreferenceUtil.getLong
 import com.unifetch.app.util.PreferenceUtil.getString
 import com.unifetch.app.util.PreferenceUtil.updateBoolean
 import com.unifetch.app.util.PreferenceUtil.updateInt
+import com.unifetch.app.util.PreferenceUtil.updateLong
 import com.unifetch.app.util.PreferenceUtil.updateString
 import java.security.MessageDigest
 import java.security.SecureRandom
@@ -42,6 +43,7 @@ object AppLock {
 
     private const val MAX_ATTEMPTS = 5
     private const val LOCKOUT_MS = 30_000L
+    private const val MAX_LOCKOUT_MS = 30 * 60_000L
     private const val ITERATIONS = 60_000
     private const val KEY_LENGTH_BITS = 256
 
@@ -53,12 +55,18 @@ object AppLock {
 
     private var startedActivities = 0
     private var backgroundSince = 0L
-    private var failedAttempts = 0
+    // Wrong tries and the lockout are saved, so closing and reopening the app doesn't give fresh tries.
+    private var failedAttempts: Int
+        get() = APP_LOCK_FAILED.getInt(0)
+        set(value) { APP_LOCK_FAILED.updateInt(value) }
     private var lockScreenOpen = false
 
     /** While set, wrong attempts are ignored until this time. */
-    var lockedOutUntil = 0L
-        private set
+    val lockedOutUntil: Long
+        get() = APP_LOCK_LOCKED_UNTIL.getLong(0L).let { until ->
+            // A clock moved far back (or a bad value) never locks you out for longer than the longest lockout.
+            if (until - System.currentTimeMillis() > MAX_LOCKOUT_MS) 0L else until
+        }
 
     fun type(): Int = APP_LOCK_TYPE.getInt()
 
@@ -83,13 +91,17 @@ object AppLock {
         val actual = hash(secret, salt, APP_LOCK_ALGORITHM.getString())
         val ok = MessageDigest.isEqual(expected.toByteArray(), actual.toByteArray())
         if (ok) {
-            failedAttempts = 0
+            resetAttempts()
             mutableLocked.value = false
         } else {
             failedAttempts++
             if (failedAttempts >= MAX_ATTEMPTS) {
                 failedAttempts = 0
-                lockedOutUntil = System.currentTimeMillis() + LOCKOUT_MS
+                // 30 s, then 1, 2, 4... minutes (at most 30) for each further round of wrong tries.
+                val lockouts = APP_LOCK_LOCKOUTS.getInt(0)
+                APP_LOCK_LOCKOUTS.updateInt(lockouts + 1)
+                val wait = (LOCKOUT_MS shl lockouts.coerceAtMost(6)).coerceAtMost(MAX_LOCKOUT_MS)
+                APP_LOCK_LOCKED_UNTIL.updateLong(System.currentTimeMillis() + wait)
             }
         }
         return ok
@@ -97,8 +109,14 @@ object AppLock {
 
     /** Called after a successful fingerprint check. */
     fun unlockWithBiometric() {
-        failedAttempts = 0
+        resetAttempts()
         mutableLocked.value = false
+    }
+
+    private fun resetAttempts() {
+        failedAttempts = 0
+        APP_LOCK_LOCKOUTS.updateInt(0)
+        APP_LOCK_LOCKED_UNTIL.updateLong(0L)
     }
 
     /** Saves a new PIN or pattern. Slow on purpose: call off the main thread. */
@@ -116,6 +134,7 @@ object AppLock {
     }
 
     fun disable() {
+        resetAttempts()
         APP_LOCK_TYPE.updateInt(TYPE_NONE)
         APP_LOCK_HASH.updateString("")
         APP_LOCK_SALT.updateString("")

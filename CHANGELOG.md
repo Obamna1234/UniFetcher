@@ -2,6 +2,14 @@
 
 All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed here, newest first. Version numbers follow [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+
+- **App lock: wrong tries are remembered.** Closing and reopening UniFetcher no longer gives a fresh set of PIN or
+  pattern tries, and each further round of 5 wrong tries waits longer (30 s, then 1, 2, 4… minutes, at most 30).
+  A correct PIN, fingerprint or turning the lock off resets it. (From the October 2026 security review done in
+  the Sevbify project: the rest of UniFetcher was fine: PIN stored only as a salted PBKDF2 hash, backups off,
+  signing key in GitHub secrets, yt-dlp updates only from the official releases.)
+
 ## v0.1.9 - 2026-10-26
 
 - **New "Action needed" tab** on the download screen for sites that want a "verify you are human" check or a login. Tap **Open**, do the check yourself, tap **Done**, and that site's videos retry automatically. Everything else keeps downloading, one notification tells you, and the videos wait as long as needed (even if the app is closed)
