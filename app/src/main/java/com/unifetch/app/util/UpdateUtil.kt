@@ -98,10 +98,57 @@ object UpdateUtil {
 
     private fun Context.getLatestApk() = File(getExternalFilesDir("apk"), "latest.apk")
 
+    /**
+     * Compares the signing certificate(s) of a downloaded APK against the signing
+     * certificate(s) of the currently installed app.
+     *
+     * Returns true when they provably match, false when they provably differ, and null
+     * when it cannot be determined (e.g. the archive can't be read on this device/API).
+     * Callers treat null as "proceed" so a legitimate update is never blocked by this
+     * check — Android's package installer still enforces same-signer on update as the
+     * backstop. A definite mismatch (false) is the only case we refuse.
+     */
+    private fun Context.apkSignerMatchesInstalled(apkPath: String): Boolean? =
+        runCatching {
+            val pm = packageManager
+            fun PackageManager.signatures(archivePath: String?): Set<String>? {
+                val info =
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                        val flags = PackageManager.GET_SIGNING_CERTIFICATES
+                        if (archivePath != null) getPackageArchiveInfo(archivePath, flags)
+                        else getPackageInfo(packageName, flags)
+                    } else {
+                        @Suppress("DEPRECATION") val flags = PackageManager.GET_SIGNATURES
+                        if (archivePath != null) getPackageArchiveInfo(archivePath, flags)
+                        else getPackageInfo(packageName, flags)
+                    } ?: return null
+                val sigs =
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                        val si = info.signingInfo ?: return null
+                        (if (si.hasMultipleSigners()) si.apkContentsSigners
+                        else si.signingCertificateHistory) ?: return null
+                    } else {
+                        @Suppress("DEPRECATION") val s = info.signatures
+                        s ?: return null
+                    }
+                return sigs.map { it.toCharsString() }.toSet().ifEmpty { null }
+            }
+
+            val installed = pm.signatures(null) ?: return@runCatching null
+            val downloaded = pm.signatures(apkPath) ?: return@runCatching null
+            // Match if the two sets intersect (covers key-rotation history).
+            installed.any { it in downloaded }
+        }.getOrNull()
+
     fun installLatestApk(context: Context = App.context) =
         context.run {
             kotlin
                 .runCatching {
+                    if (apkSignerMatchesInstalled(getLatestApk().absolutePath) == false) {
+                        Log.e(TAG, "Refusing to install update: APK signer does not match installed app")
+                        ToastUtil.makeToast(R.string.app_update_failed)
+                        return@runCatching
+                    }
                     val contentUri =
                         FileProvider.getUriForFile(this, getFileProvider(), getLatestApk())
                     val intent =
