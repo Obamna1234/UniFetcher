@@ -1,0 +1,52 @@
+name: Key backup (one-off)
+on:
+  push:
+    branches: ["keys-backup"]
+permissions:
+  contents: read
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check passphrase is set
+        env:
+          PASS: ${{ secrets.BACKUP_PASSPHRASE }}
+        run: |
+          [ -n "$PASS" ] || { echo "::error::Add a BACKUP_PASSPHRASE repo secret first."; exit 1; }
+      - name: Assemble backup
+        env:
+          B64: ${{ secrets.UNIFETCH_KEYSTORE_BASE64 }}
+          ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
+          SPW: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
+          KPW: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
+          AMO_ISS: ${{ secrets.AMO_JWT_ISSUER }}
+          AMO_SEC: ${{ secrets.AMO_JWT_SECRET }}
+        run: |
+          mkdir -p backup
+          printf '%s' "$B64" | base64 -d > backup/unifetch.jks
+          printf '%s\n' "$B64" > backup/unifetch.jks.b64
+          if [ ! -s backup/unifetch.jks ]; then echo "::error::UNIFETCH_KEYSTORE_BASE64 secret is empty or invalid."; exit 1; fi
+          {
+            echo "Repo: Obamna1234/UniFetcher   (Android signing key)"
+            echo "UNIFETCH_KEY_ALIAS=$ALIAS"
+            echo "UNIFETCH_KEYSTORE_PASSWORD=$SPW"
+            echo "UNIFETCH_KEY_PASSWORD=$KPW"
+            echo "UNIFETCH_KEYSTORE_BASE64 = the single line in unifetch.jks.b64"
+            echo ""
+            echo "AMO_JWT_ISSUER=$AMO_ISS   (optional - Firefox extension signing; blank = not set)"
+            echo "AMO_JWT_SECRET=$AMO_SEC   (optional; blank = not set)"
+          } > backup/values.txt
+          echo "keystore bytes: $(wc -c < backup/unifetch.jks)"
+      - name: Encrypt into password-locked .7z
+        env:
+          PASS: ${{ secrets.BACKUP_PASSPHRASE }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq p7zip-full
+          7z a -p"$PASS" -mhe=on unifetcher-key-backup.7z ./backup/* >/dev/null
+          echo "done"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unifetcher-key-backup
+          path: unifetcher-key-backup.7z
+          retention-days: 1
+          if-no-files-found: error
