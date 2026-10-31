@@ -1,0 +1,3263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-23 23:33-0400\n"
+"PO-Revision-Date: 2026-02-14 14:09+0000\n"
+"Last-Translator: Fjuro <fjuro@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/nickvision-tube-"
+"converter/app/cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16-dev\n"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:27
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:112
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:120
+msgid "Add Download"
+msgstr "Přidat stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:40
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:64
+msgid "Discover"
+msgstr "Objevit"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:50
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:68
+msgid "Media URL"
+msgstr "URL média"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:55
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:284
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:70
+msgid "Select Batch File"
+msgstr "Vyberte hromadný soubor"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:62
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:71
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:72
+msgid "Use Authentication"
+msgstr "Použít přihlášení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:67
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:73
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:67
+msgid "Credential"
+msgstr "Údaj"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:71
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:51
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:74
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:87
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:75
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:55
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:92
+msgid "Password"
+msgstr "Heslo"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:78
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:79
+#, fuzzy
+msgid "Download Immediately as Video"
+msgstr "Stáhnout okamžitě"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:81
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:86
+msgid ""
+"Media will be downloaded based off of previously configured options and "
+"sensible defaults. Options will not be shown"
+msgstr ""
+"Média budou stažena na základě dříve nastavených možností a smysluplných "
+"výchozích hodnot. Možnosti nebudou zobrazeny"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:81
+#, fuzzy
+msgid "Download Immediately as Audio"
+msgstr "Stáhnout okamžitě"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:171
+msgid "Discovering Media"
+msgstr "Hledání médií"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:84
+msgid "This may take some time..."
+msgstr "Toto může chvíli trvat…"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:111
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:304
+msgid "Configure"
+msgstr "Konfigurace"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:126
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:319
+#, fuzzy
+msgid "Search Subtitles"
+msgstr "Titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:132
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:150
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:325
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:343
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:230
+msgid "Download"
+msgstr "Stáhnout"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:160
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:353
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:11
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:25
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:111
+msgid "General"
+msgstr "Obecné"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:170
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:88
+msgid "File Name"
+msgstr "Název souboru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:176
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:440
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:89
+msgid "Revert to Title"
+msgstr "Vrátit na název"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:183
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:363
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:115
+msgid "Save Folder"
+msgstr "Složka k uložení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:190
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:370
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:511
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:563
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:116
+msgid "Select Save Folder"
+msgstr "Vybrat složku k uložení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:199
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:379
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:117
+msgid "File Type"
+msgstr "Typ souboru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:200
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:380
+msgid "Generic types do not support embedding thumbnails and subtitles."
+msgstr "Generické typy nepodporují vkládání miniatur a titulků."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:204
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:95
+msgid "Video Format"
+msgstr "Formát videa"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:208
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:96
+msgid "Audio Format"
+msgstr "Formát zvuku"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:215
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:439
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:113
+msgid "Subtitles"
+msgstr "Titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:224
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:448
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:101
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:135
+#, fuzzy
+msgid "Search subtitles"
+msgstr "Titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:237
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:461
+msgid "Available Subtitles"
+msgstr "Dostupné titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:245
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:420
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:470
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:133
+msgid "Deselect All"
+msgstr "Zrušit výběr"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:252
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:427
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:477
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:99
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:122
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:132
+msgid "Select All"
+msgstr "Vybrat vše"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:266
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:491
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:325
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:111
+msgid "Advanced"
+msgstr "Rozšířené"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:270
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:399
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:495
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:12
+msgid "Options"
+msgstr "Možnosti"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:273
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:502
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:103
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:139
+msgid "Split into Files by Chapters"
+msgstr "Rozdělit na soubory podle kapitol"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:277
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:506
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:104
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:140
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:141
+msgid "Export Description to File"
+msgstr "Exportovat popis do souboru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:281
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:510
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:142
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:143
+msgid "Exclude from History"
+msgstr "Odstranit z historie"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:285
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:514
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:108
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:144
+msgid "Post Processor Argument"
+msgstr "Argument postprocesoru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:286
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:515
+msgid "Arguments are configurable in Preferences"
+msgstr "Argumenty lze upravit v Předvolbách"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:290
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:19
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:109
+msgid "Start Time"
+msgstr "Čas začátku"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:294
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:20
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:110
+msgid "End Time"
+msgstr "Čas konce"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:384
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:120
+msgid "Suggested Video Resolution"
+msgstr "Navrhované rozlišení videa"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:121
+msgid "Suggested Audio Bitrate"
+msgstr "Navrhovaný datový tok zvuku"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:395
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:112
+msgid "Items"
+msgstr "Položky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:402
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:125
+msgid "Reverse Download Order"
+msgstr "Obrátit pořadí stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:406
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:126
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:127
+msgid "Number Titles"
+msgstr "Očíslovat názvy"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:407
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download"
+msgstr ""
+"Číslování bude použito na názvy vybraných položek v návaznosti na stažení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:412
+msgid "Available Items"
+msgstr "Dostupné položky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:462
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:134
+msgid ""
+"Note: Some playlist items may not contain subtitles for a selected language."
+msgstr ""
+"Upozornění: Některé položky playlistu nemusí obsahovat titulky pro zvolený "
+"jazyk."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:498
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:137
+msgid "Export M3U Playlist File"
+msgstr "Exportovat soubor playlistu M3U"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:70
+msgid "View Log"
+msgstr "Zobrazit protokol"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:87
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:196
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:168
+msgid "Pause"
+msgstr "Pozastavit"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:95
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:52
+msgid "Stop"
+msgstr "Zastavit"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:111
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:116
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:53
+msgid "Play"
+msgstr "Přehrát"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:119
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:54
+msgid "Open"
+msgstr "Otevřít"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:131
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:55
+msgid "Retry"
+msgstr "Zkusit znovu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:154
+msgid "Copy Log to Clipboard"
+msgstr "Kopírovat protokol do schránky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:41
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:6
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:38
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:89
+msgid "History"
+msgstr "Historie"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:15
+msgid "Sort By"
+msgstr "Seřadit podle"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:43
+msgid "Newest"
+msgstr "Nejnovější"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:44
+msgid "Oldest"
+msgstr "Nejstarší"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:36
+msgid "Save Length"
+msgstr "Délka k uložení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:42
+msgid "Clear All"
+msgstr "Vymazat vše"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:94
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:106
+msgid "Keyring"
+msgstr "Klíčenka"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:12
+msgid "Credentials"
+msgstr "Údaje"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:17
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:52
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:447
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:111
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:112
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:148
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:210
+msgid "Add"
+msgstr "Přidat"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:43
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:472
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:151
+msgid "Name"
+msgstr "Název"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:82
+msgid "URL"
+msgstr "Adresa URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/LoadingDialog.blp:5
+msgid "Loading"
+msgstr "Načítání"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:9
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:9
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:10
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:14
+msgid "Keyboard Shortcuts"
+msgstr "Klávesové zkratky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:11
+msgid "About Parabolic"
+msgstr "O aplikaci Parabolic"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:17
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:108
+msgid "Stop All Remaining"
+msgstr "Zastavit všechny zbývající"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:18
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:109
+msgid "Retry All Failed"
+msgstr "Opakovat všechny neúspěšné"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:110
+msgid "Clear All Queued"
+msgstr "Vymazat celou frontu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:23
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:111
+msgid "Clear All Completed"
+msgstr "Fronta úspěšně vymazána"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:61
+msgid "Main Menu"
+msgstr "Hlavní nabídka"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:70
+msgid "Updater"
+msgstr "Aktualizace"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:108
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:103
+msgid "Download Media"
+msgstr "Stáhnout média"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:109
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:104
+msgid "Add a video, audio, or playlist URL to start downloading"
+msgstr "Pro spuštění stahování přidejte adresu URL videa, zvuku nebo playlistu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:140
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:113
+msgid "All"
+msgstr "Vše"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:145
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:206
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:81
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:114
+msgid "Running"
+msgstr "Běží"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:150
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:107
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:115
+msgid "Queued"
+msgstr "Ve frontě"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:155
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:116
+msgid "Completed"
+msgstr "Dokončeno"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:160
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:117
+msgid "Failed"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:171
+msgid "Manage Download"
+msgstr "Spravovat stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:195
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:118
+msgid "No Downloads"
+msgstr "Žádná stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:196
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:119
+msgid "There are no downloads of this type"
+msgstr "Nejsou zde žádná stahování tohoto typu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:15
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:33
+msgid "User Interface"
+msgstr "Uživatelské rozhraní"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:18
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:37
+msgid "Theme"
+msgstr "Motiv"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:27
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:39
+msgid "Translation Language"
+msgstr "Jazyk překladu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:40
+msgid "An application restart is required for a change to take effect"
+msgstr "Pro provedení změn je vyžadován restart aplikace"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:37
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:42
+msgid "Receive Preview Updates"
+msgstr "Získávat předběžné aktualizace"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:38
+msgid "Update dependencies, such as yt-dlp, to beta versions"
+msgstr "Aktualizovat závislosti, například yt-dlp, na beta verze"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:46
+msgid "Prevent Suspend"
+msgstr "Zabránit uspání"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:47
+msgid "Prevent the computer from sleeping while downloads are running"
+msgstr ""
+"Zabránit počítači v přechodu do režimu spánku, pokud probíhají stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:57
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:50
+msgid "Download History Length"
+msgstr "Délka historie stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:58
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:51
+msgid "The amount of time to keep past downloads in the app's history"
+msgstr "Jak dlouho uchovat stažené položky v historii aplikace"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:34
+msgid "Downloads"
+msgstr "Stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:71
+msgid "Max Number of Running Downloads"
+msgstr "Maximální počet běžících stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:54
+msgid "Overwrite Existing Files"
+msgstr "Přepsat existující soubory"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:96
+msgid "Limit Filename Characters"
+msgstr "Omezení znaků v názvu souboru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:97
+msgid "Restrict characters in filenames to those supported only by Windows"
+msgstr ""
+"Omezit znaky v názvech souborů pouze na znaky podporované sytémem Windows"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:57
+msgid "Include Media Id in Title"
+msgstr "Přidat ID média do názvu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:58
+msgid "Add the media's id to its default title"
+msgstr "Vložit ID média do jeho výchozího názvu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:116
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:61
+msgid "Include Auto-Generated Subtitles"
+msgstr "Zahrnout automaticky generované titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:62
+msgid ""
+"Show auto-generated subtitles to download in addition to available subtitles"
+msgstr ""
+"Zobrazit automaticky generované titulky ke stažení společně s dostupnými "
+"titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:126
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:65
+msgid "Include Super Resolution Formats"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:66
+#, fuzzy
+msgid ""
+"Show super (AI-scaled) resolution formats to download in addition to regular "
+"formats"
+msgstr ""
+"Zobrazit automaticky generované titulky ke stažení společně s dostupnými "
+"titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:69
+msgid "Preferred Video Codec"
+msgstr "Preferovaný video kodek"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:137
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:70
+msgid ""
+"Prefer this codec when parsing video formats to show available to download"
+msgstr ""
+"Preferovat tento kodek při zpracování formátů videa k zobrazení dostupných "
+"ke stažení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:146
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:72
+msgid "Preferred Audio Codec"
+msgstr "Preferovaný zvukový kodek"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:147
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:73
+msgid ""
+"Prefer this codec when parsing audio formats to show available to download"
+msgstr ""
+"Preferovat tento kodek při zpracování formátů zvuku k zobrazení dostupných "
+"ke stažení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:156
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:75
+msgid "Preferred Subtitle Format"
+msgstr "Preferovaný formát titulků"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:157
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:76
+msgid "Prefer this subtitle file format when downloading"
+msgstr "Preferovat tento formát souborů titulků při stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:166
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:78
+#, fuzzy
+msgid "Preferred Frame Rate"
+msgstr "Preferovaný formát titulků"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:167
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:79
+#, fuzzy
+msgid ""
+"Prefer this frame rate when parsing video formats to show available to "
+"download"
+msgstr ""
+"Preferovat tento kodek při zpracování formátů videa k zobrazení dostupných "
+"ke stažení"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:178
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:182
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:35
+msgid "Downloader"
+msgstr "Služba stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:185
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:81
+msgid "Use Part Files"
+msgstr "Použít částečné soubory"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:186
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:82
+msgid ""
+"Download media in separate .part files instead of directly into the output "
+"file"
+msgstr ""
+"Stáhnout média do samostatných souborů .part namísto přímého stažení do "
+"výsledného souboru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:195
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:85
+msgid "Use SponsorBlock for YouTube"
+msgstr "Použít SponsorBlock pro YouTube"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:196
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:86
+msgid "Try to remove sponsored segments from videos"
+msgstr "Pokusit se odstranit sponzorské segmenty z videí"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:205
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:89
+msgid "Limit Download Speed"
+msgstr "Omezit rychlost stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:210
+msgid "Speed Limit (KiB/s)"
+msgstr "Omezení rychlosti (KiB/s)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:93
+msgid "Proxy URL"
+msgstr "URL proxy"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:237
+msgid "Cookies File"
+msgstr "Soubor cookies"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:248
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:268
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:99
+msgid "Select Cookies File"
+msgstr "Vybrat soubor s cookies"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:257
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:98
+msgid "Clear Cookies File"
+msgstr "Vymazat soubor s cookies"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:100
+msgid "Cookies from Browser"
+msgstr "Soubory cookie z prohlížeče"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:276
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:102
+msgid "aria2c"
+msgstr "aria2c"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:277
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:104
+msgid ""
+"An alternative downloader that may be faster in some regions compared to yt-"
+"dlp's native downloader"
+msgstr ""
+"Alternativní služba pro stahování, která může být v některých oblastech "
+"rychlejší oproti nativní službě yt-dlp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:280
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:103
+msgid "Use aria2c"
+msgstr "Použít aria2c"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:289
+msgid "Max Connections Per Server (-x)"
+msgstr "Max. počet připojení na server (-x)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:306
+msgid "Minimum Split Size (-k)"
+msgstr "Minimální velikost rozdělení (-k)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:307
+msgid "The minimum size of which to split a file (in MiB)"
+msgstr "Minimální velikost, na kterou rozdělit soubor (v MiB)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:326
+msgid "Specify extra arguments to pass to yt-dlp"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:329
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:112
+#, fuzzy
+msgid "yt-dlp Discovery Arguments"
+msgstr "Argumenty postprocesoru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:338
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:115
+#, fuzzy
+msgid "yt-dlp Download Arguments"
+msgstr "Stáhnout znovu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:349
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:353
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:36
+msgid "Converter"
+msgstr "Konvertor"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:356
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:118
+msgid "Translate Metadata and Chapters"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:119
+msgid ""
+"Automatically translate embedded metadata and chapters to the app's language "
+"on supported sites and media"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:366
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:122
+msgid "Embed Metadata"
+msgstr "Vložit metadata"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:376
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:125
+msgid "Remove Source Data"
+msgstr "Odebrat zdrojová data"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:377
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:126
+msgid "Clear metadata fields containing identifying download information"
+msgstr "Vymazat pole metadat obsahující identifikující informace o stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:387
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:129
+msgid "Embed Thumbnails"
+msgstr "Vkládat miniatury"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:130
+msgid ""
+"If the file type does not support embedding, the thumbnail will be written "
+"to a separate image file"
+msgstr ""
+"Pokud typ souboru nepodporuje vkládání, bude miniatura uložena do "
+"samostatného souboru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:398
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:133
+msgid "Crop Audio Thumbnails"
+msgstr "Oříznout miniatury zvuku"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:399
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:134
+msgid "Crop thumbnails of audio files to squares"
+msgstr "Oříznout miniatury zvukových souborů na čtverec"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:409
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:137
+msgid "Embed Chapters"
+msgstr "Vložit kapitoly"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:418
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:140
+msgid "Embed Subtitles"
+msgstr "Vložit titulky"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:419
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:141
+msgid ""
+"If disabled or if embedding is not supported, downloaded subtitles will be "
+"saved to separate files"
+msgstr ""
+"Pokud je zakázáno nebo pokud není vložení podporováno, budou stažené titulky "
+"uloženy do samostatných souborů"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:428
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:144
+msgid "FFmpeg Threads"
+msgstr "Vlákna FFmpeg"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:429
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:145
+msgid "Limit the number of threads used by ffmpeg"
+msgstr "Omezit počet vláken používaných službou ffmpeg"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:440
+msgid "Postprocessing Arguments"
+msgstr "Argumenty postprocesoru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:441
+msgid "Arguments will be shown for selection in the add download dialog"
+msgstr "Argumenty budou zobrazeny k výběru v dialogu přidání stahování"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:443
+msgid "Add Postprocessing Argument"
+msgstr "Přidat argument postprocesoru"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:457
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:149
+msgid "Argument"
+msgstr "Argument"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:476
+msgid "Post Processor"
+msgstr "Postprocesor"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:480
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:154
+msgid "Executable"
+msgstr "Spustitelný soubor"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:484
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:155
+msgid "Args"
+msgstr "Argumenty"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:6
+msgctxt "Shortcut"
+msgid "Application"
+msgstr "Aplikace"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:19
+msgid "About Application"
+msgstr "O aplikaci"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:24
+msgid "Quit"
+msgstr "Opustit"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:30
+msgid "Folder"
+msgstr "Složka"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:33
+msgid "Open Folder"
+msgstr "Otevřít složku"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:38
+msgid "Close Folder"
+msgstr "Zavřít složku"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:112
+msgid "Starting"
+msgstr "Spouštění"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:117
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:183
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:184
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:155
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:156
+msgid "Unknown"
+msgstr "Neznámý"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:139
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:139
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:315
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:325
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:109
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:226
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:289
+msgid "Error"
+msgstr "Chyba"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:147
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:116
+msgid "Success"
+msgstr "Úspěch"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:156
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:125
+msgid "Paused"
+msgstr "Pozastaveno"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:159
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:128
+msgid "Resume"
+msgstr "Pokračovat"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:173
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:141
+msgid "Processing"
+msgstr "Zpracovává se"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:177
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:147
+#, csharp-format
+msgid "Sleeping for {0}"
+msgstr "Čekání po dobu {0}"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:181
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:153
+#, csharp-format
+msgid "{0}% Complete • {1} • {2} Remaining"
+msgstr "Dokončeno {0} % • {1} • Zbývá {2}"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:213
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:184
+msgid "Stopped"
+msgstr "Zastaveno"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:286
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:270
+msgid "TXT Files (*.txt)"
+msgstr "Soubory TXT (*.txt)"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:378
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:478
+msgid "No Subtitles Available"
+msgstr "Nejsou dostupné žádné titulky"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:410
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:434
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:280
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:485
+#, fuzzy, csharp-format
+msgid "Total Duration: {0}"
+msgstr "Celková rychlost: {0}"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:463
+msgid "Properties"
+msgstr "Vlastnosti"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:59
+msgid "Clear All History?"
+msgstr "Vymazat celou historii?"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:60
+msgid ""
+"Are you sure you want to clear all download history? This action is "
+"irreversible"
+msgstr "Opravdu chcete vymazat celou historii stahování? Tato akce je nevratná"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:82
+msgid "Clear"
+msgstr "Vymazat"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:83
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:166
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:359
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:65
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:173
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:231
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:69
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:125
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:150
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:111
+msgid "Download Again"
+msgstr "Stáhnout znovu"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:122
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:82
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:165
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:230
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:358
+msgid "Delete"
+msgstr "Odstranit"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:129
+#, csharp-format
+msgid "Downloaded On: {0}"
+msgstr "Staženo: {0}"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:140
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:46
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:48
+msgid "No History"
+msgstr "Žádná historie"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:77
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:158
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:225
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:351
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:85
+msgid "Edit"
+msgstr "Upravit"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:97
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:52
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:54
+msgid "No Credentials"
+msgstr "Žádné údaje"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:140
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:326
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:291
+msgid "OK"
+msgstr "OK"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:144
+msgid "Delete Credential?"
+msgstr "Odstranit údaje?"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:145
+msgid ""
+"Are you sure you want to delete this credential? This action is irreversible"
+msgstr "Opravdu chcete odstranit tento údaj? Tato akce je nevratná"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:197
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:138
+msgid "Don't show this message again"
+msgstr "Tuto zprávu již nezobrazovat"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:142
+msgid "Legal Copyright Disclaimer"
+msgstr "Právní upozornění na autorská práva"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:151
+msgid ""
+"Videos on YouTube and other sites may be subject to DMCA protection. The "
+"authors of Parabolic do not endorse, and are not responsible for, the use of "
+"this application in means that will violate these laws."
+msgstr ""
+"Videa ve službě YouTube a na dalších webových stránkách mohou podléhat "
+"ochraně DMCA. Autoři aplikace Parabolic neschvalují a nenesou žádnou "
+"zodpovědnost za použití této aplikace způsoby, které by porušovaly tento "
+"zákon."
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:199
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:157
+msgid "I understand"
+msgstr "Rozumím"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:172
+msgid "Recover Downloads?"
+msgstr "Obnovit stahování?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:173
+msgid ""
+"There are downloads available to recover from when Parabolic crashed. Would "
+"you like to download them again?"
+msgstr ""
+"Jsou k dispozici stahování k obnovení před pádem aplikace Parabolic. Chcete "
+"se je pokusit znovu stáhnout?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:212
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:243
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:61
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:146
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:174
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:206
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:252
+msgid "Yes"
+msgstr "Ano"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:213
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:244
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:62
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:147
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:207
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:253
+msgid "No"
+msgstr "Ne"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:205
+msgid ""
+"There are downloads still in progress. Would you like to stop them and exit?"
+msgstr "Stále probíhají stahování. Chcete je zastavit a ukončit aplikaci?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:272
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:88
+msgid "View"
+msgstr "Zobrazit"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:282
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:248
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:254
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:273
+msgid "Update"
+msgstr "Aktualizovat"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:287
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:302
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:421
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:405
+#, csharp-format
+msgid "Downloading update: {0}%"
+msgstr "Stahování aktualizace: {0} %"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:312
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:260
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:317
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:39
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:277
+msgid "Close"
+msgstr "Zavřít"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:453
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:97
+msgid "GitHub Repo"
+msgstr "Repozitář GitHub"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:151
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:287
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:180
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:241
+msgid "No file selected"
+msgstr "Není vybrán žádný soubor"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:245
+msgid "No Arguments"
+msgstr "Žádné argumenty"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:250
+msgid "Delete Argument?"
+msgstr "Odstranit argument?"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:251
+msgid ""
+"Are you sure you want to delete this post-processor argument? This action is "
+"irreversible"
+msgstr ""
+"Opravdu chcete odstranit tento argument postprocesoru? Tato akce je nevratná"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:169
+msgid "An error occurred while adding playlist downloads"
+msgstr "Během přidávání stahování playlistu došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:244
+msgid "An error occurred while adding the single download"
+msgstr "Během přidávání stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:261
+msgid "No media was found at the provided URL"
+msgstr "Na zadané adrese nebyla nalezena žádná média"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:309
+#: Nickvision.Parabolic.Shared/Models/Format.cs:354
+#: Nickvision.Parabolic.Shared/Models/Format.cs:355
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:37
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:79
+msgid "Worst"
+msgstr "Nejhorší"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:310
+#: Nickvision.Parabolic.Shared/Models/Format.cs:352
+#: Nickvision.Parabolic.Shared/Models/Format.cs:353
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:33
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:75
+msgid "Best"
+msgstr "Nejlepší"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:335
+msgid "Video (Generic)"
+msgstr "Video (obecné)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:336
+msgid "MP4 (Video)"
+msgstr "MP4 (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:337
+msgid "WEBM (Video)"
+msgstr "WEBM (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:338
+msgid "MKV (Video)"
+msgstr "MKV (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:339
+msgid "MOV (Video)"
+msgstr "MOV (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:340
+msgid "AVI (Video)"
+msgstr "AVI (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:342
+msgid "Audio (Generic)"
+msgstr "Zvuk (obecný)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:343
+msgid "MP3 (Audio)"
+msgstr "MP3 (zvuk)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:344
+msgid "M4A (Audio)"
+msgstr "M4A (zvuk)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:345
+msgid "OPUS (Audio)"
+msgstr "OPUS (zvuk)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:346
+msgid "FLAC (Audio)"
+msgstr "FLAC (zvuk)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:347
+msgid "WAV (Audio)"
+msgstr "WAV (zvuk)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:348
+msgid "OGG (Audio)"
+msgstr "OGG (zvuk)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:381
+msgid "An error occurred while discovering media"
+msgstr "Během hledání médií došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:395
+msgid "Use manual credential"
+msgstr "Použít manuální údaje"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:414
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:60
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:75
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:105
+#: Nickvision.Parabolic.Shared/Models/Format.cs:356
+#: Nickvision.Parabolic.Shared/Models/Format.cs:357
+msgid "None"
+msgstr "Žádné"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:29
+msgid "A credential with that name already exists"
+msgstr "Údaj s tímto názvem již existuje"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:33
+msgid "The name of the credential cannot be empty"
+msgstr "Název údaje nesmí být prázdný"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:37
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:79
+msgid "Either the credential username or password must be set"
+msgstr "Musí být nastaveno buď uživatelské jméno nebo heslo údaje"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:75
+msgid "A credential with that name does not exist"
+msgstr "Údaj s tímto názvem neexistuje"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:61
+msgid "Parabolic"
+msgstr "Parabolic"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:62
+msgid "Download web video and audio."
+msgstr "Stáhnout webové video a zvuk."
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:63
+msgid "Matrix Chat"
+msgstr "Matrix chat"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:65
+msgid "Contributors on GitHub ❤️"
+msgstr "Přispěvatelé na GitHubu ❤️"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:67
+msgid "Fyodor Sobolev"
+msgstr "Fyodor Sobolev"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:69
+msgid "David Lapshin"
+msgstr "David Lapshin"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:70
+msgid "translation-credits"
+msgstr "Jonáš Loskot <jonas@jonasloskot.cz>"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:159
+#, csharp-format
+msgid "New {0} update available: {1}"
+msgstr "Je dostupná aktualizace aplikace {0}: {1}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:168
+#, csharp-format
+msgid "New yt-dlp update available: {0}"
+msgstr "Je dostupná aktualizace služby yt-dlp: {0}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:176
+#, fuzzy, csharp-format
+msgid "New deno update available: {0}"
+msgstr "Je dostupná aktualizace aplikace {0}: {1}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:186
+msgid "No update available"
+msgstr "Není dostupná žádná aktualizace"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:200
+msgid "An error occurred while clearing completed downloads"
+msgstr "Během mazání dokončených stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:218
+msgid "An error occurred while clearing recoverable downloads"
+msgstr "Během mazání obnovitelných stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:235
+msgid "An error occurred while clearing queued downloads"
+msgstr "Během mazání stahování ve frontě došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:249
+#, fuzzy, csharp-format
+msgid "Deno {0} installed successfully"
+msgstr "Služba yt-dlp {0} úspěšně nainstalována"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:253
+#, fuzzy
+msgid "Unable to download and install the Deno update"
+msgstr "Nepodařilo se stáhnout a nainstalovat aktualizaci"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:282
+msgid "An error occurred while pausing the download"
+msgstr "Během pozastavování stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:300
+msgid "An error occurred while recovering downloads"
+msgstr "Během obnovování stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:317
+msgid "An error occurred while resuming the download"
+msgstr "Během pokusu o pokračování ve stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:335
+msgid "An error occurred while retrying failed downloads"
+msgstr "Během opakování selhaných stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:352
+msgid "An error occurred while retrying the download"
+msgstr "Během opakování stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:370
+msgid "An error occurred while stopping all downloads"
+msgstr "Během zastavování všech stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:387
+msgid "An error occurred while stopping the download"
+msgstr "Během zastavování stahování došlo k chybě"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:401
+#, fuzzy, csharp-format
+msgid "Starting {0} installer..."
+msgstr "Spouštění stahování..."
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:405
+msgid "Unable to download and install the update"
+msgstr "Nepodařilo se stáhnout a nainstalovat aktualizaci"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:414
+#, csharp-format
+msgid "yt-dlp {0} installed successfully"
+msgstr "Služba yt-dlp {0} úspěšně nainstalována"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:418
+msgid "Unable to download and install the yt-dlp update"
+msgstr "Nepodařilo se stáhnout a nainstalovat aktualizaci yt-dlp"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:39
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:87
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:118
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:132
+msgid "Any"
+msgstr "Jakýkoli"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:40
+msgid "FLAC (ALAC)"
+msgstr "FLAC (ALAC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:41
+msgid "WAV (AIFF)"
+msgstr "WAV (AIFF)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:49
+msgid "System"
+msgstr "Systémový"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:61
+msgid "Firefox"
+msgstr "Firefox"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:65
+msgid "Brave"
+msgstr "Brave"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:66
+msgid "Chrome"
+msgstr "Chrome"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:67
+msgid "Chromium"
+msgstr "Chromium"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:68
+msgid "Edge"
+msgstr "Edge"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:69
+msgid "Opera"
+msgstr "Opera"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:70
+msgid "Vivaldi"
+msgstr "Vivaldi"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:71
+msgid "Whale"
+msgstr "Whale"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:88
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:89
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:90
+#: Nickvision.Parabolic.Shared/Models/Format.cs:269
+#: Nickvision.Parabolic.Shared/Models/Format.cs:270
+#: Nickvision.Parabolic.Shared/Models/Format.cs:271
+#, csharp-format
+msgid "{0} FPS"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:94
+msgid "Never"
+msgstr "Nikdy"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:95
+msgid "1 Day"
+msgstr "1 den"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:96
+msgid "1 Week"
+msgstr "1 týden"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:97
+msgid "1 Month"
+msgstr "1 měsíc"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:98
+msgid "3 Months"
+msgstr "3 měsíce"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:99
+msgid "6 Months"
+msgstr "6 měsíců"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:100
+msgid "1 Year"
+msgstr "1 rok"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:101
+msgid "Forever"
+msgstr "Navždy"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:126
+msgctxt "Theme"
+msgid "Light"
+msgstr "Světlý"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:127
+msgctxt "Theme"
+msgid "Dark"
+msgstr "Tmavý"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:128
+msgctxt "Theme"
+msgid "System"
+msgstr "Systémový"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:135
+msgid "H.264 (AVC)"
+msgstr "H.264 (AVC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:136
+msgid "H.265 (HEVC)"
+msgstr "H.265 (HEVC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:366
+msgid "An argument with that name already exists"
+msgstr "Argument s tímto názvem již existuje"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:370
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:402
+msgid "The name of the argument cannot be empty"
+msgstr "Název argumentu nemůže být prázdný"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:374
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:406
+msgid "The arguments of the argument cannot be empty"
+msgstr "Argumenty argumentu nemohou být prázdné"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:398
+msgid "An argument with that name does not exist"
+msgstr "Argument s tímto názvem neexistuje"
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:98
+msgid "The file already exists and overwriting is disabled."
+msgstr "Soubor již existuje a přepisování je zakázáno."
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:115
+msgid "Starting download..."
+msgstr "Spouštění stahování..."
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:250
+#: Nickvision.Parabolic.Shared/Models/Format.cs:304
+msgid "Audio Description"
+msgstr "Popis zvuku"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:335
+#, csharp-format
+msgid "{0:0.00} GiB"
+msgstr "{0:0.00} GiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:339
+#, csharp-format
+msgid "{0:0.00} MiB"
+msgstr "{0:0.00} MiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:343
+#, csharp-format
+msgid "{0:0.00} KiB"
+msgstr "{0:0.00} KiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:347
+#, csharp-format
+msgid "{0:0.00} B"
+msgstr "{0:0.00} B"
+
+#: Nickvision.Parabolic.Shared/Models/SubtitleLanguage.cs:49
+#, csharp-format
+msgid "{0} (Auto-generated)"
+msgstr "{0} (Automaticky generovaný)"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:417
+#, csharp-format
+msgid "About {0}"
+msgstr "O aplikaci {0}"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:26
+msgid "Changelog"
+msgstr "Seznam změn"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:27
+msgid "Debugging"
+msgstr "Ladění"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:28
+msgid "Credits"
+msgstr "Zásluhy"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:34
+msgid "Copy Debug Information"
+msgstr "Kopírovat informace o ladění"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:37
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}"
+msgstr ""
+"Naprogramovali:\n"
+"{0}\n"
+"\n"
+"Navrhli:\n"
+"{1}\n"
+"\n"
+"Ztvárnili:\n"
+"{2}"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:41
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}\n"
+"\n"
+"Translators:\n"
+"{3}"
+msgstr ""
+"Naprogramovali:\n"
+"{0}\n"
+"\n"
+"Navrhli:\n"
+"{1}\n"
+"\n"
+"Ztvárnili:\n"
+"{2}\n"
+"\n"
+"Přeložili:\n"
+"{3}"
+
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:50
+msgid "Log"
+msgstr "Protokol"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:69
+msgid "Enter media url here"
+msgstr "Zde zadejte adresu URL média"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:122
+msgid "Enter username here"
+msgstr "Zde zadejte uživatelské jméno"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:123
+msgid "Enter password here"
+msgstr "Zde zadejte heslo"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:82
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:118
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:128
+msgid "Warning"
+msgstr "Varování"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:83
+msgid ""
+"Parabolic will download media based off of previously configured options and "
+"sensible defaults. Options including save folder, format, and subtitle "
+"selection will not be shown."
+msgstr ""
+"Parabolic stáhne média na základě dříve nastavených možností a rozumných "
+"výchozích hodnot. Možnosti, včetně složky uložení a výběru formátu a titulků "
+"nebudou zobrazeny."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:119
+msgid ""
+"Generic types do not support embedding thumbnails and subtitles. If "
+"necessary, please select a specific type that is known to support embedding "
+"to prevent separate files from being written."
+msgstr ""
+"Obecné typy nepodporují vkládání miniatur a titulků. Zvolte prosím "
+"specifický typ, který podporuje vkládání, abyste zabránili tvorbě "
+"samostatných souborů."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:130
+msgid "No Subtitles"
+msgstr "Žádné titulky"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:98
+msgid "No subtitles were found for this media."
+msgstr "U tohoto média nebyly nalezeny žádné titulky."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:129
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download."
+msgstr "Číslování bude použito na názvy vybraných položek po jejich stažení."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:131
+msgid "No subtitles were found in this playlist."
+msgstr "V tomto playlistu nebyly nalezeny žádné titulky."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:229
+msgid "Configure Download"
+msgstr "Nastavit stahování"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:40
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:50
+msgid "Search..."
+msgstr "Hledat…"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:41
+msgid "Sort"
+msgstr "Seřadit"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:45
+msgid "Please wait..."
+msgstr "Čekejte prosím..."
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:47
+msgid "There are no downloads in your history"
+msgstr "Ve vaší historii se nenachází žádná stahování"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:49
+msgid "There are no downloads found with the current filters"
+msgstr "Se zvolenými filtry nebyla nalezena žádná stahování"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:53
+msgid "There are no credentials in your keyring"
+msgstr "Ve vaší klíčence nejsou žádné údaje"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:55
+msgid "There are no credentials found with the current filters"
+msgstr "Se zvolenými filtry nebyly nalezeny žádné údaje"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:152
+msgid "Enter name here"
+msgstr "Zde zadejte název"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:83
+msgid "Enter url here"
+msgstr "Zde zadejte adresu URL"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:82
+msgid "File"
+msgstr "Soubor"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:84
+msgid "Exit"
+msgstr "Ukončit"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:32
+msgid "Settings"
+msgstr "Nastavení"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:95
+msgid "Help"
+msgstr "Nápověda"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:96
+msgid "Check for Updates"
+msgstr "Zkontrolovat aktualizace"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:98
+msgid "Report a Bug"
+msgstr "Nahlásit chybu"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:99
+msgid "Discussions"
+msgstr "Diskuze"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:101
+#, csharp-format
+msgid "You are running a preview version of {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:102
+msgid "Thank you for testing the upcoming features and changes! ❤️"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:121
+msgid "Credential Required"
+msgstr "Vyžadován údaj"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:124
+msgid "Submit"
+msgstr "Potvrdit"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:43
+msgid "Update Parabolic and dependencies, such as yt-dlp, to beta versions"
+msgstr "Aktualizovat Parabolic a závislosti, například yt-dlp, na beta verze"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:44
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:55
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:59
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:67
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:120
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:131
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:135
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:142
+msgid "On"
+msgstr "Zapnuto"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:45
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:56
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:60
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:64
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:84
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:128
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:132
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:139
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:143
+msgid "Off"
+msgstr "Vypnuto"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:53
+msgid "Max Number of Active Downloads"
+msgstr "Maximální počet aktivních stahování"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:92
+msgid "Speed Limit"
+msgstr "Omezení rychlosti"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:94
+msgid "Enter proxy url here"
+msgstr "Zde zadejte adresu URL proxy"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:95
+msgid "Cookies from File"
+msgstr "Cookies ze souboru"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:96
+msgid "Upload a txt cookies file from unlisted browsers"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:107
+msgid "Max Connections Per Server"
+msgstr "Max. počet připojení na server"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:108
+msgid "Corresponds to -x option"
+msgstr "Odpovídá možnosti -x"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:109
+msgid "Minimum Split Size (MiB)"
+msgstr "Minimální velikost rozdělení (MiB)"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:110
+msgid "Corresponds to -k option"
+msgstr "Odpovídá možnosti -k"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:113
+msgid "Extra arguments to pass to yt-dlp when discovering media"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:156
+msgid "Enter args here"
+msgstr "Zde zadejte argumenty"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:116
+msgid "Extra arguments to pass to yt-dlp when downloading media"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:147
+msgid "Post-Processor Arguments"
+msgstr "Argumenty postprocesoru"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:153
+msgid "Post-Processor"
+msgstr "Postprocesor"
+
+#, csharp-format
+#~ msgid "A credential is required to continue the download of \"{0}\"."
+#~ msgstr "Pro pokračování ve stahování média „{0}“ je vyžadován údaj."
+
+#, fuzzy
+#~ msgid "Password Required"
+#~ msgstr "Heslo"
+
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "Hledat…"
+
+#~ msgid "Home"
+#~ msgstr "Domů"
+
+#~ msgid "Updating"
+#~ msgstr "Aktualizace"
+
+#~ msgid "Preview"
+#~ msgstr "Náhled"
+
+#, fuzzy
+#~ msgid "Download Immediately"
+#~ msgstr "Stáhnout okamžitě"
+
+#, fuzzy
+#~ msgid "An error occured while erasing file metadata"
+#~ msgstr "Během hledání médií došlo k chybě"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} • {1}"
+#~ msgstr "{} • {}"
+
+#, fuzzy
+#~ msgid "close"
+#~ msgstr "Zavřít"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} downloads remaining"
+#~ msgstr "Nejsou spuštěna žádná stahování"
+
+#, fuzzy
+#~ msgid "One Day"
+#~ msgstr "Jeden den"
+
+#, fuzzy
+#~ msgid "One Week"
+#~ msgstr "Jeden týden"
+
+#, fuzzy
+#~ msgid "One Month"
+#~ msgstr "Jeden měsíc"
+
+#~ msgid "Three Months"
+#~ msgstr "Tři měsíce"
+
+#, fuzzy
+#~ msgid "There are no downloads added"
+#~ msgstr "Při dokončení všech stahování"
+
+#, fuzzy
+#~ msgid "Add a download to get started"
+#~ msgstr "Začněte přidáním údajů"
+
+#~ msgid "Arguments"
+#~ msgstr "Argumenty"
+
+#, fuzzy
+#~ msgid "The name cannot be empty."
+#~ msgstr "Název argumentu nemůže být prázdný."
+
+#~ msgid "Manage"
+#~ msgstr "Správa"
+
+#~ msgid "Postprocessing"
+#~ msgstr "Zpracování"
+
+#, fuzzy
+#~ msgid "Add Argument"
+#~ msgstr "Upravit argument"
+
+#~ msgid "Edit Argument"
+#~ msgstr "Upravit argument"
+
+#~ msgid "Delete Argument"
+#~ msgstr "Odstranit argument"
+
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "{}"
+#~ msgstr ""
+#~ "Chyba při pokusu o ověření yt-dlp:\n"
+#~ "{}"
+
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "<span font_family='monospace'>{}</span>"
+#~ msgstr ""
+#~ "Chyba při pokusu o ověření yt-dlp:\n"
+#~ "<span font_family='monospace'>{}</span>"
+
+#~ msgid "Error during download validation: {}"
+#~ msgstr "Chyba při pokusu o ověření stahování: {}"
+
+#~ msgid "Error attempting to add download: {}"
+#~ msgstr "Chyba při pokusu o přidání stahování: {}"
+
+#~ msgid "Error attempting to recover downloads: {}"
+#~ msgstr "Chyba při pokusu o obnovení stahování: {}"
+
+#~ msgid "Download Finished"
+#~ msgstr "Stahování dokončeno"
+
+#~ msgid "{} has finished downloading"
+#~ msgstr "Soubor „{}“ byl stažen"
+
+#~ msgid "Download Failed"
+#~ msgstr "Stahování selhalo"
+
+#~ msgid "{} has finished with an error"
+#~ msgstr "Stahování souboru „{}“ skončilo s chybou"
+
+#~ msgid "0 B/s"
+#~ msgstr "0 B/s"
+
+#~ msgid "{:.2f} GiB/s"
+#~ msgstr "{:.2f} GiB/s"
+
+#~ msgid "{:.2f} MiB/s"
+#~ msgstr "{:.2f} MiB/s"
+
+#~ msgid "{:.2f} KiB/s"
+#~ msgstr "{:.2f} KiB/s"
+
+#~ msgid "{:.2f} B/s"
+#~ msgstr "{:.2f} B/s"
+
+#~ msgid "Unknown time left"
+#~ msgstr "Zbývá neznámý čas"
+
+#~ msgid "0 seconds"
+#~ msgstr "0 sekund"
+
+#~ msgid "{} hour"
+#~ msgid_plural "{} hours"
+#~ msgstr[0] "{} hodina"
+#~ msgstr[1] "{} hodiny"
+#~ msgstr[2] "{} hodin"
+
+#~ msgid "{} and "
+#~ msgstr "{} a "
+
+#~ msgid "{} minute"
+#~ msgid_plural "{} minutes"
+#~ msgstr[0] "{} minuta"
+#~ msgstr[1] "{} minuty"
+#~ msgstr[2] "{} minut"
+
+#~ msgid "{} second"
+#~ msgid_plural "{} seconds"
+#~ msgstr[0] "{} sekunda"
+#~ msgstr[1] "{} sekundy"
+#~ msgstr[2] "{} sekund"
+
+#~ msgid "{} left"
+#~ msgid_plural "{} left"
+#~ msgstr[0] "Zbývá {}"
+#~ msgstr[1] "Zbývají {}"
+#~ msgstr[2] "Zbývá {}"
+
+#~ msgid "{:.2f} B"
+#~ msgstr "{:.2f} B"
+
+#~ msgid "Unable to download yt-dlp update"
+#~ msgstr "Nepodařilo se stáhnout aktualizaci yt-dlp"
+
+#~ msgid "Validate"
+#~ msgstr "Ověřit"
+
+#~ msgid "Use Batch File"
+#~ msgstr "Použít hromadný soubor"
+
+#~ msgid "Authenticate"
+#~ msgstr "Přihlášení"
+
+#~ msgid "Use your previous download options for this download"
+#~ msgstr "Pro toho stahování použít vaše předchozí možnosti stahování"
+
+#~ msgid "Validating"
+#~ msgstr "Ověřování"
+
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and "
+#~ "subtitles.\n"
+#~ "Please select a specific file type that is known to support embedding\n"
+#~ "to prevent separate files from being written."
+#~ msgstr ""
+#~ "Obecné typy souborů nepodporují vkládání miniatur a titulků.\n"
+#~ "Zvolte prosím specifický typ souboru, který podporuje vkládání,\n"
+#~ "abyste zabránili samostatnému ukládání souborů."
+
+#~ msgid "Advanced Options"
+#~ msgstr "Rozšířené možnosti"
+
+#~ msgid "Revert to Original"
+#~ msgstr "Vrátit na originál"
+
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and writing "
+#~ "playlist files. Please select a specific file type that is known to "
+#~ "support embedding to prevent separate files from being written."
+#~ msgstr ""
+#~ "Obecné typy souborů nepodporují vkládání miniatur a zapisování souborů "
+#~ "playlistů. Zvolte prosím specifický typ souboru, který podporuje "
+#~ "vkládání, abyste zabránili tvorbě samostatných souborů."
+
+#~ msgid ""
+#~ "Will be ignored for media in batch files that provide save folder paths."
+#~ msgstr ""
+#~ "Bude ignorováno pro média v hromadných souborech, které poskytují cesty k "
+#~ "úložným složkám."
+
+#~ msgid "Playlist Items"
+#~ msgstr "Položky playlistu"
+
+#~ msgid "Use"
+#~ msgstr "Použít"
+
+#~ msgid "No Credentials Found"
+#~ msgstr "Nenalezeny žádné údaje"
+
+#~ msgid "Add Credential"
+#~ msgstr "Přidat údaje"
+
+#~ msgid "Updates"
+#~ msgstr "Aktualizace"
+
+#~ msgid "Update Available"
+#~ msgstr "Dostupná aktualizace"
+
+#~ msgid "Stop All Downloads"
+#~ msgstr "Zastavit všechna stahování"
+
+#~ msgid "Clear Queued Downloads"
+#~ msgstr "Vymazat stahování ve frontě"
+
+#~ msgid "Retry Failed Downloads"
+#~ msgstr "Opakovat selhaná stahování"
+
+#~ msgid "No History Available"
+#~ msgstr "Není dostupná žádná historie"
+
+#~ msgid "No Downloads Running"
+#~ msgstr "Žádná probíhající stahování"
+
+#~ msgid "No Downloads Queued"
+#~ msgstr "Žádná stahování ve frontě"
+
+#~ msgid "No Downloads Completed"
+#~ msgstr "Žádná dokončená stahování"
+
+#~ msgid "Log copied to clipboard"
+#~ msgstr "Protokol zkopírován do schránky"
+
+#~ msgid "{} items"
+#~ msgstr "{} položek"
+
+#~ msgid ""
+#~ "{} needs a credential to download.\n"
+#~ "Please select or enter one to use."
+#~ msgstr ""
+#~ "{} potřebuje údaj ke stahování.\n"
+#~ "Vyberte jej nebo jej zadejte."
+
+#~ msgid "Keyring is not saving to disk. Changes will be lost."
+#~ msgstr "Klíčenka není ukládána na disk. Změny budou ztraceny."
+
+#~ msgid "Modify"
+#~ msgstr "Upravit"
+
+#~ msgid "Name (Empty)"
+#~ msgstr "Název (prázdný)"
+
+#~ msgid "Username (Empty)"
+#~ msgstr "Uživatelské jméno (prázdné)"
+
+#~ msgid "Password (Empty)"
+#~ msgstr "Heslo (prázdné)"
+
+#~ msgid "URL (Invalid)"
+#~ msgstr "Adresa URL (neplatná)"
+
+#~ msgid "Name (Exists)"
+#~ msgstr "Název (existuje)"
+
+#~ msgid "Credential (Database Error)"
+#~ msgstr "Údaj (chyba databáze)"
+
+#~ msgid "Exit?"
+#~ msgstr "Ukončit?"
+
+#~ msgid "There are downloads in progress. Exiting will stop all downloads."
+#~ msgstr "Probíhají stahování. Ukončením všechna stahování zastavíte."
+
+#~ msgid "Ok"
+#~ msgstr "OK"
+
+#~ msgid "{} version {} is available to download and install"
+#~ msgstr "{} verze {} je k dispozici ke stažení a instalaci"
+
+#~ msgid "Update completed successfully"
+#~ msgstr "Aktualizace úspěšně dokončena"
+
+#~ msgid "Are you sure you want to delete this argument?"
+#~ msgstr "Opravdu chcete odstranit tento argument?"
+
+#~ msgid "Args (Empty)"
+#~ msgstr "Argumenty (prázdné)"
+
+#~ msgid "Show Log"
+#~ msgstr "Zobrazit protokol"
+
+#~ msgid "Open Containing Folder"
+#~ msgstr "Otevřít cílovou složku"
+
+#~ msgid "Media"
+#~ msgstr "Média"
+
+#~ msgid "Split Video by Chapters"
+#~ msgstr "Rozdělit video na kapitoly"
+
+#~ msgid "Use manual credentials"
+#~ msgstr "Použít manuální údaje"
+
+#~ msgid "Items ({})"
+#~ msgstr "Položky ({})"
+
+#~ msgid ""
+#~ "{} needs a credential to download. Please select or enter one to use."
+#~ msgstr "{} potřebuje údaj ke stahování. Vyberte jej nebo jej zadejte."
+
+#~ msgid ""
+#~ "The keyring is not saving changes to disk. Any changes made will be lost"
+#~ msgstr ""
+#~ "Klíčenka neukládá změny na disk. Jakékoli provedené změny budou ztraceny."
+
+#~ msgid "New Credential"
+#~ msgstr "Nový údaj"
+
+#~ msgid "The credential name cannot be empty."
+#~ msgstr "Název údaje nesmí být prázdný."
+
+#~ msgid "The provided url is invalid."
+#~ msgstr "Zadaná adresa URL je neplatná."
+
+#~ msgid "There was an unknown error adding the credential to the keyring."
+#~ msgstr "Při přidávání údaje do klíčenka se vyskytla neznámá chyba."
+
+#~ msgid "Edit Credential"
+#~ msgstr "Upravit údaj"
+
+#~ msgid "Save"
+#~ msgstr "Uložit"
+
+#~ msgid "Delete Credential"
+#~ msgstr "Odstranit údaj"
+
+#~ msgid "Start"
+#~ msgstr "Spustit"
+
+#~ msgid "Documentation"
+#~ msgstr "Dokumentace"
+
+#~ msgid "You're up to date"
+#~ msgstr "Používáte nejnovější verzi"
+
+#~ msgid ""
+#~ "We will let you know once app or yt-dlp updates are available to install"
+#~ msgstr ""
+#~ "Dáme vám vědět, jakmile budou k dispozici aktualizace aplikace nebo yt-dlp"
+
+#~ msgid "Downloading the update"
+#~ msgstr "Stahování aktualizace"
+
+#~ msgid "Check for pre-release (beta) versions of {}"
+#~ msgstr "Kontrolovat předběžná vydání (beta verze) aplikace {}"
+
+#~ msgid "Version {}"
+#~ msgstr "Verze {}"
+
+#~ msgid "The installer will start once the download is complete"
+#~ msgstr "Instalátor bude spuštěn po dokončení stahování"
+
+#~ msgid "Debug information copied to clipboard"
+#~ msgstr "Ladicí informace zkopírovány do schránky"
+
+#~ msgid "Light"
+#~ msgstr "Světlý"
+
+#~ msgid "Dark"
+#~ msgstr "Tmavý"
+
+#~ msgid "New Argument"
+#~ msgstr "Nový argument"
+
+#, fuzzy
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "```{}```"
+#~ msgstr "Chyba při pokusu o ověření stahování: {}"
+
+#~ msgid "Error attempting to validate download: {}"
+#~ msgstr "Chyba při pokusu o ověření stahování: {}"
+
+#~ msgid ""
+#~ "The url provided is invalid or unable to be reached. Check the url, the "
+#~ "authentication used, the cookies settings, and the preferred codecs "
+#~ "selected. Note that the service may have blocked your IP or the video may "
+#~ "be geo-restricted."
+#~ msgstr ""
+#~ "Zadaná adresa URL je neplatná nebo ji nelze načíst. Zkontrolujte adresu, "
+#~ "použité přihlašování, nastavení cookies a zvolené preferované kodeky. Je "
+#~ "možné, že YouTube zablokoval vaši IP nebo že je video geograficky omezené."
+
+#~ msgid "Download Finished With Error"
+#~ msgstr "Stahování skončilo s chybou"
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid "Use aria2c instead of yt-dlp's native downloader"
+#~ msgstr "Použít aria2c namísto nativní služby stahování yt-dlp"
+
+#~ msgid "Safari"
+#~ msgstr "Safari"
+
+#~ msgid "Back"
+#~ msgstr "Zpět"
+
+#~ msgid "New version of yt-dlp available"
+#~ msgstr "Je dostupná nová verze služby yt-dlp"
+
+#~ msgid "New version of Parabolic available"
+#~ msgstr "Je dostupná nová verze aplikace Parabolic"
+
+#~ msgid ""
+#~ "The update is downloading in the background and will start once it "
+#~ "finishes"
+#~ msgstr "Aktualizace se stahuje na pozadí a po dokončení bude spuštěna"
+
+#~ msgid "Developers"
+#~ msgstr "Vývojáři"
+
+#~ msgid "Designers"
+#~ msgstr "Návrháři"
+
+#~ msgid "Artists"
+#~ msgstr "Umělci"
+
+#~ msgid "Automatically Check for Updates"
+#~ msgstr "Automaticky kontrolovat aktualizace"
+
+#~ msgid "Copy Command to Clipboard"
+#~ msgstr "Kopírovat příkaz do schránky"
+
+#~ msgid "Parabolic will limit the number of threads used by ffmpeg."
+#~ msgstr "Aplikace Parabolic omezí počet vláken používaných službou ffmpeg."
+
+#~ msgid "Parabolic will include a media's id in its default title."
+#~ msgstr "Aplikace Parabolic přidá ID média do jeho výchozího názvu."
+
+#~ msgid ""
+#~ "The video codec Parabolic should prefer when parsing media formats to "
+#~ "download."
+#~ msgstr ""
+#~ "Video kodek, který by měla aplikace Parabolic preferovat při zpracování "
+#~ "formátů médií ke stažení."
+
+#~ msgid ""
+#~ "The audio codec Parabolic should prefer when parsing media formats to "
+#~ "download."
+#~ msgstr ""
+#~ "Zvukový kodek, který by měla aplikace Parabolic preferovat při zpracování "
+#~ "formátů médií ke stažení."
+
+#~ msgid ""
+#~ "The file format Parabolic should ensure all subtitles are downloaded as."
+#~ msgstr ""
+#~ "Formát souboru, ve kterém by měla aplikace Parabolic stáhnout všechny "
+#~ "titulky."
+
+#~ msgid ""
+#~ "Parabolic will show these arguments below for selection in the add "
+#~ "download dialog."
+#~ msgstr ""
+#~ "Aplikace Parabolic zobrazí argumenty níže k výběru v dialogu přidání "
+#~ "stahování."
+
+#~ msgid "Disclaimer"
+#~ msgstr "Upozornění"
+
+#~ msgid ""
+#~ "The authors of Nickvision Parabolic are not responsible/liable for any "
+#~ "misuse of this program that may violate local copyright/DMCA laws. Users "
+#~ "use this application at their own risk."
+#~ msgstr ""
+#~ "Autoři aplikace Nickvision Parabolic nenesou odpovědnost za jakékoli "
+#~ "zneužití tohoto programu, které může porušovat místní zákony o autorských "
+#~ "právech/DMCA. Uživatelé používají tuto aplikaci na vlastní nebezpečí."
+
+#~ msgid "UI"
+#~ msgstr "Rozhraní"
+
+#, fuzzy
+#~ msgid "Download some media to see it here"
+#~ msgstr "Stáhnout okamžitě"
+
+#, fuzzy
+#~ msgid "Add, delete and modify credentials for validating websites"
+#~ msgstr "Přidávejte, odstraňujte a upravujte své údaje pro ověřování webů"
+
+#, fuzzy
+#~ msgid "Revert File Name"
+#~ msgstr "Název souboru"
+
+#~ msgid "Notification"
+#~ msgstr "Oznámení"
+
+#~ msgid "No Download Log"
+#~ msgstr "Žádný protokol o stahování"
+
+#~ msgid "Copy"
+#~ msgstr "Kopírovat"
+
+#~ msgid "No save folder selected"
+#~ msgstr "Není vybrána složka k ukládání"
+
+#~ msgid "Enter file name here"
+#~ msgstr "Zde zadejte název souboru"
+
+#~ msgid "Enter start time here"
+#~ msgstr "Zde zadejte počáteční čas"
+
+#~ msgid "Enter end time here"
+#~ msgstr "Zde zadejte konečný čas"
+
+#~ msgid "Downloading (0)"
+#~ msgstr "Stahování (0)"
+
+#~ msgid "Queued (0)"
+#~ msgstr "Ve frontě (0)"
+
+#~ msgid "Completed (0)"
+#~ msgstr "Dokončeno (0)"
+
+#~ msgid "Parabolic (Preview)"
+#~ msgstr "Parabolic (náhled)"
+
+#~ msgid "Queued ({})"
+#~ msgstr "Ve frontě ({})"
+
+#~ msgid "Completed ({})"
+#~ msgstr "Dokončeno ({})"
+
+#~ msgid ""
+#~ "Parabolic will show these arguments for\n"
+#~ "selection in the add download dialog."
+#~ msgstr ""
+#~ "Aplikace Parabolic zobrazí tyto argumenty\n"
+#~ "k výběru v dialogu přidání stahování."
+
+#, fuzzy
+#~ msgid "Add, delete, and modify arguments for postprocessing"
+#~ msgstr "Přidávejte, odstraňujte a upravujte své údaje pro ověřování webů"
+
+#~ msgid "Configure downloading with aria2c."
+#~ msgstr "Nastavit stahování pomocí aria2c."
+
+#~ msgid "Postprocessing Threads"
+#~ msgstr "Zpracovávání vláken"
+
+#~ msgid ""
+#~ "The url provided is invalid or unable to be reached. Check the url, the "
+#~ "authentication used, and the selected browser for cookies in settings. "
+#~ "Note that YouTube may have blocked your IP or the video may be geo-"
+#~ "restricted."
+#~ msgstr ""
+#~ "Zadaná adresa URL je neplatná nebo ji nelze načíst. Zkontrolujte adresu, "
+#~ "použité přihlašování a zvolený prohlížeč pro cookies v nastavení. Je "
+#~ "možné, že YouTube zablokoval vaši IP nebo že je video geograficky omezené."
+
+#~ msgid "The limit to apply to downloads with limiting speed enabled."
+#~ msgstr "Limit k použití u stahování, která mají povolené omezení rychlosti."
+
+#~ msgid ""
+#~ "Parabolic will immediately download media after validation, without "
+#~ "presenting configuration options to the user."
+#~ msgstr ""
+#~ "Parabolic stáhne média okamžitě po ověření, bez zobrazení možností "
+#~ "konfigurace."
+
+#~ msgid "Download Immediately After Validation"
+#~ msgstr "Stáhnout ihned po ověření"
+
+#~ msgid ""
+#~ "Parabolic will recover downloads that were in progress when the app "
+#~ "crashed."
+#~ msgstr "Parabolic obnoví stahování, která probíhala, když aplikace spadla."
+
+#~ msgid "Past Downloads"
+#~ msgstr "Minulá stahování"
+
+#~ msgid "No Download History"
+#~ msgstr "Žádná historie stahování"
+
+#~ msgid "Downloads Finished"
+#~ msgstr "Stahování dokončena"
+
+#~ msgid "All downloads have finished"
+#~ msgstr "Všechna stahování byla dokončena"
+
+#~ msgid "Completed Notification Trigger"
+#~ msgstr "Oznámení o dokončení"
+
+#~ msgid "For each download"
+#~ msgstr "Pro každé stahování"
+
+#~ msgid "Verbose Logging"
+#~ msgstr "Podrobné protokolování"
+
+#~ msgid "Revert"
+#~ msgstr "Vrátit"
+
+#~ msgid "Select"
+#~ msgstr "Vybrat"
+
+#~ msgid "Select save folder"
+#~ msgstr "Vybrat složku k uložení"
+
+#~ msgid "Language"
+#~ msgstr "Jazyk"
+
+#~ msgid "WARNING: Using aria2 to download. Progress will not be shown."
+#~ msgstr "VAROVÁNÍ: Stahování pomocí služby aria2. Postup nebude zobrazen."
+
+#~ msgid "WARNING: Using ffmpeg to download. Progress will not be shown."
+#~ msgstr "VAROVÁNÍ: Stahování pomocí služby ffmpeg. Postup nebude zobrazen."
+
+#~ msgid "Quality"
+#~ msgstr "Kvalita"
+
+#~ msgid "Default"
+#~ msgstr "Výchozí"
+
+#~ msgid "Download Subtitles"
+#~ msgstr "Stáhnout titulky"
+
+#~ msgid "Good"
+#~ msgstr "Dobrý"
+
+#~ msgid "Title"
+#~ msgstr "Název"
+
+#, csharp-format
+#~ msgid "{0} download — {1:f1}% ({2})"
+#~ msgid_plural "{0} downloads — {1:f1}% ({2})"
+#~ msgstr[0] "{0} stahování — {1:f1}% ({2})"
+#~ msgstr[1] "{0} stahování — {1:f1}% ({2})"
+#~ msgstr[2] "{0} stahování — {1:f1}% ({2})"
+
+#, csharp-format
+#~ msgid "{0}{1}"
+#~ msgstr "{0}{1}"
+
+#~ msgid ""
+#~ "A cookies file can be provided to yt-dlp to allow downloading media that "
+#~ "requires a login."
+#~ msgstr ""
+#~ "Programu yt-dlp lze poskytnout soubor s cookies pro stáhnutí médií, která "
+#~ "vyžadují přihlášení."
+
+#~ msgid "Add Login"
+#~ msgstr "Přidat přihlášení"
+
+#~ msgid "Allow Running In Background"
+#~ msgstr "Povolit běh na pozadí"
+
+#~ msgid ""
+#~ "Clear metadata fields containing the URL and other identifying "
+#~ "information of the media source"
+#~ msgstr ""
+#~ "Vymazat pole metadat obsahující adresu URL a další informace "
+#~ "identifikující zdroj média"
+
+#~ msgid "Close and Stop Downloads?"
+#~ msgstr "Zavřít a zastavit stahování?"
+
+#~ msgid "Comma separated list"
+#~ msgstr "Seznam oddělený čárkami"
+
+#~ msgid ""
+#~ "Cookies can be passed to yt-dlp in the form of TXT files. Export cookies "
+#~ "from your browser using the following extensions (use at your own risk):"
+#~ msgstr ""
+#~ "Programu yt-dlp lze soubory cookies předat ve formě souborů TXT. Cookies "
+#~ "můžete ze svého prohlížeče exportovat pomocí následujících rozšíření "
+#~ "(používejte na vlastní nebezpečí):"
+
+#~ msgid "Cookies File Information"
+#~ msgstr "Informace o souboru s cookies"
+
+#~ msgid "Crop Thumbnail"
+#~ msgstr "Oříznout miniaturu"
+
+#~ msgid "DaPigGuy"
+#~ msgstr "DaPigGuy"
+
+#~ msgid ""
+#~ "Different sites can use different language code formats for the same "
+#~ "language. You may encounter one of the following three types: two-letter, "
+#~ "two-letter with region, or three-letter. For example, \"en\", \"en-US\" "
+#~ "and \"eng\" are all used for English.\n"
+#~ "Please specify all valid codes for your languages for the best results. "
+#~ "Auto-generated subtitles will also be downloaded if available.\n"
+#~ "\n"
+#~ "You can specify \"all\" instead to download all subtitles, including auto-"
+#~ "generated ones. To exclude auto-generated ones, turn off the option below."
+#~ msgstr ""
+#~ "Různé stránky používají různé jazykové kódy pro stejný jazyk. Můžete "
+#~ "narazit na jeden z následujících třech typů: dvoupísmenný, dvoupísmenný s "
+#~ "oblastí nebo třípísmenný. Například u angličtiny to bude „en“, „en-US“ či "
+#~ "„eng“.\n"
+#~ "Pro dosažení nejlepších výsledků zadejte pro své jazyky všechny platné "
+#~ "kódy. Pokud jsou dostupné, budou staženy i automaticky vygenerované "
+#~ "titulky.\n"
+#~ "\n"
+#~ "Pro stažení všech titulků (mimo automaticky generovaných) můžete zadat "
+#~ "„all“. Chcete-li vyloučit automaticky generované, vypněte níže uvedenou "
+#~ "možnost."
+
+#~ msgid "Disable"
+#~ msgstr "Zakázat"
+
+#~ msgid "Disable Keyring?"
+#~ msgstr "Zakázat klíčenku?"
+
+#~ msgid ""
+#~ "Disabling the keyring will delete all data currently stored inside. Are "
+#~ "you sure you want to disable it?"
+#~ msgstr ""
+#~ "Zakázáním klíčenky se odstraní všechna data, která jsou v ní aktuálně "
+#~ "uložena. Opravdu ji chcete vypnout?"
+
+#~ msgid "Disallow Conversions"
+#~ msgstr "Zakázat převody"
+
+#~ msgid "Download Specific Timeframe"
+#~ msgstr "Stáhnout konkrétní časový úsek"
+
+#~ msgid "Download using aria2 has started"
+#~ msgstr "Bylo spuštěno stahování pomocí aria2"
+
+#~ msgid "Download using ffmpeg has started"
+#~ msgstr "Bylo spuštěno stahování pomocí ffmpeg"
+
+#, csharp-format
+#~ msgid "Downloading {0:f2}% ({1})"
+#~ msgstr "Stahování {0:f2}% ({1})"
+
+#~ msgid "Downloading..."
+#~ msgstr "Stahování..."
+
+#~ msgid ""
+#~ "Enable to use aria2 downloader. It can be faster, but you will not see "
+#~ "download progress."
+#~ msgstr ""
+#~ "Povolte pro použití downloaderu aria2. Může být rychlejší, ale neuvidíte "
+#~ "průběh stahování."
+
+#~ msgid "End Time (Invalid)"
+#~ msgstr "Čas konce (neplatný)"
+
+#~ msgid "Failed to enable keyring."
+#~ msgstr "Nepodařilo se povolit klíčenku."
+
+#~ msgid ""
+#~ "If enabled, Parabolic will download the appropriate video/audio format "
+#~ "for the selected quality without converting to other formats. (You will "
+#~ "be unable to select a file format)"
+#~ msgstr ""
+#~ "Při povolení stáhne aplikace Parabolic odpovídající formát videa/zvuku "
+#~ "pro vybranou kvalitu bez převodu na jiné formáty. (Nebudete si moci "
+#~ "vybrat formát souboru)"
+
+#~ msgid ""
+#~ "In combination with the trigger, completed notifications will only be "
+#~ "shown if the window is not focused."
+#~ msgstr ""
+#~ "V kombinaci se spouštěčem budou oznámení o dokončení zobrazena pouze, "
+#~ "pokud je okno na pozadí."
+
+#~ msgid "Keyring Credential"
+#~ msgstr "Údaj klíčenky"
+
+#~ msgid "Keyring Disabled"
+#~ msgstr "Klíčenka zakázána"
+
+#~ msgid "Keyring locked"
+#~ msgstr "Klíčenka uzamčena"
+
+#~ msgid "Keyring locked."
+#~ msgstr "Klíčenka uzamčena."
+
+#~ msgid "Language Code Information"
+#~ msgstr "Informace o kódu jazyka"
+
+#~ msgid "Leave empty to download from start."
+#~ msgstr "Ponechte prázdné pro stažení od začátku."
+
+#~ msgid "List of supported sites"
+#~ msgstr "Seznam podporovaných webů"
+
+#~ msgid "Login"
+#~ msgstr "Přihlásit se"
+
+#~ msgid "Make thumbnail square, useful when downloading music."
+#~ msgstr "Oříznout miniaturu na čtverec, užitečné při stahování hudby."
+
+#~ msgid "Maximum Quality"
+#~ msgstr "Maximální kvalita"
+
+#~ msgid ""
+#~ "Media can possibly be cut inaccurately.\n"
+#~ "Enabling this option will disable the use of aria2 as the downloader if "
+#~ "it is enabled."
+#~ msgstr ""
+#~ "Média mohou být nesprávně oříznuta.\n"
+#~ "Povolením této možnosti zakážete použití aria2 jako downloaderu, pokud je "
+#~ "povolen."
+
+#~ msgid "Media URL (Invalid)"
+#~ msgstr "Adresa URL média (neplatná)"
+
+#~ msgid ""
+#~ "Minimize to the system tray instead of quitting the application when the "
+#~ "window is closed."
+#~ msgstr ""
+#~ "Místo ukončení aplikace při zavření okna ji minimalizovat do systémové "
+#~ "lišty."
+
+#~ msgid "Nicholas Logozzo"
+#~ msgstr "Nicholas Logozzo"
+
+#~ msgid "No active internet connection"
+#~ msgstr "Žádné aktivní připojení k internetu"
+
+#~ msgid "No Completed Downloads"
+#~ msgstr "Žádná dokončená stahování"
+
+#~ msgid "No Previous Downloads"
+#~ msgstr "Žádná předchozí stahování"
+
+#~ msgid "No Queued Downloads"
+#~ msgstr "Žádná stahování ve frontě"
+
+#~ msgid "Preparing..."
+#~ msgstr "Příprava..."
+
+#~ msgid "PREVIEW"
+#~ msgstr "NÁHLED"
+
+#~ msgid "Reset"
+#~ msgstr "Resetovat"
+
+#~ msgid "Reset Keyring?"
+#~ msgstr "Resetovat klíčenku?"
+
+#~ msgid "Reset to default"
+#~ msgstr "Obnovit na výchozí"
+
+#~ msgid "Restart the app to unlock the keyring."
+#~ msgstr "Pro odemknutí klíčenky restartujte aplikaci."
+
+#~ msgid "Restart To Apply Theme?"
+#~ msgstr "Restartovat pro použití motivu?"
+
+#~ msgid "Retry Download"
+#~ msgstr "Opakovat stahování"
+
+#~ msgid "Save Folder (Invalid)"
+#~ msgstr "Složka k uložení (neplatná)"
+
+#~ msgid "Search for downloads, history, and more"
+#~ msgstr "Hledat stahování, historii a další"
+
+#~ msgid "Select items to download or change file names."
+#~ msgstr "Vyberte položky ke stažení nebo změňte názvy souborů."
+
+#~ msgid ""
+#~ "Some downloads are still in progress.\n"
+#~ "Are you sure you want to close Parabolic and stop the running downloads?"
+#~ msgstr ""
+#~ "Některá stahování stále probíhají.\n"
+#~ "Určitě chcete zavřít Parabolic a zastavit probíhající stahování?"
+
+#~ msgid "Some downloads finished with errors!"
+#~ msgstr "Některá stahování skončila s chybami!"
+
+#~ msgid "Splits the video into multiple smaller ones based on its chapters."
+#~ msgstr "Rozdělí video do několika menších podle jeho kapitol."
+
+#~ msgid "SponsorBlock Information (opens in a web browser)"
+#~ msgstr "Informace o službě SponsorBlock (otevře se v prohlížeči)"
+
+#~ msgid "Start Time (Invalid)"
+#~ msgstr "Čas začátku (neplatný)"
+
+#~ msgid "Subtitle Languages"
+#~ msgstr "Jazyky titulků"
+
+#~ msgid "Subtitle Languages (Comma-Separated)"
+#~ msgstr "Jazyky titulků (oddělené čárkou)"
+
+#~ msgid "Subtitle Languages (Invalid)"
+#~ msgstr "Jazyky titulků (neplatné)"
+
+#~ msgid ""
+#~ "This option's state will be remembered and restored for future downloads."
+#~ msgstr "Stav této možnosti bude zapamatován a obnoven pro příští stahování."
+
+#~ msgid ""
+#~ "This will delete the previous keyring removing all passwords with it. "
+#~ "This action is irreversible."
+#~ msgstr ""
+#~ "Tato akce odstraní předchozí klíčenku, což také odstraní všechna hesla "
+#~ "uvnitř klíčenky. Tato akce je nevratná."
+
+#~ msgid "Unable to disable keyring."
+#~ msgstr "Nepodařilo se zakázat klíčenku."
+
+#~ msgid "Unable to reset keyring."
+#~ msgstr "Nepodařilo se resetovat klíčenku."
+
+#~ msgid "Undo Title Editing"
+#~ msgstr "Vrátit úpravu názvu"
+
+#~ msgid "Unlock Keyring"
+#~ msgstr "Odemknout klíčenku"
+
+#~ msgid "Unset Cookies File"
+#~ msgstr "Nenastaven soubor s cookies"
+
+#~ msgid ""
+#~ "Use keyring to safely store credentials for sites that require a user "
+#~ "name and password to login."
+#~ msgstr ""
+#~ "Používat klíčenku pro bezpečné ukládání údajů pro weby, které vyžadují "
+#~ "přihlášení uživatelským jménem a heslem."
+
+#~ msgid "User Name"
+#~ msgstr "Uživatelské jméno"
+
+#~ msgid "Waiting..."
+#~ msgstr "Čekání..."
+
+#, csharp-format
+#~ msgid ""
+#~ "Would you like to restart {0} to apply the new theme?\n"
+#~ "Any unsaved work will be lost."
+#~ msgstr ""
+#~ "Chcete restartovat aplikaci {0} pro použití nového motivu?\n"
+#~ "Jakákoli neuložená práce bude ztracena."
+
+#~ msgid "Leave empty to download to end."
+#~ msgstr "Ponechte prázdné pro stáhnutí do konce."
+
+#~ msgid "Manage previously downloaded media."
+#~ msgstr "Správa dříve stažených médií."
+
+#~ msgid "Search history"
+#~ msgstr "Historie vyhledávání"
+
+#~ msgid "Disable Keyring"
+#~ msgstr "Zakázat klíčenku"
+
+#~ msgid "Migrate to Secret-Secured Keyring"
+#~ msgstr "Přejít na tajně zabezpečenou klíčenku"
+
+#~ msgid "Migrate Keyring"
+#~ msgstr "Migrovat klíčenku"
+
+#~ msgid "Skip"
+#~ msgstr "Přeskočit"
+
+#~ msgid "Unlock"
+#~ msgstr "Odemknout"
+
+#~ msgid "Hide the window instead of quitting if there are downloads running."
+#~ msgstr "Skrýt okno místo ukončení, pokud probíhá stahování."
+
+#~ msgid "Add Download (Ctrl+N)"
+#~ msgstr "Přidat stahování (Ctrl+N)"
+
+#~ msgid "Apply"
+#~ msgstr "Použít"
+
+#~ msgid "Copied debug info to clipboard."
+#~ msgstr "Zkopírovat informace o ladění do schránky."
+
+#~ msgid ""
+#~ "Parabolic's documentation and support channels are accessible via the "
+#~ "Help menu."
+#~ msgstr ""
+#~ "Dokumentace a kanály podpory aplikace Parabolic jsou dostupné v nabídce "
+#~ "nápovědy."
+
+#, csharp-format
+#~ msgid "Remaining Downloads: {0}"
+#~ msgstr "Zbývající stahování: {0}"
+
+#~ msgid "YouTube;Downloader;ytdlp;Nickvision;Tube;Converter;"
+#~ msgstr "YouTube;Stahování;ytdlp;Nickvision;Tube;Converter;"
+
+#~ msgid "— A basic yt-dlp frontend"
+#~ msgstr "— Jednoduché rozhraní pro yt-dlp"
+
+#~ msgid ""
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)"
+#~ msgstr ""
+#~ "— Podporuje stahování videí v několika různých formátech (mp4, webm, mp3, "
+#~ "opus, flac, a wav)"
+
+#~ msgid "— Run multiple downloads at a time"
+#~ msgstr "— Možnost stahovat několik videí najednou"
+
+#~ msgid "— Supports downloading metadata and video subtitles"
+#~ msgstr "— Podporuje stahování metadat a titulků videí"
+
+#~ msgid ""
+#~ "Different sites can use different language code formats for the same "
+#~ "language. You may encounter one of the following three types: two-letter, "
+#~ "two-letter with region, or three-letter. For example, \"en\", \"en-US\" "
+#~ "and \"eng\" are all used for English.\n"
+#~ "Please specify all valid codes for your languages for the best results. "
+#~ "Auto-generated subtitles will also be downloaded if available.\n"
+#~ "\n"
+#~ "You can specify \"all\" instead to download all subtitles, but without "
+#~ "auto-generated ones."
+#~ msgstr ""
+#~ "Různé stránky používají různé jazykové kódy pro stejný jazyk. Můžete "
+#~ "narazit na jeden z následujících třech typů: dvoupísmenný, dvoupísmenný s "
+#~ "oblastí nebo třípísmenný. Například u angličtiny to bude „en“, „en-US“ či "
+#~ "„eng“.\n"
+#~ "Pro dosažení nejlepších výsledků zadejte pro své jazyky všechny platné "
+#~ "kódy. Pokud jsou dostupné, budou staženy i automaticky vygenerované "
+#~ "titulky.\n"
+#~ "\n"
+#~ "Pro stažení všech titulků (mimo automaticky generovaných) můžete zadat "
+#~ "„all“."
+
+#~ msgid "Download Subtitle"
+#~ msgstr "Stáhnout titulky"
+
+#~ msgid "Embed Subtitle"
+#~ msgstr "Vložit titulky"
+
+#~ msgid "Preparing required tools..."
+#~ msgstr "Příprava požadovaných nástrojů..."
+
+#~ msgid "Unable to setup dependencies. Please restart the app and try again."
+#~ msgstr ""
+#~ "Nepodařilo se nastavit závislosti. Restartujte prosím aplikaci a zkuste "
+#~ "to znovu."
+
+#~ msgid "Remove data about media source"
+#~ msgstr "Odstranit data o zdroji média"
+
+#~ msgid "Set Password"
+#~ msgstr "Nastavit heslo"
+
+#~ msgid "New Password"
+#~ msgstr "Nové heslo"
+
+#~ msgid "Confirm Password"
+#~ msgstr "Potvrzení hesla"
+
+#~ msgid "If the password is lost, there is no way to restore the keyring!"
+#~ msgstr "Pokud heslo ztratíte, není možné získat přístup do klíčenky!"
+
+#~ msgid "Continue"
+#~ msgstr "Pokračovat"
+
+#~ msgid "Unable to unlock keyring. Restart the app to try again."
+#~ msgstr ""
+#~ "Nepodařilo se odemknout klíčenku. Restartujte aplikaci a zkuste to znovu."
+
+#~ msgid "Keyring has not been unlocked."
+#~ msgstr "Klíčenka nebyla odemčena."
+
+#, csharp-format
+#~ msgid ""
+#~ "David Lapshin {0}\n"
+#~ "Brage Fuglseth {1}\n"
+#~ "marcin {2}"
+#~ msgstr ""
+#~ "David Lapshin {0}\n"
+#~ "Brage Fuglseth {1}\n"
+#~ "marcin {2}"
+
+#, csharp-format
+#~ msgid ""
+#~ "Nicholas Logozzo {0}\n"
+#~ "Fyodor Sobolev {1}\n"
+#~ "DaPigGuy {2}"
+#~ msgstr ""
+#~ "Nicholas Logozzo {0}\n"
+#~ "Fyodor Sobolev {1}\n"
+#~ "DaPigGuy {2}"
+
+#~ msgid "youtube"
+#~ msgstr "youtube"
+
+#~ msgid "video"
+#~ msgstr "video"
+
+#~ msgid "audio"
+#~ msgstr "zvuk"
+
+#~ msgid "download"
+#~ msgstr "stahování"
+
+#~ msgid "Customize the application's user interface."
+#~ msgstr "Přizpůsobit uživatelské rozhraní aplikace."
+
+#~ msgid "Customize downloader settings."
+#~ msgstr "Přizpůsobení nastavení stahování."
+
+#~ msgid "Customize converter settings."
+#~ msgstr "Přizpůsobit nastavení konvertoru."
+
+#~ msgid "About Tube Converter"
+#~ msgstr "O aplikaci Tube Converter"
+
+#~ msgid "Tube Converter"
+#~ msgstr "Tube Converter"
+
+#~ msgid "Get video and audio from the web"
+#~ msgstr "Získávání videa a zvuku z webu"
+
+#, fuzzy
+#~ msgid "Authenticate (Invalid)"
+#~ msgstr "Autentizace"
+
+#~ msgid ""
+#~ "Please provide credentials only if required by the website you are "
+#~ "downloading media from."
+#~ msgstr ""
+#~ "Přihlašovací údaje uveďte pouze v případě, že je webová stránka, ze které "
+#~ "média stahujete, vyžaduje."
+
+#~ msgid "A link has been detected in your clipboard."
+#~ msgstr "Ve vaší schránce byl nalezen odkaz."
+
+#~ msgid "Scan Clipboard for URLs"
+#~ msgstr "Vyhledat adresy URL ve schránce"
+
+#, fuzzy
+#~ msgid "Link pasted from clipboard."
+#~ msgstr "Vložit ze schránky"
+
+#~ msgid "If checked, media metadata will be included in the downloaded file."
+#~ msgstr ""
+#~ "Pokud je zaškrtnuto, budou metadata média zahrnuta do staženého souboru."
+
+#, fuzzy
+#~ msgid "More options for configuring the download."
+#~ msgstr "Další možnosti konfigurace stahování"
+
+#~ msgctxt "Night"
+#~ msgid "Good Morning!"
+#~ msgstr "Dobré ráno!"
+
+#~ msgctxt "Morning"
+#~ msgid "Good Morning!"
+#~ msgstr "Dobré ráno!"
+
+#~ msgid "Good Afternoon!"
+#~ msgstr "Dobré odpoledne!"
+
+#~ msgid "Good Evening!"
+#~ msgstr "Dobrý večer!"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Contributors on GitHub ❤️ https://github.com/NickvisionApps/TubeConverter/"
+#~ "graphs/contributors"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Přispěvatelé na GitHubu ❤️ https://github.com/NickvisionApps/TubeConverter/"
+#~ "graphs/contributors"
+
+#~ msgid "New"
+#~ msgstr "Nový"
+
+#~ msgid ""
+#~ "Downloading required dependencies...\n"
+#~ "\n"
+#~ "(This may take some time)"
+#~ msgstr ""
+#~ "Stahování požadovaných závislostí...\n"
+#~ "\n"
+#~ "(Může to chvíli trvat)"
+
+#~ msgid ""
+#~ "Hide the window instead of quitting if there are downloads running. "
+#~ "Showing background activity status requires GNOME 44+"
+#~ msgstr ""
+#~ "Skrýt okno místo ukončení, pokud probíhá stahování. Zobrazení stavu "
+#~ "činnosti na pozadí vyžaduje prostředí GNOME 44+"
+
+#~ msgid ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+#~ msgstr ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+
+#~ msgid ""
+#~ "— A basic yt-dlp frontend\n"
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)\n"
+#~ "— Run multiple downloads at a time\n"
+#~ "— Supports downloading metadata and video subtitles"
+#~ msgstr ""
+#~ "— Jednoduchý frontend yt-dlp\n"
+#~ "— Podporuje stahování videí v několika formátech (mp4, webm, mp3, opus, "
+#~ "flac a wav).\n"
+#~ "— Možnost několika stahování najednou\n"
+#~ "— Podporuje stahování metadat a titulků videí"
+
+#~ msgid "Info"
+#~ msgstr "Informace"
+
+#~ msgid "Downloading required dependencies..."
+#~ msgstr "Stahování požadovaných závislostí..."
+
+#~ msgid "Stop All Downloads (Ctrl+Shift+C)"
+#~ msgstr "Zastavit všechna stahování (Ctrl+Shift+C)"
+
+#~ msgid "Retry Failed Downloads (Ctrl+Shift+R)"
+#~ msgstr "Opakovat selhaná stahování (Ctrl+Shift+R)"
+
+#~ msgid "Clear Queued Downloads (Ctrl+Delete)"
+#~ msgstr "Vymazat stahování ve frontě (Ctrl+Delete)"

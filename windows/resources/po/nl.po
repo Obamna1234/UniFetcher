@@ -1,0 +1,2869 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-23 23:33-0400\n"
+"PO-Revision-Date: 2026-02-15 18:12+0000\n"
+"Last-Translator: jensdl <JDL_bakugan@hotmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/nickvision-tube-"
+"converter/app/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:27
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:112
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:120
+msgid "Add Download"
+msgstr "Download toevoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:40
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:64
+msgid "Discover"
+msgstr "Ontdekken"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:50
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:68
+msgid "Media URL"
+msgstr "Media-URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:55
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:284
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:70
+msgid "Select Batch File"
+msgstr "Selecteer Bulk Bestand"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:62
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:71
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:72
+msgid "Use Authentication"
+msgstr "Gebruik Authenticatie"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:67
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:73
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:67
+msgid "Credential"
+msgstr "Inloggegevens"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:71
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:51
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:74
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:87
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:75
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:55
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:92
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:78
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:79
+#, fuzzy
+msgid "Download Immediately as Video"
+msgstr "Download Onmiddelijk"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:81
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:86
+msgid ""
+"Media will be downloaded based off of previously configured options and "
+"sensible defaults. Options will not be shown"
+msgstr ""
+"Media wordt gedownload op basis van eerder geconfigureerde opties en "
+"verstandige standaardinstellingen. Opties worden niet weergegeven"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:81
+#, fuzzy
+msgid "Download Immediately as Audio"
+msgstr "Download Onmiddelijk"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:171
+msgid "Discovering Media"
+msgstr "Media Ontdekken"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:84
+msgid "This may take some time..."
+msgstr "Dit kan even duren..."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:111
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:304
+msgid "Configure"
+msgstr "Configureren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:126
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:319
+#, fuzzy
+msgid "Search Subtitles"
+msgstr "Onder­titels"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:132
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:150
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:325
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:343
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:230
+msgid "Download"
+msgstr "Downloaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:160
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:353
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:11
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:25
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:111
+msgid "General"
+msgstr "Algemeen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:170
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:88
+msgid "File Name"
+msgstr "Bestandsnaam"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:176
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:440
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:89
+msgid "Revert to Title"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:183
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:363
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:115
+msgid "Save Folder"
+msgstr "Opslagmap"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:190
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:370
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:511
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:563
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:116
+msgid "Select Save Folder"
+msgstr "Opslagmap selecteren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:199
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:379
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:117
+msgid "File Type"
+msgstr "Bestandstype"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:200
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:380
+msgid "Generic types do not support embedding thumbnails and subtitles."
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:204
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:95
+msgid "Video Format"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:208
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:96
+msgid "Audio Format"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:215
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:439
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:113
+msgid "Subtitles"
+msgstr "Onder­titels"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:224
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:448
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:101
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:135
+#, fuzzy
+msgid "Search subtitles"
+msgstr "Onder­titels"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:237
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:461
+#, fuzzy
+msgid "Available Subtitles"
+msgstr "Ondertiteling invoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:245
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:420
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:470
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:133
+msgid "Deselect All"
+msgstr "Alles deselecteren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:252
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:427
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:477
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:99
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:122
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:132
+msgid "Select All"
+msgstr "Alles selecteren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:266
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:491
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:325
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:111
+#, fuzzy
+msgid "Advanced"
+msgstr "Geavanceerde opties"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:270
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:399
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:495
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:12
+#, fuzzy
+msgid "Options"
+msgstr "Geavanceerde opties"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:273
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:502
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:103
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:139
+#, fuzzy
+msgid "Split into Files by Chapters"
+msgstr "Hoofdstukken opsplitsen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:277
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:506
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:104
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:140
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:141
+#, fuzzy
+msgid "Export Description to File"
+msgstr "Beschrĳving exporteren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:281
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:510
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:142
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:143
+#, fuzzy
+msgid "Exclude from History"
+msgstr "Geschiedenis wissen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:285
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:514
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:108
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:144
+#, fuzzy
+msgid "Post Processor Argument"
+msgstr "Nabewerkings­threads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:286
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:515
+#, fuzzy
+msgid "Arguments are configurable in Preferences"
+msgstr "(configureerbaar in voorkeuren)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:290
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:19
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:109
+msgid "Start Time"
+msgstr "Starttijd"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:294
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:20
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:110
+msgid "End Time"
+msgstr "Eindtijd"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:384
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:120
+msgid "Suggested Video Resolution"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:121
+msgid "Suggested Audio Bitrate"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:395
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:112
+msgid "Items"
+msgstr "Items"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:402
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:125
+#, fuzzy
+msgid "Reverse Download Order"
+msgstr "Mislukte downloads opnieuw proberen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:406
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:126
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:127
+msgid "Number Titles"
+msgstr "Titels nummeren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:407
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:412
+#, fuzzy
+msgid "Available Items"
+msgstr "Ondertiteling invoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:462
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:134
+msgid ""
+"Note: Some playlist items may not contain subtitles for a selected language."
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:498
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:137
+msgid "Export M3U Playlist File"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:70
+msgid "View Log"
+msgstr "Logboek bekĳken"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:87
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:196
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:168
+msgid "Pause"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:95
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:52
+msgid "Stop"
+msgstr "Stoppen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:111
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:116
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:53
+msgid "Play"
+msgstr "Afspelen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:119
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:54
+msgid "Open"
+msgstr "Openen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:131
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:55
+msgid "Retry"
+msgstr "Opnieuw proberen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:154
+#, fuzzy
+msgid "Copy Log to Clipboard"
+msgstr "Kopiëren naar klembord"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:41
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:6
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:38
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:89
+msgid "History"
+msgstr "Geschiedenis"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:15
+msgid "Sort By"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:43
+msgid "Newest"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:44
+msgid "Oldest"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:36
+msgid "Save Length"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:42
+#, fuzzy
+msgid "Clear All"
+msgstr "Wissen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:94
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:106
+msgid "Keyring"
+msgstr "Sleutelbos"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:12
+msgid "Credentials"
+msgstr "Inlog­gegevens"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:17
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:52
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:447
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:111
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:112
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:148
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:210
+msgid "Add"
+msgstr "Toevoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:43
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:472
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:151
+msgid "Name"
+msgstr "Naam"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:82
+msgid "URL"
+msgstr "URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/LoadingDialog.blp:5
+#, fuzzy
+msgid "Loading"
+msgstr "Downloaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:9
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:9
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:10
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:14
+msgid "Keyboard Shortcuts"
+msgstr "Sneltoetsen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:11
+msgid "About Parabolic"
+msgstr "Over Parabolic"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:17
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:108
+#, fuzzy
+msgid "Stop All Remaining"
+msgstr "Alles stoppen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:18
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:109
+#, fuzzy
+msgid "Retry All Failed"
+msgstr "Opnieuw proberen mislukt"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:110
+#, fuzzy
+msgid "Clear All Queued"
+msgstr "Download­wachtrij wissen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:23
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:111
+#, fuzzy
+msgid "Clear All Completed"
+msgstr "Voltooide downloads wissen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:61
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:70
+#, fuzzy
+msgid "Updater"
+msgstr "Bij­werken"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:108
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:103
+msgid "Download Media"
+msgstr "Media downloaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:109
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:104
+msgid "Add a video, audio, or playlist URL to start downloading"
+msgstr ""
+"Voeg een URL van een video, audio, of een playlist toe om te downloaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:140
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:113
+#, fuzzy
+msgid "All"
+msgstr "alles"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:145
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:206
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:81
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:114
+msgid "Running"
+msgstr "Bezig"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:150
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:107
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:115
+msgid "Queued"
+msgstr "In wachtrij"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:155
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:116
+msgid "Completed"
+msgstr "Voltooid"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:160
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:117
+msgid "Failed"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:171
+#, fuzzy
+msgid "Manage Download"
+msgstr "Downloads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:195
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:118
+#, fuzzy
+msgid "No Downloads"
+msgstr "Downloads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:196
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:119
+#, fuzzy
+msgid "There are no downloads of this type"
+msgstr "Bij voltooien van alle downloads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:15
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:33
+msgid "User Interface"
+msgstr "Gebruikersinterface"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:18
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:37
+msgid "Theme"
+msgstr "Thema"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:27
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:39
+#, fuzzy
+msgid "Translation Language"
+msgstr "Audio­taal"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:40
+msgid "An application restart is required for a change to take effect"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:37
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:42
+#, fuzzy
+msgid "Receive Preview Updates"
+msgstr "Controleren op updates"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:38
+msgid "Update dependencies, such as yt-dlp, to beta versions"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:46
+#, fuzzy
+msgid "Prevent Suspend"
+msgstr "Slaapstand voorkomen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:47
+msgid "Prevent the computer from sleeping while downloads are running"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:57
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:50
+#, fuzzy
+msgid "Download History Length"
+msgstr "Downloaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:58
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:51
+#, fuzzy
+msgid "The amount of time to keep past downloads in the app's history"
+msgstr "Bij voltooien van alle downloads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:34
+msgid "Downloads"
+msgstr "Downloads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:71
+#, fuzzy
+msgid "Max Number of Running Downloads"
+msgstr "Maximumaantal actieve downloads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:54
+msgid "Overwrite Existing Files"
+msgstr "Bestaande bestanden overschrijven"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:96
+msgid "Limit Filename Characters"
+msgstr "Bestandsnaam­tekens limiteren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:97
+msgid "Restrict characters in filenames to those supported only by Windows"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:57
+msgid "Include Media Id in Title"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:58
+msgid "Add the media's id to its default title"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:116
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:61
+#, fuzzy
+msgid "Include Auto-Generated Subtitles"
+msgstr "Onder­titels down­loaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:62
+msgid ""
+"Show auto-generated subtitles to download in addition to available subtitles"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:126
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:65
+msgid "Include Super Resolution Formats"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:66
+msgid ""
+"Show super (AI-scaled) resolution formats to download in addition to regular "
+"formats"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:69
+#, fuzzy
+msgid "Preferred Video Codec"
+msgstr "Voorkeur geven aan AV1-codec"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:137
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:70
+msgid ""
+"Prefer this codec when parsing video formats to show available to download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:146
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:72
+#, fuzzy
+msgid "Preferred Audio Codec"
+msgstr "Voorkeur geven aan AV1-codec"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:147
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:73
+msgid ""
+"Prefer this codec when parsing audio formats to show available to download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:156
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:75
+#, fuzzy
+msgid "Preferred Subtitle Format"
+msgstr "Voorkeur geven aan AV1-codec"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:157
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:76
+msgid "Prefer this subtitle file format when downloading"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:166
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:78
+#, fuzzy
+msgid "Preferred Frame Rate"
+msgstr "Voorkeur geven aan AV1-codec"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:167
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:79
+msgid ""
+"Prefer this frame rate when parsing video formats to show available to "
+"download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:178
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:182
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:35
+msgid "Downloader"
+msgstr "Downloader"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:185
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:81
+#, fuzzy
+msgid "Use Part Files"
+msgstr "Gebruikmaken van aria2"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:186
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:82
+msgid ""
+"Download media in separate .part files instead of directly into the output "
+"file"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:195
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:85
+msgid "Use SponsorBlock for YouTube"
+msgstr "SponsorBlock gebruiken voor YouTube"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:196
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:86
+msgid "Try to remove sponsored segments from videos"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:205
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:89
+#, fuzzy
+msgid "Limit Download Speed"
+msgstr "Media downloaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:210
+#, fuzzy
+msgid "Speed Limit (KiB/s)"
+msgstr "Snelheidslimiet"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:93
+msgid "Proxy URL"
+msgstr "Proxy-URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:237
+#, fuzzy
+msgid "Cookies File"
+msgstr "Cookies-bestand"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:248
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:268
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:99
+msgid "Select Cookies File"
+msgstr "Cookies-bestand selecteren"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:257
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:98
+msgid "Clear Cookies File"
+msgstr "Cookies-bestand wissen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:100
+msgid "Cookies from Browser"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:276
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:102
+#, fuzzy
+msgid "aria2c"
+msgstr "aria2"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:277
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:104
+msgid ""
+"An alternative downloader that may be faster in some regions compared to yt-"
+"dlp's native downloader"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:280
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:103
+#, fuzzy
+msgid "Use aria2c"
+msgstr "Gebruikmaken van aria2"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:289
+#, fuzzy
+msgid "Max Connections Per Server (-x)"
+msgstr "Maximaal aantal verbindingen per server (-x)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:306
+#, fuzzy
+msgid "Minimum Split Size (-k)"
+msgstr "Minimale splitsingsgrootte (-k)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:307
+msgid "The minimum size of which to split a file (in MiB)"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:326
+msgid "Specify extra arguments to pass to yt-dlp"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:329
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:112
+#, fuzzy
+msgid "yt-dlp Discovery Arguments"
+msgstr "Nabewerkings­threads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:338
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:115
+#, fuzzy
+msgid "yt-dlp Download Arguments"
+msgstr "Opnieuw downloaden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:349
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:353
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:36
+msgid "Converter"
+msgstr "Converter"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:356
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:118
+msgid "Translate Metadata and Chapters"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:119
+msgid ""
+"Automatically translate embedded metadata and chapters to the app's language "
+"on supported sites and media"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:366
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:122
+msgid "Embed Metadata"
+msgstr "Metagegevens invoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:376
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:125
+msgid "Remove Source Data"
+msgstr "Bron­gegevens verwijderen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:377
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:126
+msgid "Clear metadata fields containing identifying download information"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:387
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:129
+#, fuzzy
+msgid "Embed Thumbnails"
+msgstr "Ondertiteling invoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:130
+msgid ""
+"If the file type does not support embedding, the thumbnail will be written "
+"to a separate image file"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:398
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:133
+msgid "Crop Audio Thumbnails"
+msgstr "Audio-miniaturen bijsnijden"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:399
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:134
+msgid "Crop thumbnails of audio files to squares"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:409
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:137
+msgid "Embed Chapters"
+msgstr "Hoofdstukken invoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:418
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:140
+msgid "Embed Subtitles"
+msgstr "Ondertiteling invoegen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:419
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:141
+msgid ""
+"If disabled or if embedding is not supported, downloaded subtitles will be "
+"saved to separate files"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:428
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:144
+#, fuzzy
+msgid "FFmpeg Threads"
+msgstr "Nabewerkings­threads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:429
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:145
+msgid "Limit the number of threads used by ffmpeg"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:440
+#, fuzzy
+msgid "Postprocessing Arguments"
+msgstr "Nabewerkings­threads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:441
+msgid "Arguments will be shown for selection in the add download dialog"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:443
+#, fuzzy
+msgid "Add Postprocessing Argument"
+msgstr "Nabewerkings­threads"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:457
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:149
+#, fuzzy
+msgid "Argument"
+msgstr "Nieuwe inlog­gegevens"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:476
+#, fuzzy
+msgid "Post Processor"
+msgstr "Verwerken"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:480
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:154
+#, fuzzy
+msgid "Executable"
+msgstr "Inschakelen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:484
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:155
+msgid "Args"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:6
+msgctxt "Shortcut"
+msgid "Application"
+msgstr "App"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:19
+#, fuzzy
+msgid "About Application"
+msgstr "App"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:24
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:30
+#, fuzzy
+msgid "Folder"
+msgstr "Map openen"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:33
+#, fuzzy
+msgid "Open Folder"
+msgstr "Opslagmap"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:38
+#, fuzzy
+msgid "Close Folder"
+msgstr "Opslagmap"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:112
+msgid "Starting"
+msgstr "Starten"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:117
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:183
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:184
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:155
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:156
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:139
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:139
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:315
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:325
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:109
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:226
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:289
+msgid "Error"
+msgstr "Fout"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:147
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:116
+msgid "Success"
+msgstr "Voltooid"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:156
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:125
+msgid "Paused"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:159
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:128
+msgid "Resume"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:173
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:141
+msgid "Processing"
+msgstr "Verwerken"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:177
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:147
+#, csharp-format
+msgid "Sleeping for {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:181
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:153
+#, csharp-format
+msgid "{0}% Complete • {1} • {2} Remaining"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:213
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:184
+msgid "Stopped"
+msgstr "Gestopt"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:286
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:270
+msgid "TXT Files (*.txt)"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:378
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:478
+msgid "No Subtitles Available"
+msgstr "Geen onder­titels beschikbaar"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:410
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:434
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:280
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:485
+#, fuzzy, csharp-format
+msgid "Total Duration: {0}"
+msgstr "Totale snelheid: {0}"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:463
+msgid "Properties"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:59
+#, fuzzy
+msgid "Clear All History?"
+msgstr "Geschiedenis wissen"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:60
+msgid ""
+"Are you sure you want to clear all download history? This action is "
+"irreversible"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:82
+#, fuzzy
+msgid "Clear"
+msgstr "Wissen"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:83
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:166
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:359
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:65
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:173
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:231
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:69
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:125
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:150
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:111
+msgid "Download Again"
+msgstr "Opnieuw downloaden"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:122
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:82
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:165
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:230
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:358
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:129
+#, fuzzy, csharp-format
+msgid "Downloaded On: {0}"
+msgstr "Downloaden"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:140
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:46
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:48
+#, fuzzy
+msgid "No History"
+msgstr "Geschiedenis"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:77
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:158
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:225
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:351
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:85
+msgid "Edit"
+msgstr "Bewerken"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:97
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:52
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:54
+#, fuzzy
+msgid "No Credentials"
+msgstr "Inlog­gegevens"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:140
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:326
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:291
+msgid "OK"
+msgstr "Ok"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:144
+msgid "Delete Credential?"
+msgstr "Inloggegevens verwijderen?"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:145
+msgid ""
+"Are you sure you want to delete this credential? This action is irreversible"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:197
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:138
+msgid "Don't show this message again"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:142
+msgid "Legal Copyright Disclaimer"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:151
+msgid ""
+"Videos on YouTube and other sites may be subject to DMCA protection. The "
+"authors of Parabolic do not endorse, and are not responsible for, the use of "
+"this application in means that will violate these laws."
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:199
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:157
+msgid "I understand"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:172
+#, fuzzy
+msgid "Recover Downloads?"
+msgstr "Mislukte downloads opnieuw proberen"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:173
+#, fuzzy
+msgid ""
+"There are downloads available to recover from when Parabolic crashed. Would "
+"you like to download them again?"
+msgstr "Deze actie is onomkeerbaar. Weet u zeker dat u het wilt verwijderen?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:212
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:243
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:61
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:146
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:174
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:206
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:252
+msgid "Yes"
+msgstr "Ja"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:213
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:244
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:62
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:147
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:207
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:253
+msgid "No"
+msgstr "Nee"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:205
+#, fuzzy
+msgid ""
+"There are downloads still in progress. Would you like to stop them and exit?"
+msgstr "Deze actie is onomkeerbaar. Weet u zeker dat u het wilt verwijderen?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:272
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:88
+msgid "View"
+msgstr "Bekĳken"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:282
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:248
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:254
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:273
+msgid "Update"
+msgstr "Bij­werken"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:287
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:302
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:421
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:405
+#, fuzzy, csharp-format
+msgid "Downloading update: {0}%"
+msgstr "Downloaden"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:312
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:260
+msgid "Details"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:317
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:39
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:277
+msgid "Close"
+msgstr "Sluiten"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:453
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:97
+msgid "GitHub Repo"
+msgstr "GitHub-repo"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:151
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:287
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:180
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:241
+msgid "No file selected"
+msgstr "Geen bestand geselecteerd"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:245
+#, fuzzy
+msgid "No Arguments"
+msgstr "Nieuwe inlog­gegevens"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:250
+#, fuzzy
+msgid "Delete Argument?"
+msgstr "Nieuwe inlog­gegevens"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:251
+msgid ""
+"Are you sure you want to delete this post-processor argument? This action is "
+"irreversible"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:169
+msgid "An error occurred while adding playlist downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:244
+msgid "An error occurred while adding the single download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:261
+msgid "No media was found at the provided URL"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:309
+#: Nickvision.Parabolic.Shared/Models/Format.cs:354
+#: Nickvision.Parabolic.Shared/Models/Format.cs:355
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:37
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:79
+msgid "Worst"
+msgstr "Slechtst"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:310
+#: Nickvision.Parabolic.Shared/Models/Format.cs:352
+#: Nickvision.Parabolic.Shared/Models/Format.cs:353
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:33
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:75
+msgid "Best"
+msgstr "Best"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:335
+msgid "Video (Generic)"
+msgstr "Video (algemeen)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:336
+msgid "MP4 (Video)"
+msgstr "MP4 (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:337
+msgid "WEBM (Video)"
+msgstr "WEBM (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:338
+msgid "MKV (Video)"
+msgstr "MKV (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:339
+msgid "MOV (Video)"
+msgstr "MOV (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:340
+msgid "AVI (Video)"
+msgstr "AVI (video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:342
+msgid "Audio (Generic)"
+msgstr "Audio (algemeen)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:343
+msgid "MP3 (Audio)"
+msgstr "MP3 (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:344
+msgid "M4A (Audio)"
+msgstr "M4A (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:345
+msgid "OPUS (Audio)"
+msgstr "OPUS (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:346
+msgid "FLAC (Audio)"
+msgstr "FLAC (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:347
+msgid "WAV (Audio)"
+msgstr "WAV (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:348
+#, fuzzy
+msgid "OGG (Audio)"
+msgstr "OPUS (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:381
+msgid "An error occurred while discovering media"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:395
+msgid "Use manual credential"
+msgstr "Handmatige inloggegevens gebruiken"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:414
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:60
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:75
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:105
+#: Nickvision.Parabolic.Shared/Models/Format.cs:356
+#: Nickvision.Parabolic.Shared/Models/Format.cs:357
+msgid "None"
+msgstr "Geen"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:29
+msgid "A credential with that name already exists"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:33
+#, fuzzy
+msgid "The name of the credential cannot be empty"
+msgstr "Zorg ervoor dat de inloggegevens correct zijn."
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:37
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:79
+#, fuzzy
+msgid "Either the credential username or password must be set"
+msgstr "Zorg ervoor dat de inloggegevens correct zijn."
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:75
+msgid "A credential with that name does not exist"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:61
+msgid "Parabolic"
+msgstr "Parabolic"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:62
+#, fuzzy
+msgid "Download web video and audio."
+msgstr "Download video's en audio van het web"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:63
+msgid "Matrix Chat"
+msgstr "Matrix-kamer"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:65
+#, fuzzy
+msgid "Contributors on GitHub ❤️"
+msgstr "Bĳdragers op GitHub"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:67
+msgid "Fyodor Sobolev"
+msgstr "Fyodor Sobolev"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:69
+msgid "David Lapshin"
+msgstr "David Lapshin"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:70
+#, fuzzy
+msgid "translation-credits"
+msgstr "Philip Goto https://philipgoto.nl/"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:159
+#, fuzzy, csharp-format
+msgid "New {0} update available: {1}"
+msgstr "Nieuwe update beschikbaar"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:168
+#, fuzzy, csharp-format
+msgid "New yt-dlp update available: {0}"
+msgstr "Nieuwe update beschikbaar"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:176
+#, fuzzy, csharp-format
+msgid "New deno update available: {0}"
+msgstr "Nieuwe update beschikbaar"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:186
+#, fuzzy
+msgid "No update available"
+msgstr "Nieuwe update beschikbaar"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:200
+msgid "An error occurred while clearing completed downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:218
+msgid "An error occurred while clearing recoverable downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:235
+msgid "An error occurred while clearing queued downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:249
+#, fuzzy, csharp-format
+msgid "Deno {0} installed successfully"
+msgstr "Voltooide down­loads wissen"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:253
+#, fuzzy
+msgid "Unable to download and install the Deno update"
+msgstr "Kan update niet downloaden en installeren"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:282
+msgid "An error occurred while pausing the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:300
+msgid "An error occurred while recovering downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:317
+msgid "An error occurred while resuming the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:335
+msgid "An error occurred while retrying failed downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:352
+msgid "An error occurred while retrying the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:370
+msgid "An error occurred while stopping all downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:387
+msgid "An error occurred while stopping the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:401
+#, fuzzy, csharp-format
+msgid "Starting {0} installer..."
+msgstr "Download starten…"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:405
+#, fuzzy
+msgid "Unable to download and install the update"
+msgstr "Kan update niet downloaden en installeren"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:414
+#, csharp-format
+msgid "yt-dlp {0} installed successfully"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:418
+#, fuzzy
+msgid "Unable to download and install the yt-dlp update"
+msgstr "Kan update niet downloaden en installeren"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:39
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:87
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:118
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:132
+msgid "Any"
+msgstr "Elke"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:40
+#, fuzzy
+msgid "FLAC (ALAC)"
+msgstr "FLAC (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:41
+#, fuzzy
+msgid "WAV (AIFF)"
+msgstr "WAV (audio)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:49
+msgid "System"
+msgstr "Systeem"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:61
+msgid "Firefox"
+msgstr "Firefox"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:65
+msgid "Brave"
+msgstr "Brave"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:66
+msgid "Chrome"
+msgstr "Chrome"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:67
+msgid "Chromium"
+msgstr "Chromium"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:68
+msgid "Edge"
+msgstr "Edge"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:69
+msgid "Opera"
+msgstr "Opera"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:70
+msgid "Vivaldi"
+msgstr "Vivaldi"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:71
+msgid "Whale"
+msgstr "Whale"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:88
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:89
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:90
+#: Nickvision.Parabolic.Shared/Models/Format.cs:269
+#: Nickvision.Parabolic.Shared/Models/Format.cs:270
+#: Nickvision.Parabolic.Shared/Models/Format.cs:271
+#, csharp-format
+msgid "{0} FPS"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:94
+msgid "Never"
+msgstr "Nooit"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:95
+#, fuzzy
+msgid "1 Day"
+msgstr "Een dag"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:96
+#, fuzzy
+msgid "1 Week"
+msgstr "Een week"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:97
+#, fuzzy
+msgid "1 Month"
+msgstr "Een maand"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:98
+#, fuzzy
+msgid "3 Months"
+msgstr "Een maand"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:99
+#, fuzzy
+msgid "6 Months"
+msgstr "Een maand"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:100
+msgid "1 Year"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:101
+msgid "Forever"
+msgstr "Voor altĳd"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:126
+msgctxt "Theme"
+msgid "Light"
+msgstr "Licht"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:127
+msgctxt "Theme"
+msgid "Dark"
+msgstr "Donker"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:128
+msgctxt "Theme"
+msgid "System"
+msgstr "Systeem"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:135
+msgid "H.264 (AVC)"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:136
+msgid "H.265 (HEVC)"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:366
+msgid "An argument with that name already exists"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:370
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:402
+#, fuzzy
+msgid "The name of the argument cannot be empty"
+msgstr "Zorg ervoor dat de inloggegevens correct zijn."
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:374
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:406
+#, fuzzy
+msgid "The arguments of the argument cannot be empty"
+msgstr "Zorg ervoor dat de inloggegevens correct zijn."
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:398
+msgid "An argument with that name does not exist"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:98
+#, fuzzy
+msgid "The file already exists and overwriting is disabled."
+msgstr "FOUT: Bestand bestaat al en overschrĳven is uitgeschakeld."
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:115
+msgid "Starting download..."
+msgstr "Download starten…"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:250
+#: Nickvision.Parabolic.Shared/Models/Format.cs:304
+msgid "Audio Description"
+msgstr "Audio­beschrĳving"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:335
+#, fuzzy, csharp-format
+msgid "{0:0.00} GiB"
+msgstr "{:.2f} GiB/s"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:339
+#, fuzzy, csharp-format
+msgid "{0:0.00} MiB"
+msgstr "{:.2f} MiB/s"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:343
+#, fuzzy, csharp-format
+msgid "{0:0.00} KiB"
+msgstr "{:.2f} KiB/s"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:347
+#, csharp-format
+msgid "{0:0.00} B"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Models/SubtitleLanguage.cs:49
+#, fuzzy, csharp-format
+msgid "{0} (Auto-generated)"
+msgstr "Automatisch gegenereerd"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:417
+#, fuzzy, csharp-format
+msgid "About {0}"
+msgstr "Over"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:26
+#, fuzzy
+msgid "Changelog"
+msgstr "Wĳzigings­logboek:"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:27
+msgid "Debugging"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:28
+msgid "Credits"
+msgstr "Dank­betuigingen"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:34
+#, fuzzy
+msgid "Copy Debug Information"
+msgstr "Cookies-bestand-informatie"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:37
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:41
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}\n"
+"\n"
+"Translators:\n"
+"{3}"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:50
+msgid "Log"
+msgstr "Log­boek"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:69
+#, fuzzy
+msgid "Enter media url here"
+msgstr "Voer media-URL hier in"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:122
+#, fuzzy
+msgid "Enter username here"
+msgstr "Voer media-URL hier in"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:123
+msgid "Enter password here"
+msgstr "Voer wacht­woord hier in"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:82
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:118
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:128
+msgid "Warning"
+msgstr "Waarschuwing"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:83
+msgid ""
+"Parabolic will download media based off of previously configured options and "
+"sensible defaults. Options including save folder, format, and subtitle "
+"selection will not be shown."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:119
+msgid ""
+"Generic types do not support embedding thumbnails and subtitles. If "
+"necessary, please select a specific type that is known to support embedding "
+"to prevent separate files from being written."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:130
+#, fuzzy
+msgid "No Subtitles"
+msgstr "Onder­titels"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:98
+msgid "No subtitles were found for this media."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:129
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:131
+msgid "No subtitles were found in this playlist."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:229
+#, fuzzy
+msgid "Configure Download"
+msgstr "Downloads"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:40
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:50
+#, fuzzy
+msgid "Search..."
+msgstr "Zoeken…"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:41
+msgid "Sort"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:45
+msgid "Please wait..."
+msgstr "Even geduld…"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:47
+#, fuzzy
+msgid "There are no downloads in your history"
+msgstr "Bij voltooien van alle downloads"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:49
+#, fuzzy
+msgid "There are no downloads found with the current filters"
+msgstr "Bij voltooien van alle downloads"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:53
+#, fuzzy
+msgid "There are no credentials in your keyring"
+msgstr "Beheer inloggegevens in uw sleutelbos."
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:55
+msgid "There are no credentials found with the current filters"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:152
+msgid "Enter name here"
+msgstr "Voer naam hier in"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:83
+#, fuzzy
+msgid "Enter url here"
+msgstr "Voer media-URL hier in"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:82
+msgid "File"
+msgstr "Bestand"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:84
+msgid "Exit"
+msgstr "Verlaten"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:32
+msgid "Settings"
+msgstr "Instellingen"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:95
+msgid "Help"
+msgstr "Hulp"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:96
+msgid "Check for Updates"
+msgstr "Controleren op updates"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:98
+msgid "Report a Bug"
+msgstr "Fout melden"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:99
+msgid "Discussions"
+msgstr "Discussies"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:101
+#, csharp-format
+msgid "You are running a preview version of {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:102
+msgid "Thank you for testing the upcoming features and changes! ❤️"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:121
+#, fuzzy
+msgid "Credential Required"
+msgstr "Inloggegevens vereist"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:124
+msgid "Submit"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:43
+msgid "Update Parabolic and dependencies, such as yt-dlp, to beta versions"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:44
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:55
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:59
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:67
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:120
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:131
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:135
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:142
+msgid "On"
+msgstr "Aan"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:45
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:56
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:60
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:64
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:84
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:128
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:132
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:139
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:143
+msgid "Off"
+msgstr "Uit"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:53
+#, fuzzy
+msgid "Max Number of Active Downloads"
+msgstr "Maximumaantal actieve downloads"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:92
+msgid "Speed Limit"
+msgstr "Snelheidslimiet"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:94
+#, fuzzy
+msgid "Enter proxy url here"
+msgstr "Voer media-URL hier in"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:95
+#, fuzzy
+msgid "Cookies from File"
+msgstr "Cookies-bestand"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:96
+msgid "Upload a txt cookies file from unlisted browsers"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:107
+#, fuzzy
+msgid "Max Connections Per Server"
+msgstr "Maximaal aantal verbindingen per server (-x)"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:108
+msgid "Corresponds to -x option"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:109
+#, fuzzy
+msgid "Minimum Split Size (MiB)"
+msgstr "Minimale splitsingsgrootte (-k)"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:110
+msgid "Corresponds to -k option"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:113
+msgid "Extra arguments to pass to yt-dlp when discovering media"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:156
+#, fuzzy
+msgid "Enter args here"
+msgstr "Voer media-URL hier in"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:116
+msgid "Extra arguments to pass to yt-dlp when downloading media"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:147
+#, fuzzy
+msgid "Post-Processor Arguments"
+msgstr "Nabewerkings­threads"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:153
+#, fuzzy
+msgid "Post-Processor"
+msgstr "Verwerken"
+
+#, fuzzy
+#~ msgid "Password Required"
+#~ msgstr "Wachtwoord"
+
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "Zoeken…"
+
+#~ msgid "Home"
+#~ msgstr "Start"
+
+#, fuzzy
+#~ msgid "Updating"
+#~ msgstr "Bij­werken"
+
+#, fuzzy
+#~ msgid "Download Immediately"
+#~ msgstr "Download Onmiddelijk"
+
+#, fuzzy
+#~ msgid "close"
+#~ msgstr "Sluiten"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} downloads remaining"
+#~ msgstr "Geen actieve downloads"
+
+#, fuzzy
+#~ msgid "One Day"
+#~ msgstr "Een dag"
+
+#, fuzzy
+#~ msgid "One Week"
+#~ msgstr "Een week"
+
+#, fuzzy
+#~ msgid "One Month"
+#~ msgstr "Een maand"
+
+#~ msgid "Three Months"
+#~ msgstr "Drie maanden"
+
+#, fuzzy
+#~ msgid "There are no downloads added"
+#~ msgstr "Bij voltooien van alle downloads"
+
+#, fuzzy
+#~ msgid "Add a download to get started"
+#~ msgstr "Voeg een download toe om te beginnen"
+
+#, fuzzy
+#~ msgid "Arguments"
+#~ msgstr "Nieuwe inlog­gegevens"
+
+#, fuzzy
+#~ msgid "The name cannot be empty."
+#~ msgstr "Zorg ervoor dat de inloggegevens correct zijn."
+
+#, fuzzy
+#~ msgid "Postprocessing"
+#~ msgstr "Verwerken"
+
+#, fuzzy
+#~ msgid "Add Argument"
+#~ msgstr "Nieuwe inlog­gegevens"
+
+#, fuzzy
+#~ msgid "Edit Argument"
+#~ msgstr "Nieuwe inlog­gegevens"
+
+#, fuzzy
+#~ msgid "Delete Argument"
+#~ msgstr "Nieuwe inlog­gegevens"
+
+#~ msgid "Download Finished"
+#~ msgstr "Download voltooid"
+
+#, fuzzy
+#~ msgid "{} has finished downloading"
+#~ msgstr "‘{0}’ is klaar met downloaden"
+
+#, fuzzy
+#~ msgid "Download Failed"
+#~ msgstr "Download voltooid"
+
+#, fuzzy
+#~ msgid "{} has finished with an error"
+#~ msgstr "‘{0}’ is voltooid met een fout!"
+
+#~ msgid "{:.2f} GiB/s"
+#~ msgstr "{:.2f} GiB/s"
+
+#~ msgid "{:.2f} MiB/s"
+#~ msgstr "{:.2f} MiB/s"
+
+#~ msgid "{:.2f} KiB/s"
+#~ msgstr "{:.2f} KiB/s"
+
+#~ msgid "{:.2f} B/s"
+#~ msgstr "{:.2f} B/s"
+
+#, fuzzy
+#~ msgid "{:.2f} B"
+#~ msgstr "{:.2f} B/s"
+
+#, fuzzy
+#~ msgid "Unable to download yt-dlp update"
+#~ msgstr "Kan update niet downloaden en installeren"
+
+#~ msgid "Validate"
+#~ msgstr "Valideren"
+
+#~ msgid "Authenticate"
+#~ msgstr "Authenticeren"
+
+#~ msgid "Validating"
+#~ msgstr "Valideren"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Geavanceerde opties"
+
+#~ msgid "Playlist Items"
+#~ msgstr "Items in afspeel­lĳst"
+
+#~ msgid "Use"
+#~ msgstr "Gebruiken"
+
+#~ msgid "No Credentials Found"
+#~ msgstr "Geen inlog­gegevens gevonden"
+
+#~ msgid "Add Credential"
+#~ msgstr "Inlog­gegevens toevoegen"
+
+#, fuzzy
+#~ msgid "Updates"
+#~ msgstr "Bij­werken"
+
+#, fuzzy
+#~ msgid "Update Available"
+#~ msgstr "Nieuwe update beschikbaar"
+
+#~ msgid "Stop All Downloads"
+#~ msgstr "Alle downloads stoppen"
+
+#~ msgid "Clear Queued Downloads"
+#~ msgstr "Download­wachtrij wissen"
+
+#~ msgid "Retry Failed Downloads"
+#~ msgstr "Mislukte downloads opnieuw proberen"
+
+#, fuzzy
+#~ msgid "No History Available"
+#~ msgstr "Geen geschiedenis beschikbaar"
+
+#~ msgid "No Downloads Running"
+#~ msgstr "Geen actieve downloads"
+
+#~ msgid "No Downloads Queued"
+#~ msgstr "Geen downloads in wacht­rĳ"
+
+#~ msgid "No Downloads Completed"
+#~ msgstr "Geen voltooide downloads"
+
+#, fuzzy
+#~ msgid "Log copied to clipboard"
+#~ msgstr "Downloadlogboek gekopieerd naar klembord"
+
+#~ msgid "{} items"
+#~ msgstr "{} items"
+
+#~ msgid "Modify"
+#~ msgstr "Aanpassen"
+
+#~ msgid "Name (Empty)"
+#~ msgstr "Naam (leeg)"
+
+#~ msgid "Username (Empty)"
+#~ msgstr "Gebruikers­naam (leeg)"
+
+#~ msgid "Password (Empty)"
+#~ msgstr "Wachtwoord (leeg)"
+
+#~ msgid "URL (Invalid)"
+#~ msgstr "URL (ongeldig)"
+
+#~ msgid "Name (Exists)"
+#~ msgstr "Naam (bestaat)"
+
+#~ msgid "Exit?"
+#~ msgstr "Verlaten?"
+
+#, fuzzy
+#~ msgid "{} version {} is available to download and install"
+#~ msgstr "Kan update niet downloaden en installeren"
+
+#, fuzzy
+#~ msgid "Args (Empty)"
+#~ msgstr "Naam (leeg)"
+
+#, fuzzy
+#~ msgid "Show Log"
+#~ msgstr "Venster tonen"
+
+#, fuzzy
+#~ msgid "Open Containing Folder"
+#~ msgstr "Map openen"
+
+#, fuzzy
+#~ msgid "Media"
+#~ msgstr "media"
+
+#, fuzzy
+#~ msgid "Split Video by Chapters"
+#~ msgstr "Hoofdstukken opsplitsen"
+
+#, fuzzy
+#~ msgid "Use manual credentials"
+#~ msgstr "Handmatige inloggegevens gebruiken"
+
+#~ msgid "Items ({})"
+#~ msgstr "Items ({})"
+
+#~ msgid "New Credential"
+#~ msgstr "Nieuwe inlog­gegevens"
+
+#~ msgid "Edit Credential"
+#~ msgstr "Inlog­gegevens bewerken"
+
+#~ msgid "Save"
+#~ msgstr "Opslaan"
+
+#, fuzzy
+#~ msgid "Delete Credential"
+#~ msgstr "Inloggegevens verwijderen?"
+
+#, fuzzy
+#~ msgid "Start"
+#~ msgstr "Starten"
+
+#~ msgid "Documentation"
+#~ msgstr "Documentatie"
+
+#, fuzzy
+#~ msgid "Downloading the update"
+#~ msgstr "Downloaden"
+
+#, fuzzy
+#~ msgid "Version {}"
+#~ msgstr "Versie: {0}"
+
+#, fuzzy
+#~ msgid "Debug information copied to clipboard"
+#~ msgstr "Downloadlogboek gekopieerd naar klembord"
+
+#~ msgid "Light"
+#~ msgstr "Licht"
+
+#~ msgid "Dark"
+#~ msgstr "Donker"
+
+#, fuzzy
+#~ msgid "New Argument"
+#~ msgstr "Nieuwe inlog­gegevens"
+
+#~ msgid "Download Finished With Error"
+#~ msgstr "Download voltooid met fouten"
+
+#~ msgid "Safari"
+#~ msgstr "Safari"
+
+#~ msgid "Back"
+#~ msgstr "Terug"
+
+#, fuzzy
+#~ msgid "Copy Command to Clipboard"
+#~ msgstr "Kopiëren naar klembord"
+
+#~ msgid ""
+#~ "The authors of Nickvision Parabolic are not responsible/liable for any "
+#~ "misuse of this program that may violate local copyright/DMCA laws. Users "
+#~ "use this application at their own risk."
+#~ msgstr ""
+#~ "De auteurs van Nickvision Parabolic zijn niet verantwoordelijk/"
+#~ "aansprakelijk voor enig misbruik van deze app dat lokale auteursrecht-/"
+#~ "DMCA-wetgeving kan schenden. Gebruikers gebruiken deze app op eigen "
+#~ "risico."
+
+#, fuzzy
+#~ msgid "Download some media to see it here"
+#~ msgstr "Media downloaden"
+
+#, fuzzy
+#~ msgid "Revert File Name"
+#~ msgstr "Bestandsnaam"
+
+#, fuzzy
+#~ msgid "Notification"
+#~ msgstr "App"
+
+#, fuzzy
+#~ msgid "No Download Log"
+#~ msgstr "Downloaden"
+
+#, fuzzy
+#~ msgid "No save folder selected"
+#~ msgstr "Geen bestand geselecteerd"
+
+#, fuzzy
+#~ msgid "Enter file name here"
+#~ msgstr "Voer naam hier in"
+
+#, fuzzy
+#~ msgid "Enter start time here"
+#~ msgstr "Voer media-URL hier in"
+
+#, fuzzy
+#~ msgid "Enter end time here"
+#~ msgstr "Voer media-URL hier in"
+
+#, fuzzy
+#~ msgid "Downloading (0)"
+#~ msgstr "Downloaden"
+
+#, fuzzy
+#~ msgid "Queued (0)"
+#~ msgstr "In wachtrij"
+
+#, fuzzy
+#~ msgid "Completed (0)"
+#~ msgstr "Voltooid"
+
+#~ msgid "Parabolic (Preview)"
+#~ msgstr "Parabolic (voor­vertoning)"
+
+#, fuzzy
+#~ msgid "Queued ({})"
+#~ msgstr "In wachtrij"
+
+#, fuzzy
+#~ msgid "Completed ({})"
+#~ msgstr "Voltooid"
+
+#~ msgid "Postprocessing Threads"
+#~ msgstr "Nabewerkings­threads"
+
+#, fuzzy
+#~ msgid "The limit to apply to downloads with limiting speed enabled."
+#~ msgstr ""
+#~ "Deze limiet (in KiB/s) wordt toegepast op downloads waarvan de "
+#~ "snelheidslimiet is ingeschakeld. Het wijzigen van de waarde heeft geen "
+#~ "invloed op reeds lopende downloads."
+
+#~ msgid "Past Downloads"
+#~ msgstr "Eerdere downloads"
+
+#, fuzzy
+#~ msgid "No Download History"
+#~ msgstr "Downloaden"
+
+#~ msgid "Downloads Finished"
+#~ msgstr "Downloads voltooid"
+
+#, fuzzy
+#~ msgid "All downloads have finished"
+#~ msgstr "Alle downloads zijn voltooid."
+
+#~ msgid "Completed Notification Trigger"
+#~ msgstr "Meldingen bij voltooide downloads"
+
+#, fuzzy
+#~ msgid "For each download"
+#~ msgstr "Voor elke download"
+
+#~ msgid "Verbose Logging"
+#~ msgstr "Uitgebreide logging"
+
+#~ msgid "Revert"
+#~ msgstr "Terug­draaien"
+
+#~ msgid "Select"
+#~ msgstr "Selecteren"
+
+#, fuzzy
+#~ msgid "Select save folder"
+#~ msgstr "Opslagmap selecteren"
+
+#~ msgid "Language"
+#~ msgstr "Taal"
+
+#~ msgid "Quality"
+#~ msgstr "Kwaliteit"
+
+#~ msgid "Default"
+#~ msgstr "Standaard"
+
+#~ msgid "Good"
+#~ msgstr "Goed"
+
+#~ msgid "Add Download (Ctrl+N)"
+#~ msgstr "Download toevoegen (Ctrl+N)"
+
+#, csharp-format
+#~ msgid "{0} download — {1:f1}% ({2})"
+#~ msgid_plural "{0} downloads — {1:f1}% ({2})"
+#~ msgstr[0] "{0} download — {1:f1}% ({2})"
+#~ msgstr[1] "{0} downloads — {1:f1}% ({2})"
+
+#, csharp-format
+#~ msgid "{0}{1}"
+#~ msgstr "{0}{1}"
+
+#~ msgid "Add Login"
+#~ msgstr "Login toevoegen"
+
+#~ msgid "Allow Running In Background"
+#~ msgstr "Uitvoeren op achtergrond toestaan"
+
+#~ msgid "Close and Stop Downloads?"
+#~ msgstr "Sluiten en downloads stoppen?"
+
+#~ msgid "Comma separated list"
+#~ msgstr "Door komma's gescheiden likst"
+
+#~ msgid "Cookies File Information"
+#~ msgstr "Cookies-bestand-informatie"
+
+#~ msgid "Crop Thumbnail"
+#~ msgstr "Miniatuur bijsnijden"
+
+#~ msgid "DaPigGuy"
+#~ msgstr "DaPigGuy"
+
+#~ msgid "Disable"
+#~ msgstr "Uitschakelen"
+
+#~ msgid "Disable Keyring?"
+#~ msgstr "Sleutelbos uitschakelen?"
+
+#~ msgid "Disallow Conversions"
+#~ msgstr "Conversie uitschakelen"
+
+#~ msgid "Download Specific Timeframe"
+#~ msgstr "Specifiek tijdsbestek downloaden"
+
+#~ msgid "Download using aria2 has started"
+#~ msgstr "Downloaden met aria2 is gestart"
+
+#~ msgid "Download using ffmpeg has started"
+#~ msgstr "Downloaden met FFmpeg is gestart"
+
+#, csharp-format
+#~ msgid "Downloading {0:f2}% ({1})"
+#~ msgstr "Downloaden — {0:f2}% ({1})"
+
+#~ msgid "Downloading..."
+#~ msgstr "Down­loaden…"
+
+#~ msgid ""
+#~ "Enable to use aria2 downloader. It can be faster, but you will not see "
+#~ "download progress."
+#~ msgstr ""
+#~ "Schakelt de aria2-downloader in. Het kan sneller zijn, maar u ziet de "
+#~ "voortgang van het downloaden niet."
+
+#~ msgid "End Time (Invalid)"
+#~ msgstr "Eindtijd (ongeldig)"
+
+#, fuzzy
+#~ msgid "Enter URL here"
+#~ msgstr "Voer media-URL hier in"
+
+#, fuzzy
+#~ msgid "Failed to enable keyring."
+#~ msgstr "Sleutelbos uitschakelen"
+
+#~ msgid "Keyring Credential"
+#~ msgstr "Inloggegevens van sleutelbos"
+
+#~ msgid "Keyring Disabled"
+#~ msgstr "Sleutelbos uitgeschakeld"
+
+#~ msgid "Keyring locked"
+#~ msgstr "Sleutel­bos vergrendeld"
+
+#~ msgid "Keyring locked."
+#~ msgstr "Sleutel­bos vergrendeld"
+
+#~ msgid "Language Code Information"
+#~ msgstr "Taalcode­informatie"
+
+#~ msgid "Leave empty to download from start."
+#~ msgstr "Laat leeg om vanaf het begin te downloaden."
+
+#~ msgid "List of supported sites"
+#~ msgstr "Lijst met ondersteunde websites"
+
+#~ msgid "Login"
+#~ msgstr "Inloggen"
+
+#~ msgid "Make thumbnail square, useful when downloading music."
+#~ msgstr "Maakt het miniatuur vierkant, handig bij het downloaden van muziek"
+
+#~ msgid "Maximum Quality"
+#~ msgstr "Maximale kwaliteit"
+
+#~ msgid "Media URL (Invalid)"
+#~ msgstr "Media-URL (ongeldig)"
+
+#~ msgid "Nicholas Logozzo"
+#~ msgstr "Nicholas Logozzo"
+
+#~ msgid "No active internet connection"
+#~ msgstr "Geen actieve internetverbinding"
+
+#~ msgid "No Completed Downloads"
+#~ msgstr "Geen voltooide down­loads"
+
+#~ msgid "No Previous Downloads"
+#~ msgstr "Geen vorige downloads"
+
+#~ msgid "No Queued Downloads"
+#~ msgstr "Geen down­loads in wacht­rij"
+
+#~ msgid "Preparing..."
+#~ msgstr "Voorbereiden…"
+
+#~ msgid "PREVIEW"
+#~ msgstr "VOOR­VERTONING"
+
+#~ msgid "Reset"
+#~ msgstr "Resetten"
+
+#~ msgid "Reset Keyring?"
+#~ msgstr "Sleutel­bos resetten?"
+
+#~ msgid "Reset to default"
+#~ msgstr "Resetten"
+
+#~ msgid "Retry Download"
+#~ msgstr "Download opnieuw proberen"
+
+#~ msgid "Save Folder (Invalid)"
+#~ msgstr "Opslagmap (ongeldig)"
+
+#~ msgid "Select items to download or change file names."
+#~ msgstr ""
+#~ "Selecteer items om te downloaden of de bestandsnaam van aan te passen."
+
+#~ msgid ""
+#~ "Some downloads are still in progress.\n"
+#~ "Are you sure you want to close Parabolic and stop the running downloads?"
+#~ msgstr ""
+#~ "Sommige downloads zijn nog bezig.\n"
+#~ "Weet u zeker dat u Tube Parabolic wilt sluiten en de lopende downloads "
+#~ "wilt stoppen?"
+
+#~ msgid "Some downloads finished with errors!"
+#~ msgstr "Sommige downloads zijn voltooid met fouten!"
+
+#, fuzzy
+#~ msgid "SponsorBlock Information (opens in a web browser)"
+#~ msgstr "Cookies-bestand-informatie"
+
+#~ msgid "Start Time (Invalid)"
+#~ msgstr "Begintijd (ongeldig)"
+
+#~ msgid "Subtitle Languages"
+#~ msgstr "Ondertitel­talen"
+
+#~ msgid "Subtitle Languages (Comma-Separated)"
+#~ msgstr "Ondertitel­talen (gescheiden door komma's)"
+
+#~ msgid "Subtitle Languages (Invalid)"
+#~ msgstr "Ondertitel­talen (ongeldig)"
+
+#, fuzzy
+#~ msgid "Unable to disable keyring."
+#~ msgstr "Sleutelbos uitschakelen"
+
+#~ msgid "Undo Title Editing"
+#~ msgstr "Titelbewerking ongedaan maken"
+
+#~ msgid "Unlock Keyring"
+#~ msgstr "Sleutelbos ontgrendelen"
+
+#, fuzzy
+#~ msgid "Unset Cookies File"
+#~ msgstr "Cookies-bestand selecteren"
+
+#~ msgid "User Name"
+#~ msgstr "Gebruikers­naam"
+
+#~ msgid "Waiting..."
+#~ msgstr "Wachten…"
+
+#~ msgid "Leave empty to download to end."
+#~ msgstr "Laat leeg om tot het einde te downloaden."
+
+#~ msgid "Search history"
+#~ msgstr "Zoek­geschiedenis"
+
+#~ msgid "Disable Keyring"
+#~ msgstr "Sleutelbos uitschakelen"
+
+#~ msgid "Migrate Keyring"
+#~ msgstr "Sleutel­bos migreren"
+
+#~ msgid "Skip"
+#~ msgstr "Over­slaan"
+
+#~ msgid "Unlock"
+#~ msgstr "Ontgrendelen"
+
+#~ msgid "Hide the window instead of quitting if there are downloads running."
+#~ msgstr ""
+#~ "Verbergt het venster in plaats van af te sluiten bij actieve downloads"
+
+#~ msgid "Apply"
+#~ msgstr "Toepassen"
+
+#, fuzzy
+#~ msgid "Copied debug info to clipboard."
+#~ msgstr "Kopiëren naar klembord"
+
+#, csharp-format
+#~ msgid "Remaining Downloads: {0}"
+#~ msgstr "Resterende downloads: {0}"
+
+#~ msgid "YouTube;Downloader;ytdlp;Nickvision;Tube;Converter;"
+#~ msgstr "YouTube;Downloader;ytdlp;Nickvision;Tube;Converter;"
+
+#~ msgid "— A basic yt-dlp frontend"
+#~ msgstr "— Een eenvoudige front-end voor yt-dlp"
+
+#~ msgid "— Run multiple downloads at a time"
+#~ msgstr "— Voer meerdere downloads tegelijk uit"
+
+#~ msgid "— Supports downloading metadata and video subtitles"
+#~ msgstr ""
+#~ "— Ondersteuning voor het downloaden van video-metagegevens en -ondertitels"
+
+#, fuzzy
+#~ msgid "Preparing required tools..."
+#~ msgstr "Voorbereiden…"
+
+#~ msgid "Unable to setup dependencies. Please restart the app and try again."
+#~ msgstr ""
+#~ "Kon afhankelijkheden niet downloaden. Herstart de app en probeer opnieuw."
+
+#~ msgid "Set Password"
+#~ msgstr "Wachtwoord instellen"
+
+#~ msgid "New Password"
+#~ msgstr "Nieuw wachtwoord"
+
+#~ msgid "Confirm Password"
+#~ msgstr "Wachtwoord bevestigen"
+
+#~ msgid "Continue"
+#~ msgstr "Doorgaan"
+
+#~ msgid "Unable to unlock keyring. Restart the app to try again."
+#~ msgstr ""
+#~ "Kon sleutelbos niet ontgrendelen. Herstart de app en probeer opnieuw."
+
+#~ msgid "Keyring has not been unlocked."
+#~ msgstr "Sleutelbos is niet ontgrendeld."
+
+#, csharp-format
+#~ msgid ""
+#~ "David Lapshin {0}\n"
+#~ "Brage Fuglseth {1}\n"
+#~ "marcin {2}"
+#~ msgstr ""
+#~ "David Lapshin {0}\n"
+#~ "Brage Fuglseth {1}\n"
+#~ "marcin {2}"
+
+#, csharp-format
+#~ msgid ""
+#~ "Nicholas Logozzo {0}\n"
+#~ "Fyodor Sobolev {1}\n"
+#~ "DaPigGuy {2}"
+#~ msgstr ""
+#~ "Nicholas Logozzo {0}\n"
+#~ "Fyodor Sobolev {1}\n"
+#~ "DaPigGuy {2}"
+
+#~ msgid "youtube"
+#~ msgstr "youtube"
+
+#~ msgid "video"
+#~ msgstr "video"
+
+#~ msgid "audio"
+#~ msgstr "audio"
+
+#~ msgid "download"
+#~ msgstr "downloaden"
+
+#~ msgid "Customize the application's user interface."
+#~ msgstr "Pas de gebruikersinterface van de app aan"
+
+#~ msgid "Customize downloader settings."
+#~ msgstr "Pas downloader-instellingen aan"
+
+#~ msgid "Customize converter settings."
+#~ msgstr "Pas conversie-instellingen aan"
+
+#~ msgid "About Tube Converter"
+#~ msgstr "Over Tube Converter"
+
+#~ msgid "Tube Converter"
+#~ msgstr "Tube Converter"
+
+#~ msgid "Get video and audio from the web"
+#~ msgstr "Download video's en geluid van het internet"
+
+#, fuzzy
+#~ msgid "Authenticate (Invalid)"
+#~ msgstr "Authenticatie"
+
+#, fuzzy
+#~ msgid "A link has been detected in your clipboard."
+#~ msgstr "Plakken van klembord"
+
+#, fuzzy
+#~ msgid "Link pasted from clipboard."
+#~ msgstr "Plakken van klembord"
+
+#~ msgid "The maximum number of connections to one server for each download."
+#~ msgstr "Het maximale aantal verbindingen met één server voor elke download"
+
+#~ msgid "If checked, media metadata will be included in the downloaded file."
+#~ msgstr "Voeg metagegevens van de video aan het gedownloade bestand toe"
+
+#~ msgid "More options for configuring the download."
+#~ msgstr "Meer opties voor het configureren van de download"
+
+#~ msgctxt "Night"
+#~ msgid "Good Morning!"
+#~ msgstr "Goedenacht!"
+
+#~ msgctxt "Morning"
+#~ msgid "Good Morning!"
+#~ msgstr "Goedenochtend!"
+
+#~ msgid "Good Afternoon!"
+#~ msgstr "Goedemiddag!"
+
+#~ msgid "Good Evening!"
+#~ msgstr "Goedenavond!"
+
+#~ msgid "New"
+#~ msgstr "Nieuw"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Contributors on GitHub ❤️ https://github.com/NickvisionApps/Parabolic/"
+#~ "graphs/contributors"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Bijdragers op GitHub ❤️ https://github.com/NickvisionApps/Parabolic/graphs/"
+#~ "contributors"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+
+#~ msgid ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+#~ msgstr ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+
+#~ msgid ""
+#~ "Downloading required dependencies...\n"
+#~ "\n"
+#~ "(This may take some time)"
+#~ msgstr ""
+#~ "Vereiste afhankelijkheden downloaden…\n"
+#~ "\n"
+#~ "(Dit kan even duren)"
+
+#~ msgid ""
+#~ "— A basic yt-dlp frontend\n"
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)\n"
+#~ "— Run multiple downloads at a time\n"
+#~ "— Supports downloading metadata and video subtitles"
+#~ msgstr ""
+#~ "— Een eenvoudige front-end voor yt-dlp\n"
+#~ "— Ondersteunt het downloaden van video's in meerdere formaten (MP4, WebM, "
+#~ "MP3, Opus, FLAC en WAV)\n"
+#~ "— Voer meerdere downloads tegelijk uit\n"
+#~ "— Ondersteunt het downloaden van metagegevens en video-ondertitels"
+
+#~ msgid ""
+#~ "Hide the window instead of quitting if there are downloads running. "
+#~ "Showing background activity status requires GNOME 44+"
+#~ msgstr ""
+#~ "Verbergt het venster in plaats van af te sluiten bij actieve downloads. "
+#~ "Het tonen van achtergrondactiviteit vereist GNOME 44+"
+
+#~ msgid "Downloading required dependencies..."
+#~ msgstr "Vereiste afhankelijkheden downloaden…"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "Stop All Downloads (Ctrl+Shift+C)"
+#~ msgstr "Alle downloads stoppen (Ctrl+Shift+C)"
+
+#~ msgid "Retry Failed Downloads (Ctrl+Shift+R)"
+#~ msgstr "Mislukte downloads opnieuw proberen (Ctrl+Shift+R)"
+
+#~ msgid "Clear Queued Downloads (Ctrl+Delete)"
+#~ msgstr "Download­wachtrij wissen (Ctrl+Delete)"
+
+#~ msgid "Paste From Clipboard"
+#~ msgstr "Plakken van klembord"

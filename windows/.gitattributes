@@ -1,0 +1,10 @@
+# Auto detect text files and perform LF normalization
+* text eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.pdf binary
+*.exe binary
+*.mp4 binary
+# Exclude Docs From Stats
+docs/** linguist-documentation

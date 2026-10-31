@@ -1,0 +1,3051 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-23 23:33-0400\n"
+"PO-Revision-Date: 2026-02-27 16:32+0000\n"
+"Last-Translator: sotohi <c6h4ohcooc6h5@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/nickvision-tube-"
+"converter/app/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:27
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:112
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:120
+msgid "Add Download"
+msgstr "ダウンロードを追加"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:40
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:64
+msgid "Discover"
+msgstr "探索"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:50
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:68
+msgid "Media URL"
+msgstr "メディアの URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:55
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:284
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:70
+msgid "Select Batch File"
+msgstr "バッチファイルを選択"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:62
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:71
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:72
+msgid "Use Authentication"
+msgstr "認証を使用する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:67
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:73
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:67
+msgid "Credential"
+msgstr "認証情報"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:71
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:51
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:74
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:87
+msgid "Username"
+msgstr "ユーザー名"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:75
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:55
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:92
+msgid "Password"
+msgstr "パスワード"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:78
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:79
+#, fuzzy
+msgid "Download Immediately as Video"
+msgstr "今すぐダウンロード"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:81
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:86
+msgid ""
+"Media will be downloaded based off of previously configured options and "
+"sensible defaults. Options will not be shown"
+msgstr ""
+"メディアは、事前に設定されたオプションと適切な既定値に基づいてダウンロードさ"
+"れます。オプションは表示されません"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:81
+#, fuzzy
+msgid "Download Immediately as Audio"
+msgstr "今すぐダウンロード"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:171
+msgid "Discovering Media"
+msgstr "メディアを探索しています"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:84
+msgid "This may take some time..."
+msgstr "これには少し時間がかかる場合があります…"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:111
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:304
+msgid "Configure"
+msgstr "設定"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:126
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:319
+msgid "Search Subtitles"
+msgstr "字幕を検索"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:132
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:150
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:325
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:343
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:230
+msgid "Download"
+msgstr "ダウンロード"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:160
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:353
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:11
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:25
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:111
+msgid "General"
+msgstr "一般"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:170
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:88
+msgid "File Name"
+msgstr "ファイル名"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:176
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:440
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:89
+msgid "Revert to Title"
+msgstr "タイトルを元に戻す"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:183
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:363
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:115
+msgid "Save Folder"
+msgstr "保存フォルダー"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:190
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:370
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:511
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:563
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:116
+msgid "Select Save Folder"
+msgstr "保存するフォルダーを選択"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:199
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:379
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:117
+msgid "File Type"
+msgstr "ファイルの種類"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:200
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:380
+msgid "Generic types do not support embedding thumbnails and subtitles."
+msgstr ""
+"ファイル形式が埋め込みに対応していない場合は、サムネイルは独立した画像ファイ"
+"ルとして保存されます。"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:204
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:95
+msgid "Video Format"
+msgstr "動画のファイル形式"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:208
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:96
+msgid "Audio Format"
+msgstr "音声のファイル形式"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:215
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:439
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:113
+msgid "Subtitles"
+msgstr "字幕"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:224
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:448
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:101
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:135
+msgid "Search subtitles"
+msgstr "字幕を検索"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:237
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:461
+msgid "Available Subtitles"
+msgstr "利用可能な字幕"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:245
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:420
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:470
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:133
+msgid "Deselect All"
+msgstr "すべて選択解除"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:252
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:427
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:477
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:99
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:122
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:132
+msgid "Select All"
+msgstr "すべて選択"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:266
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:491
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:325
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:111
+msgid "Advanced"
+msgstr "詳細オプション"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:270
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:399
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:495
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:12
+msgid "Options"
+msgstr "オプション"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:273
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:502
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:103
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:139
+msgid "Split into Files by Chapters"
+msgstr "チャプターごとにファイルを分割"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:277
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:506
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:104
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:140
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:141
+msgid "Export Description to File"
+msgstr "概要をエクスポート"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:281
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:510
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:142
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:143
+msgid "Exclude from History"
+msgstr "履歴に残さない"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:285
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:514
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:108
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:144
+msgid "Post Processor Argument"
+msgstr "ポストプロセッサー引数"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:286
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:515
+msgid "Arguments are configurable in Preferences"
+msgstr "引数は設定から変更できます"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:290
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:19
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:109
+msgid "Start Time"
+msgstr "開始"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:294
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:20
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:110
+msgid "End Time"
+msgstr "終わり"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:384
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:120
+msgid "Suggested Video Resolution"
+msgstr "推奨解像度"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:121
+msgid "Suggested Audio Bitrate"
+msgstr "推奨音声ビットレート"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:395
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:112
+msgid "Items"
+msgstr "アイテム"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:402
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:125
+msgid "Reverse Download Order"
+msgstr "ダウンロード順を逆にする"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:406
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:126
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:127
+msgid "Number Titles"
+msgstr "タイトルに番号をつける"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:407
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download"
+msgstr "ダウンロード時に選択された項目のタイトルに連番が付与されます"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:412
+msgid "Available Items"
+msgstr "利用可能な項目"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:462
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:134
+msgid ""
+"Note: Some playlist items may not contain subtitles for a selected language."
+msgstr ""
+"注：プレイリスト内の一部のアイテムには、選択した言語の字幕が含まれない場合が"
+"あります。"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:498
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:137
+msgid "Export M3U Playlist File"
+msgstr "M3Uプレイリストをエクスポート"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:70
+msgid "View Log"
+msgstr "ログを表示"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:87
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:196
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:168
+msgid "Pause"
+msgstr "一時停止"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:95
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:52
+msgid "Stop"
+msgstr "一時停止"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:111
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:116
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:53
+msgid "Play"
+msgstr "再生"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:119
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:54
+msgid "Open"
+msgstr "開く"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:131
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:55
+msgid "Retry"
+msgstr "再試行"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:154
+msgid "Copy Log to Clipboard"
+msgstr "ログをクリップボードへコピー"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:41
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:6
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:38
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:89
+msgid "History"
+msgstr "履歴"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:15
+msgid "Sort By"
+msgstr "ソート："
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:43
+msgid "Newest"
+msgstr "新しい順"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:44
+msgid "Oldest"
+msgstr "古い順"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:36
+msgid "Save Length"
+msgstr "保存長さ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:42
+msgid "Clear All"
+msgstr "全てクリア"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:94
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:106
+msgid "Keyring"
+msgstr "キーリング"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:12
+msgid "Credentials"
+msgstr "認証情報"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:17
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:52
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:447
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:111
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:112
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:148
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:210
+msgid "Add"
+msgstr "追加"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:43
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:472
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:151
+msgid "Name"
+msgstr "名前"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:82
+msgid "URL"
+msgstr "URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/LoadingDialog.blp:5
+msgid "Loading"
+msgstr "読み込み中"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:9
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:9
+msgid "Preferences"
+msgstr "設定"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:10
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:14
+msgid "Keyboard Shortcuts"
+msgstr "キーボードショートカット"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:11
+msgid "About Parabolic"
+msgstr "Parabolic について"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:17
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:108
+msgid "Stop All Remaining"
+msgstr "すべて停止"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:18
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:109
+msgid "Retry All Failed"
+msgstr "失敗したダウンロードを再試行"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:110
+msgid "Clear All Queued"
+msgstr "待機中のダウンロードをクリア"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:23
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:111
+msgid "Clear All Completed"
+msgstr "完了したダウンロードをクリア"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:61
+msgid "Main Menu"
+msgstr "メインメニュー"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:70
+msgid "Updater"
+msgstr "アップデーター"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:108
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:103
+msgid "Download Media"
+msgstr "メディアをダウンロード"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:109
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:104
+msgid "Add a video, audio, or playlist URL to start downloading"
+msgstr "動画、音声、再生リストの URL を追加してダウンロードを始めます"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:140
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:113
+msgid "All"
+msgstr "全て"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:145
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:206
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:81
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:114
+msgid "Running"
+msgstr "実行中"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:150
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:107
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:115
+msgid "Queued"
+msgstr "停止中"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:155
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:116
+msgid "Completed"
+msgstr "完了済"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:160
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:117
+msgid "Failed"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:171
+msgid "Manage Download"
+msgstr "ダウンロードを管理"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:195
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:118
+msgid "No Downloads"
+msgstr "ダウンロードはありません"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:196
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:119
+msgid "There are no downloads of this type"
+msgstr "このタイプのダウンロードはありません"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:15
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:33
+msgid "User Interface"
+msgstr "ユーザーインターフェース"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:18
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:37
+msgid "Theme"
+msgstr "テーマ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:27
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:39
+msgid "Translation Language"
+msgstr "翻訳言語"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:40
+msgid "An application restart is required for a change to take effect"
+msgstr "テーマの変更にはアプリケーションの再起動が必要です"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:37
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:42
+msgid "Receive Preview Updates"
+msgstr "プレビュー版の更新を受け取る"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:38
+msgid "Update dependencies, such as yt-dlp, to beta versions"
+msgstr "yt-dlp などの依存関係をベータ版に更新"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:46
+msgid "Prevent Suspend"
+msgstr "サスペンドを無効化"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:47
+msgid "Prevent the computer from sleeping while downloads are running"
+msgstr "ダウンロード中はスリープを無効化"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:57
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:50
+msgid "Download History Length"
+msgstr "ダウンロード履歴の保存量"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:58
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:51
+msgid "The amount of time to keep past downloads in the app's history"
+msgstr "過去のダウンロードを履歴に保持する期間"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:34
+msgid "Downloads"
+msgstr "ダウンロード"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:71
+msgid "Max Number of Running Downloads"
+msgstr "最大同時ダウンロード数"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:54
+msgid "Overwrite Existing Files"
+msgstr "存在するファイルを上書きする"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:96
+msgid "Limit Filename Characters"
+msgstr "ファイル名の文字を制限"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:97
+msgid "Restrict characters in filenames to those supported only by Windows"
+msgstr "ファイル名の文字を Windows がサポートする文字のみに制限する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:57
+msgid "Include Media Id in Title"
+msgstr "メディアIDをタイトルに含める"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:58
+msgid "Add the media's id to its default title"
+msgstr "デフォルトのタイトルにメディアIDを付加"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:116
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:61
+msgid "Include Auto-Generated Subtitles"
+msgstr "自動生成された字幕を含める"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:62
+msgid ""
+"Show auto-generated subtitles to download in addition to available subtitles"
+msgstr ""
+"利用可能な字幕に加え、自動生成された字幕もダウンロード対象として表示する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:126
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:65
+msgid "Include Super Resolution Formats"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:66
+#, fuzzy
+msgid ""
+"Show super (AI-scaled) resolution formats to download in addition to regular "
+"formats"
+msgstr ""
+"利用可能な字幕に加え、自動生成された字幕もダウンロード対象として表示する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:69
+msgid "Preferred Video Codec"
+msgstr "優先するビデオコーデック"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:137
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:70
+msgid ""
+"Prefer this codec when parsing video formats to show available to download"
+msgstr ""
+"ダウンロード可能な動画フォーマットとしてこのコーデックを優先して表示する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:146
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:72
+msgid "Preferred Audio Codec"
+msgstr "優先される音声コーデック"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:147
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:73
+msgid ""
+"Prefer this codec when parsing audio formats to show available to download"
+msgstr ""
+"ダウンロード可能な音声フォーマットとしてこのコーデックを優先して表示する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:156
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:75
+msgid "Preferred Subtitle Format"
+msgstr "優先する字幕のフォーマット"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:157
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:76
+msgid "Prefer this subtitle file format when downloading"
+msgstr "ダウンロード時にこの字幕ファイルフォーマットを優先する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:166
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:78
+#, fuzzy
+msgid "Preferred Frame Rate"
+msgstr "優先する字幕のフォーマット"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:167
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:79
+#, fuzzy
+msgid ""
+"Prefer this frame rate when parsing video formats to show available to "
+"download"
+msgstr ""
+"ダウンロード可能な動画フォーマットとしてこのコーデックを優先して表示する"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:178
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:182
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:35
+msgid "Downloader"
+msgstr "ダウンローダー"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:185
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:81
+msgid "Use Part Files"
+msgstr "分割ファイルを使う"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:186
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:82
+msgid ""
+"Download media in separate .part files instead of directly into the output "
+"file"
+msgstr ""
+"メディアを出力ファイルに直接書き出さず、 .part ファイルに分割してダウンロード"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:195
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:85
+msgid "Use SponsorBlock for YouTube"
+msgstr "YouTube のダウンロードで SponsorBlock を使用"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:196
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:86
+msgid "Try to remove sponsored segments from videos"
+msgstr "動画に含まれる広告区間の除去を試行"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:205
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:89
+msgid "Limit Download Speed"
+msgstr "ダウンロード速度を制限"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:210
+msgid "Speed Limit (KiB/s)"
+msgstr "スピード制限 (KiB/毎秒)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:93
+msgid "Proxy URL"
+msgstr "プロキシ URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:237
+msgid "Cookies File"
+msgstr "Cookieファイル"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:248
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:268
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:99
+msgid "Select Cookies File"
+msgstr "クッキーファイルを選択"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:257
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:98
+msgid "Clear Cookies File"
+msgstr "クッキーファイルを消去"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:100
+msgid "Cookies from Browser"
+msgstr "ブラウザのクッキー"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:276
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:102
+msgid "aria2c"
+msgstr "aria2c"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:277
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:104
+msgid ""
+"An alternative downloader that may be faster in some regions compared to yt-"
+"dlp's native downloader"
+msgstr ""
+"代替ダウンローダー（地域によっては yt-dlp 標準のダウンローダより高速な場合が"
+"あります）"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:280
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:103
+msgid "Use aria2c"
+msgstr "aria2c を使用"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:289
+msgid "Max Connections Per Server (-x)"
+msgstr "サーバーごとの最大接続数 (-x)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:306
+msgid "Minimum Split Size (-k)"
+msgstr "最小分割サイズ (-k)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:307
+msgid "The minimum size of which to split a file (in MiB)"
+msgstr "ファイルあたりの最小分割サイズ (MiB)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:326
+msgid "Specify extra arguments to pass to yt-dlp"
+msgstr "yt-dlp に渡す追加の引数を指定"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:329
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:112
+msgid "yt-dlp Discovery Arguments"
+msgstr "yt-dlp の探索引数"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:338
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:115
+msgid "yt-dlp Download Arguments"
+msgstr "yt-dlp ダウンロード引数"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:349
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:353
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:36
+msgid "Converter"
+msgstr "コンバーター"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:356
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:118
+msgid "Translate Metadata and Chapters"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:119
+msgid ""
+"Automatically translate embedded metadata and chapters to the app's language "
+"on supported sites and media"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:366
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:122
+msgid "Embed Metadata"
+msgstr "メタデータを埋め込む"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:376
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:125
+msgid "Remove Source Data"
+msgstr "ダウンロード元のデータを削除"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:377
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:126
+msgid "Clear metadata fields containing identifying download information"
+msgstr "ダウンロード情報を示すようなメタデータを削除します"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:387
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:129
+msgid "Embed Thumbnails"
+msgstr "字幕を埋め込む"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:130
+msgid ""
+"If the file type does not support embedding, the thumbnail will be written "
+"to a separate image file"
+msgstr ""
+"ファイル形式が埋め込みに対応していない場合は、サムネイルは独立した画像ファイ"
+"ルとして保存されます"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:398
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:133
+msgid "Crop Audio Thumbnails"
+msgstr "オーディオサムネイルを整形"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:399
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:134
+msgid "Crop thumbnails of audio files to squares"
+msgstr "オーディオファイルのサムネイルを正方形にトリミングします"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:409
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:137
+msgid "Embed Chapters"
+msgstr "チャプター(章)を埋め込む"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:418
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:140
+msgid "Embed Subtitles"
+msgstr "字幕を埋め込む"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:419
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:141
+msgid ""
+"If disabled or if embedding is not supported, downloaded subtitles will be "
+"saved to separate files"
+msgstr ""
+"無効化されていたり、埋め込みが非対応の場合は、ダウンロードされた字幕は独立し"
+"たファイルに保存されます"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:428
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:144
+msgid "FFmpeg Threads"
+msgstr "FFmpeg のスレッド"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:429
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:145
+msgid "Limit the number of threads used by ffmpeg"
+msgstr "ffmpge のスレッド数を制限"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:440
+msgid "Postprocessing Arguments"
+msgstr "ポストプロセスの引数"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:441
+msgid "Arguments will be shown for selection in the add download dialog"
+msgstr "引数はダウンロード追加ダイアログで選択できます"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:443
+msgid "Add Postprocessing Argument"
+msgstr "ポストプロセスの引数を追加"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:457
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:149
+msgid "Argument"
+msgstr "引数"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:476
+msgid "Post Processor"
+msgstr "ポストプロセッサ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:480
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:154
+msgid "Executable"
+msgstr "実行可能"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:484
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:155
+msgid "Args"
+msgstr "引数"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:6
+msgctxt "Shortcut"
+msgid "Application"
+msgstr "アプリケーション"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:19
+msgid "About Application"
+msgstr "このアプリについて"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:24
+msgid "Quit"
+msgstr "閉じる"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:30
+msgid "Folder"
+msgstr "フォルダー"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:33
+msgid "Open Folder"
+msgstr "フォルダーを開く"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:38
+msgid "Close Folder"
+msgstr "フォルダーを閉じる"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:112
+msgid "Starting"
+msgstr "開始中"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:117
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:183
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:184
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:155
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:156
+msgid "Unknown"
+msgstr "不明"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:139
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:139
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:315
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:325
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:109
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:226
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:289
+msgid "Error"
+msgstr "エラー"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:147
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:116
+msgid "Success"
+msgstr "成功"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:156
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:125
+msgid "Paused"
+msgstr "一時停止中"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:159
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:128
+msgid "Resume"
+msgstr "再開"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:173
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:141
+msgid "Processing"
+msgstr "進行中"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:177
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:147
+#, csharp-format
+msgid "Sleeping for {0}"
+msgstr "{0} スリープ"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:181
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:153
+#, csharp-format
+msgid "{0}% Complete • {1} • {2} Remaining"
+msgstr "{0}%完了• {1} •残り{2}"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:213
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:184
+msgid "Stopped"
+msgstr "停止中"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:286
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:270
+msgid "TXT Files (*.txt)"
+msgstr "TXT ファイル (*.txt)"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:378
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:478
+msgid "No Subtitles Available"
+msgstr "利用可能な字幕がありません"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:410
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:434
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:280
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:485
+#, csharp-format
+msgid "Total Duration: {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:463
+msgid "Properties"
+msgstr "プロパティ"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:59
+msgid "Clear All History?"
+msgstr "全履歴を消去しますか？"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:60
+msgid ""
+"Are you sure you want to clear all download history? This action is "
+"irreversible"
+msgstr "本当に全ダウンロード履歴を消去しますか？ この操作は元に戻せません"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:82
+msgid "Clear"
+msgstr "クリア"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:83
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:166
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:359
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:65
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:173
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:231
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:69
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:125
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:150
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:111
+msgid "Download Again"
+msgstr "もう一度ダウンロード"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:122
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:82
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:165
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:230
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:358
+msgid "Delete"
+msgstr "削除"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:129
+#, csharp-format
+msgid "Downloaded On: {0}"
+msgstr "ダウンロード日時：{0}"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:140
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:46
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:48
+msgid "No History"
+msgstr "履歴なし"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:77
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:158
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:225
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:351
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:85
+msgid "Edit"
+msgstr "編集"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:97
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:52
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:54
+msgid "No Credentials"
+msgstr "資格情報なし"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:140
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:326
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:291
+msgid "OK"
+msgstr "OK"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:144
+msgid "Delete Credential?"
+msgstr "資格情報を削除しますか？"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:145
+msgid ""
+"Are you sure you want to delete this credential? This action is irreversible"
+msgstr "本当にこの資格情報を削除しますか？ この操作は元に戻せません"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:197
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:138
+msgid "Don't show this message again"
+msgstr "二度とこのメッセージを表示しない"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:142
+msgid "Legal Copyright Disclaimer"
+msgstr "著作権に関する法的免責事項"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:151
+msgid ""
+"Videos on YouTube and other sites may be subject to DMCA protection. The "
+"authors of Parabolic do not endorse, and are not responsible for, the use of "
+"this application in means that will violate these laws."
+msgstr ""
+"YouTube やその他のサイト上の動画は、DMCAによる保護の対象となる場合がありま"
+"す。Parabolic はこれらの法律に違反する形での本アプリケーションの使用を推奨せ"
+"ず、またその使用について一切の責任を負いません。"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:199
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:157
+msgid "I understand"
+msgstr "理解しました"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:172
+msgid "Recover Downloads?"
+msgstr "中断されたダウンロードを復元しますか？"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:173
+msgid ""
+"There are downloads available to recover from when Parabolic crashed. Would "
+"you like to download them again?"
+msgstr ""
+"Prabolicのクラッシュにより中断されたダウンロードがあります。再度ダウンロード"
+"しますか？"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:212
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:243
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:61
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:146
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:174
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:206
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:252
+msgid "Yes"
+msgstr "はい"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:213
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:244
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:62
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:147
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:207
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:253
+msgid "No"
+msgstr "いいえ"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:205
+msgid ""
+"There are downloads still in progress. Would you like to stop them and exit?"
+msgstr "進行中のダウンロードがあります。本当に終了しますか？"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:272
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:88
+msgid "View"
+msgstr "表示"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:282
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:248
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:254
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:273
+msgid "Update"
+msgstr "アップデート"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:287
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:302
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:421
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:405
+#, csharp-format
+msgid "Downloading update: {0}%"
+msgstr "アップデートをダウンロード中：{0}%"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:312
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:260
+msgid "Details"
+msgstr "詳細"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:317
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:39
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:277
+msgid "Close"
+msgstr "閉じる"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:453
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:97
+msgid "GitHub Repo"
+msgstr "GitHub リポジトリ"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:151
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:287
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:180
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:241
+msgid "No file selected"
+msgstr "ファイルが選択されていません"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:245
+msgid "No Arguments"
+msgstr "引数なし"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:250
+msgid "Delete Argument?"
+msgstr "引数を消去しますか？"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:251
+msgid ""
+"Are you sure you want to delete this post-processor argument? This action is "
+"irreversible"
+msgstr "本当にこのポストプロセッサ引数を消去しますか？この操作は元に戻せません"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:169
+msgid "An error occurred while adding playlist downloads"
+msgstr "プレイリストのダウンロードを追加しようとしましたがエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:244
+msgid "An error occurred while adding the single download"
+msgstr "1件のダウンロードを追加しようとしましたがエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:261
+msgid "No media was found at the provided URL"
+msgstr "指定されたURLにメディアが存在しません"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:309
+#: Nickvision.Parabolic.Shared/Models/Format.cs:354
+#: Nickvision.Parabolic.Shared/Models/Format.cs:355
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:37
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:79
+msgid "Worst"
+msgstr "最低"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:310
+#: Nickvision.Parabolic.Shared/Models/Format.cs:352
+#: Nickvision.Parabolic.Shared/Models/Format.cs:353
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:33
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:75
+msgid "Best"
+msgstr "最高"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:335
+msgid "Video (Generic)"
+msgstr "動画 (一般)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:336
+msgid "MP4 (Video)"
+msgstr "MP4 (ビデオ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:337
+msgid "WEBM (Video)"
+msgstr "WEBM (ビデオ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:338
+msgid "MKV (Video)"
+msgstr "MKV (動画)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:339
+msgid "MOV (Video)"
+msgstr "MOV (動画)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:340
+msgid "AVI (Video)"
+msgstr "AVI (動画)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:342
+msgid "Audio (Generic)"
+msgstr "音声 (一般)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:343
+msgid "MP3 (Audio)"
+msgstr "MP3 (音声)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:344
+msgid "M4A (Audio)"
+msgstr "M4A (音声)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:345
+msgid "OPUS (Audio)"
+msgstr "OPUS (音声)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:346
+msgid "FLAC (Audio)"
+msgstr "FLAC (音声)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:347
+msgid "WAV (Audio)"
+msgstr "WAV (音声)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:348
+msgid "OGG (Audio)"
+msgstr "OGG (音声)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:381
+msgid "An error occurred while discovering media"
+msgstr "メディアの探索中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:395
+msgid "Use manual credential"
+msgstr "手動で資格情報を入力する"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:414
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:60
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:75
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:105
+#: Nickvision.Parabolic.Shared/Models/Format.cs:356
+#: Nickvision.Parabolic.Shared/Models/Format.cs:357
+msgid "None"
+msgstr "なし"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:29
+msgid "A credential with that name already exists"
+msgstr "これと同じ名前の資格情報がすでに存在します"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:33
+msgid "The name of the credential cannot be empty"
+msgstr "資格情報の名前を空にすることはできません"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:37
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:79
+msgid "Either the credential username or password must be set"
+msgstr "ユーザー名とパスワードを指定する必要があります"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:75
+msgid "A credential with that name does not exist"
+msgstr "その名前の資格情報は存在しません"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:61
+msgid "Parabolic"
+msgstr "Parabolic"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:62
+msgid "Download web video and audio."
+msgstr "ウェブ上のビデオと音声をダウンロード。"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:63
+msgid "Matrix Chat"
+msgstr "Matrix チャット"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:65
+msgid "Contributors on GitHub ❤️"
+msgstr "GitHub での貢献者の皆さん❤️"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:67
+msgid "Fyodor Sobolev"
+msgstr "Fyodor Sobolev"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:69
+msgid "David Lapshin"
+msgstr "David Lapshin"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:70
+msgid "translation-credits"
+msgstr "翻訳者クレジット"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:159
+#, csharp-format
+msgid "New {0} update available: {1}"
+msgstr "新しい {0} アップデートが利用可能：{1}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:168
+#, csharp-format
+msgid "New yt-dlp update available: {0}"
+msgstr "yt-dlpの新しいアップデートが利用可能：{0}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:176
+#, fuzzy, csharp-format
+msgid "New deno update available: {0}"
+msgstr "新しい {0} アップデートが利用可能：{1}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:186
+msgid "No update available"
+msgstr "アップデートはありません"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:200
+msgid "An error occurred while clearing completed downloads"
+msgstr "完了したダウンロードの消去中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:218
+msgid "An error occurred while clearing recoverable downloads"
+msgstr "復元可能なダウンロードの消去中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:235
+msgid "An error occurred while clearing queued downloads"
+msgstr "待機中のダウンロードの消去中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:249
+#, fuzzy, csharp-format
+msgid "Deno {0} installed successfully"
+msgstr "yt-dlp {0} が正常にインストールされました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:253
+#, fuzzy
+msgid "Unable to download and install the Deno update"
+msgstr "アップデートをダウンロードおよびインストールできませんでした"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:282
+msgid "An error occurred while pausing the download"
+msgstr "ダウンロードの一時停止中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:300
+msgid "An error occurred while recovering downloads"
+msgstr "ダウンロードの復元中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:317
+msgid "An error occurred while resuming the download"
+msgstr "ダウンロードの再開中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:335
+msgid "An error occurred while retrying failed downloads"
+msgstr "失敗したダウンロードの再試行中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:352
+msgid "An error occurred while retrying the download"
+msgstr "ダウンロードの再試行中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:370
+msgid "An error occurred while stopping all downloads"
+msgstr "全てのダウンロードの停止中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:387
+msgid "An error occurred while stopping the download"
+msgstr "ダウンロードの停止中にエラーが発生しました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:401
+#, fuzzy, csharp-format
+msgid "Starting {0} installer..."
+msgstr "ダウンロードを開始しています..."
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:405
+msgid "Unable to download and install the update"
+msgstr "アップデートをダウンロードおよびインストールできませんでした"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:414
+#, csharp-format
+msgid "yt-dlp {0} installed successfully"
+msgstr "yt-dlp {0} が正常にインストールされました"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:418
+msgid "Unable to download and install the yt-dlp update"
+msgstr "yt-dlpのアップデートをダウンロードおよびインストールできませんでした"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:39
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:87
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:118
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:132
+msgid "Any"
+msgstr "すべて"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:40
+msgid "FLAC (ALAC)"
+msgstr "FLAC (ALAC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:41
+msgid "WAV (AIFF)"
+msgstr "WAV (AIFF)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:49
+msgid "System"
+msgstr "システムに従う"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:61
+msgid "Firefox"
+msgstr "Firefox"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:65
+msgid "Brave"
+msgstr "Brave"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:66
+msgid "Chrome"
+msgstr "Chrome"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:67
+msgid "Chromium"
+msgstr "Chromium"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:68
+msgid "Edge"
+msgstr "Edge"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:69
+msgid "Opera"
+msgstr "Opera"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:70
+msgid "Vivaldi"
+msgstr "Vivaldi"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:71
+msgid "Whale"
+msgstr "Whale"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:88
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:89
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:90
+#: Nickvision.Parabolic.Shared/Models/Format.cs:269
+#: Nickvision.Parabolic.Shared/Models/Format.cs:270
+#: Nickvision.Parabolic.Shared/Models/Format.cs:271
+#, csharp-format
+msgid "{0} FPS"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:94
+msgid "Never"
+msgstr "通知しない"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:95
+msgid "1 Day"
+msgstr "1日"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:96
+msgid "1 Week"
+msgstr "1週間"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:97
+msgid "1 Month"
+msgstr "1ヶ月"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:98
+msgid "3 Months"
+msgstr "3ヶ月"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:99
+msgid "6 Months"
+msgstr "6ヶ月"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:100
+msgid "1 Year"
+msgstr "1年"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:101
+msgid "Forever"
+msgstr "ずっと"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:126
+msgctxt "Theme"
+msgid "Light"
+msgstr "ライト"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:127
+msgctxt "Theme"
+msgid "Dark"
+msgstr "ダーク"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:128
+msgctxt "Theme"
+msgid "System"
+msgstr "システムに従う"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:135
+msgid "H.264 (AVC)"
+msgstr "H.264 (AVC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:136
+msgid "H.265 (HEVC)"
+msgstr "H.265 (HEVC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:366
+msgid "An argument with that name already exists"
+msgstr "同名の引数が既に存在します"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:370
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:402
+msgid "The name of the argument cannot be empty"
+msgstr "引数の名前を空にすることはできません"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:374
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:406
+msgid "The arguments of the argument cannot be empty"
+msgstr "引数の値を空にすることはできません"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:398
+msgid "An argument with that name does not exist"
+msgstr "その名前の引数は存在しません"
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:98
+msgid "The file already exists and overwriting is disabled."
+msgstr "ファイルが既に存在し、上書きが無効になっています。"
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:115
+msgid "Starting download..."
+msgstr "ダウンロードを開始しています..."
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:250
+#: Nickvision.Parabolic.Shared/Models/Format.cs:304
+msgid "Audio Description"
+msgstr "音声の概要"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:335
+#, csharp-format
+msgid "{0:0.00} GiB"
+msgstr "{0:0.00} GiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:339
+#, csharp-format
+msgid "{0:0.00} MiB"
+msgstr "{0:0.00} MiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:343
+#, csharp-format
+msgid "{0:0.00} KiB"
+msgstr "{0:0.00} KiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:347
+#, csharp-format
+msgid "{0:0.00} B"
+msgstr "{0:0.00} B"
+
+#: Nickvision.Parabolic.Shared/Models/SubtitleLanguage.cs:49
+#, csharp-format
+msgid "{0} (Auto-generated)"
+msgstr "{0} (自動生成)"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:417
+#, csharp-format
+msgid "About {0}"
+msgstr "Parabolic について {0}"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:26
+msgid "Changelog"
+msgstr "変更履歴"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:27
+msgid "Debugging"
+msgstr "デバッグ"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:28
+msgid "Credits"
+msgstr "クレジット"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:34
+msgid "Copy Debug Information"
+msgstr "デバッグ情報をコピー"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:37
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}"
+msgstr ""
+"開発者:\n"
+"{0}\n"
+"\n"
+"デザイナー:\n"
+"{1}\n"
+"\n"
+"アート担当:\n"
+"{2}"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:41
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}\n"
+"\n"
+"Translators:\n"
+"{3}"
+msgstr ""
+"開発者:\n"
+"{0}\n"
+"\n"
+"デザイナー:\n"
+"{1}\n"
+"\n"
+"アート担当:\n"
+"{2}\n"
+"\n"
+"翻訳者:\n"
+"{3}"
+
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:50
+msgid "Log"
+msgstr "ログ"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:69
+msgid "Enter media url here"
+msgstr "メディアの URL を入力"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:122
+msgid "Enter username here"
+msgstr "ユーザー名を入力"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:123
+msgid "Enter password here"
+msgstr "パスワードを入力"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:82
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:118
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:128
+msgid "Warning"
+msgstr "警告"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:83
+msgid ""
+"Parabolic will download media based off of previously configured options and "
+"sensible defaults. Options including save folder, format, and subtitle "
+"selection will not be shown."
+msgstr ""
+"Parabolic は、以前に設定されたオプションや適切なデフォルト値に基づいてメディ"
+"アをダウンロードします。保存先フォルダー、形式、字幕選択などのオプションは表"
+"示されません。"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:119
+msgid ""
+"Generic types do not support embedding thumbnails and subtitles. If "
+"necessary, please select a specific type that is known to support embedding "
+"to prevent separate files from being written."
+msgstr ""
+"一般的なファイル形式は、サムネイルや字幕の埋め込みに対応していません。独立し"
+"た画像や字幕ファイルがディスクに保存されることを防ぐために、埋め込みに対応す"
+"るファイル形式を選択してください。"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:130
+msgid "No Subtitles"
+msgstr "字幕なし"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:98
+msgid "No subtitles were found for this media."
+msgstr "このメディアには字幕がありません。"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:129
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download."
+msgstr "ダウンロード時、選択したアイテムのタイトルに連番が付与されます。"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:131
+msgid "No subtitles were found in this playlist."
+msgstr "このプレイリストに字幕はありません。"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:229
+msgid "Configure Download"
+msgstr "ダウンロードを設定"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:40
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:50
+msgid "Search..."
+msgstr "検索..."
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:41
+msgid "Sort"
+msgstr "ソート"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:45
+msgid "Please wait..."
+msgstr "お待ちください..."
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:47
+msgid "There are no downloads in your history"
+msgstr "履歴にダウンロードがありません"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:49
+msgid "There are no downloads found with the current filters"
+msgstr "現在のフィルターに該当するダウンロードはありません"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:53
+msgid "There are no credentials in your keyring"
+msgstr "キーリングに資格情報がありません"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:55
+msgid "There are no credentials found with the current filters"
+msgstr "現在のフィルターに該当する資格情報はありません"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:152
+msgid "Enter name here"
+msgstr "名前を入力"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:83
+msgid "Enter url here"
+msgstr "URL をここに入力"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:82
+msgid "File"
+msgstr "ファイル"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:84
+msgid "Exit"
+msgstr "終了"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:32
+msgid "Settings"
+msgstr "設定"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:95
+msgid "Help"
+msgstr "ヘルプ"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:96
+msgid "Check for Updates"
+msgstr "アップデートをチェック"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:98
+msgid "Report a Bug"
+msgstr "バグを報告"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:99
+msgid "Discussions"
+msgstr "ディスカッション"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:101
+#, csharp-format
+msgid "You are running a preview version of {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:102
+msgid "Thank you for testing the upcoming features and changes! ❤️"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:121
+msgid "Credential Required"
+msgstr "資格情報が必要です"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:124
+msgid "Submit"
+msgstr "送信"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:43
+msgid "Update Parabolic and dependencies, such as yt-dlp, to beta versions"
+msgstr "Parabolic と依存関係 (yt-dlp等) をベータ版にアップデート"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:44
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:55
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:59
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:67
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:120
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:131
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:135
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:142
+msgid "On"
+msgstr "オン"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:45
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:56
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:60
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:64
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:84
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:128
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:132
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:139
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:143
+msgid "Off"
+msgstr "オフ"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:53
+msgid "Max Number of Active Downloads"
+msgstr "最大同時ダウンロード数"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:92
+msgid "Speed Limit"
+msgstr "速度制限"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:94
+msgid "Enter proxy url here"
+msgstr "プロキシの URL を入力"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:95
+msgid "Cookies from File"
+msgstr "ファイルからCookieを取得"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:96
+msgid "Upload a txt cookies file from unlisted browsers"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:107
+msgid "Max Connections Per Server"
+msgstr "サーバーごとの最大接続数"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:108
+msgid "Corresponds to -x option"
+msgstr "-x オプションに対応"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:109
+msgid "Minimum Split Size (MiB)"
+msgstr "最小分割サイズ (MiB)"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:110
+msgid "Corresponds to -k option"
+msgstr "-x オプションに対応"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:113
+msgid "Extra arguments to pass to yt-dlp when discovering media"
+msgstr "メディア探索時のyt-dlpの追加引数"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:156
+msgid "Enter args here"
+msgstr "引数をここに入力"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:116
+msgid "Extra arguments to pass to yt-dlp when downloading media"
+msgstr "メディアのダウンロード時のyt-dlpの追加引数"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:147
+msgid "Post-Processor Arguments"
+msgstr "ポストプロセッサ引数"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:153
+msgid "Post-Processor"
+msgstr "ポストプロセッサ"
+
+#, csharp-format
+#~ msgid "A credential is required to continue the download of \"{0}\"."
+#~ msgstr "\"{0}\" のダウンロードを続行するには資格情報が必要です。"
+
+#, fuzzy
+#~ msgid "Password Required"
+#~ msgstr "パスワード"
+
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "検索..."
+
+#~ msgid "Home"
+#~ msgstr "ホーム"
+
+#~ msgid "Updating"
+#~ msgstr "アップデート中"
+
+#~ msgid "Preview"
+#~ msgstr "プレビュー"
+
+#, fuzzy
+#~ msgid "Download Immediately"
+#~ msgstr "今すぐダウンロード"
+
+#, fuzzy
+#~ msgid "close"
+#~ msgstr "閉じる"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} downloads remaining"
+#~ msgstr "進行中のダウンロードはありません"
+
+#, fuzzy
+#~ msgid "One Day"
+#~ msgstr "一日中"
+
+#, fuzzy
+#~ msgid "One Week"
+#~ msgstr "一週間"
+
+#, fuzzy
+#~ msgid "One Month"
+#~ msgstr "1か月間"
+
+#~ msgid "Three Months"
+#~ msgstr "3か月間"
+
+#, fuzzy
+#~ msgid "There are no downloads added"
+#~ msgstr "すべてのダウンロード完了時"
+
+#, fuzzy
+#~ msgid "Add a download to get started"
+#~ msgstr "ログインを追加してはじめましょう。"
+
+#, fuzzy
+#~ msgid "Arguments"
+#~ msgstr "新しい認証情報"
+
+#, fuzzy
+#~ msgid "The name cannot be empty."
+#~ msgstr "認証情報の名前は空にすることはできません。"
+
+#, fuzzy
+#~ msgid "Postprocessing"
+#~ msgstr "進行中"
+
+#, fuzzy
+#~ msgid "Add Argument"
+#~ msgstr "新しい認証情報"
+
+#, fuzzy
+#~ msgid "Edit Argument"
+#~ msgstr "新しい認証情報"
+
+#, fuzzy
+#~ msgid "Delete Argument"
+#~ msgstr "新しい認証情報"
+
+#~ msgid "Download Finished"
+#~ msgstr "ダウンロードが完了"
+
+#~ msgid "{} has finished downloading"
+#~ msgstr "{} はダウンロード完了です"
+
+#, fuzzy
+#~ msgid "Download Failed"
+#~ msgstr "ダウンロードが完了"
+
+#~ msgid "{} has finished with an error"
+#~ msgstr "{} のダウンロードはエラーで終了しました"
+
+#~ msgid "{:.2f} GiB/s"
+#~ msgstr "{:.2f} GiB /毎秒"
+
+#~ msgid "{:.2f} MiB/s"
+#~ msgstr "{:.2f} MiB/毎秒"
+
+#~ msgid "{:.2f} KiB/s"
+#~ msgstr "{:.2f} KiB/毎秒"
+
+#~ msgid "{:.2f} B/s"
+#~ msgstr "{:.2f} B/毎秒"
+
+#, fuzzy
+#~ msgid "{:.2f} B"
+#~ msgstr "{:.2f} B/毎秒"
+
+#, fuzzy
+#~ msgid "Unable to download yt-dlp update"
+#~ msgstr "アップデートをダウンロードしてインストールできません"
+
+#~ msgid "Validate"
+#~ msgstr "内容の確認"
+
+#~ msgid "Use Batch File"
+#~ msgstr "バッチファイルを使う"
+
+#~ msgid "Authenticate"
+#~ msgstr "認証"
+
+#~ msgid "Validating"
+#~ msgstr "内容の確認"
+
+#, fuzzy
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and "
+#~ "subtitles.\n"
+#~ "Please select a specific file type that is known to support embedding\n"
+#~ "to prevent separate files from being written."
+#~ msgstr ""
+#~ "一般的なファイル形式は、サムネイルや字幕の埋め込みに対応していません。独立"
+#~ "した画像や字幕ファイルがディスクに保存されることを防ぐために、埋め込みに対"
+#~ "応するファイル形式を選択してください。"
+
+#~ msgid "Advanced Options"
+#~ msgstr "詳細オプション"
+
+#~ msgid "Revert to Original"
+#~ msgstr "元に戻す"
+
+#, fuzzy
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and writing "
+#~ "playlist files. Please select a specific file type that is known to "
+#~ "support embedding to prevent separate files from being written."
+#~ msgstr ""
+#~ "一般的なファイル形式は、サムネイルや字幕の埋め込みに対応していません。独立"
+#~ "した画像や字幕ファイルがディスクに保存されることを防ぐために、埋め込みに対"
+#~ "応するファイル形式を選択してください。"
+
+#~ msgid "Playlist Items"
+#~ msgstr "再生リストのアイテム"
+
+#~ msgid "Use"
+#~ msgstr "使用する"
+
+#~ msgid "No Credentials Found"
+#~ msgstr "認証情報が見つかりません"
+
+#~ msgid "Add Credential"
+#~ msgstr "認証情報の追加"
+
+#, fuzzy
+#~ msgid "Updates"
+#~ msgstr "アップデート"
+
+#, fuzzy
+#~ msgid "Update Available"
+#~ msgstr "新しいアップデートが利用可能"
+
+#~ msgid "Stop All Downloads"
+#~ msgstr "すべてのダウンロードを停止"
+
+#~ msgid "Clear Queued Downloads"
+#~ msgstr "一時停止中のダウンロードをクリア"
+
+#~ msgid "Retry Failed Downloads"
+#~ msgstr "失敗したダウンロードを再試行"
+
+#, fuzzy
+#~ msgid "No History Available"
+#~ msgstr "表示可能な履歴はありません"
+
+#~ msgid "No Downloads Running"
+#~ msgstr "進行中のダウンロードはありません"
+
+#~ msgid "No Downloads Queued"
+#~ msgstr "一時停止中のダウンロードはありません"
+
+#~ msgid "No Downloads Completed"
+#~ msgstr "完了済のダウンロードはありません"
+
+#, fuzzy
+#~ msgid "Log copied to clipboard"
+#~ msgstr "ダウンロードログがクリップボードにコピーされました。"
+
+#~ msgid "{} items"
+#~ msgstr "{} 個のアイテム"
+
+#~ msgid ""
+#~ "{} needs a credential to download.\n"
+#~ "Please select or enter one to use."
+#~ msgstr ""
+#~ "{} はダウンロードに認証情報を必要とします。\n"
+#~ "使用する認証情報を選択、または入力して下さい。"
+
+#~ msgid "Keyring is not saving to disk. Changes will be lost."
+#~ msgstr "キーリングはディスクに保存されていません。変更は失われます。"
+
+#~ msgid "Modify"
+#~ msgstr "編集"
+
+#~ msgid "Name (Empty)"
+#~ msgstr "名前(空)"
+
+#~ msgid "Username (Empty)"
+#~ msgstr "ユーザー名(空)"
+
+#~ msgid "Password (Empty)"
+#~ msgstr "パスワード(空)"
+
+#~ msgid "URL (Invalid)"
+#~ msgstr "URL (無効)"
+
+#~ msgid "Name (Exists)"
+#~ msgstr "名前(すでに存在)"
+
+#~ msgid "Credential (Database Error)"
+#~ msgstr "認証情報(データベースエラー)"
+
+#~ msgid "Exit?"
+#~ msgstr "終了しますか？"
+
+#, fuzzy
+#~ msgid "{} version {} is available to download and install"
+#~ msgstr "アップデートをダウンロードしてインストールできません"
+
+#, fuzzy
+#~ msgid "Update completed successfully"
+#~ msgstr "完了したダウンロードをクリア"
+
+#, fuzzy
+#~ msgid "Are you sure you want to delete this argument?"
+#~ msgstr "本当にこの認証情報を削除しますか？"
+
+#, fuzzy
+#~ msgid "Args (Empty)"
+#~ msgstr "名前(空)"
+
+#, fuzzy
+#~ msgid "Show Log"
+#~ msgstr "ウィンドウを表示"
+
+#, fuzzy
+#~ msgid "Open Containing Folder"
+#~ msgstr "フォルダーを開く"
+
+#, fuzzy
+#~ msgid "Media"
+#~ msgstr "メディア"
+
+#~ msgid "Split Video by Chapters"
+#~ msgstr "動画をチャプター(章)で分ける"
+
+#, fuzzy
+#~ msgid "Use manual credentials"
+#~ msgstr "手動で認証情報を入力する"
+
+#~ msgid "Items ({})"
+#~ msgstr "アイテム ({})"
+
+#~ msgid ""
+#~ "{} needs a credential to download. Please select or enter one to use."
+#~ msgstr ""
+#~ "{} はダウンロードに認証情報を必要とします。使用する認証情報を選択、または"
+#~ "入力して下さい。"
+
+#, fuzzy
+#~ msgid ""
+#~ "The keyring is not saving changes to disk. Any changes made will be lost"
+#~ msgstr ""
+#~ "キーリングの変更はディスクへ保存されていません。加えられた変更はアプリケー"
+#~ "ション閉じると失われます。"
+
+#~ msgid "New Credential"
+#~ msgstr "新しい認証情報"
+
+#~ msgid "The credential name cannot be empty."
+#~ msgstr "認証情報の名前は空にすることはできません。"
+
+#~ msgid "The provided url is invalid."
+#~ msgstr "入力された URL が無効です。"
+
+#~ msgid "There was an unknown error adding the credential to the keyring."
+#~ msgstr "認証情報をキーリングへ保存するときに不明なエラーが発生しました。"
+
+#~ msgid "Edit Credential"
+#~ msgstr "認証情報の編集"
+
+#~ msgid "Save"
+#~ msgstr "保存"
+
+#, fuzzy
+#~ msgid "Delete Credential"
+#~ msgstr "認証情報を削除しますか？"
+
+#, fuzzy
+#~ msgid "Start"
+#~ msgstr "開始中"
+
+#~ msgid "Documentation"
+#~ msgstr "ドキュメント"
+
+#, fuzzy
+#~ msgid "Downloading the update"
+#~ msgstr "ダウンロード中"
+
+#, fuzzy
+#~ msgid "Version {}"
+#~ msgstr "バージョン: {0}"
+
+#, fuzzy
+#~ msgid "Debug information copied to clipboard"
+#~ msgstr "ダウンロードログがクリップボードにコピーされました。"
+
+#~ msgid "Light"
+#~ msgstr "ライト"
+
+#~ msgid "Dark"
+#~ msgstr "ダーク"
+
+#, fuzzy
+#~ msgid "New Argument"
+#~ msgstr "新しい認証情報"
+
+#, fuzzy
+#~ msgid ""
+#~ "The url provided is invalid or unable to be reached. Check the url, the "
+#~ "authentication used, the cookies settings, and the preferred codecs "
+#~ "selected. Note that the service may have blocked your IP or the video may "
+#~ "be geo-restricted."
+#~ msgstr ""
+#~ "入力した URL が無効であるかアクセスできません。URL、使用される認証、設定"
+#~ "で Cookie 用に選択したブラウザを確認してください。"
+
+#~ msgid "Download Finished With Error"
+#~ msgstr "ダウンロードはエラーで終了"
+
+#~ msgid "Safari"
+#~ msgstr "Safari"
+
+#~ msgid "Back"
+#~ msgstr "戻る"
+
+#~ msgid ""
+#~ "The update is downloading in the background and will start once it "
+#~ "finishes"
+#~ msgstr ""
+#~ "アップデートはバックグラウンドでダウンロードされ、完了すると開始されます"
+
+#~ msgid "Automatically Check for Updates"
+#~ msgstr "アップデートを自動的にチェックする"
+
+#~ msgid "Copy Command to Clipboard"
+#~ msgstr "コマンドをクリップボードへコピー"
+
+#~ msgid ""
+#~ "The authors of Nickvision Parabolic are not responsible/liable for any "
+#~ "misuse of this program that may violate local copyright/DMCA laws. Users "
+#~ "use this application at their own risk."
+#~ msgstr ""
+#~ "Nickvision Parabolic の製作者は、地域の著作権法 / DMCA （デジタルミレニア"
+#~ "ム著作権法）に反する可能性のある、このプログラムの誤用について責任を負いま"
+#~ "せん。ユーザーによるこのアプリケーションの使用は自己責任です。"
+
+#, fuzzy
+#~ msgid "Download some media to see it here"
+#~ msgstr "メディアをダウンロード"
+
+#, fuzzy
+#~ msgid "Add, delete and modify credentials for validating websites"
+#~ msgstr "メディアサイトの資格情報を作成・保存・管理できます。"
+
+#, fuzzy
+#~ msgid "Revert File Name"
+#~ msgstr "ファイル名"
+
+#, fuzzy
+#~ msgid "Notification"
+#~ msgstr "アプリケーション"
+
+#, fuzzy
+#~ msgid "No Download Log"
+#~ msgstr "ダウンロード履歴の保存量"
+
+#, fuzzy
+#~ msgid "No save folder selected"
+#~ msgstr "ファイルが選択されていません"
+
+#~ msgid "Enter file name here"
+#~ msgstr "ファイル名を入力"
+
+#, fuzzy
+#~ msgid "Enter start time here"
+#~ msgstr "初めのタイムフレームをここに入力"
+
+#, fuzzy
+#~ msgid "Enter end time here"
+#~ msgstr "終わりのタイムフレームをここに入力"
+
+#, fuzzy
+#~ msgid "Downloading (0)"
+#~ msgstr "ダウンロード中"
+
+#, fuzzy
+#~ msgid "Queued (0)"
+#~ msgstr "停止中"
+
+#, fuzzy
+#~ msgid "Completed (0)"
+#~ msgstr "完了済"
+
+#~ msgid "Parabolic (Preview)"
+#~ msgstr "Parabolic (プレビュー版)"
+
+#, fuzzy
+#~ msgid "Queued ({})"
+#~ msgstr "停止中"
+
+#, fuzzy
+#~ msgid "Completed ({})"
+#~ msgstr "完了済"
+
+#, fuzzy
+#~ msgid "Add, delete, and modify arguments for postprocessing"
+#~ msgstr "メディアサイトの資格情報を作成・保存・管理できます。"
+
+#~ msgid "Postprocessing Threads"
+#~ msgstr "後処理のスレッド"
+
+#, fuzzy
+#~ msgid ""
+#~ "The url provided is invalid or unable to be reached. Check the url, the "
+#~ "authentication used, and the selected browser for cookies in settings. "
+#~ "Note that YouTube may have blocked your IP or the video may be geo-"
+#~ "restricted."
+#~ msgstr ""
+#~ "入力された URL は無効であるかアクセスできません。URL、使用した認証、クッ"
+#~ "キー用に設定したブラウザを確認してみてください。"
+
+#, fuzzy
+#~ msgid "The limit to apply to downloads with limiting speed enabled."
+#~ msgstr ""
+#~ "この制限は、ダウンロードにスピード制限が設定されている時のみ有効になりま"
+#~ "す。"
+
+#~ msgid "Download Immediately After Validation"
+#~ msgstr "検証終了後に直ちにダウンロードを行う"
+
+#~ msgid "Past Downloads"
+#~ msgstr "過去のダウンロード"
+
+#, fuzzy
+#~ msgid "No Download History"
+#~ msgstr "ダウンロード履歴の保存量"
+
+#~ msgid "Downloads Finished"
+#~ msgstr "ダウンロード完了"
+
+#~ msgid "All downloads have finished"
+#~ msgstr "すべてのダウンロードが完了しました"
+
+#~ msgid "Completed Notification Trigger"
+#~ msgstr "完了の通知のタイミング"
+
+#~ msgid "For each download"
+#~ msgstr "各ダウンロード完了時"
+
+#~ msgid "Verbose Logging"
+#~ msgstr "詳細なログ (Verbose)"
+
+#~ msgid "Revert"
+#~ msgstr "もとに戻す"
+
+#~ msgid "Select"
+#~ msgstr "選択"
+
+#~ msgid "Select save folder"
+#~ msgstr "保存するフォルダーを選択"
+
+#~ msgid "Language"
+#~ msgstr "言語"
+
+#~ msgid "WARNING: Using aria2 to download. Progress will not be shown."
+#~ msgstr ""
+#~ "警告: aria2 を使用してダウンロードします。進捗状況を表示することはできませ"
+#~ "ん。"
+
+#~ msgid "WARNING: Using ffmpeg to download. Progress will not be shown."
+#~ msgstr ""
+#~ "警告: ffmpeg を使用してダウンロードします。進捗状況を表示することはできま"
+#~ "せん。"
+
+#~ msgid "Quality"
+#~ msgstr "品質"
+
+#~ msgid "Default"
+#~ msgstr "デフォルト"
+
+#~ msgid "Download Subtitles"
+#~ msgstr "字幕をダウンロード"
+
+#~ msgid "Good"
+#~ msgstr "通常"
+
+#~ msgid "Add Download (Ctrl+N)"
+#~ msgstr "ダウンロードを追加 (Ctrl+N)"
+
+#, csharp-format
+#~ msgid "{0} download — {1:f1}% ({2})"
+#~ msgid_plural "{0} downloads — {1:f1}% ({2})"
+#~ msgstr[0] "{0} ダウンロード— {1:f1}% ({2})"
+
+#, csharp-format
+#~ msgid "{0}{1}"
+#~ msgstr "{0}{1}"
+
+#~ msgid ""
+#~ "A cookies file can be provided to yt-dlp to allow downloading media that "
+#~ "requires a login."
+#~ msgstr ""
+#~ "ログインが必要なメディアをダウンロードするために yt-dlp にクッキーファイル"
+#~ "を渡すことができます。"
+
+#~ msgid "Add Login"
+#~ msgstr "ログインを追加"
+
+#~ msgid "Allow Running In Background"
+#~ msgstr "バックグラウンドでの動作を許可"
+
+#~ msgid ""
+#~ "Clear metadata fields containing the URL and other identifying "
+#~ "information of the media source"
+#~ msgstr "メディアのソースを特定できる URL などのメタデータを削除する"
+
+#~ msgid "Close and Stop Downloads?"
+#~ msgstr "閉じてダウンロードを中止しますか？"
+
+#~ msgid "Comma separated list"
+#~ msgstr "コンマで区切りリスト"
+
+#~ msgid ""
+#~ "Cookies can be passed to yt-dlp in the form of TXT files. Export cookies "
+#~ "from your browser using the following extensions (use at your own risk):"
+#~ msgstr ""
+#~ "クッキーは TXT ファイル形式で yt-dlp に渡すことができます。ブラウザの拡張"
+#~ "機能を使ってクッキーをエクスポートできます(自己責任で使用してください):"
+
+#~ msgid "Cookies File Information"
+#~ msgstr "クッキーファイルの情報"
+
+#~ msgid "Crop Thumbnail"
+#~ msgstr "サムネイルを整形"
+
+#~ msgid "DaPigGuy"
+#~ msgstr "DaPigGuy"
+
+#~ msgid ""
+#~ "Different sites can use different language code formats for the same "
+#~ "language. You may encounter one of the following three types: two-letter, "
+#~ "two-letter with region, or three-letter. For example, \"en\", \"en-US\" "
+#~ "and \"eng\" are all used for English.\n"
+#~ "Please specify all valid codes for your languages for the best results. "
+#~ "Auto-generated subtitles will also be downloaded if available.\n"
+#~ "\n"
+#~ "You can specify \"all\" instead to download all subtitles, including auto-"
+#~ "generated ones. To exclude auto-generated ones, turn off the option below."
+#~ msgstr ""
+#~ "同じ言語であっても、サイトによって違った言語コードを使用しているかもしれま"
+#~ "せん。2文字、2文字+地域、3文字の３つのパターンが考えられます。例えば、"
+#~ "\"en\"、\"en-US\"、\"eng\" は英語の言語コードとして使用されます。\n"
+#~ "より良い結果を得るために、有効な言語コードを全て指定してください。自動生成"
+#~ "された字幕が利用可能な場合は、それらもダウンロードされます。\n"
+#~ "\n"
+#~ "\"all\"を設定すると、自動生成された字幕を含めた全ての字幕をダウンロードし"
+#~ "ます。自動生成された字幕を除く場合は、下のオプションをオフにしてください。"
+
+#~ msgid "Disable"
+#~ msgstr "無効化"
+
+#~ msgid "Disable Keyring?"
+#~ msgstr "キーリングを無効にしますか？"
+
+#~ msgid ""
+#~ "Disabling the keyring will delete all data currently stored inside. Are "
+#~ "you sure you want to disable it?"
+#~ msgstr ""
+#~ "キーリングを無効にすると、現在保存されているデータがすべて削除されます。本"
+#~ "当に無効にしますか？"
+
+#~ msgid "Disallow Conversions"
+#~ msgstr "フォーマット変換を無効化"
+
+#~ msgid "Download Specific Timeframe"
+#~ msgstr "特定の時間枠をダウンロードする"
+
+#~ msgid "Download using aria2 has started"
+#~ msgstr "aria2 を使用したダウンロードが開始"
+
+#~ msgid "Download using ffmpeg has started"
+#~ msgstr "ffmpeg を使用したダウンロードが開始"
+
+#, csharp-format
+#~ msgid "Downloading {0:f2}% ({1})"
+#~ msgstr "ダウンロード中 {0:f2}% ({1})"
+
+#~ msgid "Downloading..."
+#~ msgstr "ダウンロード中..."
+
+#~ msgid ""
+#~ "Enable to use aria2 downloader. It can be faster, but you will not see "
+#~ "download progress."
+#~ msgstr ""
+#~ "aria2 をダウンローダーとして使用します。ダウンロードは速くなりますが、ダウ"
+#~ "ンロードの進捗を見ることはできません。"
+
+#~ msgid "End Time (Invalid)"
+#~ msgstr "終わり (無効)"
+
+#~ msgid "Enter media URL here"
+#~ msgstr "メディアの URL を入力"
+
+#~ msgid "Enter proxy URL here"
+#~ msgstr "プロキシの URL を入力"
+
+#~ msgid "Enter URL here"
+#~ msgstr "URL をここに入力"
+
+#~ msgid "Failed to enable keyring."
+#~ msgstr "キーリングの有効化に失敗しました。"
+
+#~ msgid ""
+#~ "If enabled, Parabolic will download the appropriate video/audio format "
+#~ "for the selected quality without converting to other formats. (You will "
+#~ "be unable to select a file format)"
+#~ msgstr ""
+#~ "有効であれば、Parabolic は他のフォーマットにファイルを変換することなく、選"
+#~ "択した画質に適した動画フォーマットでダウンロードします。（ファイル形式は選"
+#~ "択できません）"
+
+#~ msgid ""
+#~ "In combination with the trigger, completed notifications will only be "
+#~ "shown if the window is not focused."
+#~ msgstr ""
+#~ "完了時、通知はウィンドウがフォーカス状態でないときにのみ表示されます。"
+
+#~ msgid "Keyring Credential"
+#~ msgstr "キーリング資格情報"
+
+#~ msgid "Keyring Disabled"
+#~ msgstr "キーリングは無効です"
+
+#~ msgid "Keyring locked"
+#~ msgstr "キーリングはロックされています"
+
+#~ msgid "Keyring locked."
+#~ msgstr "キーリングはロックされています。"
+
+#~ msgid "Language Code Information"
+#~ msgstr "言語コードについて"
+
+#~ msgid "Leave empty to download from start."
+#~ msgstr "オプションが空のままだと、動画の最初からダウンロードされます。"
+
+#~ msgid "List of supported sites"
+#~ msgstr "サポートされているサイト"
+
+#~ msgid "Login"
+#~ msgstr "ログイン"
+
+#~ msgid "Make thumbnail square, useful when downloading music."
+#~ msgstr "サムネイルを正方形に整えます。音楽をダウンロードする時に便利です。"
+
+#~ msgid "Maximum Quality"
+#~ msgstr "最高品質"
+
+#~ msgid ""
+#~ "Media can possibly be cut inaccurately.\n"
+#~ "Enabling this option will disable the use of aria2 as the downloader if "
+#~ "it is enabled."
+#~ msgstr ""
+#~ "メディアは不正確にカットされる可能性があります。\n"
+#~ "このオプションを有効だと、aria2 を有効にしている場合、aria2 でのダウンロー"
+#~ "ドは無効になります。"
+
+#~ msgid "Media URL (Invalid)"
+#~ msgstr "メディアの URL (無効)"
+
+#~ msgid ""
+#~ "Minimize to the system tray instead of quitting the application when the "
+#~ "window is closed."
+#~ msgstr ""
+#~ "ウィンドウが閉じたときにアプリケーションを終了する代わりに、システムトレイ"
+#~ "に最小化します。"
+
+#~ msgid "Nicholas Logozzo"
+#~ msgstr "Nicholas Logozzo"
+
+#~ msgid "No active internet connection"
+#~ msgstr "有効なインターネット接続がありません"
+
+#~ msgid "No Completed Downloads"
+#~ msgstr "完了したダウンロードはありません"
+
+#~ msgid "No Previous Downloads"
+#~ msgstr "過去のダウンロードはありません"
+
+#~ msgid "No Queued Downloads"
+#~ msgstr "一時停止中のダウンロードはありません"
+
+#~ msgid "Preparing..."
+#~ msgstr "準備中..."
+
+#~ msgid "PREVIEW"
+#~ msgstr "プレビュー"
+
+#~ msgid "Reset"
+#~ msgstr "リセット"
+
+#~ msgid "Reset Keyring?"
+#~ msgstr "キーリングをリセットしますか？"
+
+#~ msgid "Reset to default"
+#~ msgstr "デフォルトに戻す"
+
+#~ msgid "Restart the app to unlock the keyring."
+#~ msgstr "キーリングを解除するにはアプリを再起動してください。"
+
+#~ msgid "Restart To Apply Theme?"
+#~ msgstr "再起動してテーマを適用しますか？"
+
+#~ msgid "Retry Download"
+#~ msgstr "ダウンロードを再試行"
+
+#~ msgid "Save Folder (Invalid)"
+#~ msgstr "保存フォルダー（不可）"
+
+#~ msgid "Search for downloads, history, and more"
+#~ msgstr "ダウンロード、履歴、その他を検索"
+
+#~ msgid "Select items to download or change file names."
+#~ msgstr "ダウンロードを選択またはファイル名を変更します。"
+
+#~ msgid ""
+#~ "Some downloads are still in progress.\n"
+#~ "Are you sure you want to close Parabolic and stop the running downloads?"
+#~ msgstr ""
+#~ "ダウンロードが続行中です。\n"
+#~ "本当に Parabolic を閉じてダウンロードを中断しますか？"
+
+#~ msgid "Some downloads finished with errors!"
+#~ msgstr "一部のダウンロードはエラーで失敗しました！"
+
+#~ msgid "Splits the video into multiple smaller ones based on its chapters."
+#~ msgstr "動画を複数の小さなチャプターごとに分割します。"
+
+#~ msgid "SponsorBlock Information (opens in a web browser)"
+#~ msgstr "SponsorBlockの情報（ブラウザーで開きます）"
+
+#~ msgid "Start Time (Invalid)"
+#~ msgstr "開始（無効）"
+
+#~ msgid "Subtitle Languages"
+#~ msgstr "字幕の言語"
+
+#~ msgid "Subtitle Languages (Comma-Separated)"
+#~ msgstr "字幕の言語（カンマで区切り）"
+
+#~ msgid "Subtitle Languages (Invalid)"
+#~ msgstr "字幕の言語（無効）"
+
+#~ msgid ""
+#~ "This option's state will be remembered and restored for future downloads."
+#~ msgstr ""
+#~ "このオプションの状態は、今後のダウンロードのために記憶・復元されます。"
+
+#~ msgid ""
+#~ "This will delete the previous keyring removing all passwords with it. "
+#~ "This action is irreversible."
+#~ msgstr ""
+#~ "以前のキーリングとすべてのパスワードは削除されます。この動作は元に戻せませ"
+#~ "ん。"
+
+#~ msgid "Unable to disable keyring."
+#~ msgstr "キーリングを無効化できません。"
+
+#~ msgid "Unable to reset keyring."
+#~ msgstr "キーリングをリセットできません。"
+
+#~ msgid "Undo Title Editing"
+#~ msgstr "タイトルの編集を取り消し"
+
+#~ msgid "Unlock Keyring"
+#~ msgstr "キーリングをロック解除"
+
+#~ msgid "Unset Cookies File"
+#~ msgstr "クッキーファイルの選択を解除"
+
+#~ msgid ""
+#~ "Use keyring to safely store credentials for sites that require a user "
+#~ "name and password to login."
+#~ msgstr ""
+#~ "キーリングを使ってユーザー名やパスワードが必要なサイトの資格情報を安全に保"
+#~ "存しましょう。"
+
+#~ msgid "User Name"
+#~ msgstr "ユーザー名"
+
+#~ msgid "Waiting..."
+#~ msgstr "待機中..."
+
+#, csharp-format
+#~ msgid ""
+#~ "Would you like to restart {0} to apply the new theme?\n"
+#~ "Any unsaved work will be lost."
+#~ msgstr ""
+#~ "{0} を再起動して新しいテーマを適用しますか？\n"
+#~ "保存されていない作業は失われます。"
+
+#~ msgid "Leave empty to download to end."
+#~ msgstr "オプションが空のままだと、動画の最後までダウンロードされます。"
+
+#~ msgid "Manage previously downloaded media."
+#~ msgstr "前にダウンロードしたメディアを管理します。"
+
+#~ msgid "Search history"
+#~ msgstr "履歴を検索"
+
+#~ msgid "Disable Keyring"
+#~ msgstr "キーリングを無効化"
+
+#~ msgid "Migrate to Secret-Secured Keyring"
+#~ msgstr "秘密保護のキーリングへ以降"
+
+#~ msgid "Migrate Keyring"
+#~ msgstr "キーリングを移行"
+
+#~ msgid "Skip"
+#~ msgstr "スキップ"
+
+#~ msgid "Unlock"
+#~ msgstr "ロック解除"
+
+#~ msgid "Hide the window instead of quitting if there are downloads running."
+#~ msgstr "ウィンドウが閉じて隠れても、ダウンロードを続けます。"
+
+#~ msgid "Apply"
+#~ msgstr "適用"
+
+#~ msgid "Copied debug info to clipboard."
+#~ msgstr "デバッグ情報をクリップボードにコピーしました。"
+
+#~ msgid ""
+#~ "Parabolic's documentation and support channels are accessible via the "
+#~ "Help menu."
+#~ msgstr ""
+#~ "Parabolic のドキュメントとサポートチャンネルは「ヘルプ」メニューからアクセ"
+#~ "スできます。"
+
+#, csharp-format
+#~ msgid "Remaining Downloads: {0}"
+#~ msgstr "残りダウンロード: {0}"
+
+#~ msgid "YouTube;Downloader;ytdlp;Nickvision;Tube;Converter;"
+#~ msgstr ""
+#~ "YouTube;Downloader;ytdlp;Nickvision;Tube;Converter;ユーチューブ;ダウンロー"
+#~ "ダー;コンバーター;"
+
+#~ msgid "— A basic yt-dlp frontend"
+#~ msgstr "— ベーシックな yt-dlp フロントエンド"
+
+#~ msgid ""
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)"
+#~ msgstr ""
+#~ "— 多様なフォーマットでのダウンロードに対応（mp4、webm、mp3、opus、flac、"
+#~ "wav）"
+
+#~ msgid "— Run multiple downloads at a time"
+#~ msgstr "— 同時に複数のダウンロードが可能"
+
+#~ msgid "— Supports downloading metadata and video subtitles"
+#~ msgstr "— メタデータと字幕のダウンロードに対応"
+
+#, fuzzy
+#~ msgid "Preparing required tools..."
+#~ msgstr "準備中..."
+
+#~ msgid "Unable to setup dependencies. Please restart the app and try again."
+#~ msgstr ""
+#~ "依存関係をダウンロードできません。アプリを再起動して試してみてください。"
+
+#~ msgid "Remove data about media source"
+#~ msgstr "メディアソースのデータを削除"
+
+#~ msgid "Set Password"
+#~ msgstr "パスワードを設定"
+
+#~ msgid "New Password"
+#~ msgstr "新しいパスワード"
+
+#~ msgid "Confirm Password"
+#~ msgstr "パスワードの確認"
+
+#~ msgid "If the password is lost, there is no way to restore the keyring!"
+#~ msgstr ""
+#~ "もしパスワードを忘れてしまったら、キーリングを復元させる方法はありません！"
+
+#~ msgid "Continue"
+#~ msgstr "続ける"
+
+#~ msgid "Unable to unlock keyring. Restart the app to try again."
+#~ msgstr ""
+#~ "キーリングをロック解除できません。アプリを再起動してもう一度試してくださ"
+#~ "い。"
+
+#~ msgid "Keyring has not been unlocked."
+#~ msgstr "キーリングはロック解除されていません。"
+
+#, csharp-format
+#~ msgid ""
+#~ "David Lapshin {0}\n"
+#~ "Brage Fuglseth {1}\n"
+#~ "marcin {2}"
+#~ msgstr ""
+#~ "David Lapshin {0}\n"
+#~ "Brage Fuglseth {1}\n"
+#~ "marcin {2}"
+
+#, csharp-format
+#~ msgid ""
+#~ "Nicholas Logozzo {0}\n"
+#~ "Fyodor Sobolev {1}\n"
+#~ "DaPigGuy {2}"
+#~ msgstr ""
+#~ "Nicholas Logozzo {0}\n"
+#~ "Fyodor Sobolev {1}\n"
+#~ "DaPigGuy {2}"
+
+#~ msgid "youtube"
+#~ msgstr "youtube"
+
+#~ msgid "video"
+#~ msgstr "動画"
+
+#~ msgid "audio"
+#~ msgstr "音楽"
+
+#~ msgid "download"
+#~ msgstr "ダウンロード"
+
+#~ msgid "Customize the application's user interface."
+#~ msgstr "このアプリのユーザーインターフェースをカスタマイズします。"
+
+#~ msgid "Customize downloader settings."
+#~ msgstr "ダウンローダーの設定をカスタマイズします。"
+
+#~ msgid "Customize converter settings."
+#~ msgstr "コンバーターを設定します。"
+
+#~ msgid "About Tube Converter"
+#~ msgstr "Tube Converter について"
+
+#~ msgid "Tube Converter"
+#~ msgstr "Tube Converter"
+
+#~ msgid "Get video and audio from the web"
+#~ msgstr "動画や音声をウェブから入手"
+
+#, fuzzy
+#~ msgid "Authenticate (Invalid)"
+#~ msgstr "認証"
+
+#, fuzzy
+#~ msgid "A link has been detected in your clipboard."
+#~ msgstr "クリップボードから貼り付け"
+
+#, fuzzy
+#~ msgid "Link pasted from clipboard."
+#~ msgstr "クリップボードから貼り付け"
+
+#~ msgid "If checked, media metadata will be included in the downloaded file."
+#~ msgstr "選択すると、動画のメタデータがダウンロードファイルに含まれます。"
+
+#~ msgctxt "Night"
+#~ msgid "Good Morning!"
+#~ msgstr "よい夜をお過ごしください！"
+
+#~ msgctxt "Morning"
+#~ msgid "Good Morning!"
+#~ msgstr "おはようございます！"
+
+#~ msgid "Good Afternoon!"
+#~ msgstr "こんにちは！"
+
+#~ msgid "Good Evening!"
+#~ msgstr "こんばんは！"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Contributors on GitHub ❤️ https://github.com/NickvisionApps/Parabolic/"
+#~ "graphs/contributors"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "GitHub での貢献者の方々 ❤️ https://github.com/NickvisionApps/Parabolic/"
+#~ "graphs/contributors"
+
+#~ msgid "New"
+#~ msgstr "新規"
+
+#~ msgid ""
+#~ "Downloading required dependencies...\n"
+#~ "\n"
+#~ "(This may take some time)"
+#~ msgstr ""
+#~ "必要な依存関係をダウンロードしています...\n"
+#~ "\n"
+#~ "（少し時間がかかります）"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+
+#~ msgid ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+#~ msgstr ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+
+#~ msgid ""
+#~ "— A basic yt-dlp frontend\n"
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)\n"
+#~ "— Run multiple downloads at a time\n"
+#~ "— Supports downloading metadata and video subtitles"
+#~ msgstr ""
+#~ "— yt-dlp のベーシックなフロントエンド\n"
+#~ "— 様々なフォーマットをサポート（mp4、webm、mp3、opus、flac、wav）\n"
+#~ "— 複数のダウンロードを同時進行\n"
+#~ "— メタデータと動画の字幕のダウンロードをサポート"
+
+#~ msgid ""
+#~ "Hide the window instead of quitting if there are downloads running. "
+#~ "Showing background activity status requires GNOME 44+"
+#~ msgstr ""
+#~ "ウィンドウが閉じて隠れても、ダウンロードを続けます。バックグラウンドでのダ"
+#~ "ウンロードの進捗情報の表示には GNOME 44 以上が必要です"

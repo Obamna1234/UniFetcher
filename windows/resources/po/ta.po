@@ -1,0 +1,3081 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-23 23:33-0400\n"
+"PO-Revision-Date: 2026-02-06 14:37+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/nickvision-tube-"
+"converter/app/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:27
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:112
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:120
+msgid "Add Download"
+msgstr "பதிவிறக்கத்தைச் சேர்க்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:40
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:64
+#, fuzzy
+msgid "Discover"
+msgstr "மறுப்பு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:50
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:68
+msgid "Media URL"
+msgstr "ஊடகத்தின் URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:55
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:284
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:70
+msgid "Select Batch File"
+msgstr "தொகுதி கோப்பைத் தேர்ந்தெடுக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:62
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:71
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:72
+#, fuzzy
+msgid "Use Authentication"
+msgstr "ஏற்பு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:67
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:73
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:67
+msgid "Credential"
+msgstr "நற்சான்றிதழ்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:71
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:51
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:74
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:87
+msgid "Username"
+msgstr "பயனர் பெயர்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:75
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:55
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:92
+msgid "Password"
+msgstr "கடவுச்சொல்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:78
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:79
+#, fuzzy
+msgid "Download Immediately as Video"
+msgstr "உடனடியாக பதிவிறக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:81
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:86
+msgid ""
+"Media will be downloaded based off of previously configured options and "
+"sensible defaults. Options will not be shown"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:81
+#, fuzzy
+msgid "Download Immediately as Audio"
+msgstr "உடனடியாக பதிவிறக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:171
+msgid "Discovering Media"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:84
+msgid "This may take some time..."
+msgstr "இதற்கு சிறிது நேரம் ஆகலாம் ..."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:111
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:304
+#, fuzzy
+msgid "Configure"
+msgstr "வரிசைப்படுத்தப்பட்ட பதிவிறக்கங்களை அழிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:126
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:319
+#, fuzzy
+msgid "Search Subtitles"
+msgstr "வசன வரிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:132
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:150
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:325
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:343
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:230
+msgid "Download"
+msgstr "பதிவிறக்கு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:160
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:353
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:11
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:25
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:111
+msgid "General"
+msgstr "பொது"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:170
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:88
+msgid "File Name"
+msgstr "கோப்பு பெயர்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:176
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:440
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:89
+msgid "Revert to Title"
+msgstr "தலைப்புக்கு திரும்பவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:183
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:363
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:115
+msgid "Save Folder"
+msgstr "கோப்புறையை சேமி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:190
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:370
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:511
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:563
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:116
+msgid "Select Save Folder"
+msgstr "சேமி கோப்புறையை தேர்ந்தெடுக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:199
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:379
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:117
+msgid "File Type"
+msgstr "கோப்பு வகை"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:200
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:380
+#, fuzzy
+msgid "Generic types do not support embedding thumbnails and subtitles."
+msgstr ""
+"கோப்பு வகை உட்பொதிப்பதை ஆதரிக்கவில்லை என்றால், சிறுபடம் ஒரு தனி படக் கோப்பில் எழுதப்படும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:204
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:95
+msgid "Video Format"
+msgstr "வீடியோ வடிவம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:208
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:96
+msgid "Audio Format"
+msgstr "ஆடியோ வடிவம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:215
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:439
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:113
+msgid "Subtitles"
+msgstr "வசன வரிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:224
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:448
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:101
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:135
+#, fuzzy
+msgid "Search subtitles"
+msgstr "வசன வரிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:237
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:461
+#, fuzzy
+msgid "Available Subtitles"
+msgstr "உட்பொதிக்கப்பட்ட வசன வரிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:245
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:420
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:470
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:133
+msgid "Deselect All"
+msgstr "அனைத்து தெரிவுகளையும் நிராகரி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:252
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:427
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:477
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:99
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:122
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:132
+msgid "Select All"
+msgstr "அனைத்தையும் தெரிவுசெய்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:266
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:491
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:325
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:111
+msgid "Advanced"
+msgstr "மேம்பட்ட"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:270
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:399
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:495
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:12
+#, fuzzy
+msgid "Options"
+msgstr "மேம்பட்ட விருப்பங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:273
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:502
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:103
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:139
+#, fuzzy
+msgid "Split into Files by Chapters"
+msgstr "அத்தியாயங்களால் வீடியோக்களைப் பிரிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:277
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:506
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:104
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:140
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:141
+#, fuzzy
+msgid "Export Description to File"
+msgstr "ஏற்றுமதி விளக்கம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:281
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:510
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:142
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:143
+msgid "Exclude from History"
+msgstr "வரலாற்றிலிருந்து விலக்கு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:285
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:514
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:108
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:144
+msgid "Post Processor Argument"
+msgstr "பிந்தைய செயலி உரையாடல்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:286
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:515
+#, fuzzy
+msgid "Arguments are configurable in Preferences"
+msgstr "(விருப்பங்களில் கட்டமைக்கக்கூடியது)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:290
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:19
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:109
+msgid "Start Time"
+msgstr "ஆரம்பிக்கும் நேரம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:294
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:20
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:110
+msgid "End Time"
+msgstr "முடிவு நேரம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:384
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:120
+msgid "Suggested Video Resolution"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:121
+msgid "Suggested Audio Bitrate"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:395
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:112
+msgid "Items"
+msgstr "உருப்படிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:402
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:125
+#, fuzzy
+msgid "Reverse Download Order"
+msgstr "செயலிழந்த பதிவிறக்கங்களை மீட்டெடுக்கவா?"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:406
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:126
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:127
+msgid "Number Titles"
+msgstr "எண் தலைப்புகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:407
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:412
+#, fuzzy
+msgid "Available Items"
+msgstr "உட்பொதிக்கப்பட்ட வசன வரிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:462
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:134
+msgid ""
+"Note: Some playlist items may not contain subtitles for a selected language."
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:498
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:137
+#, fuzzy
+msgid "Export M3U Playlist File"
+msgstr "M3U பிளேலிச்ட் கோப்பை எழுதுங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:70
+msgid "View Log"
+msgstr "பதிவைக் காண்க"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:87
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:196
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:168
+msgid "Pause"
+msgstr "இடைநிறுத்தம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:95
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:52
+msgid "Stop"
+msgstr "நிறுத்து"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:111
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:116
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:53
+msgid "Play"
+msgstr "தொடங்கு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:119
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:54
+msgid "Open"
+msgstr "திற"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:131
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:55
+msgid "Retry"
+msgstr "மீண்டும் முயற்சிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:154
+msgid "Copy Log to Clipboard"
+msgstr "இடைநிலைப்பலகைக்கு பதிவை நகலெடுக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:41
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:6
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:38
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:89
+msgid "History"
+msgstr "வரலாறு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:15
+msgid "Sort By"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:43
+msgid "Newest"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:44
+msgid "Oldest"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:36
+msgid "Save Length"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:42
+#, fuzzy
+msgid "Clear All"
+msgstr "தெளிவாக்கு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:94
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:106
+msgid "Keyring"
+msgstr "சாவி வளையம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:12
+msgid "Credentials"
+msgstr "நற்சான்றிதழ்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:17
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:52
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:447
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:111
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:112
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:148
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:210
+msgid "Add"
+msgstr "சேர்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:43
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:472
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:151
+msgid "Name"
+msgstr "பெயர்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:82
+msgid "URL"
+msgstr "முகவரி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/LoadingDialog.blp:5
+#, fuzzy
+msgid "Loading"
+msgstr "பதிவிறக்குகிறது"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:9
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:9
+msgid "Preferences"
+msgstr "விருப்பங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:10
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:14
+msgid "Keyboard Shortcuts"
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:11
+msgid "About Parabolic"
+msgstr "பரபோலிக் பற்றி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:17
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:108
+#, fuzzy
+msgid "Stop All Remaining"
+msgstr "அனைத்தையும் நிறுத்து"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:18
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:109
+#, fuzzy
+msgid "Retry All Failed"
+msgstr "மீண்டும் முயற்சிக்கவும் தோல்வியடைந்தது"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:110
+#, fuzzy
+msgid "Clear All Queued"
+msgstr "வரிசைப்படுத்தப்பட்ட பதிவிறக்கங்களை அழிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:23
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:111
+#, fuzzy
+msgid "Clear All Completed"
+msgstr "முடிக்கப்பட்ட பதிவிறக்கங்களை அழிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:61
+msgid "Main Menu"
+msgstr "முதன்மை பட்டியல்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:70
+#, fuzzy
+msgid "Updater"
+msgstr "புதுப்பிப்பு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:108
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:103
+msgid "Download Media"
+msgstr "ஊடகத்தைப் பதிவிறக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:109
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:104
+msgid "Add a video, audio, or playlist URL to start downloading"
+msgstr "பதிவிறக்கம் செய்ய, காணொளி, ஒலி அமைவு அல்லது பாடல் பட்டியல் URL ஐச் சேர்க்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:140
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:113
+#, fuzzy
+msgid "All"
+msgstr "அனைத்து"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:145
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:206
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:81
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:114
+msgid "Running"
+msgstr "இயங்கும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:150
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:107
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:115
+msgid "Queued"
+msgstr "வரிசையில் நிற்கிறது"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:155
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:116
+msgid "Completed"
+msgstr "முடிக்கப்பட்டது"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:160
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:117
+msgid "Failed"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:171
+#, fuzzy
+msgid "Manage Download"
+msgstr "பதிவிறக்கங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:195
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:118
+#, fuzzy
+msgid "No Downloads"
+msgstr "பதிவிறக்கங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:196
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:119
+#, fuzzy
+msgid "There are no downloads of this type"
+msgstr "எல்லா பதிவிறக்கங்களும் முடிந்ததும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:15
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:33
+msgid "User Interface"
+msgstr "பயனர் இடைமுகம்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:18
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:37
+msgid "Theme"
+msgstr "கருப்பொருள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:27
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:39
+#, fuzzy
+msgid "Translation Language"
+msgstr "ஒலி மொழி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:40
+msgid "An application restart is required for a change to take effect"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:37
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:42
+#, fuzzy
+msgid "Receive Preview Updates"
+msgstr "புதுப்பிப்புகளை சரிபார்க்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:38
+msgid "Update dependencies, such as yt-dlp, to beta versions"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:46
+#, fuzzy
+msgid "Prevent Suspend"
+msgstr "இடைநீக்கத்தைத் தடுக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:47
+#, fuzzy
+msgid "Prevent the computer from sleeping while downloads are running"
+msgstr "பதிவிறக்கங்கள் இயங்கும் போது கணினி தூங்குவதைத் தடுக்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:57
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:50
+msgid "Download History Length"
+msgstr "வரலாற்று நீளத்தைப் பதிவிறக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:58
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:51
+#, fuzzy
+msgid "The amount of time to keep past downloads in the app's history"
+msgstr "பயன்பாட்டின் வரலாற்றில் கடந்த பதிவிறக்கங்களை வைத்திருக்க வேண்டிய நேரம்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:34
+msgid "Downloads"
+msgstr "பதிவிறக்கங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:71
+msgid "Max Number of Running Downloads"
+msgstr "இயங்கும் பதிவிறக்கங்களின் அதிகபட்ச எண்ணிக்கை"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:54
+msgid "Overwrite Existing Files"
+msgstr "ஏற்கனவே உள்ள கோப்புகளை மேலெழுதவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:96
+msgid "Limit Filename Characters"
+msgstr "கோப்பு பெயர் எழுத்துக்களைக் கட்டுப்படுத்துங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:97
+#, fuzzy
+msgid "Restrict characters in filenames to those supported only by Windows"
+msgstr ""
+"பரபோலிக் கோப்பு பெயர்களில் உள்ள எழுத்துக்களை விண்டோசால் மட்டுமே ஆதரிக்கப்படுபவர்களுக்கு "
+"கட்டுப்படுத்தும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:57
+#, fuzzy
+msgid "Include Media Id in Title"
+msgstr "தலைப்பில் மீடியா ஐடியைச் சேர்க்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:58
+#, fuzzy
+msgid "Add the media's id to its default title"
+msgstr "பரபோலிக் அதன் இயல்புநிலை தலைப்பில் ஊடகத்தின் ஐடியை உள்ளடக்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:116
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:61
+msgid "Include Auto-Generated Subtitles"
+msgstr "தானாக உருவாக்கிய வசன வரிகள் சேர்க்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:62
+#, fuzzy
+msgid ""
+"Show auto-generated subtitles to download in addition to available subtitles"
+msgstr ""
+"கிடைக்கக்கூடிய வசனங்களுக்கு கூடுதலாக பதிவிறக்கம் செய்ய பரபோலிக் தானாக உருவாக்கிய வசன "
+"வரிகள் வழங்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:126
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:65
+msgid "Include Super Resolution Formats"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:66
+#, fuzzy
+msgid ""
+"Show super (AI-scaled) resolution formats to download in addition to regular "
+"formats"
+msgstr ""
+"கிடைக்கக்கூடிய வசனங்களுக்கு கூடுதலாக பதிவிறக்கம் செய்ய பரபோலிக் தானாக உருவாக்கிய வசன "
+"வரிகள் வழங்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:69
+msgid "Preferred Video Codec"
+msgstr "விருப்பமான வீடியோ கோடெக்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:137
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:70
+msgid ""
+"Prefer this codec when parsing video formats to show available to download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:146
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:72
+msgid "Preferred Audio Codec"
+msgstr "விருப்பமான ஆடியோ கோடெக்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:147
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:73
+msgid ""
+"Prefer this codec when parsing audio formats to show available to download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:156
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:75
+msgid "Preferred Subtitle Format"
+msgstr "விருப்பமான வசன வடிவமைப்பு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:157
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:76
+msgid "Prefer this subtitle file format when downloading"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:166
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:78
+#, fuzzy
+msgid "Preferred Frame Rate"
+msgstr "விருப்பமான வசன வடிவமைப்பு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:167
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:79
+msgid ""
+"Prefer this frame rate when parsing video formats to show available to "
+"download"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:178
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:182
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:35
+msgid "Downloader"
+msgstr "பதிவிறக்குபவர்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:185
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:81
+msgid "Use Part Files"
+msgstr "பகுதி கோப்புகளைப் பயன்படுத்தவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:186
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:82
+#, fuzzy
+msgid ""
+"Download media in separate .part files instead of directly into the output "
+"file"
+msgstr "பரபோலிக் வெளியீட்டு கோப்பில் நேரடியாக பதிலாக ஊடகங்களை தனித்தனியாக பதிவிறக்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:195
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:85
+msgid "Use SponsorBlock for YouTube"
+msgstr "YouTubeக்கு SponsorBlock ஐப் பயன்படுத்தவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:196
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:86
+#, fuzzy
+msgid "Try to remove sponsored segments from videos"
+msgstr ""
+"யூடியூப் வீடியோக்களிலிருந்து ஒப்புரவாளர் செய்யப்பட்ட பிரிவுகளை அகற்ற பரபோலிக் "
+"முயற்சிக்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:205
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:89
+msgid "Limit Download Speed"
+msgstr "பதிவிறக்க வேகத்தை கட்டுப்படுத்துங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:210
+msgid "Speed Limit (KiB/s)"
+msgstr "வேக வரம்பு (KIB/s)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:93
+msgid "Proxy URL"
+msgstr "ப்ராக்ஸி URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:237
+#, fuzzy
+msgid "Cookies File"
+msgstr "குக்கீகள் கோப்பு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:248
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:268
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:99
+msgid "Select Cookies File"
+msgstr "குக்கீகள் கோப்பைத் தேர்ந்தெடுக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:257
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:98
+msgid "Clear Cookies File"
+msgstr "குக்கீகள் கோப்பை அழிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:100
+msgid "Cookies from Browser"
+msgstr "உலாவியில் இருந்து குக்கீகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:276
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:102
+msgid "aria2c"
+msgstr "ARIA2C"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:277
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:104
+msgid ""
+"An alternative downloader that may be faster in some regions compared to yt-"
+"dlp's native downloader"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:280
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:103
+msgid "Use aria2c"
+msgstr "ARIA2C ஐப் பயன்படுத்தவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:289
+#, fuzzy
+msgid "Max Connections Per Server (-x)"
+msgstr "ஒரு சேவையகத்திற்கு அதிகபட்ச இணைப்புகள் (-x)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:306
+#, fuzzy
+msgid "Minimum Split Size (-k)"
+msgstr "குறைந்தபட்ச பிளவு அளவு (-k)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:307
+#, fuzzy
+msgid "The minimum size of which to split a file (in MiB)"
+msgstr "கோப்பைப் பிரிப்பதற்கான குறைந்தபட்ச அளவு (MiB - மெபிபைட்/வினாடி இல்)."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:326
+msgid "Specify extra arguments to pass to yt-dlp"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:329
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:112
+#, fuzzy
+msgid "yt-dlp Discovery Arguments"
+msgstr "பிந்தைய செயலி உரையாடல்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:338
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:115
+#, fuzzy
+msgid "yt-dlp Download Arguments"
+msgstr "மீண்டும் பதிவிறக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:349
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:353
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:36
+msgid "Converter"
+msgstr "மாற்றி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:356
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:118
+msgid "Translate Metadata and Chapters"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:119
+msgid ""
+"Automatically translate embedded metadata and chapters to the app's language "
+"on supported sites and media"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:366
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:122
+msgid "Embed Metadata"
+msgstr "மெட்டாடேட்டாவை உட்பொதிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:376
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:125
+msgid "Remove Source Data"
+msgstr "மூலத் தரவை அகற்று"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:377
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:126
+#, fuzzy
+msgid "Clear metadata fields containing identifying download information"
+msgstr "பதிவிறக்கத் தகவல்களை அடையாளம் காணும் மேனிலை தரவு புலங்களை பரபோலிக் அழிக்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:387
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:129
+msgid "Embed Thumbnails"
+msgstr "சிறு உருவங்களை உட்பொதிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:130
+#, fuzzy
+msgid ""
+"If the file type does not support embedding, the thumbnail will be written "
+"to a separate image file"
+msgstr ""
+"கோப்பு வகை உட்பொதிப்பதை ஆதரிக்கவில்லை என்றால், சிறுபடம் ஒரு தனி படக் கோப்பில் எழுதப்படும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:398
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:133
+msgid "Crop Audio Thumbnails"
+msgstr "ஒலி அமைப்பு சிறுபடங்களை செதுக்கு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:399
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:134
+#, fuzzy
+msgid "Crop thumbnails of audio files to squares"
+msgstr "பரபோலிக் ஆடியோ கோப்புகளின் சிறு உருவங்களை சதுரங்களுக்கு பயிர் செய்யும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:409
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:137
+msgid "Embed Chapters"
+msgstr "அத்தியாயங்களை உட்பொதிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:418
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:140
+msgid "Embed Subtitles"
+msgstr "உட்பொதிக்கப்பட்ட வசன வரிகள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:419
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:141
+#, fuzzy
+msgid ""
+"If disabled or if embedding is not supported, downloaded subtitles will be "
+"saved to separate files"
+msgstr ""
+"முடக்கப்பட்டிருந்தால் அல்லது உட்பொதித்தல் ஆதரிக்கப்படாவிட்டால், பதிவிறக்கம் செய்யப்பட்ட வசனங்கள் "
+"தனித்தனி கோப்புகளுக்கு சேமிக்கப்படும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:428
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:144
+msgid "FFmpeg Threads"
+msgstr "Ffmpeg நூல்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:429
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:145
+#, fuzzy
+msgid "Limit the number of threads used by ffmpeg"
+msgstr "பரபோலிக் FFMPEG ஆல் பயன்படுத்தப்படும் நூல்களின் எண்ணிக்கையை கட்டுப்படுத்தும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:440
+msgid "Postprocessing Arguments"
+msgstr "போச்ட்ரோசெசிங் வாதங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:441
+#, fuzzy
+msgid "Arguments will be shown for selection in the add download dialog"
+msgstr "பதிவிறக்க உரையாடலில் தேர்வு செய்வதற்கான இந்த வாதங்களை பரபோலிக் காண்பிக்கும்."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:443
+msgid "Add Postprocessing Argument"
+msgstr "போச்ட்ரோசெசிங் வாதத்தை சேர்க்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:457
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:149
+msgid "Argument"
+msgstr "உரையாடல்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:476
+#, fuzzy
+msgid "Post Processor"
+msgstr "இடுகை செயலி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:480
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:154
+msgid "Executable"
+msgstr "இயங்கக்கூடிய"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:484
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:155
+msgid "Args"
+msgstr "ஆர்க்ச்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:6
+msgctxt "Shortcut"
+msgid "Application"
+msgstr "பயன்பாடு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:19
+#, fuzzy
+msgid "About Application"
+msgstr "பயன்பாடு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:24
+msgid "Quit"
+msgstr "கைவிடு"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:30
+#, fuzzy
+msgid "Folder"
+msgstr "கோப்புறையைத் திறக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:33
+#, fuzzy
+msgid "Open Folder"
+msgstr "கோப்புறையை சேமி"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:38
+#, fuzzy
+msgid "Close Folder"
+msgstr "கோப்புறையை சேமி"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:112
+msgid "Starting"
+msgstr "தொடங்குகிறது"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:117
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:183
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:184
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:155
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:156
+msgid "Unknown"
+msgstr "தெரியவில்லை"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:139
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:139
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:315
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:325
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:109
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:226
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:289
+msgid "Error"
+msgstr "பிழை"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:147
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:116
+msgid "Success"
+msgstr "வெற்றி"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:156
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:125
+msgid "Paused"
+msgstr "இடைநிறுத்தப்பட்டது"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:159
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:128
+msgid "Resume"
+msgstr "மீண்டும் தொடங்குங்கள்"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:173
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:141
+msgid "Processing"
+msgstr "செயலாக்கம்"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:177
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:147
+#, csharp-format
+msgid "Sleeping for {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:181
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:153
+#, fuzzy, csharp-format
+msgid "{0}% Complete • {1} • {2} Remaining"
+msgstr "{} | {} | மற்றும்: {}"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:213
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:184
+msgid "Stopped"
+msgstr "நிறுத்தப்பட்டது"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:286
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:270
+msgid "TXT Files (*.txt)"
+msgstr "Txt கோப்புகள் (*.txt)"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:378
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:478
+msgid "No Subtitles Available"
+msgstr "வசன வரிகள் எதுவும் கிடைக்கவில்லை"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:410
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:434
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:280
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:485
+#, csharp-format
+msgid "Total Duration: {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:463
+msgid "Properties"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:59
+#, fuzzy
+msgid "Clear All History?"
+msgstr "வரலாற்றை அழிக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:60
+#, fuzzy
+msgid ""
+"Are you sure you want to clear all download history? This action is "
+"irreversible"
+msgstr "இந்த நற்சான்றிதழை நீக்க விரும்புகிறீர்களா?"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:82
+#, fuzzy
+msgid "Clear"
+msgstr "தெளிவாக்கு"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:83
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:166
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:359
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:65
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:173
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:231
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:69
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:125
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:150
+msgid "Cancel"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:111
+msgid "Download Again"
+msgstr "மீண்டும் பதிவிறக்கவும்"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:122
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:82
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:165
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:230
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:358
+msgid "Delete"
+msgstr "நீக்கு"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:129
+#, fuzzy, csharp-format
+msgid "Downloaded On: {0}"
+msgstr "பதிவிறக்குதல் ({})"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:140
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:46
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:48
+#, fuzzy
+msgid "No History"
+msgstr "வரலாறு"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:77
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:158
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:225
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:351
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:85
+msgid "Edit"
+msgstr "தொகு"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:97
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:52
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:54
+msgid "No Credentials"
+msgstr "நற்சான்றிதழ்கள் இல்லை"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:140
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:326
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:291
+msgid "OK"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:144
+msgid "Delete Credential?"
+msgstr "நற்சான்றிதழை நீக்கவா?"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:145
+#, fuzzy
+msgid ""
+"Are you sure you want to delete this credential? This action is irreversible"
+msgstr "இந்த நற்சான்றிதழை நீக்க விரும்புகிறீர்களா?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:197
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:138
+msgid "Don't show this message again"
+msgstr "இந்த செய்தியை மீண்டும் காட்ட வேண்டாம்"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:142
+msgid "Legal Copyright Disclaimer"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:151
+msgid ""
+"Videos on YouTube and other sites may be subject to DMCA protection. The "
+"authors of Parabolic do not endorse, and are not responsible for, the use of "
+"this application in means that will violate these laws."
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:199
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:157
+msgid "I understand"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:172
+#, fuzzy
+msgid "Recover Downloads?"
+msgstr "மீட்டெடுக்கப்பட்டது {} பதிவிறக்கம்"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:173
+#, fuzzy
+msgid ""
+"There are downloads available to recover from when Parabolic crashed. Would "
+"you like to download them again?"
+msgstr ""
+"பரபோலிக் செயலிழந்தபோது மீட்க பதிவிறக்கங்கள் உள்ளன. அவற்றை மீட்டெடுக்க விரும்புகிறீர்களா?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:212
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:243
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:61
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:146
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:174
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:206
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:252
+msgid "Yes"
+msgstr "ஆம்"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:213
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:244
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:62
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:147
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:207
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:253
+msgid "No"
+msgstr "இல்லை"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:205
+#, fuzzy
+msgid ""
+"There are downloads still in progress. Would you like to stop them and exit?"
+msgstr ""
+"பரபோலிக் செயலிழந்தபோது மீட்க பதிவிறக்கங்கள் உள்ளன. அவற்றை மீட்டெடுக்க விரும்புகிறீர்களா?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:272
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:88
+msgid "View"
+msgstr "பார்வை"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:282
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:248
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:254
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:273
+msgid "Update"
+msgstr "புதுப்பிப்பு"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:287
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:302
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:421
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:405
+#, fuzzy, csharp-format
+msgid "Downloading update: {0}%"
+msgstr "பதிவிறக்குகிறது"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:312
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:260
+msgid "Details"
+msgstr ""
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:317
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:39
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:277
+msgid "Close"
+msgstr "மூடு"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:453
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:97
+msgid "GitHub Repo"
+msgstr "GitHub களஞ்சியம்"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:151
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:287
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:180
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:241
+msgid "No file selected"
+msgstr "எந்த கோப்பும் தேர்ந்தெடுக்கப்படவில்லை"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:245
+msgid "No Arguments"
+msgstr "வாதங்கள் இல்லை"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:250
+msgid "Delete Argument?"
+msgstr "வாதத்தை நீக்கவா?"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:251
+#, fuzzy
+msgid ""
+"Are you sure you want to delete this post-processor argument? This action is "
+"irreversible"
+msgstr "இந்த நற்சான்றிதழை நீக்க விரும்புகிறீர்களா?"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:169
+msgid "An error occurred while adding playlist downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:244
+msgid "An error occurred while adding the single download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:261
+msgid "No media was found at the provided URL"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:309
+#: Nickvision.Parabolic.Shared/Models/Format.cs:354
+#: Nickvision.Parabolic.Shared/Models/Format.cs:355
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:37
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:79
+msgid "Worst"
+msgstr "மோசமான"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:310
+#: Nickvision.Parabolic.Shared/Models/Format.cs:352
+#: Nickvision.Parabolic.Shared/Models/Format.cs:353
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:33
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:75
+msgid "Best"
+msgstr "சிறந்த"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:335
+msgid "Video (Generic)"
+msgstr "வீடியோ (பொதுவான)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:336
+msgid "MP4 (Video)"
+msgstr "Mp4 (வீடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:337
+msgid "WEBM (Video)"
+msgstr "வெப் (வீடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:338
+msgid "MKV (Video)"
+msgstr "எம்.கே.வி (வீடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:339
+msgid "MOV (Video)"
+msgstr "மூவ் (வீடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:340
+msgid "AVI (Video)"
+msgstr "அவி (வீடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:342
+msgid "Audio (Generic)"
+msgstr "ஆடியோ (பொதுவான)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:343
+msgid "MP3 (Audio)"
+msgstr "எம்பி 3 (ஆடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:344
+msgid "M4A (Audio)"
+msgstr "M4A (ஆடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:345
+msgid "OPUS (Audio)"
+msgstr "வேலை (ஆடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:346
+msgid "FLAC (Audio)"
+msgstr "Flac (ஆடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:347
+msgid "WAV (Audio)"
+msgstr "WAV (ஆடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:348
+#, fuzzy
+msgid "OGG (Audio)"
+msgstr "வேலை (ஆடியோ)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:381
+msgid "An error occurred while discovering media"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:395
+msgid "Use manual credential"
+msgstr "கைமுறை நற்சான்றிதழைப் பயன்படுத்தவும்"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:414
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:60
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:75
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:105
+#: Nickvision.Parabolic.Shared/Models/Format.cs:356
+#: Nickvision.Parabolic.Shared/Models/Format.cs:357
+msgid "None"
+msgstr "எதுவுமில்லை"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:29
+#, fuzzy
+msgid "A credential with that name already exists"
+msgstr "இந்த பெயருடன் ஒரு நற்சான்றிதழ் ஏற்கனவே உள்ளது."
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:33
+#, fuzzy
+msgid "The name of the credential cannot be empty"
+msgstr "வாதங்கள் காலியாக இருக்க முடியாது."
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:37
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:79
+#, fuzzy
+msgid "Either the credential username or password must be set"
+msgstr "பயனர்பெயர் மற்றும் கடவுச்சொல் இரண்டும் காலியாக இருக்க முடியாது."
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:75
+#, fuzzy
+msgid "A credential with that name does not exist"
+msgstr "இந்த பெயருடன் ஒரு உரையாடல் ஏற்கனவே உள்ளது."
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:61
+msgid "Parabolic"
+msgstr "பரபோலிக்"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:62
+#, fuzzy
+msgid "Download web video and audio."
+msgstr "இணைய காணொளி மற்றும் ஒலி அமைவைப் பதிவிறக்கவும்"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:63
+msgid "Matrix Chat"
+msgstr "மேட்ரிக்ஸ் மன்றம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:65
+#, fuzzy
+msgid "Contributors on GitHub ❤️"
+msgstr "கிதுபில் பங்களிப்பாளர்கள்"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:67
+msgid "Fyodor Sobolev"
+msgstr "ஃபியோடர் சோபோலேவ்"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:69
+msgid "David Lapshin"
+msgstr "டேவிட் லாப்ஷின்"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:70
+#, fuzzy
+msgid "translation-credits"
+msgstr "K.B.Dharun Krishna <kbdharunkrishna@gmail.com>, 2023"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:159
+#, fuzzy, csharp-format
+msgid "New {0} update available: {1}"
+msgstr "புதிய புதுப்பிப்பு கிடைக்கிறது"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:168
+#, fuzzy, csharp-format
+msgid "New yt-dlp update available: {0}"
+msgstr "புதிய புதுப்பிப்பு கிடைக்கிறது"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:176
+#, fuzzy, csharp-format
+msgid "New deno update available: {0}"
+msgstr "புதிய புதுப்பிப்பு கிடைக்கிறது"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:186
+#, fuzzy
+msgid "No update available"
+msgstr "புதிய புதுப்பிப்பு கிடைக்கிறது"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:200
+msgid "An error occurred while clearing completed downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:218
+msgid "An error occurred while clearing recoverable downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:235
+msgid "An error occurred while clearing queued downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:249
+#, fuzzy, csharp-format
+msgid "Deno {0} installed successfully"
+msgstr "முடிக்கப்பட்ட பதிவிறக்கங்களை அழிக்கவும்"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:253
+#, fuzzy
+msgid "Unable to download and install the Deno update"
+msgstr "புதுப்பிப்பைப் பதிவிறக்கி நிறுவ முடியவில்லை"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:282
+msgid "An error occurred while pausing the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:300
+msgid "An error occurred while recovering downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:317
+msgid "An error occurred while resuming the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:335
+msgid "An error occurred while retrying failed downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:352
+msgid "An error occurred while retrying the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:370
+msgid "An error occurred while stopping all downloads"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:387
+msgid "An error occurred while stopping the download"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:401
+#, fuzzy, csharp-format
+msgid "Starting {0} installer..."
+msgstr "பதிவிறக்கத் தொடங்குகிறது ..."
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:405
+#, fuzzy
+msgid "Unable to download and install the update"
+msgstr "புதுப்பிப்பைப் பதிவிறக்கி நிறுவ முடியவில்லை"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:414
+#, csharp-format
+msgid "yt-dlp {0} installed successfully"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:418
+#, fuzzy
+msgid "Unable to download and install the yt-dlp update"
+msgstr "புதுப்பிப்பைப் பதிவிறக்கி நிறுவ முடியவில்லை"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:39
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:87
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:118
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:132
+msgid "Any"
+msgstr "ஏதேனும்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:40
+msgid "FLAC (ALAC)"
+msgstr "Flac (alac)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:41
+msgid "WAV (AIFF)"
+msgstr "WAV (AIFF)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:49
+msgid "System"
+msgstr "மண்டலம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:61
+msgid "Firefox"
+msgstr "பயர்பாக்ச்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:65
+msgid "Brave"
+msgstr "தைரியமான"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:66
+msgid "Chrome"
+msgstr "குரோம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:67
+msgid "Chromium"
+msgstr "நீலிரும்பு, குருமம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:68
+msgid "Edge"
+msgstr "விளிம்பு"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:69
+msgid "Opera"
+msgstr "ஓபரா"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:70
+msgid "Vivaldi"
+msgstr "விவால்டி"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:71
+msgid "Whale"
+msgstr "திமிங்கலம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:88
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:89
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:90
+#: Nickvision.Parabolic.Shared/Models/Format.cs:269
+#: Nickvision.Parabolic.Shared/Models/Format.cs:270
+#: Nickvision.Parabolic.Shared/Models/Format.cs:271
+#, csharp-format
+msgid "{0} FPS"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:94
+msgid "Never"
+msgstr "ஒருபோதும்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:95
+#, fuzzy
+msgid "1 Day"
+msgstr "ஒரு நாள்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:96
+#, fuzzy
+msgid "1 Week"
+msgstr "ஒரு வாரம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:97
+#, fuzzy
+msgid "1 Month"
+msgstr "ஒரு மாதம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:98
+#, fuzzy
+msgid "3 Months"
+msgstr "ஒரு மாதம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:99
+#, fuzzy
+msgid "6 Months"
+msgstr "ஒரு மாதம்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:100
+msgid "1 Year"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:101
+msgid "Forever"
+msgstr "என்றென்றும்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:126
+msgctxt "Theme"
+msgid "Light"
+msgstr "ஒளி"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:127
+msgctxt "Theme"
+msgid "Dark"
+msgstr "இருள்"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:128
+msgctxt "Theme"
+msgid "System"
+msgstr "அமைப்பு"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:135
+msgid "H.264 (AVC)"
+msgstr "H.264 (பக்கவாதம்)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:136
+msgid "H.265 (HEVC)"
+msgstr "H.265 (HEVC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:366
+#, fuzzy
+msgid "An argument with that name already exists"
+msgstr "இந்த பெயருடன் ஒரு உரையாடல் ஏற்கனவே உள்ளது."
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:370
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:402
+#, fuzzy
+msgid "The name of the argument cannot be empty"
+msgstr "வாதங்கள் காலியாக இருக்க முடியாது."
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:374
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:406
+#, fuzzy
+msgid "The arguments of the argument cannot be empty"
+msgstr "வாதங்கள் காலியாக இருக்க முடியாது."
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:398
+#, fuzzy
+msgid "An argument with that name does not exist"
+msgstr "இந்த பெயருடன் ஒரு உரையாடல் ஏற்கனவே உள்ளது."
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:98
+#, fuzzy
+msgid "The file already exists and overwriting is disabled."
+msgstr "பிழை: கோப்பு ஏற்கனவே உள்ளது மற்றும் மேலெழுதும் முடக்கப்பட்டுள்ளது."
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:115
+msgid "Starting download..."
+msgstr "பதிவிறக்கத் தொடங்குகிறது ..."
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:250
+#: Nickvision.Parabolic.Shared/Models/Format.cs:304
+msgid "Audio Description"
+msgstr "ஆடியோ விளக்கம்"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:335
+#, fuzzy, csharp-format
+msgid "{0:0.00} GiB"
+msgstr "{:.2f} கிப்"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:339
+#, fuzzy, csharp-format
+msgid "{0:0.00} MiB"
+msgstr "{:.2f} mib"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:343
+#, fuzzy, csharp-format
+msgid "{0:0.00} KiB"
+msgstr "{:.2f} என்பது"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:347
+#, csharp-format
+msgid "{0:0.00} B"
+msgstr ""
+
+#: Nickvision.Parabolic.Shared/Models/SubtitleLanguage.cs:49
+#, fuzzy, csharp-format
+msgid "{0} (Auto-generated)"
+msgstr "தானாக உருவாக்கிய"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:417
+#, fuzzy, csharp-format
+msgid "About {0}"
+msgstr "பற்றி"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:26
+msgid "Changelog"
+msgstr "மாற்றபதிவு"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:27
+msgid "Debugging"
+msgstr "பிழைத்திருத்தம்"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:28
+msgid "Credits"
+msgstr "வரவு"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:34
+msgid "Copy Debug Information"
+msgstr "பிழைத்திருத்த தகவல்களை நகலெடுக்கவும்"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:37
+#, fuzzy, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}"
+msgstr ""
+"டெவலப்பர்கள்:\n"
+" {}\n"
+" வடிவமைப்பாளர்கள்:\n"
+" {}\n"
+" கலைஞர்கள்:\n"
+" {}"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:41
+#, fuzzy, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}\n"
+"\n"
+"Translators:\n"
+"{3}"
+msgstr ""
+"டெவலப்பர்கள்:\n"
+" {}\n"
+" வடிவமைப்பாளர்கள்:\n"
+" {}\n"
+" கலைஞர்கள்:\n"
+" {}"
+
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:50
+msgid "Log"
+msgstr "பதிவு"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:69
+msgid "Enter media url here"
+msgstr "மீடியா முகவரி ஐ இங்கே உள்ளிடவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:122
+msgid "Enter username here"
+msgstr "பயனர்பெயரை இங்கே உள்ளிடவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:123
+msgid "Enter password here"
+msgstr "கடவுச்சொல்லை இங்கே உள்ளிடவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:82
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:118
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:128
+msgid "Warning"
+msgstr "எச்சரிக்கை"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:83
+msgid ""
+"Parabolic will download media based off of previously configured options and "
+"sensible defaults. Options including save folder, format, and subtitle "
+"selection will not be shown."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:119
+#, fuzzy
+msgid ""
+"Generic types do not support embedding thumbnails and subtitles. If "
+"necessary, please select a specific type that is known to support embedding "
+"to prevent separate files from being written."
+msgstr ""
+"சிறுபடங்கள் மற்றும் வசன வரிகள் உட்பொதித்தல் பொதுவான கோப்பு வகைகள் முழுமையாக "
+"ஆதரிக்கவில்லை. தனித்தனி கோப்புகள் எழுதப்படுவதைத் தடுக்க உட்பொதியை ஆதரிப்பதாக அறியப்பட்ட "
+"ஒரு குறிப்பிட்ட கோப்பு வகையைத் தேர்ந்தெடுக்கவும்."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:130
+#, fuzzy
+msgid "No Subtitles"
+msgstr "வசன வரிகள்"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:98
+msgid "No subtitles were found for this media."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:129
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:131
+msgid "No subtitles were found in this playlist."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:229
+#, fuzzy
+msgid "Configure Download"
+msgstr "பதிவிறக்கங்கள்"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:40
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:50
+#, fuzzy
+msgid "Search..."
+msgstr "தேடுங்கள்..."
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:41
+msgid "Sort"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:45
+msgid "Please wait..."
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:47
+#, fuzzy
+msgid "There are no downloads in your history"
+msgstr "எல்லா பதிவிறக்கங்களும் முடிந்ததும்"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:49
+#, fuzzy
+msgid "There are no downloads found with the current filters"
+msgstr "எல்லா பதிவிறக்கங்களும் முடிந்ததும்"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:53
+#, fuzzy
+msgid "There are no credentials in your keyring"
+msgstr "உங்கள் சாவி வளையத்தில் நற்சான்றிதழ்களை நிர்வகிக்கவும்."
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:55
+msgid "There are no credentials found with the current filters"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:152
+msgid "Enter name here"
+msgstr "பெயரை இங்கே உள்ளிடவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:83
+#, fuzzy
+msgid "Enter url here"
+msgstr "இங்கே முகவரி ஐ உள்ளிடவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:82
+msgid "File"
+msgstr "கோப்பு"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:84
+msgid "Exit"
+msgstr "வெளியேறு"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:32
+msgid "Settings"
+msgstr "அமைப்புகள்"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:95
+msgid "Help"
+msgstr "உதவி"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:96
+msgid "Check for Updates"
+msgstr "புதுப்பிப்புகளை சரிபார்க்கவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:98
+msgid "Report a Bug"
+msgstr "ஒரு பிழையைப் புகாரளிக்கவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:99
+msgid "Discussions"
+msgstr "விவாதங்கள்"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:101
+#, csharp-format
+msgid "You are running a preview version of {0}"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:102
+msgid "Thank you for testing the upcoming features and changes! ❤️"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:121
+#, fuzzy
+msgid "Credential Required"
+msgstr "நற்சான்றிதழ் தேவை"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:124
+msgid "Submit"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:43
+msgid "Update Parabolic and dependencies, such as yt-dlp, to beta versions"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:44
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:55
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:59
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:67
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:120
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:131
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:135
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:142
+#, fuzzy
+msgid "On"
+msgstr "கோப்பைத் திறக்கவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:45
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:56
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:60
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:64
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:84
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:128
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:132
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:139
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:143
+msgid "Off"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:53
+#, fuzzy
+msgid "Max Number of Active Downloads"
+msgstr "இயங்கும் பதிவிறக்கங்களின் அதிகபட்ச எண்ணிக்கை"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:92
+msgid "Speed Limit"
+msgstr "வேக வரம்பு"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:94
+msgid "Enter proxy url here"
+msgstr "பதிலாள் முகவரி ஐ இங்கே உள்ளிடவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:95
+#, fuzzy
+msgid "Cookies from File"
+msgstr "குக்கீகள் கோப்பு"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:96
+msgid "Upload a txt cookies file from unlisted browsers"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:107
+#, fuzzy
+msgid "Max Connections Per Server"
+msgstr "ஒரு சேவையகத்திற்கு அதிகபட்ச இணைப்புகள் (-x)"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:108
+msgid "Corresponds to -x option"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:109
+#, fuzzy
+msgid "Minimum Split Size (MiB)"
+msgstr "குறைந்தபட்ச பிளவு அளவு (-k)"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:110
+msgid "Corresponds to -k option"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:113
+msgid "Extra arguments to pass to yt-dlp when discovering media"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:156
+#, fuzzy
+msgid "Enter args here"
+msgstr "இங்கே முகவரி ஐ உள்ளிடவும்"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:116
+msgid "Extra arguments to pass to yt-dlp when downloading media"
+msgstr ""
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:147
+#, fuzzy
+msgid "Post-Processor Arguments"
+msgstr "பிந்தைய செயலி உரையாடல்"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:153
+#, fuzzy
+msgid "Post-Processor"
+msgstr "இடுகை செயலி"
+
+#, fuzzy
+#~ msgid "Password Required"
+#~ msgstr "கடவுச்சொல்"
+
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "தேடுங்கள்..."
+
+#~ msgid "Home"
+#~ msgstr "வீடு"
+
+#, fuzzy
+#~ msgid "Updating"
+#~ msgstr "புதுப்பிப்பு"
+
+#, fuzzy
+#~ msgid "Download Immediately"
+#~ msgstr "உடனடியாக பதிவிறக்கவும்"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} • {1}"
+#~ msgstr "{} | {} | மற்றும்: {}"
+
+#, fuzzy
+#~ msgid "close"
+#~ msgstr "மூடு"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} downloads remaining"
+#~ msgstr "பதிவிறக்கங்கள் எதுவும் இயங்கவில்லை"
+
+#, fuzzy
+#~ msgid "One Day"
+#~ msgstr "ஒரு நாள்"
+
+#, fuzzy
+#~ msgid "One Week"
+#~ msgstr "ஒரு வாரம்"
+
+#, fuzzy
+#~ msgid "One Month"
+#~ msgstr "ஒரு மாதம்"
+
+#~ msgid "Three Months"
+#~ msgstr "மூன்று மாதங்கள்"
+
+#, fuzzy
+#~ msgid "There are no downloads added"
+#~ msgstr "எல்லா பதிவிறக்கங்களும் முடிந்ததும்"
+
+#, fuzzy
+#~ msgid "Add a download to get started"
+#~ msgstr "தொடங்குவதற்கு நற்சான்றிதழைச் சேர்க்கவும்"
+
+#~ msgid "Arguments"
+#~ msgstr "வாதங்கள்"
+
+#, fuzzy
+#~ msgid "The name cannot be empty."
+#~ msgstr "வாதத்தின் பெயர் காலியாக இருக்க முடியாது."
+
+#~ msgid "Postprocessing"
+#~ msgstr "போச்ட்ரோசெசிங்"
+
+#, fuzzy
+#~ msgid "Add Argument"
+#~ msgstr "வாதத்தைத் திருத்து"
+
+#~ msgid "Edit Argument"
+#~ msgstr "வாதத்தைத் திருத்து"
+
+#~ msgid "Delete Argument"
+#~ msgstr "வாதத்தை நீக்கு"
+
+#, fuzzy
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "{}"
+#~ msgstr "பதிவிறக்கத்தை சரிபார்க்க முயற்சிப்பதில் பிழை: {}"
+
+#, fuzzy
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "<span font_family='monospace'>{}</span>"
+#~ msgstr "பதிவிறக்கத்தை சரிபார்க்க முயற்சிப்பதில் பிழை: {}"
+
+#, fuzzy
+#~ msgid "Error during download validation: {}"
+#~ msgstr "பதிவிறக்கத்தை சரிபார்க்க முயற்சிப்பதில் பிழை: {}"
+
+#~ msgid "Error attempting to add download: {}"
+#~ msgstr "பதிவிறக்கத்தை சேர்க்க முயற்சிப்பதில் பிழை: {}"
+
+#~ msgid "Error attempting to recover downloads: {}"
+#~ msgstr "பதிவிறக்கங்களை மீட்டெடுக்க முயற்சிப்பதில் பிழை: {}"
+
+#~ msgid "Download Finished"
+#~ msgstr "பதிவிறக்கம் முடிந்தது"
+
+#, fuzzy
+#~ msgid "{} has finished downloading"
+#~ msgstr "{the பதிவிறக்குவதை முடித்துவிட்டது"
+
+#, fuzzy
+#~ msgid "Download Failed"
+#~ msgstr "பதிவிறக்கம் முடிந்தது"
+
+#~ msgid "{} has finished with an error"
+#~ msgstr "{} பிழையுடன் முடித்துவிட்டது"
+
+#~ msgid "0 B/s"
+#~ msgstr "0 பி/வி"
+
+#~ msgid "{:.2f} GiB/s"
+#~ msgstr "{:.2f} கிப்/கள்"
+
+#~ msgid "{:.2f} MiB/s"
+#~ msgstr "{:.2f} mib/s"
+
+#~ msgid "{:.2f} KiB/s"
+#~ msgstr "{:.2f} kib/s"
+
+#~ msgid "{:.2f} B/s"
+#~ msgstr "{:.2f} b/s"
+
+#~ msgid "{:.2f} B"
+#~ msgstr "{:.2f} b"
+
+#, fuzzy
+#~ msgid "Unable to download yt-dlp update"
+#~ msgstr "புதுப்பிப்பைப் பதிவிறக்கி நிறுவ முடியவில்லை"
+
+#~ msgid "Validate"
+#~ msgstr "சரிபார்க்கவும்"
+
+#~ msgid "Use Batch File"
+#~ msgstr "தொகுதி கோப்பைப் பயன்படுத்தவும்"
+
+#~ msgid "Authenticate"
+#~ msgstr "அங்கீகரிக்கவும்"
+
+#~ msgid "Use your previous download options for this download"
+#~ msgstr "இந்த பதிவிறக்கத்திற்கு உங்கள் முந்தைய பதிவிறக்க விருப்பங்களைப் பயன்படுத்தவும்"
+
+#, fuzzy
+#~ msgid "Validating"
+#~ msgstr "சரிபார்க்கவும்"
+
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and "
+#~ "subtitles.\n"
+#~ "Please select a specific file type that is known to support embedding\n"
+#~ "to prevent separate files from being written."
+#~ msgstr ""
+#~ "சிறுபடங்கள் மற்றும் வசன வரிகள் உட்பொதித்தல் பொதுவான கோப்பு வகைகள் முழுமையாக "
+#~ "ஆதரிக்கவில்லை. \n"
+#~ "உட்பொதிப்பை ஆதரிக்க அறியப்பட்ட ஒரு குறிப்பிட்ட கோப்பு வகையைத் தேர்ந்தெடுக்கவும் \n"
+#~ "தனி கோப்புகள் எழுதப்படுவதைத் தடுக்க."
+
+#~ msgid "Advanced Options"
+#~ msgstr "மேம்பட்ட விருப்பங்கள்"
+
+#~ msgid "Revert to Original"
+#~ msgstr "அசல் திரும்பவும்"
+
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and writing "
+#~ "playlist files. Please select a specific file type that is known to "
+#~ "support embedding to prevent separate files from being written."
+#~ msgstr ""
+#~ "சிறுபடங்களை உட்பொதித்தல் மற்றும் பிளேலிச்ட் கோப்புகளை எழுதுவது பொதுவான கோப்பு வகைகள் "
+#~ "முழுமையாக ஆதரிக்காது. தனித்தனி கோப்புகள் எழுதப்படுவதைத் தடுக்க உட்பொதியை "
+#~ "ஆதரிப்பதாக அறியப்பட்ட ஒரு குறிப்பிட்ட கோப்பு வகையைத் தேர்ந்தெடுக்கவும்."
+
+#~ msgid ""
+#~ "Will be ignored for media in batch files that provide save folder paths."
+#~ msgstr ""
+#~ "கோப்புறை பாதைகளை சேமிக்கும் தொகுதி கோப்புகளில் ஊடகங்களுக்கு புறக்கணிக்கப்படும்."
+
+#~ msgid "Playlist Items"
+#~ msgstr "பிளேலிச்ட் உருப்படிகள்"
+
+#~ msgid "Use"
+#~ msgstr "பயன்படுத்தவும்"
+
+#~ msgid "No Credentials Found"
+#~ msgstr "நற்சான்றிதழ்கள் எதுவும் கிடைக்கவில்லை"
+
+#~ msgid "Add Credential"
+#~ msgstr "நற்சான்றிதழ் சேர்க்கவும்"
+
+#, fuzzy
+#~ msgid "Updates"
+#~ msgstr "புதுப்பிப்பு"
+
+#, fuzzy
+#~ msgid "Update Available"
+#~ msgstr "புதிய புதுப்பிப்பு கிடைக்கிறது"
+
+#~ msgid "Stop All Downloads"
+#~ msgstr "அனைத்து பதிவிறக்கங்களையும் நிறுத்து"
+
+#~ msgid "Clear Queued Downloads"
+#~ msgstr "வரிசைப்படுத்தப்பட்ட பதிவிறக்கங்களை அழிக்கவும்"
+
+#~ msgid "Retry Failed Downloads"
+#~ msgstr "தோல்வியடைந்த பதிவிறக்கங்களை மீண்டும் முயற்சிக்கவும்"
+
+#~ msgid "No History Available"
+#~ msgstr "வரலாறு எதுவும் கிடைக்கவில்லை"
+
+#~ msgid "No Downloads Running"
+#~ msgstr "பதிவிறக்கங்கள் இயங்கவில்லை"
+
+#~ msgid "No Downloads Queued"
+#~ msgstr "பதிவிறக்கங்கள் இல்லை"
+
+#~ msgid "No Downloads Completed"
+#~ msgstr "பதிவிறக்கங்கள் எதுவும் இல்லை"
+
+#, fuzzy
+#~ msgid "Log copied to clipboard"
+#~ msgstr "பதிவிறக்கப் பதிவு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது."
+
+#, fuzzy
+#~ msgid "{} items"
+#~ msgstr "}} உருப்படிகள்"
+
+#, fuzzy
+#~ msgid ""
+#~ "{} needs a credential to download.\n"
+#~ "Please select or enter one to use."
+#~ msgstr ""
+#~ "{bownload பதிவிறக்கம் செய்ய ஒரு நற்சான்றிதழ் தேவை. \n"
+#~ "பயன்படுத்த ஒன்றைத் தேர்ந்தெடுக்கவும் அல்லது உள்ளிடவும்."
+
+#~ msgid "Keyring is not saving to disk. Changes will be lost."
+#~ msgstr "கீரிங் வட்டில் சேமிக்கவில்லை. மாற்றங்கள் இழக்கப்படும்."
+
+#~ msgid "Modify"
+#~ msgstr "மாற்றவும்"
+
+#~ msgid "Name (Empty)"
+#~ msgstr "பெயர் (காலி)"
+
+#~ msgid "Username (Empty)"
+#~ msgstr "பயனர்பெயர் (காலியாக)"
+
+#~ msgid "Password (Empty)"
+#~ msgstr "கடவுச்சொல் (காலி)"
+
+#~ msgid "URL (Invalid)"
+#~ msgstr "URL (செல்லாதது)"
+
+#~ msgid "Name (Exists)"
+#~ msgstr "பெயர் (உள்ளது)"
+
+#~ msgid "Credential (Database Error)"
+#~ msgstr "நற்சான்றிதழ் (தரவுத்தள பிழை)"
+
+#~ msgid "Exit?"
+#~ msgstr "வெளியேற?"
+
+#, fuzzy
+#~ msgid "There are downloads in progress. Exiting will stop all downloads."
+#~ msgstr "பதிவிறக்கங்கள் முன்னேற்றத்தில் உள்ளன. நீங்கள் வெளியேற விரும்புகிறீர்களா?"
+
+#~ msgid "Ok"
+#~ msgstr "சரி"
+
+#, fuzzy
+#~ msgid "{} version {} is available to download and install"
+#~ msgstr "புதுப்பிப்பைப் பதிவிறக்கி நிறுவ முடியவில்லை"
+
+#~ msgid "Are you sure you want to delete this argument?"
+#~ msgstr "இந்த வாதத்தை நீக்க விரும்புகிறீர்களா?"
+
+#~ msgid "Args (Empty)"
+#~ msgstr "ஆர்க்ச் (காலியாக)"
+
+#~ msgid "Show Log"
+#~ msgstr "பதிவைக் காட்டு"
+
+#~ msgid "Open Containing Folder"
+#~ msgstr "கோப்புறை கொண்ட திறந்த"
+
+#~ msgid "Media"
+#~ msgstr "ஊடகம்"
+
+#~ msgid "Split Video by Chapters"
+#~ msgstr "அத்தியாயங்களால் வீடியோவைப் பிரிக்கவும்"
+
+#, fuzzy
+#~ msgid "Use manual credentials"
+#~ msgstr "கைமுறை நற்சான்றிதழைப் பயன்படுத்தவும்"
+
+#~ msgid "Items ({})"
+#~ msgstr "உருப்படிகள் ({})"
+
+#, fuzzy
+#~ msgid ""
+#~ "{} needs a credential to download. Please select or enter one to use."
+#~ msgstr ""
+#~ "{bownload பதிவிறக்கம் செய்ய ஒரு நற்சான்றிதழ் தேவை. பயன்படுத்த ஒன்றைத் தேர்ந்தெடுக்கவும் "
+#~ "அல்லது உள்ளிடவும்."
+
+#, fuzzy
+#~ msgid ""
+#~ "The keyring is not saving changes to disk. Any changes made will be lost"
+#~ msgstr ""
+#~ "கீரிங் வட்டில் மாற்றங்களைச் சேமிக்கவில்லை. பயன்பாடு மூடும்போது எந்த மாற்றங்களும் "
+#~ "இழக்கப்படும்."
+
+#~ msgid "New Credential"
+#~ msgstr "புதிய நற்சான்றிதழ்"
+
+#~ msgid "The credential name cannot be empty."
+#~ msgstr "நற்சான்றிதழ் பெயர் காலியாக இருக்க முடியாது."
+
+#~ msgid "The provided url is invalid."
+#~ msgstr "வழங்கப்பட்ட முகவரி தவறானது."
+
+#~ msgid "There was an unknown error adding the credential to the keyring."
+#~ msgstr "கெய்ரிங்கிற்கு நற்சான்றிதழைச் சேர்ப்பது தெரியாத பிழை இருந்தது."
+
+#~ msgid "Edit Credential"
+#~ msgstr "நற்சான்றிதழைத் திருத்தவும்"
+
+#~ msgid "Save"
+#~ msgstr "சேமி"
+
+#~ msgid "Delete Credential"
+#~ msgstr "நற்சான்றிதழ் நீக்கு"
+
+#, fuzzy
+#~ msgid "Start"
+#~ msgstr "தொடங்குகிறது"
+
+#~ msgid "Documentation"
+#~ msgstr "ஆவணப்படுத்துதல்"
+
+#, fuzzy
+#~ msgid "Downloading the update"
+#~ msgstr "பதிவிறக்குகிறது"
+
+#, fuzzy
+#~ msgid "Version {}"
+#~ msgstr "பதிப்பு: {0}"
+
+#, fuzzy
+#~ msgid "Debug information copied to clipboard"
+#~ msgstr "பதிவிறக்கப் பதிவு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது."
+
+#~ msgid "Light"
+#~ msgstr "ஒளி"
+
+#~ msgid "Dark"
+#~ msgstr "இருண்ட"
+
+#~ msgid "New Argument"
+#~ msgstr "புதிய உரையாடல்"
+
+#, fuzzy
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "```{}```"
+#~ msgstr "பதிவிறக்கத்தை சரிபார்க்க முயற்சிப்பதில் பிழை: {}"
+
+#~ msgid "Error attempting to validate download: {}"
+#~ msgstr "பதிவிறக்கத்தை சரிபார்க்க முயற்சிப்பதில் பிழை: {}"
+
+#~ msgid ""
+#~ "The url provided is invalid or unable to be reached. Check the url, the "
+#~ "authentication used, the cookies settings, and the preferred codecs "
+#~ "selected. Note that the service may have blocked your IP or the video may "
+#~ "be geo-restricted."
+#~ msgstr ""
+#~ "வழங்கப்பட்ட முகவரி தவறானது அல்லது அடைய முடியவில்லை. URL, பயன்படுத்தப்படும் ஏற்பு, "
+#~ "குக்கீகள் அமைப்புகள் மற்றும் தேர்ந்தெடுக்கப்பட்ட விருப்பமான கோடெக்குகளை சரிபார்க்கவும். "
+#~ "பணி உங்கள் ஐபி தடுத்திருக்கலாம் அல்லது வீடியோ உலகம் தடைசெய்யப்படலாம் என்பதை நினைவில் "
+#~ "கொள்க."
+
+#~ msgid "Download Finished With Error"
+#~ msgstr "பதிவிறக்கம் பிழையுடன் முடிந்தது"
+
+#~ msgid "N/A"
+#~ msgstr "இதற்கில்லை"
+
+#, fuzzy
+#~ msgid "Use aria2c instead of yt-dlp's native downloader"
+#~ msgstr "YT-DLP இன் சொந்த பதிவிறக்கத்திற்கு பதிலாக பரபோலிக் ARIA2C ஐப் பயன்படுத்தும்."
+
+#~ msgid "Safari"
+#~ msgstr "சஃபாரி"
+
+#~ msgid "Back"
+#~ msgstr "திரும்பவும்"
+
+#~ msgid ""
+#~ "The update is downloading in the background and will start once it "
+#~ "finishes"
+#~ msgstr "புதுப்பிப்பு பின்னணியில் பதிவிறக்கம் செய்கிறது மற்றும் அது முடிந்ததும் தொடங்கும்"
+
+#~ msgid "Developers"
+#~ msgstr "உருவாக்குநர்கள்"
+
+#~ msgid "Designers"
+#~ msgstr "வடிவமைப்பாளர்கள்"
+
+#~ msgid "Artists"
+#~ msgstr "கலைஞர்கள்"
+
+#~ msgid "Automatically Check for Updates"
+#~ msgstr "புதுப்பிப்புகளை தானாக சரிபார்க்கவும்"
+
+#~ msgid "Copy Command to Clipboard"
+#~ msgstr "இடைநிலைப்பலகைக்கு கட்டளையை நகலெடுக்கவும்"
+
+#~ msgid "Parabolic will limit the number of threads used by ffmpeg."
+#~ msgstr "பரபோலிக் FFMPEG ஆல் பயன்படுத்தப்படும் நூல்களின் எண்ணிக்கையை கட்டுப்படுத்தும்."
+
+#~ msgid "Parabolic will include a media's id in its default title."
+#~ msgstr "பரபோலிக் அதன் இயல்புநிலை தலைப்பில் ஒரு ஊடகத்தின் ஐடியை உள்ளடக்கும்."
+
+#~ msgid ""
+#~ "The video codec Parabolic should prefer when parsing media formats to "
+#~ "download."
+#~ msgstr ""
+#~ "வீடியோ கோடெக் பரபோலிக் பதிவிறக்கம் செய்ய ஊடக வடிவங்களை பாகுபடுத்தும்போது விரும்ப "
+#~ "வேண்டும்."
+
+#~ msgid ""
+#~ "The audio codec Parabolic should prefer when parsing media formats to "
+#~ "download."
+#~ msgstr ""
+#~ "பதிவிறக்கம் செய்ய ஊடக வடிவங்களை பாகுபடுத்தும்போது ஆடியோ கோடெக் பரவளைய விரும்ப "
+#~ "வேண்டும்."
+
+#~ msgid ""
+#~ "The file format Parabolic should ensure all subtitles are downloaded as."
+#~ msgstr ""
+#~ "கோப்பு வடிவம் பரபோலிக் அனைத்து வசன வரிகளும் பதிவிறக்கம் செய்யப்படுவதை உறுதி செய்ய "
+#~ "வேண்டும்."
+
+#, fuzzy
+#~ msgid ""
+#~ "Parabolic will show these arguments below for selection in the add "
+#~ "download dialog."
+#~ msgstr "பதிவிறக்க உரையாடலில் தேர்வு செய்வதற்கான இந்த வாதங்களை பரபோலிக் காண்பிக்கும்."
+
+#~ msgid ""
+#~ "The authors of Nickvision Parabolic are not responsible/liable for any "
+#~ "misuse of this program that may violate local copyright/DMCA laws. Users "
+#~ "use this application at their own risk."
+#~ msgstr ""
+#~ "உள்ளூர் பதிப்புரிமை/DMCA சட்டங்களை மீறும் இந்தத் திட்டத்தை தவறாகப் பயன்படுத்துவதற்கு "
+#~ "நிக்விஷன் பரபோலிக் இன் ஆசிரியர்கள் பொறுப்பல்ல/பொறுப்பேற்க மாட்டார்கள். பயனர்கள் இந்த "
+#~ "பயன்பாட்டை தங்கள் சொந்த ஆபத்தில் பயன்படுத்துகின்றனர்."
+
+#~ msgid "UI"
+#~ msgstr "இடைமுகம்"
+
+#, fuzzy
+#~ msgid "Download some media to see it here"
+#~ msgstr "உடனடியாக பதிவிறக்கவும்"
+
+#, fuzzy
+#~ msgid "Add, delete and modify credentials for validating websites"
+#~ msgstr "வலைத்தளங்களை சரிபார்க்க நற்சான்றிதழ்களைச் சேர்க்கவும், நீக்கவும், மாற்றவும்"
+
+#, fuzzy
+#~ msgid "Revert File Name"
+#~ msgstr "கோப்பு பெயர்"
+
+#~ msgid "Notification"
+#~ msgstr "அறிவிப்பு"
+
+#~ msgid "No Download Log"
+#~ msgstr "பதிவிறக்க பதிவு இல்லை"
+
+#~ msgid "Copy"
+#~ msgstr "நகலெடு"
+
+#~ msgid "No save folder selected"
+#~ msgstr "சேமி கோப்புறை எதுவும் தேர்ந்தெடுக்கப்படவில்லை"
+
+#~ msgid "Enter file name here"
+#~ msgstr "கோப்பு பெயரை இங்கே உள்ளிடவும்"
+
+#~ msgid "Enter start time here"
+#~ msgstr "தொடக்க நேரத்தை இங்கே உள்ளிடவும்"
+
+#~ msgid "Enter end time here"
+#~ msgstr "இறுதி நேரத்தை இங்கே உள்ளிடவும்"
+
+#~ msgid "Downloading (0)"
+#~ msgstr "பதிவிறக்குதல் (0)"
+
+#~ msgid "Queued (0)"
+#~ msgstr "வரிசையில் (0)"
+
+#~ msgid "Completed (0)"
+#~ msgstr "முடிந்தது (0)"
+
+#~ msgid "Parabolic (Preview)"
+#~ msgstr "பரபோலிக் (முன்னோட்டம்)"
+
+#~ msgid "Queued ({})"
+#~ msgstr "வரிசையில் ({})"
+
+#~ msgid "Completed ({})"
+#~ msgstr "முடிந்தது ({})"
+
+#~ msgid ""
+#~ "Parabolic will show these arguments for\n"
+#~ "selection in the add download dialog."
+#~ msgstr ""
+#~ "பரபோலிக் இந்த வாதங்களைக் காண்பிக்கும் \n"
+#~ "பதிவிறக்க உரையாடலில் தேர்வு."
+
+#~ msgid "Postprocessing Threads"
+#~ msgstr "போச்ட்ரோசெசிங் நூல்கள்"
+
+#, fuzzy
+#~ msgid ""
+#~ "The url provided is invalid or unable to be reached. Check the url, the "
+#~ "authentication used, and the selected browser for cookies in settings. "
+#~ "Note that YouTube may have blocked your IP or the video may be geo-"
+#~ "restricted."
+#~ msgstr ""
+#~ "வழங்கப்பட்ட முகவரி தவறானது அல்லது அடைய முடியவில்லை. அமைப்புகளில் குக்கீகளுக்கான "
+#~ "முகவரி, பயன்படுத்தப்பட்ட ஏற்பு மற்றும் தேர்ந்தெடுக்கப்பட்ட உலாவியை சரிபார்க்கவும்."
+
+#, fuzzy
+#~ msgid "The limit to apply to downloads with limiting speed enabled."
+#~ msgstr ""
+#~ "பதிவிறக்க வேகத்தை கட்டுப்படுத்த உதவிய பதிவிறக்கங்களுக்கு மட்டுமே இந்த வரம்பு "
+#~ "பயன்படுத்தப்படுகிறது."
+
+#~ msgid "Download Immediately After Validation"
+#~ msgstr "சரிபார்த்தவுடன் உடனடியாக பதிவிறக்கவும்"
+
+#~ msgid "Past Downloads"
+#~ msgstr "கடந்த பதிவிறக்கங்கள்"
+
+#, fuzzy
+#~ msgid "No Download History"
+#~ msgstr "வரலாற்று நீளத்தைப் பதிவிறக்கவும்"
+
+#~ msgid "Downloads Finished"
+#~ msgstr "பதிவிறக்கங்கள் முடிந்தது"
+
+#~ msgid "All downloads have finished"
+#~ msgstr "எல்லா பதிவிறக்கங்களும் முடிந்துவிட்டன"
+
+#~ msgid "Completed Notification Trigger"
+#~ msgstr "நிறைவு செய்யப்பட்ட அறிவிப்பு தூண்டுதல்"
+
+#~ msgid "For each download"
+#~ msgstr "ஒவ்வொரு பதிவிறக்கத்திற்கும்"
+
+#~ msgid "Verbose Logging"
+#~ msgstr "சொற்களஞ்சியம் பதிவு"
+
+#~ msgid "Revert"
+#~ msgstr "மாற்றியமைக்கவும்"
+
+#~ msgid "Select"
+#~ msgstr "தேர்ந்தெடு"
+
+#~ msgid "Select save folder"
+#~ msgstr "சேமி கோப்புறையைத் தேர்ந்தெடுக்கவும்"
+
+#~ msgid "Language"
+#~ msgstr "மொழி"
+
+#~ msgid "WARNING: Using aria2 to download. Progress will not be shown."
+#~ msgstr "எச்சரிக்கை: பதிவிறக்கம் செய்ய ARIA2 ஐப் பயன்படுத்துதல். முன்னேற்றம் காட்டப்படாது."
+
+#~ msgid "WARNING: Using ffmpeg to download. Progress will not be shown."
+#~ msgstr ""
+#~ "எச்சரிக்கை: பதிவிறக்கம் செய்ய FFMPEG ஐப் பயன்படுத்துதல். முன்னேற்றம் காட்டப்படாது."
+
+#~ msgid "Quality"
+#~ msgstr "தரம்"
+
+#~ msgid "Default"
+#~ msgstr "இயல்புநிலை"
+
+#, fuzzy
+#~ msgid "Download Subtitles"
+#~ msgstr "வசனத்தைப் பதிவிறக்கவும்"
+
+#~ msgid "Add Download (Ctrl+N)"
+#~ msgstr "பதிவிறக்கத்தைச் சேர் (Ctrl+N)"
+
+#, csharp-format
+#~ msgid "{0} download — {1:f1}% ({2})"
+#~ msgid_plural "{0} downloads — {1:f1}% ({2})"
+#~ msgstr[0] "{0} பதிவிறக்கம் — {1:f1}% ({2})"
+#~ msgstr[1] "{0} பதிவிறக்கங்கள் — {1:f1}% ({2})"
+
+#~ msgid ""
+#~ "A cookies file can be provided to yt-dlp to allow downloading media that "
+#~ "requires a login."
+#~ msgstr ""
+#~ "உள்நுழைவு தேவைப்படும் மீடியாவைப் பதிவிறக்க அனுமதிக்க குக்கீகள் கோப்பு yt-dlp க்கு "
+#~ "வழங்கப்படலாம்."
+
+#~ msgid "Add Login"
+#~ msgstr "உள்நுழைவைச் சேர்க்கவும்"
+
+#~ msgid "Allow Running In Background"
+#~ msgstr "பின்னணியில் இயங்குவதை அனுமதிக்கவும்"
+
+#, fuzzy
+#~ msgid ""
+#~ "Clear metadata fields containing the URL and other identifying "
+#~ "information of the media source"
+#~ msgstr ""
+#~ "ஊடகம் மூலத்திற்கு வழிவகுக்கும் URL மற்றும் மற்றொரு தரவைக் கொண்ட மெட்டாடேட்டா புலங்களை "
+#~ "அழிக்கவும்"
+
+#~ msgid "Close and Stop Downloads?"
+#~ msgstr "பதிவிறக்கங்களை மூடிவிட்டு நிறுத்தவா?"
+
+#~ msgid ""
+#~ "Cookies can be passed to yt-dlp in the form of TXT files. Export cookies "
+#~ "from your browser using the following extensions (use at your own risk):"
+#~ msgstr ""
+#~ "TXT கோப்புகளின் வடிவத்தில் குக்கீகளை yt-dlp க்கு அனுப்பலாம். பின்வரும் நீட்டிப்புகளைப் "
+#~ "பயன்படுத்தி உங்கள் உலாவியில் இருந்து குக்கீகளை ஏற்றுமதி செய்யவும் (உங்கள் சொந்த ஆபத்தில் "
+#~ "பயன்படுத்தவும்):"
+
+#~ msgid "Cookies File Information"
+#~ msgstr "குக்கீகள் கோப்பு தகவல்"
+
+#~ msgid "Crop Thumbnail"
+#~ msgstr "சிறுபடத்தை வெட்டவும்"
+
+#~ msgid "DaPigGuy"
+#~ msgstr "DaPigGuy"
+
+#, fuzzy
+#~ msgid ""
+#~ "Different sites can use different language code formats for the same "
+#~ "language. You may encounter one of the following three types: two-letter, "
+#~ "two-letter with region, or three-letter. For example, \"en\", \"en-US\" "
+#~ "and \"eng\" are all used for English.\n"
+#~ "Please specify all valid codes for your languages for the best results. "
+#~ "Auto-generated subtitles will also be downloaded if available.\n"
+#~ "\n"
+#~ "You can specify \"all\" instead to download all subtitles, including auto-"
+#~ "generated ones. To exclude auto-generated ones, turn off the option below."
+#~ msgstr ""
+#~ "வெவ்வேறு தளங்கள் ஒரே மொழிக்கு வெவ்வேறு மொழி குறியீடு வடிவங்களைப் பயன்படுத்தலாம். "
+#~ "பின்வரும் மூன்று வகைகளில் ஒன்றை நீங்கள் சந்திக்கலாம்: இரண்டு எழுத்து, பகுதியுடன் கூடிய "
+#~ "இரண்டு எழுத்து அல்லது மூன்றெழுத்து. எடுத்துக்காட்டாக, \"en\", \"en-US\" மற்றும் "
+#~ "\"eng\" அனைத்தும் ஆங்கிலத்திற்குப் பயன்படுத்தப்படுகின்றன.\n"
+#~ "\n"
+#~ "சிறந்த முடிவுகளுக்கு உங்கள் மொழிகளுக்கான அனைத்து சரியான குறியீடுகளையும் "
+#~ "குறிப்பிடவும்."
+
+#~ msgid "Disable"
+#~ msgstr "முடக்கு"
+
+#~ msgid "Disable Keyring?"
+#~ msgstr "சாவி வளையத்தை முடக்கவா?"
+
+#~ msgid ""
+#~ "Disabling the keyring will delete all data currently stored inside. Are "
+#~ "you sure you want to disable it?"
+#~ msgstr ""
+#~ "சாவி வளையத்தை முடக்குவது, தற்போது உள்ளே சேமிக்கப்பட்டுள்ள எல்லா தரவையும் நீக்கிவிடும். "
+#~ "நிச்சயமாக அதை முடக்க விரும்புகிறீர்களா?"
+
+#~ msgid "Disallow Conversions"
+#~ msgstr "மாற்றங்களை அனுமதிக்காதே"
+
+#~ msgid "Download Specific Timeframe"
+#~ msgstr "குறிப்பிட்ட காலக்கெடுவைப் பதிவிறக்கவும்"
+
+#~ msgid "Download using aria2 has started"
+#~ msgstr "aria2 ஐப் பயன்படுத்தி பதிவிறக்கம் தொடங்கப்பட்டது"
+
+#~ msgid "Download using ffmpeg has started"
+#~ msgstr "ffmpeg ஐப் பயன்படுத்தி பதிவிறக்கம் தொடங்கப்பட்டது"
+
+#, csharp-format
+#~ msgid "Downloading {0:f2}% ({1})"
+#~ msgstr "பதிவிறக்குகிறது {0:f2}% ({1})"
+
+#, fuzzy
+#~ msgid "Downloading..."
+#~ msgstr "பதிவிறக்குகிறது"
+
+#~ msgid ""
+#~ "Enable to use aria2 downloader. It can be faster, but you will not see "
+#~ "download progress."
+#~ msgstr ""
+#~ "aria2 பதிவிறக்குபவரைப் பயன்படுத்த இயக்கு. இது வேகமாக இருக்கலாம், ஆனால் நீங்கள் "
+#~ "பதிவிறக்க முன்னேற்றத்தைக் காண மாட்டீர்கள்."
+
+#~ msgid "End Time (Invalid)"
+#~ msgstr "முடிவு நேரம் (செல்லாதது)"
+
+#~ msgid "Failed to enable keyring."
+#~ msgstr "சாவி வலயத்தை இயக்குவதில் தோல்வி."
+
+#~ msgid ""
+#~ "If enabled, Parabolic will download the appropriate video/audio format "
+#~ "for the selected quality without converting to other formats. (You will "
+#~ "be unable to select a file format)"
+#~ msgstr ""
+#~ "இயக்கப்பட்டால், மற்ற வடிவங்களுக்கு மாற்றாமல், தேர்ந்தெடுக்கப்பட்ட தரத்திற்கு பொருத்தமான "
+#~ "வீடியோ/ஆடியோ வடிவமைப்பை பரபோலிக் பதிவிறக்கும். (நீங்கள் ஒரு கோப்பு வடிவமைப்பைத் "
+#~ "தேர்ந்தெடுக்க முடியாது)"
+
+#~ msgid ""
+#~ "In combination with the trigger, completed notifications will only be "
+#~ "shown if the window is not focused."
+#~ msgstr ""
+#~ "தூண்டுதலுடன் இணைந்து, சாளரம் கவனம் செலுத்தவில்லை என்றால் மட்டுமே நிறைவு செய்யப்பட்ட "
+#~ "அறிவிப்புகள் காண்பிக்கப்படும்."
+
+#~ msgid "Keyring Credential"
+#~ msgstr "சாவி வளைய நற்சான்றிதழ்"
+
+#~ msgid "Keyring Disabled"
+#~ msgstr "சாவி வளையம் முடக்கப்பட்டது"
+
+#~ msgid "Keyring locked"
+#~ msgstr "சாவி வளையம் பூட்டப்பட்டது"
+
+#, fuzzy
+#~ msgid "Keyring locked."
+#~ msgstr "சாவி வளையம் பூட்டப்பட்டது"
+
+#~ msgid "Language Code Information"
+#~ msgstr "மொழி குறியீடு தகவல்"
+
+#~ msgid "Leave empty to download from start."
+#~ msgstr "தொடக்கத்தில் இருந்து பதிவிறக்கம் செய்ய காலியாக விடவும்."
+
+#~ msgid "List of supported sites"
+#~ msgstr "ஆதரிக்கப்படும் தளங்களின் பட்டியல்"
+
+#~ msgid "Login"
+#~ msgstr "உள்நுழை"
+
+#~ msgid "Make thumbnail square, useful when downloading music."
+#~ msgstr "இசை பதிவிறக்கம் செய்யும் போது உபயோகமான சிறுபடவுரு சதுரத்தை உருவாக்கவும்."
+
+#~ msgid "Maximum Quality"
+#~ msgstr "அதிகபட்ச தரம்"
+
+#~ msgid ""
+#~ "Media can possibly be cut inaccurately.\n"
+#~ "Enabling this option will disable the use of aria2 as the downloader if "
+#~ "it is enabled."
+#~ msgstr ""
+#~ "ஊடகங்கள் துல்லியமாக வெட்டப்படலாம்.\n"
+#~ "இந்த விருப்பத்தை இயக்குவது, அது இயக்கப்பட்டிருந்தால், பதிவிறக்கியாக aria2 ஐப் "
+#~ "பயன்படுத்துவது முடக்கப்படும்."
+
+#~ msgid "Media URL (Invalid)"
+#~ msgstr "ஊடகத்தின் URL (செல்லாதது)"
+
+#~ msgid "Nicholas Logozzo"
+#~ msgstr "நிக்கோலஸ் லோகோசோ"
+
+#~ msgid "No active internet connection"
+#~ msgstr "செயலில் இணைய இணைப்பு இல்லை"
+
+#, fuzzy
+#~ msgid "No Completed Downloads"
+#~ msgstr "முடிக்கப்பட்ட பதிவிறக்கங்களை அழிக்கவும்"
+
+#~ msgid "No Previous Downloads"
+#~ msgstr "முந்தைய பதிவிறக்கங்கள் இல்லை"
+
+#, fuzzy
+#~ msgid "No Queued Downloads"
+#~ msgstr "வரிசைப்படுத்தப்பட்ட பதிவிறக்கங்களை அழிக்கவும்"
+
+#~ msgid "Preparing..."
+#~ msgstr "தயாராகிறது..."
+
+#~ msgid "Reset"
+#~ msgstr "மீட்டமைக்கவும்"
+
+#~ msgid "Reset Keyring?"
+#~ msgstr "சாவி வளையத்தை மீட்டமைக்கவா?"
+
+#~ msgid "Reset to default"
+#~ msgstr "இயல்புநிலைக்கு மீட்டமைக்கவும்"
+
+#~ msgid "Restart the app to unlock the keyring."
+#~ msgstr "சாவி வலயத்தை திறக்க, பயன்பாட்டை மறுதொடக்கம் செய்யவும்."
+
+#~ msgid "Retry Download"
+#~ msgstr "பதிவிறக்க மீண்டும் முயற்சிக்கவும்"
+
+#~ msgid "Save Folder (Invalid)"
+#~ msgstr "கோப்புறையைச் சேமி (செல்லாதது)"
+
+#~ msgid "Select items to download or change file names."
+#~ msgstr "கோப்புப் பெயர்களைப் பதிவிறக்க அல்லது மாற்ற உருப்படிகளைத் தேர்ந்தெடுக்கவும்."
+
+#~ msgid ""
+#~ "Some downloads are still in progress.\n"
+#~ "Are you sure you want to close Parabolic and stop the running downloads?"
+#~ msgstr ""
+#~ "சில பதிவிறக்கங்கள் இன்னும் செயலில் உள்ளன.\n"
+#~ "பரபோலிக் ஐ மூடிவிட்டு இயங்கும் பதிவிறக்கங்களை நிறுத்த விரும்புகிறீர்களா?"
+
+#~ msgid "Some downloads finished with errors!"
+#~ msgstr "சில பதிவிறக்கங்கள் பிழைகளுடன் முடிந்தது!"
+
+#~ msgid "Splits the video into multiple smaller ones based on its chapters."
+#~ msgstr "காணொளியை அதன் அத்தியாயங்களின் அடிப்படையில் பல சிறியதாகப் பிரிக்கிறது."
+
+#~ msgid "SponsorBlock Information (opens in a web browser)"
+#~ msgstr "SponsorBlock தகவல் (இணைய உலாவியில் திறக்கும்)"
+
+#~ msgid "Start Time (Invalid)"
+#~ msgstr "தொடக்க நேரம் (செல்லாதது)"
+
+#~ msgid "Subtitle Languages (Comma-Separated)"
+#~ msgstr "வசன மொழிகள் (கமாவால் பிரிக்கப்பட்டவை)"
+
+#~ msgid "Subtitle Languages (Invalid)"
+#~ msgstr "வசன மொழிகள் (செல்லாதது)"
+
+#~ msgid ""
+#~ "This will delete the previous keyring removing all passwords with it. "
+#~ "This action is irreversible."
+#~ msgstr ""
+#~ "இது அனைத்து கடவுச்சொற்களையும் அகற்றும் முந்தைய சாவி வலயத்தை நீக்கும். இந்த நடவடிக்கை "
+#~ "மீள முடியாதது."
+
+#~ msgid "Unable to disable keyring."
+#~ msgstr "சாவி வலயத்தை முடக்க முடியவில்லை."
+
+#~ msgid "Unable to reset keyring."
+#~ msgstr "சாவி வலயத்தை மீட்டமைக்க முடியவில்லை."
+
+#~ msgid "Undo Title Editing"
+#~ msgstr "தலைப்பு திருத்தத்தை செயல்தவிர்க்கவும்"
+
+#~ msgid "Unlock Keyring"
+#~ msgstr "சாவி வளையத்தைத் திறக்கவும்"
+
+#, fuzzy
+#~ msgid "Unset Cookies File"
+#~ msgstr "குக்கீகள் கோப்பைத் தேர்ந்தெடுக்கவும்"
+
+#, fuzzy
+#~ msgid ""
+#~ "Use keyring to safely store credentials for sites that require a user "
+#~ "name and password to login."
+#~ msgstr ""
+#~ "பயனர்பெயர் மற்றும் கடவுச்சொல்லுடன் உள்நுழைய வேண்டிய தளங்களுக்கான சான்றுகளை "
+#~ "பாதுகாப்பாகச் சேமிக்க சாவி வளையத்தைப் பயன்படுத்தவும்."
+
+#, fuzzy
+#~ msgid "User Name"
+#~ msgstr "பயனர் பெயர்"
+
+#~ msgid "Waiting..."
+#~ msgstr "காத்திருக்கிறது..."
+
+#~ msgid "Leave empty to download to end."
+#~ msgstr "இறுதிவரை பதிவிறக்கம் செய்ய காலியாக விடவும்."
+
+#~ msgid "Manage previously downloaded media."
+#~ msgstr "முன்பு பதிவிறக்கம் செய்யப்பட்ட மீடியாவை நிர்வகிக்கவும்."
+
+#, fuzzy
+#~ msgid "Search history"
+#~ msgstr "வரலாற்றை அழிக்கவும்"
+
+#~ msgid "Disable Keyring"
+#~ msgstr "சாவி வளையத்தை முடக்கு"
+
+#~ msgid "Migrate to Secret-Secured Keyring"
+#~ msgstr "ரகசிய-பாதுகாக்கப்பட்ட சாவி வலயத்திற்கு நகர்த்தவும்"
+
+#~ msgid "Migrate Keyring"
+#~ msgstr "சாவி வளையத்தை நகர்த்தவும்"
+
+#~ msgid "Skip"
+#~ msgstr "தவிர்"
+
+#~ msgid "Unlock"
+#~ msgstr "திறக்கவும்"
+
+#~ msgid "Hide the window instead of quitting if there are downloads running."
+#~ msgstr "பதிவிறக்கங்கள் இயங்கினால் வெளியேறுவதற்குப் பதிலாக சாளரத்தை மறைக்கவும்."
+
+#~ msgid "Apply"
+#~ msgstr "விண்ணப்பிக்கவும்"
+
+#, fuzzy
+#~ msgid "Copied debug info to clipboard."
+#~ msgstr "கிளிப்போர்டுக்கு நகலெடுக்கவும்"
+
+#, fuzzy, csharp-format
+#~ msgid "Remaining Downloads: {0}"
+#~ msgstr "தோல்வியடைந்த பதிவிறக்கங்களை மீண்டும் முயற்சிக்கவும்"
+
+#~ msgid "YouTube;Downloader;ytdlp;Nickvision;Tube;Converter;"
+#~ msgstr "YouTube;பதிவிறக்கி;ytdlp;நிக்விஷன்;குழாய்; மாற்றி;"
+
+#~ msgid "— A basic yt-dlp frontend"
+#~ msgstr "- ஒரு அடிப்படை yt-dlp முன்பக்கம்"
+
+#~ msgid ""
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)"
+#~ msgstr ""
+#~ "- பல வடிவங்களில் (mp4, webm, mp3, opus, flac மற்றும் wav) காணொளிகளைப் "
+#~ "பதிவிறக்குவதை ஆதரிக்கிறது"
+
+#~ msgid "— Run multiple downloads at a time"
+#~ msgstr "- ஒரே நேரத்தில் பல பதிவிறக்கங்களை இயக்கலாம்"
+
+#~ msgid "— Supports downloading metadata and video subtitles"
+#~ msgstr "— மெட்டாடேட்டா மற்றும் காணொளி வசனங்களைப் பதிவிறக்குவதை ஆதரிக்கிறது"
+
+#, fuzzy
+#~ msgid "Preparing required tools..."
+#~ msgstr "தயாராகிறது..."
+
+#~ msgid "Unable to setup dependencies. Please restart the app and try again."
+#~ msgstr ""
+#~ "சார்புகளை அமைக்க முடியவில்லை. பயன்பாட்டை மறுதொடக்கம் செய்து மீண்டும் முயற்சிக்கவும்."
+
+#~ msgid "Remove data about media source"
+#~ msgstr "ஊடக மூலத்தை பற்றிய தரவை அகற்று"
+
+#~ msgid "Set Password"
+#~ msgstr "கடவுச்சொல்லை அமைக்கவும்"
+
+#~ msgid "New Password"
+#~ msgstr "புதிய கடவுச்சொல்"
+
+#~ msgid "Confirm Password"
+#~ msgstr "கடவுச்சொல்லை உறுதிப்படுத்தவும்"
+
+#~ msgid "If the password is lost, there is no way to restore the keyring!"
+#~ msgstr "கடவுச்சொல் தொலைந்துவிட்டால், சாவி வளையத்தை மீட்டெடுக்க வழி இல்லை!"
+
+#~ msgid "Continue"
+#~ msgstr "தொடரவும்"
+
+#~ msgid "Unable to unlock keyring. Restart the app to try again."
+#~ msgstr ""
+#~ "சாவி வளையத்தைத் திறக்க முடியவில்லை. மீண்டும் முயற்சிக்க, பயன்பாட்டை மறுதொடக்கம் "
+#~ "செய்யவும்."
+
+#~ msgid "Keyring has not been unlocked."
+#~ msgstr "சாவி வளையம் திறக்கப்படவில்லை."
+
+#, csharp-format
+#~ msgid ""
+#~ "David Lapshin {0}\n"
+#~ "Brage Fuglseth {1}\n"
+#~ "marcin {2}"
+#~ msgstr ""
+#~ "டேவிட் லாப்ஷின் {0}\n"
+#~ "பிரேஜ் ஃபுல்செத் {1}\n"
+#~ "மார்சின் {2}"
+
+#, csharp-format
+#~ msgid ""
+#~ "Nicholas Logozzo {0}\n"
+#~ "Fyodor Sobolev {1}\n"
+#~ "DaPigGuy {2}"
+#~ msgstr ""
+#~ "நிக்கோலஸ் லோகோஸோ {0}\n"
+#~ "ஃபியோடர் சோபோலெவ் {1}\n"
+#~ "DaPigGuy {2}"
+
+#~ msgid "youtube"
+#~ msgstr "யூடியூப் (YouTube)"
+
+#~ msgid "video"
+#~ msgstr "காணொளி"
+
+#~ msgid "audio"
+#~ msgstr "ஒலி அமைவு"
+
+#~ msgid "download"
+#~ msgstr "பதிவிறக்கவும்"
+
+#~ msgid "Customize the application's user interface."
+#~ msgstr "பயன்பாட்டின் பயனர் இடைமுகத்தைத் தனிப்பயனாக்கவும்."
+
+#~ msgid "Customize downloader settings."
+#~ msgstr "பதிவிறக்கி அமைப்புகளைத் தனிப்பயனாக்கு."
+
+#~ msgid "Customize converter settings."
+#~ msgstr "மாற்றி அமைப்புகளைத் தனிப்பயனாக்கு."
+
+#~ msgid "About Tube Converter"
+#~ msgstr "குழாய் மாற்றி பற்றி"
+
+#~ msgid "Tube Converter"
+#~ msgstr "குழாய் மாற்றி"
+
+#~ msgid "Get video and audio from the web"
+#~ msgstr "எளிதாகப் பயன்படுத்தக்கூடிய காணொளி பதிவிறக்கி"
+
+#, fuzzy
+#~ msgid "Authenticate (Invalid)"
+#~ msgstr "அங்கீகரிக்கவும்"
