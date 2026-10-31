@@ -1,3 +1,8 @@
+<!-- UNIFIED REPO NOTE (added during consolidation) -->
+> **Platforms:** This repository now hosts UniFetch for **all operating systems** in one place:
+> the **Android** app at the repository root, and the **Windows** app under [`windows/`](windows/).
+> Each has its own build in CI. (Migration in progress — see the PR that introduced this.)
+
 <div align="center">
 
 <img src="docs/icon.png" width="120" alt="UniFetcher icon" />

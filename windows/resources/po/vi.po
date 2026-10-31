@@ -1,0 +1,3025 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-23 23:33-0400\n"
+"PO-Revision-Date: 2026-05-03 08:09+0000\n"
+"Last-Translator: Loc Huynh <huynhloc.contact@gmail.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/nickvision-"
+"tube-converter/app/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17.1\n"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:27
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:112
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:120
+msgid "Add Download"
+msgstr "Thêm lượt tải"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:40
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:64
+msgid "Discover"
+msgstr "Khám phá"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:50
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:68
+msgid "Media URL"
+msgstr "URL của phương tiện"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:55
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:284
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:70
+msgid "Select Batch File"
+msgstr "Chọn tệp hàng loạt"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:62
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:71
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:72
+msgid "Use Authentication"
+msgstr "Sử dụng Xác thực"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:67
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:73
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:67
+msgid "Credential"
+msgstr "Thông tin xác thực"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:71
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:51
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:74
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:87
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:75
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:55
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:92
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:78
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:79
+msgid "Download Immediately as Video"
+msgstr "Tải xuống ngay lập tức dưới dạng Video"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:81
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:86
+msgid ""
+"Media will be downloaded based off of previously configured options and "
+"sensible defaults. Options will not be shown"
+msgstr ""
+"Phương tiện sẽ được tải xuống dựa trên các tùy chọn đã cấu hình trước đó và "
+"các giá trị mặc định hợp lý. Các tùy chọn sẽ không được hiển thị"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:80
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:81
+msgid "Download Immediately as Audio"
+msgstr "Tải xuống ngay lập tức dưới dạng âm thanh"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:171
+msgid "Discovering Media"
+msgstr "Khám phá Phương tiện"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:84
+msgid "This may take some time..."
+msgstr "Việc này có thể mất chút thời gian..."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:111
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:304
+msgid "Configure"
+msgstr "Cấu hình"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:126
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:319
+msgid "Search Subtitles"
+msgstr "Tìm phụ đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:132
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:150
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:325
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:343
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:230
+msgid "Download"
+msgstr "Tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:160
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:353
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:11
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:25
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:85
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:111
+msgid "General"
+msgstr "Chung"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:170
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:88
+msgid "File Name"
+msgstr "Tên tệp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:176
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:440
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:89
+msgid "Revert to Title"
+msgstr "Đổi về tiêu đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:183
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:363
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:115
+msgid "Save Folder"
+msgstr "Thư mục lưu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:190
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:370
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:511
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:563
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:116
+msgid "Select Save Folder"
+msgstr "Chọn thư mục lưu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:199
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:379
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:117
+msgid "File Type"
+msgstr "Loại tệp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:200
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:380
+msgid "Generic types do not support embedding thumbnails and subtitles."
+msgstr "Loại chung không hỗ trợ nhúng hình thu nhỏ và phụ đề."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:204
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:95
+msgid "Video Format"
+msgstr "Định dạng video"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:208
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:96
+msgid "Audio Format"
+msgstr "Định dạng âm thanh"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:215
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:439
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:113
+msgid "Subtitles"
+msgstr "Phụ đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:224
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:448
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:101
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:135
+msgid "Search subtitles"
+msgstr "Tìm phụ đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:237
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:461
+msgid "Available Subtitles"
+msgstr "Phụ đề có sẵn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:245
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:420
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:470
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:133
+msgid "Deselect All"
+msgstr "Bỏ chọn tất cả"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:252
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:427
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:477
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:99
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:122
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:132
+msgid "Select All"
+msgstr "Chọn tất cả"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:266
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:491
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:325
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:111
+msgid "Advanced"
+msgstr "Nâng cao"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:270
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:399
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:495
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:12
+msgid "Options"
+msgstr "Tùy chọn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:273
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:502
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:102
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:103
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:139
+msgid "Split into Files by Chapters"
+msgstr "Tách thành nhiều tệp theo chương"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:277
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:506
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:104
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:140
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:141
+msgid "Export Description to File"
+msgstr "Xuất mô tả ra tệp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:281
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:510
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:142
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:143
+msgid "Exclude from History"
+msgstr "Xóa khỏi lịch sử"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:285
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:514
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:108
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:144
+msgid "Post Processor Argument"
+msgstr "Đối số bộ xử lý hậu kì"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:286
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:515
+msgid "Arguments are configurable in Preferences"
+msgstr "Đối số có thể cấu hình trong Tùy chọn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:290
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:19
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:109
+msgid "Start Time"
+msgstr "Thời điểm bắt đầu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:294
+#: Nickvision.Parabolic.Shared/Models/MediaSelectionItem.cs:20
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:110
+msgid "End Time"
+msgstr "Thời điểm kết thúc"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:384
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:120
+msgid "Suggested Video Resolution"
+msgstr "Độ phân giải video đề xuất"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:121
+msgid "Suggested Audio Bitrate"
+msgstr "Tốc độ bit âm thanh đề xuất"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:395
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:112
+msgid "Items"
+msgstr "Mục"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:402
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:125
+msgid "Reverse Download Order"
+msgstr "Đảo ngược thứ tự tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:406
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:126
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:127
+msgid "Number Titles"
+msgstr "Đánh số tiêu đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:407
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download"
+msgstr ""
+"Việc đánh số sẽ được áp dụng cho tiêu đề của các mục đã chọn theo thứ tự khi "
+"tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:412
+msgid "Available Items"
+msgstr "Các mục có sẵn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:462
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:134
+msgid ""
+"Note: Some playlist items may not contain subtitles for a selected language."
+msgstr ""
+"Lưu ý: Một số mục trong danh sách phát có thể không có phụ đề cho ngôn ngữ "
+"đã chọn."
+
+#: Nickvision.Parabolic.GNOME/Blueprints/AddDownloadDialog.blp:498
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:137
+msgid "Export M3U Playlist File"
+msgstr "Xuất tệp danh sách phát M3U"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:70
+msgid "View Log"
+msgstr "Xem nhật ký"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:87
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:196
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:168
+msgid "Pause"
+msgstr "Tạm dừng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:95
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:52
+msgid "Stop"
+msgstr "Dừng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:111
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:116
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:53
+msgid "Play"
+msgstr "Phát"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:119
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:54
+msgid "Open"
+msgstr "Mở"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:131
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:55
+msgid "Retry"
+msgstr "Thử lại"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/DownloadRow.blp:154
+msgid "Copy Log to Clipboard"
+msgstr "Chép nhật ký vào bộ nhớ tạm"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:41
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:6
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:38
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:89
+msgid "History"
+msgstr "Lịch sử"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:15
+msgid "Sort By"
+msgstr "Sắp xếp theo"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:43
+msgid "Newest"
+msgstr "Mới nhất"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:44
+msgid "Oldest"
+msgstr "Cũ nhất"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:36
+msgid "Save Length"
+msgstr "Thời gian lưu"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/HistoryDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:42
+msgid "Clear All"
+msgstr "Xóa tất cả"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:94
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:86
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:106
+msgid "Keyring"
+msgstr "Keyring"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:12
+msgid "Credentials"
+msgstr "Thông tin xác thực"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:17
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:52
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:447
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:111
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:51
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:112
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:148
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:210
+msgid "Add"
+msgstr "Thêm"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:43
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:472
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:76
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:151
+msgid "Name"
+msgstr "Tên"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/KeyringDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:82
+msgid "URL"
+msgstr "URL"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/LoadingDialog.blp:5
+msgid "Loading"
+msgstr "Đang tải"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:9
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:8
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:9
+msgid "Preferences"
+msgstr "Tùy chọn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:10
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:14
+msgid "Keyboard Shortcuts"
+msgstr "Phím tắt"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:11
+msgid "About Parabolic"
+msgstr "Giới thiệu về Parabolic"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:17
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:108
+msgid "Stop All Remaining"
+msgstr "Dừng tất cả còn lại"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:18
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:92
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:109
+msgid "Retry All Failed"
+msgstr "Thử lại tất cả thất bại"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:110
+msgid "Clear All Queued"
+msgstr "Xóa tất cả trong hàng chờ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:23
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:111
+msgid "Clear All Completed"
+msgstr "Xóa tất cả đã hoàn thành"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:61
+msgid "Main Menu"
+msgstr "Menu chính"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:70
+msgid "Updater"
+msgstr "Cập nhật"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:108
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:103
+msgid "Download Media"
+msgstr "Tải phương tiện"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:109
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:104
+msgid "Add a video, audio, or playlist URL to start downloading"
+msgstr ""
+"Thêm một liên kết đến video, âm thanh, hoặc danh sách phát để bắt đầu tải"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:140
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:113
+msgid "All"
+msgstr "Tất cả"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:145
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:206
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:81
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:114
+msgid "Running"
+msgstr "Đang chạy"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:150
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:107
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:115
+msgid "Queued"
+msgstr "Hàng chờ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:155
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:116
+msgid "Completed"
+msgstr "Hoàn tất"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:160
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:117
+msgid "Failed"
+msgstr "Thất bại"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:171
+msgid "Manage Download"
+msgstr "Quản lý tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:195
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:118
+msgid "No Downloads"
+msgstr "Không có tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/MainWindow.blp:196
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:119
+msgid "There are no downloads of this type"
+msgstr "Không có tải xuống nào của loại này"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:15
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:33
+msgid "User Interface"
+msgstr "Giao diện người dùng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:18
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:37
+msgid "Theme"
+msgstr "Chủ đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:27
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:39
+msgid "Translation Language"
+msgstr "Ngôn ngữ dịch thuật"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:28
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:40
+msgid "An application restart is required for a change to take effect"
+msgstr "Cần khởi động lại ứng dụng để thay đổi có hiệu lực"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:37
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:42
+msgid "Receive Preview Updates"
+msgstr "Nhận cập nhật xem trước"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:38
+msgid "Update dependencies, such as yt-dlp, to beta versions"
+msgstr "Cập nhật các phụ thuộc, chẳng hạn như yt-dlp, lên phiên bản beta"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:47
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:46
+msgid "Prevent Suspend"
+msgstr "Ngăn chặn tạm ngừng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:47
+msgid "Prevent the computer from sleeping while downloads are running"
+msgstr "Ngăn máy tính ngủ trong khi các tải xuống đang chạy"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:57
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:50
+msgid "Download History Length"
+msgstr "Độ dài lịch sử tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:58
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:51
+msgid "The amount of time to keep past downloads in the app's history"
+msgstr ""
+"Khoảng thời gian lưu giữ các tải xuống trước đó trong lịch sử của ứng dụng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:34
+msgid "Downloads"
+msgstr "Tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:71
+msgid "Max Number of Running Downloads"
+msgstr "Số lượng tải xuống chạy tối đa"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:54
+msgid "Overwrite Existing Files"
+msgstr "Ghi đè tệp đã tồn tại"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:96
+msgid "Limit Filename Characters"
+msgstr "Giới hạn ký tự tên tệp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:97
+msgid "Restrict characters in filenames to those supported only by Windows"
+msgstr "Hạn chế các ký tự trong tên tệp ở những ký tự chỉ được Windows hỗ trợ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:57
+msgid "Include Media Id in Title"
+msgstr "Bao gồm Id phương tiện trong tiêu đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:58
+msgid "Add the media's id to its default title"
+msgstr "Thêm id của phương tiện vào tiêu đề mặc định của nó"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:116
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:61
+msgid "Include Auto-Generated Subtitles"
+msgstr "Bao gồm phụ đề tự động"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:62
+msgid ""
+"Show auto-generated subtitles to download in addition to available subtitles"
+msgstr "Hiển thị phụ đề được tạo tự động để tải xuống ngoài phụ đề có sẵn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:126
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:65
+msgid "Include Super Resolution Formats"
+msgstr "Bao gồm các định dạng siêu phân giải"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:66
+msgid ""
+"Show super (AI-scaled) resolution formats to download in addition to regular "
+"formats"
+msgstr ""
+"Hiển thị các định dạng có độ phân giải siêu (theo tỷ lệ AI) để tải xuống "
+"ngoài các định dạng thông thường"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:69
+msgid "Preferred Video Codec"
+msgstr "Codec video ưu tiên"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:137
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:70
+msgid ""
+"Prefer this codec when parsing video formats to show available to download"
+msgstr ""
+"Thích codec này khi phân tích các định dạng video để hiển thị có sẵn để tải "
+"xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:146
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:72
+msgid "Preferred Audio Codec"
+msgstr "Codec âm thanh ưu tiên"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:147
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:73
+msgid ""
+"Prefer this codec when parsing audio formats to show available to download"
+msgstr ""
+"Ưu tiên codec này khi phân tích cú pháp các định dạng âm thanh để hiển thị "
+"có sẵn để tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:156
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:75
+msgid "Preferred Subtitle Format"
+msgstr "Định dạng phụ đề ưa thích"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:157
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:76
+msgid "Prefer this subtitle file format when downloading"
+msgstr "Ưu tiên định dạng tệp phụ đề này khi tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:166
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:78
+msgid "Preferred Frame Rate"
+msgstr "Fps (Tốc độ khung hình) mong muốn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:167
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:79
+msgid ""
+"Prefer this frame rate when parsing video formats to show available to "
+"download"
+msgstr ""
+"Ưu tiên fps này khi phân tích các định dạng video để hiển thị có sẵn để tải "
+"xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:178
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:182
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:35
+msgid "Downloader"
+msgstr "Trình tải"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:185
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:81
+msgid "Use Part Files"
+msgstr "Sử dụng tệp phần"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:186
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:82
+msgid ""
+"Download media in separate .part files instead of directly into the output "
+"file"
+msgstr ""
+"Tải xuống phương tiện ở các tệp .part riêng biệt thay vì trực tiếp vào tệp "
+"đầu ra"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:195
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:85
+msgid "Use SponsorBlock for YouTube"
+msgstr "Sử dụng SponsorBlock với YouTube"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:196
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:86
+msgid "Try to remove sponsored segments from videos"
+msgstr "Cố gắng xóa các phân đoạn được tài trợ khỏi video"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:205
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:89
+msgid "Limit Download Speed"
+msgstr "Giới hạn tốc độ tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:210
+msgid "Speed Limit (KiB/s)"
+msgstr "Giới hạn tốc độ (KiB/s)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:93
+msgid "Proxy URL"
+msgstr "URL của proxy"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:237
+msgid "Cookies File"
+msgstr "Tệp cookie"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:248
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:268
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:99
+msgid "Select Cookies File"
+msgstr "Chọn tệp cookie"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:257
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:98
+msgid "Clear Cookies File"
+msgstr "Xóa tệp cookie"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:100
+msgid "Cookies from Browser"
+msgstr "Cookie từ trình duyệt"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:276
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:102
+msgid "aria2c"
+msgstr "aria2c"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:277
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:104
+msgid ""
+"An alternative downloader that may be faster in some regions compared to yt-"
+"dlp's native downloader"
+msgstr ""
+"Trình tải xuống thay thế có thể nhanh hơn ở một số khu vực so với trình tải "
+"xuống gốc của yt-dlp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:280
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:103
+msgid "Use aria2c"
+msgstr "Sử dụng aria2c"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:289
+msgid "Max Connections Per Server (-x)"
+msgstr "Số kết nối tối đa mỗi máy chủ (-x)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:306
+msgid "Minimum Split Size (-k)"
+msgstr "Kích thước tách tối thiểu (-k)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:307
+msgid "The minimum size of which to split a file (in MiB)"
+msgstr "Kích thước tối thiểu để chia một tệp (tính bằng MiB)"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:326
+msgid "Specify extra arguments to pass to yt-dlp"
+msgstr "Chỉ định các tham số bổ sung để truyền cho yt-dlp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:329
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:112
+msgid "yt-dlp Discovery Arguments"
+msgstr "Đối số khám phá yt-dlp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:338
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:115
+msgid "yt-dlp Download Arguments"
+msgstr "Đối số tải xuống yt-dlp"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:349
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:353
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:36
+msgid "Converter"
+msgstr "Bộ chuyển đổi"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:356
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:118
+msgid "Translate Metadata and Chapters"
+msgstr "Dịch siêu dữ liệu và chương"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:119
+msgid ""
+"Automatically translate embedded metadata and chapters to the app's language "
+"on supported sites and media"
+msgstr ""
+"Tự động dịch (siêu dữ liệu và chương được nhúng) sang ngôn ngữ của ứng dụng "
+"trên các trang web và phương tiện truyền thông được hỗ trợ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:366
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:122
+msgid "Embed Metadata"
+msgstr "Nhúng metadata"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:376
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:125
+msgid "Remove Source Data"
+msgstr "Xóa dữ liệu nguồn"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:377
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:126
+msgid "Clear metadata fields containing identifying download information"
+msgstr "Xóa các trường siêu dữ liệu chứa thông tin tải xuống nhận dạng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:387
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:129
+msgid "Embed Thumbnails"
+msgstr "Nhúng hình thu nhỏ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:388
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:130
+msgid ""
+"If the file type does not support embedding, the thumbnail will be written "
+"to a separate image file"
+msgstr ""
+"Nếu loại tệp không hỗ trợ nhúng thì hình thu nhỏ sẽ được ghi vào file ảnh "
+"riêng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:398
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:133
+msgid "Crop Audio Thumbnails"
+msgstr "Cắt hình thu nhỏ âm thanh"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:399
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:134
+msgid "Crop thumbnails of audio files to squares"
+msgstr "Cắt hình thu nhỏ của tệp âm thanh thành hình vuông"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:409
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:137
+msgid "Embed Chapters"
+msgstr "Nhúng chương"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:418
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:140
+msgid "Embed Subtitles"
+msgstr "Nhúng phụ đề"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:419
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:141
+msgid ""
+"If disabled or if embedding is not supported, downloaded subtitles will be "
+"saved to separate files"
+msgstr ""
+"Nếu bị tắt hoặc nếu tính năng nhúng không được hỗ trợ, phụ đề đã tải xuống "
+"sẽ được lưu vào các tệp riêng biệt"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:428
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:144
+msgid "FFmpeg Threads"
+msgstr "Luồng FFmpeg"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:429
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:145
+msgid "Limit the number of threads used by ffmpeg"
+msgstr "Giới hạn số luồng được ffmpeg sử dụng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:440
+msgid "Postprocessing Arguments"
+msgstr "Đối số xử lý hậu kỳ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:441
+msgid "Arguments will be shown for selection in the add download dialog"
+msgstr "Các đối số sẽ được hiển thị để lựa chọn trong hộp thoại thêm tải xuống"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:443
+msgid "Add Postprocessing Argument"
+msgstr "Thêm đối số xử lý hậu kỳ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:457
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:149
+msgid "Argument"
+msgstr "Đối số"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:476
+msgid "Post Processor"
+msgstr "Bộ xử lý hậu kỳ"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:480
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:154
+msgid "Executable"
+msgstr "Có thể thực thi"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/PreferencesDialog.blp:484
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:155
+msgid "Args"
+msgstr "Đối số"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:6
+msgctxt "Shortcut"
+msgid "Application"
+msgstr "Ứng dụng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:19
+msgid "About Application"
+msgstr "Giới thiệu ứng dụng"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:24
+msgid "Quit"
+msgstr "Thoát"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:30
+msgid "Folder"
+msgstr "Thư mục"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:33
+msgid "Open Folder"
+msgstr "Mở thư mục"
+
+#: Nickvision.Parabolic.GNOME/Blueprints/ShortcutsDialog.blp:38
+msgid "Close Folder"
+msgstr "Đóng thư mục"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:112
+msgid "Starting"
+msgstr "Bắt đầu"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:117
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:183
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:184
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:155
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:156
+msgid "Unknown"
+msgstr "Không xác định"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:139
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:139
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:315
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:325
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:109
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:266
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:226
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:289
+msgid "Error"
+msgstr "Lỗi"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:147
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:116
+msgid "Success"
+msgstr "Thành công"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:156
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:125
+msgid "Paused"
+msgstr "Tạm dừng"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:159
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:128
+msgid "Resume"
+msgstr "Tiếp tục"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:173
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:141
+msgid "Processing"
+msgstr "Đang xử lý"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:177
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:147
+#, csharp-format
+msgid "Sleeping for {0}"
+msgstr "Ngủ trong {0}"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:181
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:153
+#, csharp-format
+msgid "{0}% Complete • {1} • {2} Remaining"
+msgstr "{0}% Hoàn thành • {1} • Còn lại {2}"
+
+#: Nickvision.Parabolic.GNOME/Controls/DownloadRow.cs:213
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:184
+msgid "Stopped"
+msgstr "Đã dừng"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:286
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:270
+msgid "TXT Files (*.txt)"
+msgstr "Tệp TXT (*.txt)"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:378
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:478
+msgid "No Subtitles Available"
+msgstr "Không có phụ đề"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:410
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:434
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:280
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:485
+#, csharp-format
+msgid "Total Duration: {0}"
+msgstr "Tổng thời lượng: {0}"
+
+#: Nickvision.Parabolic.GNOME/Views/AddDownloadDialog.cs:463
+msgid "Properties"
+msgstr "Thuộc tính"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:59
+msgid "Clear All History?"
+msgstr "Xóa toàn bộ lịch sử?"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:81
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:60
+msgid ""
+"Are you sure you want to clear all download history? This action is "
+"irreversible"
+msgstr ""
+"Bạn có chắc chắn muốn xóa toàn bộ lịch sử tải xuống không? Hành động này "
+"không thể hoàn tác"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:82
+msgid "Clear"
+msgstr "Xóa"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:83
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:166
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:359
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:65
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:173
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:231
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:69
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:125
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:150
+msgid "Cancel"
+msgstr "Hủy"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:111
+msgid "Download Again"
+msgstr "Tải lại"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:122
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:82
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:165
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:230
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:358
+msgid "Delete"
+msgstr "Xóa"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:129
+#, csharp-format
+msgid "Downloaded On: {0}"
+msgstr "Đã tải vào: {0}"
+
+#: Nickvision.Parabolic.GNOME/Views/HistoryDialog.cs:140
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:46
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:48
+msgid "No History"
+msgstr "Không có lịch sử"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:77
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:158
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:225
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:351
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:85
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:97
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:52
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:54
+msgid "No Credentials"
+msgstr "Không có thông tin xác thực"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:140
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:326
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:228
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:291
+msgid "OK"
+msgstr "Đồng ý"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:144
+msgid "Delete Credential?"
+msgstr "Xóa thông tin xác thực?"
+
+#: Nickvision.Parabolic.GNOME/Views/KeyringDialog.cs:164
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:145
+msgid ""
+"Are you sure you want to delete this credential? This action is irreversible"
+msgstr ""
+"Bạn có chắc chắn muốn xóa thông tin xác thực này không? Hành động này không "
+"thể hoàn tác"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:197
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:138
+msgid "Don't show this message again"
+msgstr "Đừng hiển thị thông báo này nữa"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:142
+msgid "Legal Copyright Disclaimer"
+msgstr "Tuyên bố từ chối trách nhiệm về bản quyền hợp pháp"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:198
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:151
+msgid ""
+"Videos on YouTube and other sites may be subject to DMCA protection. The "
+"authors of Parabolic do not endorse, and are not responsible for, the use of "
+"this application in means that will violate these laws."
+msgstr ""
+"Video trên YouTube và các trang web khác có thể được bảo vệ theo DMCA. Các "
+"tác giả của Parabolic không xác nhận và không chịu trách nhiệm về việc sử "
+"dụng ứng dụng này theo cách vi phạm các luật này."
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:199
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:157
+msgid "I understand"
+msgstr "Tôi hiểu"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:172
+msgid "Recover Downloads?"
+msgstr "Khôi phục các tải xuống?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:211
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:173
+msgid ""
+"There are downloads available to recover from when Parabolic crashed. Would "
+"you like to download them again?"
+msgstr ""
+"Có các tải xuống có thể khôi phục từ khi Parabolic bị lỗi. Bạn có muốn tải "
+"lại chúng không?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:212
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:243
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:61
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:146
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:174
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:206
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:252
+msgid "Yes"
+msgstr "Có"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:213
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:244
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:62
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:147
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:175
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:207
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:253
+msgid "No"
+msgstr "Không"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:205
+msgid ""
+"There are downloads still in progress. Would you like to stop them and exit?"
+msgstr ""
+"Vẫn còn các tải xuống đang diễn ra. Bạn có muốn dừng chúng và thoát không?"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:272
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:88
+msgid "View"
+msgstr "Xem"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:282
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:297
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:242
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:248
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:254
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:273
+msgid "Update"
+msgstr "Cập nhật"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:287
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:302
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:421
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:405
+#, csharp-format
+msgid "Downloading update: {0}%"
+msgstr "Đang tải cập nhật: {0}%"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:312
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:260
+msgid "Details"
+msgstr "Chi tiết"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:317
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:23
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:39
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:277
+msgid "Close"
+msgstr "Đóng"
+
+#: Nickvision.Parabolic.GNOME/Views/MainWindow.cs:453
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:97
+msgid "GitHub Repo"
+msgstr "GitHub Repo"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:151
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:287
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:180
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:241
+msgid "No file selected"
+msgstr "Không có tệp nào được chọn"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:245
+msgid "No Arguments"
+msgstr "Không có đối số"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:250
+msgid "Delete Argument?"
+msgstr "Xóa đối số?"
+
+#: Nickvision.Parabolic.GNOME/Views/PreferencesDialog.cs:357
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:251
+msgid ""
+"Are you sure you want to delete this post-processor argument? This action is "
+"irreversible"
+msgstr ""
+"Bạn có chắc chắn muốn xóa đối số bộ xử lý hậu kì này không? Hành động này "
+"không thể hoàn tác"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:169
+msgid "An error occurred while adding playlist downloads"
+msgstr "Xuất hiện lỗi khi thêm tải xuống danh sách phát"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:244
+msgid "An error occurred while adding the single download"
+msgstr "Xuất hiện lỗi khi thêm tải xuống đơn"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:261
+msgid "No media was found at the provided URL"
+msgstr "Không tìm thấy phương tiện tại URL đã cung cấp"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:309
+#: Nickvision.Parabolic.Shared/Models/Format.cs:354
+#: Nickvision.Parabolic.Shared/Models/Format.cs:355
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:37
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:79
+msgid "Worst"
+msgstr "Thấp nhất"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:310
+#: Nickvision.Parabolic.Shared/Models/Format.cs:352
+#: Nickvision.Parabolic.Shared/Models/Format.cs:353
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:33
+#: Nickvision.Parabolic.Shared/Models/VideoResolution.cs:75
+msgid "Best"
+msgstr "Cao nhất"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:335
+msgid "Video (Generic)"
+msgstr "Video (Chung)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:336
+msgid "MP4 (Video)"
+msgstr "MP4 (Video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:337
+msgid "WEBM (Video)"
+msgstr "Video"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:338
+msgid "MKV (Video)"
+msgstr "MKV (Video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:339
+msgid "MOV (Video)"
+msgstr "MOV (Video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:340
+msgid "AVI (Video)"
+msgstr "AVI (Video)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:342
+msgid "Audio (Generic)"
+msgstr "Âm thanh (Chung)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:343
+msgid "MP3 (Audio)"
+msgstr "MP3 (Âm thanh)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:344
+msgid "M4A (Audio)"
+msgstr "M4A (Âm thanh)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:345
+msgid "OPUS (Audio)"
+msgstr "OPUS (Âm thanh)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:346
+msgid "FLAC (Audio)"
+msgstr "FLAC (Âm thanh)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:347
+msgid "WAV (Audio)"
+msgstr "WAV (Âm thanh)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:348
+msgid "OGG (Audio)"
+msgstr "OPUS (Âm thanh)"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:381
+msgid "An error occurred while discovering media"
+msgstr "Xuất hiện lỗi khi khám phá phương tiện"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:395
+msgid "Use manual credential"
+msgstr "Dùng thông tin xác thực thủ công"
+
+#: Nickvision.Parabolic.Shared/Controllers/AddDownloadDialogController.cs:414
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:60
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:75
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:105
+#: Nickvision.Parabolic.Shared/Models/Format.cs:356
+#: Nickvision.Parabolic.Shared/Models/Format.cs:357
+msgid "None"
+msgstr "Không"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:29
+msgid "A credential with that name already exists"
+msgstr "Một thông tin xác thực với tên này đã tồn tại"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:33
+msgid "The name of the credential cannot be empty"
+msgstr "Tên thông tin xác thực không được để trống"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:37
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:79
+msgid "Either the credential username or password must be set"
+msgstr "Phải đặt tên người dùng hoặc mật khẩu của thông tin xác thực"
+
+#: Nickvision.Parabolic.Shared/Controllers/KeyringViewController.cs:75
+msgid "A credential with that name does not exist"
+msgstr "Thông tin xác thực với tên này không tồn tại"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:61
+msgid "Parabolic"
+msgstr "Parabolic"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:62
+msgid "Download web video and audio."
+msgstr "Tải xuống video và âm thanh từ web."
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:63
+msgid "Matrix Chat"
+msgstr "Nhắn tin Matrix"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:65
+msgid "Contributors on GitHub ❤️"
+msgstr "Người đóng góp trên GitHub ❤️"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:67
+msgid "Fyodor Sobolev"
+msgstr "Fyodor Sobolev"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:69
+msgid "David Lapshin"
+msgstr "David Lapshin"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:70
+msgid "translation-credits"
+msgstr "Ghi công bản dịch"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:159
+#, csharp-format
+msgid "New {0} update available: {1}"
+msgstr "Có cập nhật {0} mới: {1}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:168
+#, csharp-format
+msgid "New yt-dlp update available: {0}"
+msgstr "Có cập nhật yt-dlp mới: {0}"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:176
+#, csharp-format
+msgid "New deno update available: {0}"
+msgstr "Có cập nhật {0} mới"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:186
+msgid "No update available"
+msgstr "Không có cập nhật"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:200
+msgid "An error occurred while clearing completed downloads"
+msgstr "Xuất hiện lỗi khi xóa các tải xuống đã hoàn thành"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:218
+msgid "An error occurred while clearing recoverable downloads"
+msgstr "Xuất hiện lỗi khi xóa các tải xuống có thể khôi phục"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:235
+msgid "An error occurred while clearing queued downloads"
+msgstr "Xuất hiện lỗi khi xóa các tải xuống trong hàng chờ"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:249
+#, csharp-format
+msgid "Deno {0} installed successfully"
+msgstr "Deno {0} đã được cài đặt thành công"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:253
+msgid "Unable to download and install the Deno update"
+msgstr "Không thể tải và cài đặt bản cập nhật của Deno"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:282
+msgid "An error occurred while pausing the download"
+msgstr "Xuất hiện lỗi khi tạm dừng tải xuống"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:300
+msgid "An error occurred while recovering downloads"
+msgstr "Xuất hiện lỗi khi khôi phục tải xuống"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:317
+msgid "An error occurred while resuming the download"
+msgstr "Xuất hiện lỗi khi tiếp tục tải xuống"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:335
+msgid "An error occurred while retrying failed downloads"
+msgstr "Xuất hiện lỗi khi thử lại các tải xuống thất bại"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:352
+msgid "An error occurred while retrying the download"
+msgstr "Xuất hiện lỗi khi thử lại tải xuống"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:370
+msgid "An error occurred while stopping all downloads"
+msgstr "Xuất hiện lỗi khi dừng tất cả tải xuống"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:387
+msgid "An error occurred while stopping the download"
+msgstr "Xuất hiện lỗi khi dừng tải xuống"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:401
+#, csharp-format
+msgid "Starting {0} installer..."
+msgstr "Đang bắt đầu trình cài đặt {0}..."
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:405
+msgid "Unable to download and install the update"
+msgstr "Không thể tải và cài đặt bản cập nhật"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:414
+#, csharp-format
+msgid "yt-dlp {0} installed successfully"
+msgstr "yt-dlp {0} đã được cài đặt thành công"
+
+#: Nickvision.Parabolic.Shared/Controllers/MainWindowController.cs:418
+msgid "Unable to download and install the yt-dlp update"
+msgstr "Không thể tải và cài đặt bản cập nhật yt-dlp"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:39
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:87
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:118
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:132
+msgid "Any"
+msgstr "Bất kì"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:40
+msgid "FLAC (ALAC)"
+msgstr "FLAC (ALAC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:41
+msgid "WAV (AIFF)"
+msgstr "WAV (AIFF)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:49
+msgid "System"
+msgstr "Hệ thống"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:61
+msgid "Firefox"
+msgstr "Firefox"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:65
+msgid "Brave"
+msgstr "Brave"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:66
+msgid "Chrome"
+msgstr "Chrome"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:67
+msgid "Chromium"
+msgstr "Chromium"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:68
+msgid "Edge"
+msgstr "Edge"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:69
+msgid "Opera"
+msgstr "Opera"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:70
+msgid "Vivaldi"
+msgstr "Vivaldi"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:71
+msgid "Whale"
+msgstr "Whale"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:88
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:89
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:90
+#: Nickvision.Parabolic.Shared/Models/Format.cs:269
+#: Nickvision.Parabolic.Shared/Models/Format.cs:270
+#: Nickvision.Parabolic.Shared/Models/Format.cs:271
+#, csharp-format
+msgid "{0} FPS"
+msgstr "{0} FPS (Khung hình mỗi giây)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:94
+msgid "Never"
+msgstr "Không bao giờ"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:95
+msgid "1 Day"
+msgstr "1 ngày"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:96
+msgid "1 Week"
+msgstr "1 tuần"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:97
+msgid "1 Month"
+msgstr "1 tháng"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:98
+msgid "3 Months"
+msgstr "3 tháng"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:99
+msgid "6 Months"
+msgstr "6 tháng"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:100
+msgid "1 Year"
+msgstr "1 năm"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:101
+msgid "Forever"
+msgstr "Mãi mãi"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:126
+msgctxt "Theme"
+msgid "Light"
+msgstr "Sáng"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:127
+msgctxt "Theme"
+msgid "Dark"
+msgstr "Tối"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:128
+msgctxt "Theme"
+msgid "System"
+msgstr "Hệ thống"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:135
+msgid "H.264 (AVC)"
+msgstr "H.264 (AVC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:136
+msgid "H.265 (HEVC)"
+msgstr "H.265 (HEVC)"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:366
+msgid "An argument with that name already exists"
+msgstr "Đã tồn tại một đối số có tên này"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:370
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:402
+msgid "The name of the argument cannot be empty"
+msgstr "Tên của đối số không được để trống"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:374
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:406
+msgid "The arguments of the argument cannot be empty"
+msgstr "Các tham số của đối số không được để trống"
+
+#: Nickvision.Parabolic.Shared/Controllers/PreferencesViewController.cs:398
+msgid "An argument with that name does not exist"
+msgstr "Đối số với tên này không tồn tại"
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:98
+msgid "The file already exists and overwriting is disabled."
+msgstr "Tệp đã tồn tại và chế độ ghi đè đã bị tắt."
+
+#: Nickvision.Parabolic.Shared/Models/Download.cs:115
+msgid "Starting download..."
+msgstr "Đang bắt đầu tải xuống..."
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:250
+#: Nickvision.Parabolic.Shared/Models/Format.cs:304
+msgid "Audio Description"
+msgstr "Mô tả âm thanh"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:335
+#, csharp-format
+msgid "{0:0.00} GiB"
+msgstr "{0:0.00} GiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:339
+#, csharp-format
+msgid "{0:0.00} MiB"
+msgstr "{0:0.00} MiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:343
+#, csharp-format
+msgid "{0:0.00} KiB"
+msgstr "{0:0.00} KiB"
+
+#: Nickvision.Parabolic.Shared/Models/Format.cs:347
+#, csharp-format
+msgid "{0:0.00} B"
+msgstr "{0:0.00} B"
+
+#: Nickvision.Parabolic.Shared/Models/SubtitleLanguage.cs:49
+#, csharp-format
+msgid "{0} (Auto-generated)"
+msgstr "{0} (Tự động tạo)"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:22
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:100
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:417
+#, csharp-format
+msgid "About {0}"
+msgstr "Giới thiệu {0}"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:26
+msgid "Changelog"
+msgstr "Nhật ký thay đổi"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:27
+msgid "Debugging"
+msgstr "Gỡ lỗi"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:28
+msgid "Credits"
+msgstr "Ghi công"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:34
+msgid "Copy Debug Information"
+msgstr "Chép thông tin debug"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:37
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}"
+msgstr ""
+"Lập trình viên:\n"
+"{0}\n"
+"\n"
+"Thiết kế:\n"
+"{1}\n"
+"\n"
+"Nghệ sĩ:\n"
+"{2}"
+
+#: Nickvision.Parabolic.WinUI/Controls/AboutDialog.xaml.cs:41
+#, csharp-format
+msgid ""
+"Developers:\n"
+"{0}\n"
+"\n"
+"Designers:\n"
+"{1}\n"
+"\n"
+"Artists:\n"
+"{2}\n"
+"\n"
+"Translators:\n"
+"{3}"
+msgstr ""
+"Lập trình viên:\n"
+"{0}\n"
+"\n"
+"Thiết kế:\n"
+"{1}\n"
+"\n"
+"Nghệ sĩ:\n"
+"{2}\n"
+"\n"
+"Người dịch:\n"
+"{3}"
+
+#: Nickvision.Parabolic.WinUI/Controls/DownloadRow.xaml.cs:50
+msgid "Log"
+msgstr "Nhật ký"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:69
+msgid "Enter media url here"
+msgstr "Nhập url phương tiện ở đây"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:75
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:122
+msgid "Enter username here"
+msgstr "Nhập tên người dùng ở đây"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:123
+msgid "Enter password here"
+msgstr "Nhập mật khẩu vào đây"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:82
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:93
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:118
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:128
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:83
+msgid ""
+"Parabolic will download media based off of previously configured options and "
+"sensible defaults. Options including save folder, format, and subtitle "
+"selection will not be shown."
+msgstr ""
+"Parabolic sẽ tải xuống phương tiện dựa trên các tùy chọn đã cấu hình trước "
+"và các giá trị mặc định hợp lý. Các tùy chọn bao gồm thư mục lưu, định dạng "
+"và lựa chọn phụ đề sẽ không được hiển thị."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:94
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:119
+msgid ""
+"Generic types do not support embedding thumbnails and subtitles. If "
+"necessary, please select a specific type that is known to support embedding "
+"to prevent separate files from being written."
+msgstr ""
+"Các loại chung không hỗ trợ nhúng hình thu nhỏ và phụ đề. Nếu cần, vui lòng "
+"chọn một loại cụ thể được biết là hỗ trợ nhúng để ngăn các tệp riêng biệt "
+"được ghi."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:97
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:130
+msgid "No Subtitles"
+msgstr "Không có phụ đề"
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:98
+msgid "No subtitles were found for this media."
+msgstr "Không tìm thấy phụ đề cho phương tiện này."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:129
+msgid ""
+"Numbering will be applied to titles of selected items in succession on "
+"download."
+msgstr ""
+"Việc đánh số sẽ được áp dụng cho tiêu đề của các mục đã chọn theo thứ tự khi "
+"tải xuống."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:131
+msgid "No subtitles were found in this playlist."
+msgstr "Không tìm thấy phụ đề trong danh sách phát này."
+
+#: Nickvision.Parabolic.WinUI/Views/AddDownloadDialog.xaml.cs:229
+msgid "Configure Download"
+msgstr "Cấu hình tải xuống"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:40
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:50
+msgid "Search..."
+msgstr "Tìm kiếm..."
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:41
+msgid "Sort"
+msgstr "Sắp xếp"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:45
+msgid "Please wait..."
+msgstr "Vui lòng đợi..."
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:47
+msgid "There are no downloads in your history"
+msgstr "Không có tải xuống nào trong lịch sử của bạn"
+
+#: Nickvision.Parabolic.WinUI/Views/HistoryDialog.xaml.cs:49
+msgid "There are no downloads found with the current filters"
+msgstr "Không tìm thấy tải xuống nào với bộ lọc hiện tại"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:53
+msgid "There are no credentials in your keyring"
+msgstr "Không có thông tin xác thực trong keyring của bạn"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:55
+msgid "There are no credentials found with the current filters"
+msgstr "Không tìm thấy thông tin xác thực nào với bộ lọc hiện tại"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:77
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:152
+msgid "Enter name here"
+msgstr "Nhập tên vào đây"
+
+#: Nickvision.Parabolic.WinUI/Views/KeyringDialog.xaml.cs:83
+msgid "Enter url here"
+msgstr "Nhập url vào đây"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:82
+msgid "File"
+msgstr "Tệp"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:84
+msgid "Exit"
+msgstr "Thoát"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:107
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:32
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:95
+msgid "Help"
+msgstr "Trợ giúp"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:96
+msgid "Check for Updates"
+msgstr "Kiểm tra bản cập nhật"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:98
+msgid "Report a Bug"
+msgstr "Báo lỗi"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:99
+msgid "Discussions"
+msgstr "Thảo luận"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:101
+#, csharp-format
+msgid "You are running a preview version of {0}"
+msgstr "Bạn đang chạy phiên bản xem trước của {0}"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:102
+msgid "Thank you for testing the upcoming features and changes! ❤️"
+msgstr "Cảm ơn bạn đã thử nghiệm các tính năng và thay đổi sắp tới! ❤️"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:121
+msgid "Credential Required"
+msgstr "Yêu cầu thông tin xác thực"
+
+#: Nickvision.Parabolic.WinUI/Views/MainWindow.xaml.cs:124
+msgid "Submit"
+msgstr "Gửi"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:43
+msgid "Update Parabolic and dependencies, such as yt-dlp, to beta versions"
+msgstr ""
+"Cập nhật Parabolic và các phụ thuộc, chẳng hạn như yt-dlp, lên phiên bản beta"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:44
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:48
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:55
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:59
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:63
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:67
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:83
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:87
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:90
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:105
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:120
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:123
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:127
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:131
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:135
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:138
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:142
+msgid "On"
+msgstr "Bật"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:45
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:49
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:56
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:60
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:64
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:68
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:84
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:88
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:91
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:106
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:121
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:124
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:128
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:132
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:136
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:139
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:143
+msgid "Off"
+msgstr "Tắt"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:53
+msgid "Max Number of Active Downloads"
+msgstr "Số lượt tải xuống hoạt động tối đa"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:92
+msgid "Speed Limit"
+msgstr "Giới hạn tốc độ"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:94
+msgid "Enter proxy url here"
+msgstr "Nhập url proxy ở đây"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:95
+msgid "Cookies from File"
+msgstr "Cookie từ tệp"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:96
+msgid "Upload a txt cookies file from unlisted browsers"
+msgstr "Tải lên tệp txt chứa cookie từ các trình duyệt không được liệt kê"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:107
+msgid "Max Connections Per Server"
+msgstr "Số kết nối tối đa mỗi máy chủ"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:108
+msgid "Corresponds to -x option"
+msgstr "Tương ứng với tùy chọn -x"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:109
+msgid "Minimum Split Size (MiB)"
+msgstr "Kích thước tách tối thiểu (MiB)"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:110
+msgid "Corresponds to -k option"
+msgstr "Tương ứng với tùy chọn -k"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:113
+msgid "Extra arguments to pass to yt-dlp when discovering media"
+msgstr "Đối số bổ sung cần chuyển tới yt-dlp khi khám phá phương tiện"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:114
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:117
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:156
+msgid "Enter args here"
+msgstr "Nhập đối số vào đây"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:116
+msgid "Extra arguments to pass to yt-dlp when downloading media"
+msgstr "Đối số bổ sung cần chuyển tới yt-dlp khi tải xuống phương tiện"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:147
+msgid "Post-Processor Arguments"
+msgstr "Đối số bộ xử lý hậu kì"
+
+#: Nickvision.Parabolic.WinUI/Views/SettingsPage.xaml.cs:153
+msgid "Post-Processor"
+msgstr "Bộ xử lý hậu kỳ"
+
+#, csharp-format
+#~ msgid "A credential is required to continue the download of \"{0}\"."
+#~ msgstr "Cần có thông tin xác thực để tiếp tục tải xuống \"{0}\"."
+
+#, fuzzy
+#~ msgid "Password Required"
+#~ msgstr "Mật khẩu"
+
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "Tìm kiếm..."
+
+#~ msgid "Preview"
+#~ msgstr "Xem trước"
+
+#~ msgid "Home"
+#~ msgstr "Trang chủ"
+
+#~ msgid "Updating"
+#~ msgstr "Đang cập nhật"
+
+#, fuzzy
+#~ msgid "An error occured while erasing file metadata"
+#~ msgstr "Xuất hiện lỗi khi khám phá phương tiện"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} • {1}"
+#~ msgstr "{} • {}"
+
+#, fuzzy
+#~ msgid "close"
+#~ msgstr "Đóng"
+
+#, fuzzy, csharp-format
+#~ msgid "{0} downloads remaining"
+#~ msgstr "Không có mục tải xuống nào đang chạy"
+
+#, fuzzy
+#~ msgid "One Day"
+#~ msgstr "1 ngày"
+
+#, fuzzy
+#~ msgid "One Week"
+#~ msgstr "1 tuần"
+
+#, fuzzy
+#~ msgid "One Month"
+#~ msgstr "1 tháng"
+
+#~ msgid "Three Months"
+#~ msgstr "3 tháng"
+
+#, fuzzy
+#~ msgid "There are no downloads added"
+#~ msgstr "Khi đã tải xong tất cả"
+
+#, fuzzy
+#~ msgid "Add a download to get started"
+#~ msgstr "Thêm một tài khoản để bắt đầu."
+
+#~ msgid "Arguments"
+#~ msgstr "Đối số"
+
+#, fuzzy
+#~ msgid "The name cannot be empty."
+#~ msgstr "Tên đối số không được để trống."
+
+#~ msgid "Manage"
+#~ msgstr "Quản lý"
+
+#~ msgid "Postprocessing"
+#~ msgstr "Xử lý hậu kỳ"
+
+#, fuzzy
+#~ msgid "Add Argument"
+#~ msgstr "Chỉnh sửa đối số"
+
+#~ msgid "Edit Argument"
+#~ msgstr "Chỉnh sửa đối số"
+
+#~ msgid "Delete Argument"
+#~ msgstr "Xóa đối số"
+
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "{}"
+#~ msgstr ""
+#~ "Lỗi trong quá trình xác thực yt-dlp:\n"
+#~ "{}"
+
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "<span font_family='monospace'>{}</span>"
+#~ msgstr ""
+#~ "Lỗi trong quá trình xác thực yt-dlp:\n"
+#~ "<span font_family='monospace'>{}</span>"
+
+#~ msgid "Error during download validation: {}"
+#~ msgstr "Lỗi trong quá trình xác thực tải xuống: {}"
+
+#~ msgid "Error attempting to add download: {}"
+#~ msgstr "Lỗi thêm nội dung tải xuống: {}"
+
+#~ msgid "Error attempting to recover downloads: {}"
+#~ msgstr "Lỗi hồi phục lại các tệp tải xuống: {}"
+
+#~ msgid "Download Finished"
+#~ msgstr "Đã tải xong"
+
+#~ msgid "{} has finished downloading"
+#~ msgstr "{} đã tải xuống xong"
+
+#~ msgid "Download Failed"
+#~ msgstr "Tải xuống không thành công"
+
+#~ msgid "{} has finished with an error"
+#~ msgstr "\"{0}\" đã tải xong nhưng bị lỗi"
+
+#~ msgid "0 B/s"
+#~ msgstr "0 B/s"
+
+#~ msgid "{:.2f} GiB/s"
+#~ msgstr "{:.2f} GiB/s"
+
+#~ msgid "{:.2f} MiB/s"
+#~ msgstr "{:.2f} MiB/s"
+
+#~ msgid "{:.2f} KiB/s"
+#~ msgstr "{:.2f} KiB/s"
+
+#~ msgid "{:.2f} B/s"
+#~ msgstr "{:.2f} B/s"
+
+#~ msgid "Unknown time left"
+#~ msgstr "Thời gian còn lại không xác định"
+
+#~ msgid "0 seconds"
+#~ msgstr "0 giây"
+
+#~ msgid "{} hour"
+#~ msgid_plural "{} hours"
+#~ msgstr[0] "{} giờ"
+
+#~ msgid "{} and "
+#~ msgstr "{} và "
+
+#~ msgid "{} minute"
+#~ msgid_plural "{} minutes"
+#~ msgstr[0] "{} phút"
+
+#~ msgid "{} second"
+#~ msgid_plural "{} seconds"
+#~ msgstr[0] "{} giây"
+
+#~ msgid "{} left"
+#~ msgid_plural "{} left"
+#~ msgstr[0] "{} còn lại"
+
+#~ msgid "{:.2f} B"
+#~ msgstr "{:.2f} B"
+
+#~ msgid "Unable to download yt-dlp update"
+#~ msgstr "Không thể tải xuống bản cập nhật yt-dlp"
+
+#~ msgid "Validate"
+#~ msgstr "Xác thực"
+
+#~ msgid "Use Batch File"
+#~ msgstr "Dùng file Batch"
+
+#~ msgid "Authenticate"
+#~ msgstr "Xác thực"
+
+#~ msgid "Use your previous download options for this download"
+#~ msgstr "Sử dụng cấu hình trước cho lần tải này"
+
+#~ msgid "Validating"
+#~ msgstr "Đang xác thực"
+
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and "
+#~ "subtitles.\n"
+#~ "Please select a specific file type that is known to support embedding\n"
+#~ "to prevent separate files from being written."
+#~ msgstr ""
+#~ "Những loại tệp chung không hỗ trợ thumbnail và phụ đề.\n"
+#~ "Vui lòng chọn loại tệp có hỗ trợ\n"
+#~ "để tránh các file khác bị ghi đè."
+
+#~ msgid "Advanced Options"
+#~ msgstr "Tùy chọn nâng cao"
+
+#~ msgid "Revert to Original"
+#~ msgstr "Quay lại về ban đầu"
+
+#~ msgid ""
+#~ "Generic file types do not fully support embedding thumbnails and writing "
+#~ "playlist files. Please select a specific file type that is known to "
+#~ "support embedding to prevent separate files from being written."
+#~ msgstr ""
+#~ "Các loại tệp chung không hỗ trợ đầy đủ việc nhúng hình thu nhỏ và viết "
+#~ "tệp danh sách phát. Vui lòng chọn loại tệp cụ thể được biết là có hỗ trợ "
+#~ "nhúng để ngăn việc ghi các tệp riêng biệt."
+
+#~ msgid ""
+#~ "Will be ignored for media in batch files that provide save folder paths."
+#~ msgstr ""
+#~ "Sẽ bị bỏ qua đối với các tệp phương tiện trong tệp hàng loạt có cung cấp "
+#~ "đường dẫn thư mục lưu."
+
+#~ msgid "Playlist Items"
+#~ msgstr "Mục trong danh sách phát"
+
+#~ msgid "Use"
+#~ msgstr "Sử dụng"
+
+#~ msgid "No Credentials Found"
+#~ msgstr "Không tìm thấy thông tin xác thực"
+
+#~ msgid "Add Credential"
+#~ msgstr "Thêm thông tin xác thực"
+
+#~ msgid "Updates"
+#~ msgstr "Cập nhật"
+
+#~ msgid "Update Available"
+#~ msgstr "Cập nhật có sẵn"
+
+#~ msgid "Stop All Downloads"
+#~ msgstr "Dừng tất cả mục tải xuống"
+
+#~ msgid "Clear Queued Downloads"
+#~ msgstr "Xóa tất cả lượt tải xuống trong hàng chờ"
+
+#~ msgid "Retry Failed Downloads"
+#~ msgstr "Thử lại các lượt tải xuống thất bại"
+
+#~ msgid "No History Available"
+#~ msgstr "Không có lịch sử"
+
+#~ msgid "No Downloads Running"
+#~ msgstr "Không có tải xuống nào đang chạy"
+
+#~ msgid "No Downloads Queued"
+#~ msgstr "Không có lượt tải xuống nào được xếp hàng chờ"
+
+#~ msgid "No Downloads Completed"
+#~ msgstr "Không có lượt tải xuống nào được hoàn thành"
+
+#~ msgid "Log copied to clipboard"
+#~ msgstr "Đã sao chép nhật ký vào bảng nhớ tạm"
+
+#~ msgid "{} items"
+#~ msgstr "{} mục"
+
+#~ msgid ""
+#~ "{} needs a credential to download.\n"
+#~ "Please select or enter one to use."
+#~ msgstr ""
+#~ "{} cần có thông tin xác thực để tải xuống.\n"
+#~ "Vui lòng chọn hoặc nhập một để sử dụng."
+
+#~ msgid "Keyring is not saving to disk. Changes will be lost."
+#~ msgstr "Keyring không được lưu vào đĩa. Những thay đổi sẽ bị mất."
+
+#~ msgid "Modify"
+#~ msgstr "Thay đổi"
+
+#~ msgid "Name (Empty)"
+#~ msgstr "Tên (trống)"
+
+#~ msgid "Username (Empty)"
+#~ msgstr "Tên người dùng (Trống)"
+
+#~ msgid "Password (Empty)"
+#~ msgstr "Mật khẩu (Trống)"
+
+#~ msgid "URL (Invalid)"
+#~ msgstr "URL (không hợp lệ)"
+
+#~ msgid "Name (Exists)"
+#~ msgstr "Tên (Tồn tại)"
+
+#~ msgid "Credential (Database Error)"
+#~ msgstr "Thông tin xác thực (Lỗi cơ sở dữ liệu)"
+
+#~ msgid "Exit?"
+#~ msgstr "Thoát?"
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid "{} version {} is available to download and install"
+#~ msgstr "{} phiên bản {} có sẵn để tải xuống và cài đặt"
+
+#~ msgid "Update completed successfully"
+#~ msgstr "Cập nhật hoàn tất thành công"
+
+#~ msgid "Are you sure you want to delete this argument?"
+#~ msgstr "Bạn có chắc chắn muốn xóa đối số này?"
+
+#~ msgid "Args (Empty)"
+#~ msgstr "Đối số (Trống)"
+
+#~ msgid "Show Log"
+#~ msgstr "Hiện nhật ký"
+
+#~ msgid "Open Containing Folder"
+#~ msgstr "Mở thư mục chứa"
+
+#~ msgid "Media"
+#~ msgstr "Phương tiện"
+
+#~ msgid "Split Video by Chapters"
+#~ msgstr "Chia video theo chương"
+
+#~ msgid "Use manual credentials"
+#~ msgstr "Sử dụng thông tin xác thực thủ công"
+
+#~ msgid "Items ({})"
+#~ msgstr "Mục ({})"
+
+#~ msgid ""
+#~ "{} needs a credential to download. Please select or enter one to use."
+#~ msgstr ""
+#~ "{} cần có thông tin xác thực để tải xuống. Vui lòng chọn hoặc nhập một để "
+#~ "sử dụng."
+
+#~ msgid ""
+#~ "The keyring is not saving changes to disk. Any changes made will be lost"
+#~ msgstr ""
+#~ "Keyring không lưu các thay đổi vào đĩa. Mọi thay đổi được thực hiện sẽ bị "
+#~ "mất"
+
+#~ msgid "New Credential"
+#~ msgstr "Thông tin xác thực mới"
+
+#~ msgid "The credential name cannot be empty."
+#~ msgstr "Tên thông tin xác thực không được để trống."
+
+#~ msgid "The provided url is invalid."
+#~ msgstr "Url được cung cấp không hợp lệ."
+
+#~ msgid "There was an unknown error adding the credential to the keyring."
+#~ msgstr ""
+#~ "Đã xảy ra lỗi không xác định khi thêm thông tin xác thực vào keyring."
+
+#~ msgid "Edit Credential"
+#~ msgstr "Chỉnh sửa thông tin xác thực"
+
+#~ msgid "Save"
+#~ msgstr "Lưu"
+
+#~ msgid "Delete Credential"
+#~ msgstr "Xóa thông tin xác thực"
+
+#~ msgid "Start"
+#~ msgstr "Bắt đầu"
+
+#~ msgid "Documentation"
+#~ msgstr "Tài liệu"
+
+#~ msgid "You're up to date"
+#~ msgstr "Bạn đang dùng phiên bản mới nhất"
+
+#~ msgid ""
+#~ "We will let you know once app or yt-dlp updates are available to install"
+#~ msgstr ""
+#~ "Chúng tôi sẽ cho bạn biết khi có bản cập nhật ứng dụng hoặc yt-dlp để cài "
+#~ "đặt"
+
+#~ msgid "Downloading the update"
+#~ msgstr "Đang tải xuống bản cập nhật"
+
+#~ msgid "Check for pre-release (beta) versions of {}"
+#~ msgstr "Kiểm tra các phiên bản tiền phát hành (beta) của {}"
+
+#~ msgid "Version {}"
+#~ msgstr "Phiên bản {}"
+
+#~ msgid "The installer will start once the download is complete"
+#~ msgstr "Trình cài đặt sẽ bắt đầu sau khi quá trình tải xuống hoàn tất"
+
+#~ msgid "Debug information copied to clipboard"
+#~ msgstr "Đã sao chép thông tin gỡ lỗi vào bảng nhớ tạm"
+
+#~ msgid "Light"
+#~ msgstr "Sáng"
+
+#~ msgid "Dark"
+#~ msgstr "Tối"
+
+#~ msgid "New Argument"
+#~ msgstr "Đối số mới"
+
+#, fuzzy
+#~ msgid ""
+#~ "Error during yt-dlp validation:\n"
+#~ "```{}```"
+#~ msgstr "Lỗi xác thực tải xuống: {}"
+
+#~ msgid "Error attempting to validate download: {}"
+#~ msgstr "Lỗi xác thực tải xuống: {}"
+
+#~ msgid "Download Finished With Error"
+#~ msgstr "Đã tải xong, có lỗi"
+
+#~ msgid "N/A"
+#~ msgstr "Không có"
+
+#~ msgid "Back"
+#~ msgstr "Quay lại"
+
+#~ msgid ""
+#~ "The update is downloading in the background and will start once it "
+#~ "finishes"
+#~ msgstr "Bản cập nhật đang tải trong nền, và sẽ bắt đầu khi tải xong"
+
+#~ msgid "Automatically Check for Updates"
+#~ msgstr "Tự động kiểm tra bản cập nhật"
+
+#~ msgid "Copy Command to Clipboard"
+#~ msgstr "Chép lệnh vào clipboard"
+
+#~ msgid "Disclaimer"
+#~ msgstr "Lưu ý"
+
+#~ msgid ""
+#~ "The authors of Nickvision Parabolic are not responsible/liable for any "
+#~ "misuse of this program that may violate local copyright/DMCA laws. Users "
+#~ "use this application at their own risk."
+#~ msgstr ""
+#~ "Các tác giả của Nickvision Parabolic không chịu trách nhiệm pháp lý đối "
+#~ "với mọi hành vi lạm dụng chương trình này mà vi phạm luật bản quyền hoặc "
+#~ "luật DMCA sở tại. Người dùng tự chịu rủi ro khi sử dụng ứng dụng này."
+
+#, fuzzy
+#~ msgid "Notification"
+#~ msgstr "Ứng dụng"
+
+#, fuzzy
+#~ msgid "No Download Log"
+#~ msgstr "Đang tải"
+
+#, fuzzy
+#~ msgid "No save folder selected"
+#~ msgstr "Chưa chọn tệp nào"
+
+#, fuzzy
+#~ msgid "Enter file name here"
+#~ msgstr "Nhập tên vào đây"
+
+#, fuzzy
+#~ msgid "Enter start time here"
+#~ msgstr "Nhập thời điểm bắt đầu vào đây"
+
+#, fuzzy
+#~ msgid "Enter end time here"
+#~ msgstr "Nhập thời gian kết thúc vào đây"
+
+#, fuzzy
+#~ msgid "Downloading (0)"
+#~ msgstr "Đang tải"
+
+#, fuzzy
+#~ msgid "Queued (0)"
+#~ msgstr "Đã đem vào hàng đợi"
+
+#, fuzzy
+#~ msgid "Completed (0)"
+#~ msgstr "Hoàn tất"
+
+#, fuzzy
+#~ msgid "Queued ({})"
+#~ msgstr "Đã đem vào hàng đợi"
+
+#, fuzzy
+#~ msgid "Completed ({})"
+#~ msgstr "Hoàn tất"
+
+#, fuzzy
+#~ msgid "Postprocessing Threads"
+#~ msgstr "Đang xử lý..."
+
+#, fuzzy
+#~ msgid "The limit to apply to downloads with limiting speed enabled."
+#~ msgstr ""
+#~ "Giới hạn này (tính bằng KiB/s) được áp dụng đối với các mục tải xuống có "
+#~ "bật giới hạn tốc độ. Thay đổi giá trị này không ảnh hưởng đến những mục "
+#~ "tải xuống đang chạy."
+
+#, fuzzy
+#~ msgid "Past Downloads"
+#~ msgstr "Downloads"
+
+#, fuzzy
+#~ msgid "No Download History"
+#~ msgstr "Đang tải"
+
+#~ msgid "Downloads Finished"
+#~ msgstr "Các mục tải xuống đã xong"
+
+#, fuzzy
+#~ msgid "All downloads have finished"
+#~ msgstr "Tất cả các lượt tải đều đã hoàn tất."
+
+#~ msgid "Completed Notification Trigger"
+#~ msgstr "Điều kiện phát thông báo hoàn tất"
+
+#, fuzzy
+#~ msgid "For each download"
+#~ msgstr "Cho từng lượt tải"
+
+#, fuzzy
+#~ msgid "Revert"
+#~ msgstr "Không bao giờ"
+
+#, fuzzy
+#~ msgid "Select"
+#~ msgstr "Chọn tất cả"
+
+#, fuzzy
+#~ msgid "Select save folder"
+#~ msgstr "Chọn thư mục lưu"
+
+#, fuzzy
+#~ msgid "Language"
+#~ msgstr "Ngôn ngữ của audio"
+
+#~ msgid "Quality"
+#~ msgstr "Mức chất lượng"
+
+#~ msgid "Default"
+#~ msgstr "Mặc định"
+
+#~ msgid "Download Subtitles"
+#~ msgstr "Tải phụ đề"
+
+#, fuzzy
+#~ msgid "Good"
+#~ msgstr "Xin Chào!"
+
+#~ msgid "Add Download (Ctrl+N)"
+#~ msgstr "Thêm lượt tải (Ctrl+N)"
+
+#, csharp-format
+#~ msgid "{0} download — {1:f1}% ({2})"
+#~ msgid_plural "{0} downloads — {1:f1}% ({2})"
+#~ msgstr[0] "{0} lượt tải — {1:f1}% ({2})"
+
+#~ msgid ""
+#~ "A cookies file can be provided to yt-dlp to allow downloading media that "
+#~ "requires a login."
+#~ msgstr ""
+#~ "Bạn có thể cấp cho yt-dlp một tệp cookie để tải những tệp có yêu cầu đăng "
+#~ "nhập."
+
+#~ msgid "Add Login"
+#~ msgstr "Thêm tài khoản"
+
+#~ msgid "Allow Running In Background"
+#~ msgstr "Cho phép chạy nền"
+
+#~ msgid "Close and Stop Downloads?"
+#~ msgstr "Đóng và dừng tất cả các lượt tải?"
+
+#~ msgid "Comma separated list"
+#~ msgstr "Danh sách được phân tách bởi dấu phẩy"
+
+#~ msgid ""
+#~ "Cookies can be passed to yt-dlp in the form of TXT files. Export cookies "
+#~ "from your browser using the following extensions (use at your own risk):"
+#~ msgstr ""
+#~ "Cookie có thể được truyền vào yt-dlp dưới dạng tệp TXT. Bạn có thể xuất "
+#~ "cookie từ trình duyệt thông qua các extension sau (không đảm bảo an toàn):"
+
+#~ msgid "Cookies File Information"
+#~ msgstr "Thông tin tệp cookie"
+
+#~ msgid "Crop Thumbnail"
+#~ msgstr "Cắt thumbnail"
+
+#, fuzzy
+#~ msgid ""
+#~ "Different sites can use different language code formats for the same "
+#~ "language. You may encounter one of the following three types: two-letter, "
+#~ "two-letter with region, or three-letter. For example, \"en\", \"en-US\" "
+#~ "and \"eng\" are all used for English.\n"
+#~ "Please specify all valid codes for your languages for the best results. "
+#~ "Auto-generated subtitles will also be downloaded if available.\n"
+#~ "\n"
+#~ "You can specify \"all\" instead to download all subtitles, including auto-"
+#~ "generated ones. To exclude auto-generated ones, turn off the option below."
+#~ msgstr ""
+#~ "Trong cùng một ngôn ngữ, các trang có thể dùng định dạng khác nhau để "
+#~ "viết mã ngôn ngữ để xác định ngôn ngữ ấy. Thường thì bạn sẽ bắt gặp một "
+#~ "trong ba loại sau: loại 2 ký tự, loại 2 ký tự kèm vùng, hoặc loại 3 ký "
+#~ "tự. Ví dụ: để xác định tiếng Anh, người ta viết \"en\", \"en-US\" hoặc "
+#~ "\"eng\".\n"
+#~ "\n"
+#~ "Tốt nhất là bạn ghi ra tất cả các mã ngôn ngữ dùng được cho các ngôn ngữ "
+#~ "bạn cần. Nếu có, phụ đề tự động cũng sẽ được tải.\n"
+#~ "\n"
+#~ "Hoặc bạn có thể ghi \"all\" để tải tất cả tiêu đề, bao gồm cả phụ đề tự "
+#~ "động. Để bỏ qua tiêu đề tự động, hãy tắt lựa chọn ở dưới."
+
+#~ msgid "Disable"
+#~ msgstr "Vô hiệu hóa"
+
+#~ msgid "Disable Keyring?"
+#~ msgstr "Vô hiệu hóa keyring?"
+
+#~ msgid ""
+#~ "Disabling the keyring will delete all data currently stored inside. Are "
+#~ "you sure you want to disable it?"
+#~ msgstr ""
+#~ "Khi vô hiệu hóa keyring, bạn sẽ đồng thời mất dữ liệu được lưu trữ trong "
+#~ "đó. Bạn có chắc chắn bạn muốn vô hiệu hóa?"
+
+#~ msgid "Disallow Conversions"
+#~ msgstr "Không cho phép chuyển đổi"
+
+#~ msgid "Download Specific Timeframe"
+#~ msgstr "Tải trong khung thời gian cụ thể"
+
+#~ msgid "Download using aria2 has started"
+#~ msgstr "Bắt đầu tải bằng aria2"
+
+#~ msgid "Download using ffmpeg has started"
+#~ msgstr "Bắt đầu tải bằng ffmpeg"
+
+#, csharp-format
+#~ msgid "Downloading {0:f2}% ({1})"
+#~ msgstr "Đang tải {0:f2}% ({1})"
+
+#~ msgid "Downloading..."
+#~ msgstr "Đang tải..."
+
+#~ msgid ""
+#~ "Enable to use aria2 downloader. It can be faster, but you will not see "
+#~ "download progress."
+#~ msgstr ""
+#~ "Bật để sử dụng trình tải aria2. Trình tải này có thể nhanh hơn, nhưng bạn "
+#~ "sẽ không thấy tiến trình tải."
+
+#~ msgid "End Time (Invalid)"
+#~ msgstr "Thời điểm kết thúc (không hợp lệ)"
+
+#~ msgid "Enter URL here"
+#~ msgstr "Nhập URL vào đây"
+
+#~ msgid "Failed to enable keyring."
+#~ msgstr "Bật keyring thất bại."
+
+#~ msgid ""
+#~ "If enabled, Parabolic will download the appropriate video/audio format "
+#~ "for the selected quality without converting to other formats. (You will "
+#~ "be unable to select a file format)"
+#~ msgstr ""
+#~ "Nếu bật, Parabolic sẽ tự tải định dạng video/audio thích hợp đối với mức "
+#~ "chất lượng đã chọn mà không chuyển đổi sang định dạng khác. (Bạn sẽ không "
+#~ "thể chọn định dạng của tệp)"
+
+#~ msgid ""
+#~ "In combination with the trigger, completed notifications will only be "
+#~ "shown if the window is not focused."
+#~ msgstr ""
+#~ "Với điều kiện này, thông báo hoàn tất chỉ hiển thị khi cửa sổ đang không "
+#~ "được tập trung vào."
+
+#~ msgid "Keyring Credential"
+#~ msgstr "Chứng chỉ trong keyring"
+
+#~ msgid "Keyring Disabled"
+#~ msgstr "Đã vô hiệu hóa keyring"
+
+#~ msgid "Keyring locked"
+#~ msgstr "Đã khóa keyring"
+
+#~ msgid "Keyring locked."
+#~ msgstr "Đã khóa keyring."
+
+#~ msgid "Language Code Information"
+#~ msgstr "Thông tin về mã ngôn ngữ"
+
+#~ msgid "Leave empty to download from start."
+#~ msgstr "Để trống để tải từ đầu."
+
+#~ msgid "List of supported sites"
+#~ msgstr "Danh sách các trang được hỗ trợ"
+
+#~ msgid "Make thumbnail square, useful when downloading music."
+#~ msgstr "Cắt thumbnail thành hình vuông, hữu ích khi tải nhạc."
+
+#~ msgid "Maximum Quality"
+#~ msgstr "Mức chất lượng tối đa"
+
+#~ msgid ""
+#~ "Media can possibly be cut inaccurately.\n"
+#~ "Enabling this option will disable the use of aria2 as the downloader if "
+#~ "it is enabled."
+#~ msgstr ""
+#~ "Media có khả năng bị cắt lệch.\n"
+#~ "Bật lựa chọn này để tắt aria2 nếu trình tải này đang được bật."
+
+#~ msgid "Media URL (Invalid)"
+#~ msgstr "URL của media (không hợp lệ)"
+
+#~ msgid ""
+#~ "Minimize to the system tray instead of quitting the application when the "
+#~ "window is closed."
+#~ msgstr "Thu nhỏ thay vì thoát ứng dụng khi đóng cửa sổ."
+
+#~ msgid "No active internet connection"
+#~ msgstr "Không có kết nối internet"
+
+#~ msgid "No Completed Downloads"
+#~ msgstr "Không có mục tải xuống hoàn tất"
+
+#~ msgid "No Previous Downloads"
+#~ msgstr "Không có mục tải xuống trước đây"
+
+#~ msgid "No Queued Downloads"
+#~ msgstr "Không có mục tải xuống trong hàng đợi"
+
+#~ msgid "Preparing..."
+#~ msgstr "Đang chuẩn bị..."
+
+#~ msgid "PREVIEW"
+#~ msgstr "XEM TRƯỚC"
+
+#~ msgid "Reset"
+#~ msgstr "Đặt lại"
+
+#~ msgid "Reset Keyring?"
+#~ msgstr "Đặt lại keyring?"
+
+#~ msgid "Reset to default"
+#~ msgstr "Đặt lại về mặc định"
+
+#~ msgid "Restart the app to unlock the keyring."
+#~ msgstr "Khởi động lại ứng dụng để mở khóa keyring."
+
+#~ msgid "Restart To Apply Theme?"
+#~ msgstr "Khởi động lại để áp dụng chủ đề?"
+
+#~ msgid "Retry Download"
+#~ msgstr "Thử tải lại"
+
+#~ msgid "Save Folder (Invalid)"
+#~ msgstr "Thư mục lưu (không hợp lệ)"
+
+#~ msgid "Search for downloads, history, and more"
+#~ msgstr "Tìm các mục tải xuống, mục lịch sử, ..."
+
+#~ msgid "Select items to download or change file names."
+#~ msgstr "Chọn mục để tải hoặc để đổi tên tệp."
+
+#~ msgid ""
+#~ "Some downloads are still in progress.\n"
+#~ "Are you sure you want to close Parabolic and stop the running downloads?"
+#~ msgstr ""
+#~ "Parabolic còn đang tải chưa xong.\n"
+#~ "Bạn có chắc muốn đóng Parabolic và hủy các mục đó?"
+
+#~ msgid "Some downloads finished with errors!"
+#~ msgstr "Một số lượt tải đã hoàn tất kèm lỗi!"
+
+#~ msgid "Splits the video into multiple smaller ones based on its chapters."
+#~ msgstr "Tách video thành nhiều phần dựa vào chương."
+
+#~ msgid "SponsorBlock Information (opens in a web browser)"
+#~ msgstr "Thông tin về SponsorBlock (mở trong trình duyệt)"
+
+#~ msgid "Start Time (Invalid)"
+#~ msgstr "Thời điểm bắt đầu (không hợp lệ)"
+
+#~ msgid "Subtitle Languages"
+#~ msgstr "Ngôn ngữ của phụ đề"
+
+#~ msgid "Subtitle Languages (Comma-Separated)"
+#~ msgstr "Ngôn ngữ của phụ đề (cách nhau bởi dấu phẩy)"
+
+#~ msgid "Subtitle Languages (Invalid)"
+#~ msgstr "Ngôn ngữ của phụ đề (không hợp lệ)"
+
+#~ msgid ""
+#~ "This option's state will be remembered and restored for future downloads."
+#~ msgstr ""
+#~ "Lựa chọn này sẽ được ghi nhớ và khôi phục lại cho các lượt tải trong "
+#~ "tương lai."
+
+#~ msgid ""
+#~ "This will delete the previous keyring removing all passwords with it. "
+#~ "This action is irreversible."
+#~ msgstr ""
+#~ "Tác vụ này sẽ xóa keyring trước đó và mọi mật khẩu trong đó. Bạn sẽ không "
+#~ "thể khôi phục lại keyring."
+
+#~ msgid "Unable to disable keyring."
+#~ msgstr "Không thể vô hiệu hóa keyring."
+
+#~ msgid "Unable to reset keyring."
+#~ msgstr "Không thể đặt lại keyring."
+
+#~ msgid "Undo Title Editing"
+#~ msgstr "Hoàn lại các chỉnh sửa trong tiêu đề"
+
+#~ msgid "Unlock Keyring"
+#~ msgstr "Mở khóa keyring"
+
+#~ msgid "Unset Cookies File"
+#~ msgstr "Bỏ đặt tệp cookie"
+
+#~ msgid ""
+#~ "Use keyring to safely store credentials for sites that require a user "
+#~ "name and password to login."
+#~ msgstr ""
+#~ "Sửa dụng keyring để an toàn lưu chứng chỉ cho các trang có yêu cầu tên và "
+#~ "mật khẩu để đăng nhập."
+
+#~ msgid "User Name"
+#~ msgstr "Tên đăng nhập"
+
+#~ msgid "Waiting..."
+#~ msgstr "Đang chờ..."
+
+#, csharp-format
+#~ msgid ""
+#~ "Would you like to restart {0} to apply the new theme?\n"
+#~ "Any unsaved work will be lost."
+#~ msgstr ""
+#~ "Bạn có muốn khởi động lại {0} để áp dụng chủ đề mới?\n"
+#~ "Mọi tác vụ chưa lưu sẽ bị mất."
+
+#~ msgid "Leave empty to download to end."
+#~ msgstr "Để trống để tải đến cuối."
+
+#~ msgid "Manage previously downloaded media."
+#~ msgstr "Quản lý các media đã tải."
+
+#~ msgid "Disable Keyring"
+#~ msgstr "Vô hiệu hóa keyring?"
+
+#~ msgid "Migrate to Secret-Secured Keyring"
+#~ msgstr "Migrate sang keyring bảo mật bằng mã"
+
+#~ msgid "Migrate Keyring"
+#~ msgstr "Migrate keyring"
+
+#~ msgid "Skip"
+#~ msgstr "Lướt qua"
+
+#~ msgid "Unlock"
+#~ msgstr "Mở khóa"
+
+#~ msgid "Hide the window instead of quitting if there are downloads running."
+#~ msgstr "Ẩn cửa sổ thay vì thoát nếu Parabolic còn đang tải."
+
+#~ msgid "Apply"
+#~ msgstr "Áp dụng"
+
+#, fuzzy
+#~ msgid "Copied debug info to clipboard."
+#~ msgstr "Chép vào Clipboard"
+
+#, fuzzy, csharp-format
+#~ msgid "Remaining Downloads: {0}"
+#~ msgstr "Thử lại Các Tải xuống Thất bại"
+
+#~ msgid "— A basic yt-dlp frontend"
+#~ msgstr "— Một giao diện yt-dlp đơn giản"
+
+#~ msgid ""
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)"
+#~ msgstr ""
+#~ "— Hỗ trợ tải về các băng hình dưới nhiều định dạng (mp4, webm, mp3, opus, "
+#~ "flac, và wav)"
+
+#~ msgid "— Run multiple downloads at a time"
+#~ msgstr "— Chạy nhiều tải xuống cùng một lúc"
+
+#~ msgid "— Supports downloading metadata and video subtitles"
+#~ msgstr "— Hỗ trợ tải về siêu dữ liệu và phụ đề"
+
+#, fuzzy
+#~ msgid "Preparing required tools..."
+#~ msgstr "Đang chuẩn bị..."
+
+#~ msgid "Unable to setup dependencies. Please restart the app and try again."
+#~ msgstr ""
+#~ "Không thể tải xuống gói phụ thuộc. Vui lòng khởi động lại ứng dụng và thử "
+#~ "lại."
+
+#, fuzzy
+#~ msgid "Set Password"
+#~ msgstr "Mật khẩu Mới"
+
+#~ msgid "New Password"
+#~ msgstr "Mật khẩu Mới"
+
+#~ msgid "Confirm Password"
+#~ msgstr "Xác nhận Mật khẩu"
+
+#~ msgid "If the password is lost, there is no way to restore the keyring!"
+#~ msgstr "Nếu mật khẩu bị mất, sẽ không có cách nào để khôi phục lại keyring!"
+
+#~ msgid "Unable to unlock keyring. Restart the app to try again."
+#~ msgstr ""
+#~ "Không thể mở khóa keyring. Vui lòng khởi động lại ứng dụng để thử lại."
+
+#~ msgid "Keyring has not been unlocked."
+#~ msgstr "Keyring chưa được mở khóa."
+
+#~ msgid "youtube"
+#~ msgstr "youtube"
+
+#~ msgid "video"
+#~ msgstr "băng hình"
+
+#~ msgid "audio"
+#~ msgstr "âm thanh"
+
+#~ msgid "download"
+#~ msgstr "tải xuống"
+
+#~ msgid "Customize the application's user interface."
+#~ msgstr "Tùy chỉnh giao diện của ứng dụng"
+
+#~ msgid "Customize downloader settings."
+#~ msgstr "Tùy chỉnh thiết lập của trình tải xuống."
+
+#~ msgid "Customize converter settings."
+#~ msgstr "Tủy chỉnh thiết lập của bộ chuyển đổi."
+
+#~ msgid "About Tube Converter"
+#~ msgstr "Về Tube Converter"
+
+#~ msgid "Tube Converter"
+#~ msgstr "Tube Converter"
+
+#~ msgid "Get video and audio from the web"
+#~ msgstr "Tải xuống nhưng video mà bạn yêu thích"
+
+#, fuzzy
+#~ msgid "Authenticate (Invalid)"
+#~ msgstr "Thời điểm Bắt đầu (Không hợp lệ)"
+
+#~ msgid "A link has been detected in your clipboard."
+#~ msgstr "Đã phát hiện liên kết trong bảng ghi tạm."
+
+#~ msgid "Link pasted from clipboard."
+#~ msgstr "Liên kết đã được dán từ bảng ghi tạm."
+
+#~ msgid "The maximum number of connections to one server for each download."
+#~ msgstr "Số lượng kết nối tối đa với một máy chủ dành cho mỗi tải xuống."
+
+#~ msgid "If checked, media metadata will be included in the downloaded file."
+#~ msgstr ""
+#~ "Nếu được đánh dấu, siêu dữ liệu của video sẽ được bao gồm trong tệp tải "
+#~ "xuống"
+
+#~ msgid "More options for configuring the download."
+#~ msgstr "Nhiều tùy chọn hơn để định cấu hình tải xuống."
+
+#~ msgctxt "Night"
+#~ msgid "Good Morning!"
+#~ msgstr "Xin Chào!"
+
+#~ msgctxt "Morning"
+#~ msgid "Good Morning!"
+#~ msgstr "Xin Chào!"
+
+#~ msgid "Good Afternoon!"
+#~ msgstr "Xin Chào!"
+
+#~ msgid "Good Evening!"
+#~ msgstr "Xin Chào!"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Contributors on GitHub ❤️ https://github.com/NickvisionApps/Parabolic/"
+#~ "graphs/contributors"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Contributors on GitHub ❤️ https://github.com/NickvisionApps/Parabolic/"
+#~ "graphs/contributors"
+
+#~ msgid ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+#~ msgstr ""
+#~ "Nicholas Logozzo https://github.com/nlogozzo\n"
+#~ "Fyodor Sobolev https://github.com/fsobolev\n"
+#~ "DaPigGuy https://github.com/DaPigGuy"
+
+#~ msgid ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+#~ msgstr ""
+#~ "David Lapshin https://github.com/daudix-UFO\n"
+#~ "Brage Fuglseth https://github.com/bragefuglseth\n"
+#~ "marcin https://github.com/martin-desktops"
+
+#~ msgid "New"
+#~ msgstr "Mới"
+
+#~ msgid ""
+#~ "Downloading required dependencies...\n"
+#~ "\n"
+#~ "(This may take some time)"
+#~ msgstr ""
+#~ "Đang tải về các gói phụ thuộc cần thiết...\n"
+#~ "\n"
+#~ "(Có thể mất một thời gian)"
+
+#~ msgid ""
+#~ "— A basic yt-dlp frontend\n"
+#~ "— Supports downloading videos in multiple formats (mp4, webm, mp3, opus, "
+#~ "flac, and wav)\n"
+#~ "— Run multiple downloads at a time\n"
+#~ "— Supports downloading metadata and video subtitles"
+#~ msgstr "Tải xuống nhưng video mà bạn yêu thích"
+
+#~ msgid "Paste From Clipboard"
+#~ msgstr "Dán Từ Clipboard"

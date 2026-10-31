@@ -1,0 +1,45 @@
+using Nickvision.Parabolic.Shared.Events;
+using Nickvision.Parabolic.Shared.Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Nickvision.Parabolic.Shared.Services;
+
+public interface IDownloadService
+{
+    event EventHandler<DownloadAddedEventArgs>? DownloadAdded;
+    event EventHandler<DownloadCompletedEventArgs>? DownloadCompleted;
+    event EventHandler<DownloadProgressChangedEventArgs>? DownloadProgressChanged;
+    event EventHandler<DownloadEventArgs>? DownloadRetired;
+    event EventHandler<DownloadEventArgs>? DownloadStartedFromQueue;
+    event EventHandler<DownloadEventArgs>? DownloadStopped;
+    /// <summary>UniFetcher: final result of a download (after any automatic retries).</summary>
+    event EventHandler<DownloadFinishedEventArgs>? DownloadFinished;
+
+    int DownloadingCount { get; }
+    int QueuedCount { get; }
+    int CompletedCount { get; }
+    int FailedCount { get; }
+    int ActionNeededCount { get; }
+    int StoppedCount { get; }
+    int FinishedCount { get; }
+
+    int RemainingCount => DownloadingCount + QueuedCount;
+
+    Task AddAsync(DownloadOptions options, bool excludeFromHistory);
+    Task AddAsync(IReadOnlyList<DownloadOptions> options, bool excludeFromHistory);
+    IReadOnlyList<int> ClearCompleted();
+    IReadOnlyList<int> ClearQueued();
+    IReadOnlyList<int> ClearFailedAndStopped();
+    Task ResumeStoppedAsync();
+    IReadOnlyList<int> WaitingIdsForSite(string site);
+    bool IsInQueue(string url);
+    bool Pause(int id);
+    Task RecoverAllAsync();
+    bool Resume(int id);
+    Task<bool> RetryAsync(int id);
+    Task RetryFailedAsync();
+    Task<bool> StopAsync(int id);
+    Task StopAllAsync();
+}
