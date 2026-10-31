@@ -24,8 +24,8 @@ public static class HostApplicationBuilderExtensions
                 Changelog = """
                 - First UniFetcher release, based on Parabolic by Nickvision
                 """,
-                SourceRepository = new Uri("https://github.com/Obamna1234/UniFetcher-Windows"),
-                IssueTracker = new Uri("https://github.com/Obamna1234/UniFetcher-Windows/issues/new"),
+                SourceRepository = new Uri("https://github.com/Obamna1234/UniFetcher"),
+                IssueTracker = new Uri("https://github.com/Obamna1234/UniFetcher/issues/new"),
                 IsPortable = OperatingSystem.IsWindows() && args.Contains("--portable")
             };
             builder.Properties.Add("AppInfo", appInfo);
