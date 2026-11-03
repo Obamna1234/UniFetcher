@@ -1,5 +1,6 @@
 package com.unifetch.app.ui.page.downloadv2.configure
 
+import com.unifetch.app.util.PAGE_EVERYTHING
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
@@ -360,6 +361,7 @@ private fun DownloadDialogContent(
                         config = config,
                         preferences = preferences,
                         onPresetEdit = onPresetEdit,
+                        onPreferencesUpdate = onPreferencesUpdate,
                         onConfigSave = {
                             Config.updatePreferences(newValue = it, oldValue = config)
                         },
@@ -520,6 +522,7 @@ private fun ConfigurePage(
     preferences: DownloadUtil.DownloadPreferences,
     settingChips: @Composable () -> Unit,
     onPresetEdit: (DownloadType?) -> Unit = {},
+    onPreferencesUpdate: (DownloadUtil.DownloadPreferences) -> Unit = {},
     onConfigSave: (Config) -> Unit,
     onActionPost: (Action) -> Unit,
 ) {
@@ -575,6 +578,12 @@ private fun ConfigurePage(
                         enabled = selectedType != Playlist,
                         onClick = { useFormatSelection = true },
                     )
+                    if (selectedType != Playlist) {
+                        PageContentChoice(
+                            preferences = preferences,
+                            onPreferencesUpdate = onPreferencesUpdate,
+                        )
+                    }
                 } else {
                     if (showTemplateSelectionDialog) {
                         TemplatePickerDialog { showTemplateSelectionDialog = false }
@@ -717,6 +726,7 @@ fun ConfigurePagePlaylistVariant(
                 showEditIcon = true,
                 onEdit = { onPresetEdit(selectedType) },
             )
+            PageContentChoice(preferences = preferences, onPreferencesUpdate = onPreferencesUpdate)
         }
         var expanded by remember { mutableStateOf(false) }
         ExpandableTitle(expanded = expanded, onClick = { expanded = true }) {
@@ -745,6 +755,44 @@ fun ConfigurePagePlaylistVariant(
             onTaskStart = { throw IllegalStateException() },
         )
     }
+}
+
+/**
+ * On pages with several videos (for example short silent preview clips next to the real video):
+ * download only the main video, or everything sorted into folders. Remembered for next time.
+ */
+@Composable
+private fun PageContentChoice(
+    preferences: DownloadUtil.DownloadPreferences,
+    onPreferencesUpdate: (DownloadUtil.DownloadPreferences) -> Unit,
+) {
+    fun choose(everything: Boolean) {
+        PAGE_EVERYTHING.updateBoolean(everything)
+        onPreferencesUpdate(preferences.copy(pageEverything = everything))
+    }
+    DrawerSheetSubtitle(text = stringResource(R.string.page_content_title))
+    Row(modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState())) {
+        SingleChoiceChip(
+            selected = !preferences.pageEverything,
+            label = stringResource(R.string.page_content_main_only),
+            onClick = { choose(false) },
+        )
+        SingleChoiceChip(
+            selected = preferences.pageEverything,
+            label = stringResource(R.string.page_content_everything),
+            onClick = { choose(true) },
+        )
+    }
+    Text(
+        text =
+            stringResource(
+                if (preferences.pageEverything) R.string.page_content_everything_desc
+                else R.string.page_content_main_only_desc
+            ),
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(start = 4.dp, top = 2.dp, bottom = 4.dp),
+    )
 }
 
 @Composable

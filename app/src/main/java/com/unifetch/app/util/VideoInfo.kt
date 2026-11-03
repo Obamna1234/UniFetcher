@@ -71,7 +71,27 @@ data class VideoInfo(
     @SerialName("requested_formats") val requestedFormats: List<Format>? = null,
     val filename: String? = null,
     @SerialName("_type") val type: String? = null,
-) : YoutubeDLInfo
+    /**
+     * UniFetcher: set when this is the main video of a page with several videos. One
+     * [PageMedia.Kind] name per item on the page, in yt-dlp's order (item i is playlist item i + 1).
+     */
+    @SerialName("unifetch_page_kinds") val pageKinds: List<String>? = null,
+) : YoutubeDLInfo {
+    /** yt-dlp playlist item number of the page's main video, or null if this isn't a page with extras. */
+    val pageMainItem: Int?
+        get() = pageKinds?.indexOf(PageMedia.Kind.MAIN.name)?.takeIf { it >= 0 }?.plus(1)
+
+    fun hasAudio(): Boolean =
+        acodec != "none" || requestedFormats?.any { it.acodec != null && it.acodec != "none" } == true
+}
+
+/** The list yt-dlp returns for a page with several videos. */
+@Serializable
+data class PageEntries(
+    @SerialName("_type") val type: String? = null,
+    @SerialName("extractor_key") val extractorKey: String? = null,
+    val entries: List<VideoInfo?>? = null,
+)
 
 @Serializable
 data class Format(

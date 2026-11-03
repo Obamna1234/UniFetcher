@@ -229,3 +229,16 @@ Nothing expires while videos wait there, even for days or after the app is close
 | Not enough space | Not enough room for temporary files | See section 10 |
 
 **Copy diagnostic.** Tap a failed download and choose **Copy diagnostic**. It copies the reason, whether cookies were used, the steps UniFetcher tried, and yt-dlp's error, with cookie values and link tokens removed, ready to paste into a bug report.
+
+## 12. Pages with more than one video (preview clips)
+
+Some video pages also play short, silent preview clips. Before a download starts, the download screen asks **If the page has more than one video**:
+
+- **Main video only** (default): downloads just the video the link is for. Preview clips and images are skipped.
+- **Everything on the page**: the main video goes to your usual folder, and the rest is sorted into folders next to it:
+  - **UniFetcher short videos**: clips of 60 seconds or less, and any clip without sound (animated "GIF" previews are usually saved by sites as small silent videos)
+  - **UniFetcher other videos**: longer extra videos
+  - **UniFetcher images**: pictures and real .gif files
+
+Your choice is remembered for next time and also applies to bulk imports and quick downloads. Only the main video is added to the download history. Real playlists and channels aren't affected by this setting.
+

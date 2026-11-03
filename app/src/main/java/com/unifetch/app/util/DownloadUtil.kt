@@ -43,6 +43,7 @@ import kotlinx.serialization.json.Json
 import java.util.Locale
 import java.io.IOException
 import java.io.File
+import android.media.MediaScannerConnection
 
 object DownloadUtil {
 
@@ -138,8 +139,36 @@ object DownloadUtil {
                 SiteSessions.run(url, request, taskId = taskKey) {
                     YoutubeDL.getInstance().execute(request, taskKey, null)
                 }
-            jsonFormat.decodeFromString(response.out)
+            val info = jsonFormat.decodeFromString<VideoInfo>(response.out)
+            if (info.type == "playlist") pageMainVideo(url, response.out) ?: info else info
         }
+
+    /**
+     * A page with several videos (for example a video plus short silent preview clips) comes back
+     * as a list. Returns the page's main video, remembering what the other items are so they can be
+     * skipped or sorted into their own folders. Null if this is a real playlist or channel.
+     */
+    private fun pageMainVideo(pageUrl: String, json: String): VideoInfo? =
+        runCatching {
+                val page = jsonFormat.decodeFromString<PageEntries>(json)
+                val entries = page.entries ?: return null
+                val items =
+                    entries.map { e ->
+                        PageMedia.Item(
+                            ext = e?.ext,
+                            duration = e?.duration,
+                            hasAudio = e?.hasAudio() ?: true,
+                            height = e?.height,
+                            webpageUrl = e?.webpageUrl,
+                            size = e?.fileSize ?: e?.fileSizeApprox,
+                        )
+                    }
+                val kinds = PageMedia.plan(pageUrl, page.extractorKey, items) ?: return null
+                val main = entries[kinds.indexOf(PageMedia.Kind.MAIN)] ?: return null
+                main.copy(originalUrl = pageUrl, pageKinds = kinds.map { it.name })
+            }
+            .onFailure { Log.w(TAG, "Couldn't read the videos on this page", it) }
+            .getOrNull()
 
     @CheckResult
     fun fetchVideoInfoFromUrl(
@@ -244,6 +273,11 @@ object DownloadUtil {
         val forceIpv4: Boolean,
         val mergeAudioStream: Boolean,
         val mergeToMkv: Boolean,
+        /**
+         * On pages with several videos: false = only the main video (the one the link is for),
+         * true = everything, with extras sorted into their own folders ([PageMedia]).
+         */
+        val pageEverything: Boolean = false,
     ) {
         companion object {
             val EMPTY =
@@ -358,6 +392,7 @@ object DownloadUtil {
                     mergeAudioStream = false,
                     mergeToMkv =
                         (downloadSubtitle && embedSubtitle) || MERGE_OUTPUT_MKV.getBoolean(),
+                    pageEverything = PAGE_EVERYTHING.getBoolean(),
                 )
             }
         }
@@ -699,6 +734,7 @@ object DownloadUtil {
             val tempOnRemovable = (tempWhere as? TempStorage.Where.Ready)?.onRemovable == true
 
             val request = YoutubeDLRequest(url)
+            val pageFileList = File(context.cacheDir, "page_lists/$taskId.txt")
             val pathBuilder = StringBuilder()
             val outputBuilder = StringBuilder()
 
@@ -739,7 +775,24 @@ object DownloadUtil {
                         addOption("-r", "${maxDownloadRate}K")
                     }
 
-                    if (playlistItem != 0 && downloadPlaylist) {
+                    val pageMainItem = videoInfo.pageMainItem
+                    if (playlistItem == 0 && pageMainItem != null) {
+                        // A page with several videos (see PageMedia).
+                        if (pageEverything) {
+                            addOption("--yes-playlist")
+                            pageFileList.parentFile?.mkdirs()
+                            pageFileList.delete()
+                            addCommands(
+                                listOf(
+                                    "--print-to-file",
+                                    "after_move:%(playlist_index)s\t%(filepath)s",
+                                    pageFileList.absolutePath,
+                                )
+                            )
+                        } else {
+                            addOption("--playlist-items", pageMainItem)
+                        }
+                    } else if (playlistItem != 0 && downloadPlaylist) {
                         addOption("--playlist-items", playlistItem)
                         if (subdirectoryPlaylistTitle && !videoInfo.playlist.isNullOrEmpty()) {
                             outputBuilder.append(PLAYLIST_TITLE_SUBDIRECTORY_PREFIX)
@@ -788,6 +841,10 @@ object DownloadUtil {
                     } else {
                         addOption("-P", pathBuilder.toString())
                         addOption("-P", "temp:" + tempDir.absolutePath)
+                    }
+                    if (pageEverything && videoInfo.pageMainItem != null && playlistItem == 0) {
+                        val home = if (sdcard) tempDir.absolutePath else pathBuilder.toString()
+                        addOption("-P", "thumbnail:" + File(home, PageMedia.FOLDER_IMAGES).absolutePath)
                     }
                     if (sdcard || tempOnRemovable) {
                         // SD cards and USB drives (exFAT/FAT32) reject characters such as : ? |
@@ -849,14 +906,65 @@ object DownloadUtil {
                         )
                     } else Result.failure(th)
                 }
+            val mainFiles =
+                if (pageEverything && videoInfo.pageMainItem != null && playlistItem == 0)
+                    sortPageFiles(pageFileList, videoInfo.pageKinds.orEmpty())
+                else null
             return onFinishDownloading(
                 preferences = this,
                 videoInfo = videoInfo,
                 downloadPath = pathBuilder.toString(),
                 sdcardUri = sdcardUri,
                 tempDir = tempDir,
+                mainFiles = mainFiles,
             )
         }
+
+    /**
+     * After an "Everything on the page" download: moves each extra into its folder next to the
+     * main video (UniFetcher short videos / other videos / images). Never overwrites a file.
+     *
+     * @return the main video's file(s), for the download history.
+     */
+    private fun sortPageFiles(listFile: File, kinds: List<String>): List<String>? {
+        val lines = runCatching { listFile.readLines() }.getOrNull() ?: return null
+        listFile.delete()
+        val mainFiles = mutableListOf<String>()
+        val moved = mutableListOf<String>()
+        for (line in lines) {
+            val index = line.substringBefore('\t').trim().toIntOrNull() ?: continue
+            val file = File(line.substringAfter('\t').trim())
+            if (!file.isFile) continue
+            val kind =
+                kinds.getOrNull(index - 1)?.let { runCatching { PageMedia.Kind.valueOf(it) }.getOrNull() }
+                    ?: PageMedia.Kind.OTHER
+            val folder = PageMedia.folderFor(kind)
+            if (folder == null) {
+                mainFiles += file.absolutePath
+                continue
+            }
+            val dir = File(file.parentFile, folder).apply { mkdirs() }
+            var target = File(dir, file.name)
+            var n = 2
+            while (target.exists()) {
+                target = File(dir, "${file.nameWithoutExtension} ($n).${file.extension}")
+                n++
+            }
+            val ok =
+                file.renameTo(target) ||
+                    runCatching {
+                            file.copyTo(target)
+                            file.delete()
+                        }
+                        .isSuccess
+            if (ok) moved += target.absolutePath
+            else Log.w(TAG, "Couldn't move ${file.name} into $folder; left it where it is")
+        }
+        if (moved.isNotEmpty()) {
+            MediaScannerConnection.scanFile(context, moved.toTypedArray(), null, null)
+        }
+        return mainFiles.takeIf { it.isNotEmpty() }
+    }
     }
 
     private fun onFinishDownloading(
@@ -865,6 +973,7 @@ object DownloadUtil {
         downloadPath: String,
         sdcardUri: String,
         tempDir: File,
+        mainFiles: List<String>? = null,
     ): Result<List<String>> =
         preferences.run {
             val fileName =
@@ -889,10 +998,13 @@ object DownloadUtil {
             } else {
                 // yt-dlp moved the finished file out; remove anything left in its temp folder.
                 runCatching { tempDir.deleteRecursively() }
-                FileUtil.scanFileToMediaLibraryPostDownload(
-                        title = fileName,
-                        downloadDir = downloadPath,
-                    )
+                (mainFiles?.also {
+                        MediaScannerConnection.scanFile(context, it.toTypedArray(), null, null)
+                    }
+                        ?: FileUtil.scanFileToMediaLibraryPostDownload(
+                            title = fileName,
+                            downloadDir = downloadPath,
+                        ))
                     .run {
                         if (privateMode) Result.success(emptyList())
                         else

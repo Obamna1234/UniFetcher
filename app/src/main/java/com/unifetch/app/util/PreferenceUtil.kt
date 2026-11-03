@@ -138,6 +138,8 @@ const val STORAGE_MIN_FREE = "storage_min_free"
 const val TEMP_LOCATION = "temp_location"
 const val AUTO_SESSIONS = "auto_sessions"
 const val SKIP_DUPLICATES = "skip_duplicates"
+/** On pages with several videos: download everything (sorted into folders) instead of only the main video. */
+const val PAGE_EVERYTHING = "page_everything"
 const val SESSION_SITES = "session_sites"
 
 private const val INTERVAL_DAY = 86_400_000L

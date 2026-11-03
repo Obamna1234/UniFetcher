@@ -4,6 +4,12 @@ All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed her
 
 ## Unreleased
 
+- **Pages with more than one video.** Some pages also play short, silent preview clips (often "GIFs" saved as
+  small videos), and UniFetcher used to download all of them. Before downloading you can now choose
+  **Main video only** (the default: just the video the link is for) or **Everything on the page**, which puts
+  the main video in your usual folder and sorts the rest into **UniFetcher short videos**, **UniFetcher other
+  videos** and **UniFetcher images**. Works with SD cards and USB drives too. Real playlists and channels
+  aren't affected.
 - **App lock: wrong tries are remembered.** Closing and reopening UniFetcher no longer gives a fresh set of PIN or
   pattern tries, and each further round of 5 wrong tries waits longer (30 s, then 1, 2, 4… minutes, at most 30).
   A correct PIN, fingerprint or turning the lock off resets it. (From the October 2026 security review done in

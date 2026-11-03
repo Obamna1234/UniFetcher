@@ -152,10 +152,27 @@ object FileUtil {
                 .onFailure { Log.w(TAG, "SD card / USB folder is not usable", it) }
                 .getOrNull()
 
+        val treeUri = runCatching { Uri.parse(sdcardUri) }.getOrNull()
+        val extraFolders =
+            setOf(PageMedia.FOLDER_SHORT, PageMedia.FOLDER_OTHER, PageMedia.FOLDER_IMAGES)
+        val folderUris = mutableMapOf<String, Uri?>()
+
         tempPath.walkTopDown().filter { it.isFile }.forEach { file ->
-            val copied = destDir?.let { copyToTree(file, it) }
+            // Extras from "Everything on the page" keep their own folder on the drive and aren't
+            // added to the download history (only the main video is).
+            val extraFolder =
+                file.parentFile?.takeIf { it.parentFile == tempPath && it.name in extraFolders }?.name
+            val target =
+                if (extraFolder == null) destDir
+                else
+                    folderUris.getOrPut(extraFolder) {
+                        if (treeUri != null && destDir != null)
+                            findOrCreateFolder(treeUri, destDir, extraFolder)
+                        else null
+                    }
+            val copied = target?.let { copyToTree(file, it) }
             if (copied != null) {
-                saved += copied.toString()
+                if (extraFolder == null) saved += copied.toString()
                 file.delete()
             } else {
                 notCopied += file
@@ -171,6 +188,50 @@ object FileUtil {
         tempPath.deleteRecursively()
         return Result.success(saved)
     }
+
+    /** Finds the folder [name] inside [parent] on the SD card / USB drive, creating it if needed. */
+    private fun findOrCreateFolder(treeUri: Uri, parent: Uri, name: String): Uri? =
+        runCatching {
+                val resolver = context.contentResolver
+                val children =
+                    DocumentsContract.buildChildDocumentsUriUsingTree(
+                        treeUri,
+                        DocumentsContract.getDocumentId(parent),
+                    )
+                resolver
+                    .query(
+                        children,
+                        arrayOf(
+                            DocumentsContract.Document.COLUMN_DOCUMENT_ID,
+                            DocumentsContract.Document.COLUMN_DISPLAY_NAME,
+                            DocumentsContract.Document.COLUMN_MIME_TYPE,
+                        ),
+                        null,
+                        null,
+                        null,
+                    )
+                    ?.use { c ->
+                        while (c.moveToNext()) {
+                            if (
+                                c.getString(1) == name &&
+                                    c.getString(2) == DocumentsContract.Document.MIME_TYPE_DIR
+                            ) {
+                                return@runCatching DocumentsContract.buildDocumentUriUsingTree(
+                                    treeUri,
+                                    c.getString(0),
+                                )
+                            }
+                        }
+                    }
+                DocumentsContract.createDocument(
+                    resolver,
+                    parent,
+                    DocumentsContract.Document.MIME_TYPE_DIR,
+                    name,
+                )
+            }
+            .onFailure { Log.w(TAG, "Couldn't make the folder $name on the drive", it) }
+            .getOrNull()
 
     /** Copies [file] into the folder [destDir]; returns the new file's address, or null on failure. */
     private fun copyToTree(file: File, destDir: Uri): Uri? {
