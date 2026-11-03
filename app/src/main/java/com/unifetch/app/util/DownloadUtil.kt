@@ -919,6 +919,7 @@ object DownloadUtil {
                 mainFiles = mainFiles,
             )
         }
+    }
 
     /**
      * After an "Everything on the page" download: moves each extra into its folder next to the
@@ -964,7 +965,6 @@ object DownloadUtil {
             MediaScannerConnection.scanFile(context, moved.toTypedArray(), null, null)
         }
         return mainFiles.takeIf { it.isNotEmpty() }
-    }
     }
 
     private fun onFinishDownloading(
