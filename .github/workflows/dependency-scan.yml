@@ -1,0 +1,76 @@
+# Security (F6): checks the libraries UniFetcher uses for known vulnerabilities.
+# - Android: sends the Gradle dependency list to GitHub, so Dependabot alerts (Security tab) cover it,
+#   and pull requests that add a vulnerable library are flagged.
+# - Windows: lists vulnerable NuGet packages.
+# This never blocks a release; problems show up as warnings/failures of this workflow only.
+name: Dependency scan
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  schedule:
+    - cron: "17 3 * * 1" # every Monday
+  workflow_dispatch:
+
+concurrency:
+  group: depscan-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  android-submit:
+    name: Android dependency list
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write # needed to submit the dependency graph
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          java-version: "21"
+          distribution: temurin
+      - uses: android-actions/setup-android@v4
+      - name: Submit Gradle dependencies to GitHub
+        uses: gradle/actions/dependency-submission@v6
+        with:
+          cache-provider: basic
+
+  review:
+    name: New vulnerable libraries in this pull request
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+          comment-summary-in-pr: on-failure
+
+  windows:
+    name: Windows NuGet packages
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: "10.0.x"
+      - name: List vulnerable packages
+        shell: pwsh
+        run: |
+          dotnet restore windows/Nickvision.Parabolic.slnx --runtime win-x64
+          if ($LASTEXITCODE -ne 0) { Write-Output "::warning title=Dependency scan::Restore failed, Windows scan skipped"; exit 0 }
+          $out = dotnet list windows/Nickvision.Parabolic.slnx package --vulnerable --include-transitive 2>&1 | Out-String
+          Write-Output $out
+          if ($out -match "has the following vulnerable packages") {
+            Write-Output "::error title=Vulnerable Windows packages::A NuGet package used by UniFetcher for Windows has a known vulnerability. See this run's log."
+            exit 1
+          }
