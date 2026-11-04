@@ -70,4 +70,17 @@ class YtdlpUpdatePolicyTest {
             )
         )
     }
+
+    @org.junit.Test
+    fun aria2cNeedsYtdlp20260609OrNewer() {
+        val min = com.unifetch.app.util.YtdlpUpdatePolicy.ARIA2C_SAFE_FROM
+        val f = com.unifetch.app.util.YtdlpUpdatePolicy::isAtLeast
+        org.junit.Assert.assertTrue(f("2026.06.09", min))
+        org.junit.Assert.assertTrue(f("2026.06.10.123456", min))
+        org.junit.Assert.assertTrue(f("2027.01.01", min))
+        org.junit.Assert.assertFalse(f("2026.06.08", min))
+        org.junit.Assert.assertFalse(f("2025.12.31.000000", min))
+        org.junit.Assert.assertFalse(f(null, min))
+        org.junit.Assert.assertFalse(f("built-in", min))
+    }
 }

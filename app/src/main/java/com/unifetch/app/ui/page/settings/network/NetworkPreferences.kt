@@ -1,5 +1,6 @@
 package com.unifetch.app.ui.page.settings.network
 
+import com.unifetch.app.util.YtdlpUpdateManager
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.lazy.items
@@ -139,7 +140,10 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
                     PreferenceSwitch(
                         title = stringResource(R.string.aria2),
                         icon = Icons.Outlined.Bolt,
-                        description = stringResource(R.string.aria2_desc),
+                        description =
+                            if (aria2c && !YtdlpUpdateManager.aria2cAllowed())
+                                stringResource(R.string.aria2_paused_security)
+                            else stringResource(R.string.aria2_desc),
                         isChecked = aria2c,
                         onClick = {
                             aria2c = !aria2c

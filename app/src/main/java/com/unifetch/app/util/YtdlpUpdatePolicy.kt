@@ -62,4 +62,25 @@ object YtdlpUpdatePolicy {
         if (permanentErrors.any { it in message }) return false
         return updateFixableErrors.any { it in message }
     }
+
+    /**
+     * Security (F-A, CVE-2026-50574): yt-dlp older than 2026.06.09 can run code through aria2c on
+     * some HLS/DASH downloads. aria2c is only used with this version or newer.
+     */
+    val ARIA2C_SAFE_FROM = listOf(2026, 6, 9)
+
+    /**
+     * True if [version] (e.g. "2026.06.09" or a nightly "2026.06.10.123456") is at least
+     * [minimum]. Unknown or unreadable versions count as too old.
+     */
+    fun isAtLeast(version: String?, minimum: List<Int>): Boolean {
+        val parts =
+            version?.trim()?.split('.')?.take(3)?.map { it.toIntOrNull() ?: return false }
+                ?: return false
+        if (parts.size < 3) return false
+        for (i in 0 until 3) {
+            if (parts[i] != minimum[i]) return parts[i] > minimum[i]
+        }
+        return true
+    }
 }

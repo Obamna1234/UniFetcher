@@ -471,7 +471,13 @@ object DownloadUtil {
         getCookieListFromDatabase().mapCatching { it.toCookiesFileContent() }
 
     private fun YoutubeDLRequest.enableAria2c(): YoutubeDLRequest =
-        this.addOption("--downloader", "libaria2c.so")
+        if (YtdlpUpdateManager.aria2cAllowed()) {
+            this.addOption("--downloader", "libaria2c.so")
+        } else {
+            // Security (F-A): old yt-dlp + aria2c is unsafe; use yt-dlp's own downloader instead.
+            Log.i(TAG, "aria2c skipped until yt-dlp is 2026.06.09 or newer")
+            this
+        }
 
     private fun YoutubeDLRequest.addOptionsForVideoDownloads(
         downloadPreferences: DownloadPreferences

@@ -354,6 +354,17 @@ object YtdlpUpdateManager {
         YT_DLP_LAST_CHECK.updateLong(0L)
     }
 
+    /**
+     * Security (F-A): aria2c is used only once yt-dlp is 2026.06.09 or newer (CVE-2026-50574).
+     * The built-in yt-dlp and a rolled-back one can be older; aria2c switches back on by itself
+     * after the next yt-dlp update.
+     */
+    fun aria2cAllowed(): Boolean =
+        YtdlpUpdatePolicy.isAtLeast(
+            runCatching { YoutubeDL.getInstance().version(context) }.getOrNull(),
+            YtdlpUpdatePolicy.ARIA2C_SAFE_FROM,
+        )
+
     fun installedVersionName(): String =
         YoutubeDL.getInstance().version(context)
             ?: YT_DLP_VERSION.getString().ifEmpty { context.getString(R.string.ytdlp_builtin) }

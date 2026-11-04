@@ -100,6 +100,7 @@
     <string name="menu_resume_canceled">Resume stopped</string>
     <string name="menu_retry_failed">Retry failed</string>
     <string name="menu_clear_finished">Clear finished from list</string>
+    <string name="aria2_paused_security">Paused for safety until yt-dlp updates to 2026.06.09 or newer. Downloads still work without it, and it turns back on by itself.</string>
     <string name="page_content_title">If the page has more than one video</string>
     <string name="page_content_main_only">Main video only</string>
     <string name="page_content_everything">Everything on the page</string>
