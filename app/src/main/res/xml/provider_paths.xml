@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Files UniFetcher hands to other apps (open / share a download, install an update).
+  Security (F4): the app's cache folder (which holds cookies.txt and yt-dlp's config) is no longer
+  listed, so it can never be shared.
+  Shared storage stays listed as a whole because downloads can be saved to any folder you pick
+  (Download/UniFetcher, Movies, a custom folder...). That's safe: the provider isn't exported, and
+  another app can only read a file UniFetcher explicitly opens or shares with it, one file at a time.
+  The update APK lives in Android/data/com.unifetch.app/files/apk, which is inside shared storage.
+-->
 <paths>
     <external-path
         name="external_files"
-        path="." />
-    <cache-path
-        name="cache"
         path="." />
 </paths>
