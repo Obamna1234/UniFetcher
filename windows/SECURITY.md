@@ -27,6 +27,17 @@ GitHub-prefix-locked, and SHA-256 verified.
   gate would break tool updates. A targeted approach (pin ffmpeg's publisher where signed, and/or add a
   second trust anchor) is recommended as a future change.
 
+### November 2026 follow-up (with the Android fixes)
+
+- **Dependency scanning (CWE-1104).** The repository's **Dependency scan** workflow lists vulnerable NuGet
+  packages (including transitive ones) on every push, pull request and weekly.
+- **Not applicable on Windows:** aria2c / CVE-2026-50574 (aria2c isn't bundled and its setting is hidden),
+  cleartext WebView, FileProvider paths and template import (none exist here).
+- **Recommended later:** `CommunityToolkit.Labs.WinUI.Controls.TokenView` is a pre-release (Labs) package;
+  move to a stable equivalent when one exists. The app's own self-updater (from the Nickvision.Desktop
+  library) could also check the installer's SHA-256 against GitHub's asset digest, like the tool updater
+  already does.
+
 ## Reporting a problem
 
 Open an issue on GitHub (without personal data), or contact the repository owner.
