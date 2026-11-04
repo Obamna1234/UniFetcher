@@ -125,6 +125,21 @@ object DatabaseUtil {
         return cnt
     }
 
+    /**
+     * Security (F2): yt-dlp options in templates/shortcuts about to be imported from [json] that
+     * can run programs on the phone (empty if none, or if [json] isn't a template backup).
+     */
+    fun riskyOptionsInTemplateJson(json: String): List<String> =
+        json
+            .decodeToBackup()
+            .map { backup ->
+                (backup.templates.orEmpty().map { it.template } +
+                        backup.shortcuts.orEmpty().map { it.option })
+                    .flatMap { TemplateSafety.riskyOptions(it) }
+                    .distinct()
+            }
+            .getOrDefault(emptyList())
+
     suspend fun importTemplatesFromJson(json: String): Int {
         json
             .decodeToBackup()

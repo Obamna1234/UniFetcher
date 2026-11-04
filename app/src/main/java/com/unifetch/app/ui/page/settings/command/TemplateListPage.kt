@@ -121,6 +121,8 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
 
     var selectedTemplateId by TEMPLATE_ID.intState
     val snackbarHostState = remember { SnackbarHostState() }
+    /** A clipboard import waiting for the user to confirm (security F2), with what was found. */
+    var riskyImport by remember { mutableStateOf<Pair<String, List<String>>?>(null) }
 
     BackHandler(isMultiSelectEnabled) { isMultiSelectEnabled = false }
 
@@ -193,13 +195,21 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                                             expanded = false
                                             clipboardManager.getText()?.text?.let {
                                                 if (it.isNotEmpty()) {
-                                                    val res =
-                                                        DatabaseUtil.importTemplatesFromJson(it)
-                                                    snackbarHostState.showSnackbar(
-                                                        context
-                                                            .getString(R.string.template_imported)
-                                                            .format(res)
-                                                    )
+                                                    // Security (F2): warn before importing a
+                                                    // template that can run programs.
+                                                    val risky =
+                                                        DatabaseUtil.riskyOptionsInTemplateJson(it)
+                                                    if (risky.isNotEmpty()) {
+                                                        riskyImport = it to risky
+                                                    } else {
+                                                        val res =
+                                                            DatabaseUtil.importTemplatesFromJson(it)
+                                                        snackbarHostState.showSnackbar(
+                                                            context
+                                                                .getString(R.string.template_imported)
+                                                                .format(res)
+                                                        )
+                                                    }
                                                 }
                                             }
                                         }
@@ -410,6 +420,41 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                 Text(text = stringResource(id = R.string.learn_more))
             }
         }
+    }
+
+    riskyImport?.let { (json, options) ->
+        AlertDialog(
+            onDismissRequest = { riskyImport = null },
+            title = { Text(stringResource(R.string.template_import_risky_title)) },
+            text = {
+                Text(
+                    stringResource(
+                        R.string.template_import_risky_msg,
+                        options.joinToString(", "),
+                    )
+                )
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        riskyImport = null
+                        scope.launch {
+                            val res = DatabaseUtil.importTemplatesFromJson(json)
+                            snackbarHostState.showSnackbar(
+                                context.getString(R.string.template_imported).format(res)
+                            )
+                        }
+                    }
+                ) {
+                    Text(stringResource(R.string.template_import_anyway))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { riskyImport = null }) {
+                    Text(stringResource(R.string.cancel))
+                }
+            },
+        )
     }
 
     LaunchedEffect(templates.size) {
