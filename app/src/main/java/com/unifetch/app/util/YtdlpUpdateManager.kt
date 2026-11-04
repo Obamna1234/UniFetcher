@@ -254,7 +254,7 @@ object YtdlpUpdateManager {
         return try {
             client.newCall(request).execute().use { response ->
                 if (response.isSuccessful) {
-                    json.decodeFromString<LatestRelease>(response.body.string()).tagName
+                    response.body?.string()?.let { json.decodeFromString<LatestRelease>(it).tagName }
                 } else {
                     Log.w(TAG, "GitHub answered ${response.code}")
                     null

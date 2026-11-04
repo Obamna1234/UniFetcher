@@ -69,7 +69,7 @@ object UpdateUtil {
         }
 
     private fun getLatestRelease(): Release =
-        client.newCall(requestForReleases).execute().body.use {
+        (client.newCall(requestForReleases).execute().body ?: throw Exception("empty response")).use {
             val releaseList = jsonFormat.decodeFromString<List<Release>>(it.string())
             val stable = UPDATE_CHANNEL.getInt() == STABLE
             val latestRelease =
@@ -211,7 +211,7 @@ object UpdateUtil {
             val request = Request.Builder().url(targetUrl).build()
             try {
                 val response = client.newCall(request).execute()
-                val responseBody = response.body
+                val responseBody = response.body ?: return@withContext emptyFlow()
                 return@withContext responseBody.downloadFileWithProgress(context.getLatestApk())
             } catch (e: Exception) {
                 e.printStackTrace()
