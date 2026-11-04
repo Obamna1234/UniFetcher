@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Security (F5): the app and its built-in browser only use HTTPS. Plain http:// links opened in the
+  built-in browser are upgraded to https:// first (see util/WebSafety.kt).
+  This doesn't affect yt-dlp, which runs separately, so downloads from http:// sites still work.
+  If a site the app needs only works over http, add just that domain here in a <domain-config>.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

@@ -1,5 +1,6 @@
 package com.unifetch.app
 
+import com.unifetch.app.util.WebSafety
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -162,7 +163,7 @@ class SiteCheckActivity : FragmentActivity() {
                                                     progress = newProgress
                                                 }
                                             }
-                                        loadUrl(url)
+                                        loadUrl(WebSafety.upgradeToHttps(url))
                                     }
                                 },
                             )

@@ -1,5 +1,6 @@
 package com.unifetch.app.ui.page.settings.network
 
+import com.unifetch.app.util.WebSafety
 import android.annotation.SuppressLint
 import android.util.Log
 import android.webkit.CookieManager
@@ -85,7 +86,7 @@ fun WebViewPage(cookiesViewModel: CookiesViewModel, onDismissRequest: () -> Unit
     val cookieManager = CookieManager.getInstance()
     val cookieSet = remember { mutableSetOf<Cookie>() }
     val websiteUrl = state.editingCookieProfile.url
-    val webViewState = rememberWebViewState(websiteUrl)
+    val webViewState = rememberWebViewState(WebSafety.upgradeToHttps(websiteUrl))
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),

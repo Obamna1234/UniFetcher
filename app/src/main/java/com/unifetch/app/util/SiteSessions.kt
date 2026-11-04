@@ -244,7 +244,7 @@ object SiteSessions {
                             }
                         webView = view
                         cont.invokeOnCancellation { handler.removeCallbacks(done) }
-                        view.loadUrl(url)
+                        view.loadUrl(WebSafety.upgradeToHttps(url))
                     }
                 }
             webView?.run {
