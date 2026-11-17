@@ -46,6 +46,7 @@ object StreamPicker {
     fun classify(url: String): Kind? {
         val lower = url.trim().lowercase()
         if (!lower.startsWith("http://") && !lower.startsWith("https://")) return null
+        if (isLocalAddress(lower)) return null
         val path = lower.substringBefore('#').substringBefore('?')
         val query = lower.substringBefore('#').substringAfter('?', "")
         return when {
@@ -55,6 +56,28 @@ object StreamPicker {
             fileExts.any { path.endsWith(it) } -> Kind.FILE
             else -> null
         }
+    }
+
+    /**
+     * True for links to this device or the home network (localhost, 10.x, 192.168.x, 172.16-31.x,
+     * 169.254.x, .local). A web page could ask for these, but they're never the video, so the finder
+     * never downloads them.
+     */
+    fun isLocalAddress(url: String): Boolean {
+        val host =
+            url.lowercase().substringAfter("://").substringBefore('/').substringBefore('?')
+                .substringAfterLast('@').let { h ->
+                    if (h.startsWith("[")) h.substringBefore(']').removePrefix("[") else h.substringBefore(':')
+                }
+        if (host == "localhost" || host.endsWith(".localhost") || host.endsWith(".local")) return true
+        if (host == "::1" || host.startsWith("fc") || host.startsWith("fd") || host.startsWith("fe80")) {
+            return host.contains(':')
+        }
+        val parts = host.split('.').map { it.toIntOrNull() ?: return false }
+        if (parts.size != 4) return false
+        val (a, b) = parts
+        return a == 127 || a == 10 || a == 0 || (a == 192 && b == 168) || (a == 172 && b in 16..31) ||
+            (a == 169 && b == 254)
     }
 
     fun isSide(url: String): Boolean = url.lowercase().let { u -> sideWords.any { it in u } }

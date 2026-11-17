@@ -71,13 +71,21 @@ public partial class DownloadService : IDisposable, IDownloadService
         // straight away and put it back in the queue; the queue carries on when the VPN is back
         _vpn.Changed += async (_, on) =>
         {
-            if (!on && _configurationService.PauseWithoutVpn)
+            try
             {
-                await PauseRunningForVpnAsync();
+                if (!on && _configurationService.PauseWithoutVpn)
+                {
+                    await PauseRunningForVpnAsync();
+                }
+                else if (on)
+                {
+                    StartNextQueued();
+                }
             }
-            else if (on)
+            catch (Exception e)
             {
-                StartNextQueued();
+                // An event handler: an error here must never close the app
+                _logger.LogError($"Couldn't react to the VPN change: {e}");
             }
         };
         _retriedAfterUpdate = new HashSet<string>();

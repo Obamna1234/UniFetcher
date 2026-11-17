@@ -61,6 +61,27 @@ public sealed class WebViewVideoFinder : VideoFinderBase
 
     public static string CookieFile => Path.Combine(DataFolder, "cookies.txt");
 
+    /// <summary>Marker: delete the finder's browser data before it next starts (it's locked while running).</summary>
+    private static string ClearMarker => Path.Combine(Path.GetDirectoryName(DataFolder)!, "VideoFinder.clear");
+
+    public override void Forget(bool alsoBrowserData)
+    {
+        base.Forget(alsoBrowserData);
+        try
+        {
+            File.Delete(CookieFile);
+            if (alsoBrowserData)
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(ClearMarker)!);
+                File.WriteAllText(ClearMarker, string.Empty);
+            }
+        }
+        catch (Exception e)
+        {
+            _logger.LogWarning($"Couldn't clear the video finder's data: {e.Message}");
+        }
+    }
+
     /// <summary>One browser environment for the hidden finder and the finder window. Call on the UI thread.</summary>
     public Task<CoreWebView2Environment> GetEnvironmentAsync()
     {
@@ -68,6 +89,22 @@ public sealed class WebViewVideoFinder : VideoFinderBase
         {
             if (_environment is null)
             {
+                if (File.Exists(ClearMarker))
+                {
+                    // You cleared the browser data last time: start the finder's browser fresh
+                    try
+                    {
+                        if (Directory.Exists(DataFolder))
+                        {
+                            Directory.Delete(DataFolder, true);
+                        }
+                        File.Delete(ClearMarker);
+                    }
+                    catch
+                    {
+                        // still in use; try again next time
+                    }
+                }
                 Directory.CreateDirectory(DataFolder);
                 var options = new CoreWebView2EnvironmentOptions { AdditionalBrowserArguments = "--autoplay-policy=no-user-gesture-required" };
                 _environment = CoreWebView2Environment.CreateWithOptionsAsync(string.Empty, DataFolder, options).AsTask();

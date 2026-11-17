@@ -38,6 +38,10 @@ public static class StreamPicker
         {
             return null;
         }
+        if (IsLocalAddress(lower))
+        {
+            return null;
+        }
         var noFragment = lower.Split('#')[0];
         var path = noFragment.Split('?')[0];
         var query = noFragment.Contains('?') ? noFragment[(noFragment.IndexOf('?') + 1)..] : string.Empty;
@@ -65,6 +69,33 @@ public static class StreamPicker
             "video/mp4" or "video/webm" or "video/quicktime" or "video/x-matroska" => Kind.File,
             _ => null
         };
+    }
+
+    /// <summary>
+    /// True for links to this computer or the home network (localhost, 10.x, 192.168.x, 172.16-31.x, 169.254.x, .local).
+    /// A web page could ask for these, but they're never the video, so the finder never downloads them.
+    /// </summary>
+    public static bool IsLocalAddress(string url)
+    {
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+        {
+            return false;
+        }
+        var host = uri.Host.Trim('[', ']').ToLowerInvariant();
+        if (uri.IsLoopback || host == "localhost" || host.EndsWith(".localhost") || host.EndsWith(".local"))
+        {
+            return true;
+        }
+        if (System.Net.IPAddress.TryParse(host, out var ip))
+        {
+            if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6)
+            {
+                return ip.IsIPv6LinkLocal || ip.IsIPv6SiteLocal || ip.IsIPv6UniqueLocal || System.Net.IPAddress.IsLoopback(ip);
+            }
+            var b = ip.GetAddressBytes();
+            return b[0] == 127 || b[0] == 10 || b[0] == 0 || (b[0] == 192 && b[1] == 168) || (b[0] == 172 && b[1] >= 16 && b[1] <= 31) || (b[0] == 169 && b[1] == 254);
+        }
+        return false;
     }
 
     public static bool IsSide(string url)

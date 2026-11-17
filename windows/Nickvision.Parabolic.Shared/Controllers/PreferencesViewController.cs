@@ -24,6 +24,7 @@ public class PreferencesViewController
     private readonly IDownloadRegistryService _registry;
     private readonly IBulkImportService _bulkImportService;
     private readonly IVpnService _vpn;
+    private readonly IVideoFinder _videoFinder;
 
     public IReadOnlyList<SelectionItem<AudioCodec>> AudioCodecs { get; }
     public IReadOnlyList<SelectionItem<string>> AvailableTranslationLanguages { get; }
@@ -41,9 +42,10 @@ public class PreferencesViewController
     public IReadOnlyList<SelectionItem<NotificationMode>> NotificationModes { get; }
     public IReadOnlyList<SelectionItem<int>> FreeSpaceLimits { get; }
 
-    public PreferencesViewController(IConfigurationService configurationService, ITranslationService translationService, IToolUpdateService toolUpdateService, ISiteSessionService sessions, IFirefoxProfileService profile, IHistoryService historyService, IDownloadRegistryService registry, IBulkImportService bulkImportService, IVpnService vpn)
+    public PreferencesViewController(IConfigurationService configurationService, ITranslationService translationService, IToolUpdateService toolUpdateService, ISiteSessionService sessions, IFirefoxProfileService profile, IHistoryService historyService, IDownloadRegistryService registry, IBulkImportService bulkImportService, IVpnService vpn, IVideoFinder videoFinder)
     {
         _vpn = vpn;
+        _videoFinder = videoFinder;
         _configurationService = configurationService;
         _translationService = translationService;
         _toolUpdateService = toolUpdateService;
@@ -625,6 +627,7 @@ public class PreferencesViewController
         await _registry.ClearAsync();
         await _bulkImportService.ClearFinishedAsync();
         _profile.ClearCookieSnapshot();
+        _videoFinder.Forget(alsoBrowserProfile);
         if (alsoBrowserProfile)
         {
             await _sessions.ForgetAllAsync();

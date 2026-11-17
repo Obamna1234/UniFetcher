@@ -24,6 +24,26 @@ public class VideoFinderAndVpnTests
         Assert.Null(StreamPicker.Classify("blob:https://example.com/123"));
     }
 
+    [Theory]
+    [InlineData("http://127.0.0.1:8080/video.mp4")]
+    [InlineData("http://192.168.1.1/cam/live.m3u8")]
+    [InlineData("http://10.0.0.5/x.mp4")]
+    [InlineData("http://172.20.1.1/x.mpd")]
+    [InlineData("http://localhost/x.mp4")]
+    [InlineData("http://[::1]/x.mp4")]
+    [InlineData("http://printer.local/x.mp4")]
+    public void IgnoresLocalAndHomeNetworkAddresses(string url)
+    {
+        Assert.Null(StreamPicker.Classify(url));
+    }
+
+    [Fact]
+    public void PublicAddressesStillWork()
+    {
+        Assert.Equal(StreamPicker.Kind.File, StreamPicker.Classify("https://172.217.1.1/x.mp4"));
+        Assert.Equal(StreamPicker.Kind.Hls, StreamPicker.Classify("https://fdcdn.example.com/x.m3u8"));
+    }
+
     [Fact]
     public void PrefersTheMainHlsPlaylistOverPreviewsAndVariants()
     {

@@ -33,6 +33,9 @@ public interface IVideoFinder
 
     /// <summary>Remembers a video you played in the finder window, for the page it's on.</summary>
     void Remember(FoundVideo found);
+
+    /// <summary>Forgets found videos and deletes the finder's saved cookies; with <paramref name="alsoBrowserData"/>, its browser data too.</summary>
+    void Forget(bool alsoBrowserData);
 }
 
 /// <summary>Shared bookkeeping for video finders.</summary>
@@ -63,6 +66,12 @@ public abstract class VideoFinderBase : IVideoFinder
     {
         _byPage[Key(found.Page)] = found;
         _byStream[Key(found.Stream)] = found;
+    }
+
+    public virtual void Forget(bool alsoBrowserData)
+    {
+        _byPage.Clear();
+        _byStream.Clear();
     }
 
     protected abstract Task<FoundVideo?> LookAsync(Uri page, CancellationToken cancellationToken);
