@@ -136,6 +136,8 @@ Version tags look like **`v1.2.3`**: raise the last number for fixes, the middle
 5. Open the [Actions page](https://github.com/Obamna1234/UniFetcher/actions). A run named **Release** starts. It takes about 10–20 minutes.
 6. When it shows a green tick ✅, the APKs appear on the release automatically, ready to install ([section 1](#1-install-unifetch-from-releases)).
 
+**Or let Claude release it.** Change the text in the **RELEASE_REQUEST** file to the new version (e.g. `v0.1.11`) on the main branch. The **Release request** workflow waits for that commit's build and tests to pass, then creates the tag and releases Android and Windows, the same as above. If a check fails, nothing is released. Asking Claude to "release it" does exactly this.
+
 > Publishing the release on github.com creates the tag, which starts the Release build. The build then fills in the APKs and notes on that same release.
 
 **If the Release run fails (red ✗):** tap it to see which step failed. "Missing GitHub Secrets" means [section 7](#7-set-up-the-signing-key-one-time) isn't finished. Fix it, delete the release *and* its tag (on the [Tags page](https://github.com/Obamna1234/UniFetcher/tags)), and try again.

@@ -9,6 +9,8 @@ on:
   push:
     tags: ["v*"]
     branches: ["release-check"]
+  # Started on a version tag by the "Release request" workflow
+  workflow_dispatch:
 
 permissions:
   contents: write

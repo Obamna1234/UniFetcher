@@ -1,0 +1,81 @@
+# Publishes a release when the RELEASE_REQUEST file changes on main (e.g. its text becomes "v0.1.10").
+# This lets a release be made by a commit (Claude can push commits but not tags). It:
+#   1. checks the version looks like v1.2.3 (or v1.2.3-beta1 for a pre-release) and isn't already released;
+#   2. waits for this commit's other checks (build, unit tests, crash tests) and stops if any failed;
+#   3. creates the version tag and starts the Android and Windows release workflows for it,
+#      exactly as publishing a release on GitHub's website does.
+# Publishing by hand on the Releases page still works too.
+name: Release request
+
+on:
+  push:
+    branches: ["main"]
+    paths: ["RELEASE_REQUEST"]
+
+permissions:
+  contents: write # create the tag
+  actions: write # start the release workflows
+
+concurrency:
+  group: release-request
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Read the requested version
+        id: version
+        run: |
+          tag="$(tr -d ' \r\n' < RELEASE_REQUEST)"
+          if ! echo "$tag" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9.]+)?$'; then
+            echo "::error title=Release request::'$tag' isn't a version like v1.2.3"
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/$tag" > /dev/null; then
+            echo "::notice title=Release request::$tag is already released; nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for this commit's checks to pass
+        if: steps.version.outputs.skip != 'true'
+        run: |
+          sleep 60 # let the other workflows for this commit start
+          for i in $(seq 1 80); do
+            runs="$(gh run list --commit "$GITHUB_SHA" --limit 50 --json name,status,conclusion \
+              --jq '.[] | select(.name != "Release request" and .name != "Dependency scan") | "\(.name)|\(.status)|\(.conclusion)"')"
+            echo "$runs"
+            if [ -n "$runs" ] && ! echo "$runs" | grep -v '|completed|' > /dev/null; then
+              if echo "$runs" | grep -v '|completed|success$' > /dev/null; then
+                echo "::error title=Release request::A check failed for this commit, so nothing was released."
+                exit 1
+              fi
+              echo "All checks passed."
+              exit 0
+            fi
+            sleep 30
+          done
+          echo "::error title=Release request::Checks took too long, so nothing was released."
+          exit 1
+
+      - name: Create the version tag
+        if: steps.version.outputs.skip != 'true'
+        run: |
+          tag="${{ steps.version.outputs.tag }}"
+          git tag "$tag" "$GITHUB_SHA"
+          git push origin "refs/tags/$tag"
+
+      - name: Start the Android and Windows releases
+        if: steps.version.outputs.skip != 'true'
+        run: |
+          tag="${{ steps.version.outputs.tag }}"
+          gh workflow run release.yml --ref "$tag"
+          gh workflow run win-release.yml --ref "$tag"
+          echo "::notice title=Release request::Started the $tag release. Files appear on the Releases page in about 15-20 minutes."
