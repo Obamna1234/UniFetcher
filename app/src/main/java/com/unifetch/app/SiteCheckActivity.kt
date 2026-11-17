@@ -1,6 +1,11 @@
 package com.unifetch.app
 
 import com.unifetch.app.util.WebSafety
+import com.unifetch.app.util.StreamFinder
+import com.unifetch.app.util.StreamPicker
+import android.webkit.WebResourceResponse
+import androidx.compose.foundation.background
+import androidx.compose.ui.unit.dp
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -70,6 +75,8 @@ class SiteCheckActivity : FragmentActivity() {
             return
         }
         var webView: WebView? = null
+        // Video requests the page makes while the user is here (video finder).
+        val seen = java.util.concurrent.CopyOnWriteArrayList<StreamPicker.Candidate>()
 
         setContent {
             SettingsProvider(calculateWindowSizeClass(this).widthSizeClass) {
@@ -78,6 +85,7 @@ class SiteCheckActivity : FragmentActivity() {
                     isHighContrastModeEnabled = LocalDarkTheme.current.isHighContrastModeEnabled,
                 ) {
                     var progress by remember { mutableIntStateOf(0) }
+                    var videoFound by remember { mutableStateOf(false) }
                     var canGoBack by remember { mutableStateOf(false) }
 
                     BackHandler {
@@ -107,7 +115,11 @@ class SiteCheckActivity : FragmentActivity() {
                                     }
                                 },
                                 actions = {
-                                    TextButton(onClick = { onDone(site) }) {
+                                    TextButton(
+                                        onClick = {
+                                            onDone(site, url, webView?.url, webView?.title, seen)
+                                        }
+                                    ) {
                                         Text(stringResource(R.string.site_check_done))
                                     }
                                 },
@@ -115,6 +127,17 @@ class SiteCheckActivity : FragmentActivity() {
                         }
                     ) { padding ->
                         Column(modifier = Modifier.padding(padding).fillMaxSize()) {
+                            if (videoFound) {
+                                Text(
+                                    text = stringResource(R.string.site_check_video_found),
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                    modifier =
+                                        Modifier.fillMaxWidth()
+                                            .background(MaterialTheme.colorScheme.primaryContainer)
+                                            .padding(horizontal = 16.dp, vertical = 10.dp),
+                                )
+                            }
                             if (progress in 1..99) {
                                 LinearProgressIndicator(
                                     progress = { progress / 100f },
@@ -146,6 +169,23 @@ class SiteCheckActivity : FragmentActivity() {
                                                 ): Boolean =
                                                     request?.url?.scheme?.startsWith("http") != true
 
+                                                // Video finder: notes the video the page plays
+                                                // (never changes what the page loads).
+                                                override fun shouldInterceptRequest(
+                                                    view: WebView?,
+                                                    request: WebResourceRequest?,
+                                                ): WebResourceResponse? {
+                                                    val link = request?.url?.toString()
+                                                    if (
+                                                        link != null &&
+                                                            StreamFinder.observe(link, seen) != null &&
+                                                            !videoFound
+                                                    ) {
+                                                        runOnUiThread { videoFound = true }
+                                                    }
+                                                    return null
+                                                }
+
                                                 override fun doUpdateVisitedHistory(
                                                     view: WebView?,
                                                     url: String?,
@@ -174,8 +214,20 @@ class SiteCheckActivity : FragmentActivity() {
         }
     }
 
-    private fun onDone(site: String) {
+    private fun onDone(
+        site: String,
+        startUrl: String,
+        currentUrl: String?,
+        title: String?,
+        seen: List<StreamPicker.Candidate>,
+    ) {
         SiteSessions.onUserSessionReady(site)
+        // A video the user played here is used for this page's download.
+        StreamPicker.pick(seen)?.let { best ->
+            val found = StreamFinder.Found(best, title?.takeIf { it.isNotBlank() })
+            StreamFinder.remember(startUrl, found)
+            currentUrl?.let { StreamFinder.remember(it, found) }
+        }
         // Retry every download from this site that was waiting for the user.
         downloader
             .getTaskStateMap()

@@ -98,9 +98,15 @@ object SiteSessions {
      * update on extractor errors (via [YtdlpUpdateManager]). On failure throws a
      * [DownloadFailure] with a plain reason and the steps tried.
      */
-    fun <T> run(url: String, request: YoutubeDLRequest, taskId: String?, block: () -> T): T {
+    fun <T> run(
+        url: String,
+        request: YoutubeDLRequest,
+        taskId: String?,
+        firstSteps: List<String> = emptyList(),
+        block: () -> T,
+    ): T {
         val site = siteOf(url)
-        val steps = mutableListOf<String>()
+        val steps = firstSteps.toMutableList()
         var cookieSource =
             if (request.hasOption("--cookies")) CookieSource.MANUAL else CookieSource.NONE
 
@@ -149,6 +155,12 @@ object SiteSessions {
         } finally {
             taskId?.let { tasksUsingCookies -= it }
         }
+    }
+
+    /** Adds the built-in browser's cookies and identity to [request] (used by the video finder). */
+    fun applySessionTo(request: YoutubeDLRequest) {
+        writeCookieFile()
+        applySession(request)
     }
 
     /** Adds the cookie file and the built-in browser's identity to a request. */
@@ -306,13 +318,24 @@ object SiteSessions {
 
     // ---- Failure details -------------------------------------------------------------------------
 
+    /** A failure with a known [reason] (used by the video finder), with the steps tried. */
+    fun failureWith(reason: FailureReason, error: Throwable, steps: List<String>): DownloadFailure =
+        failure(
+            error = error as? Exception ?: Exception(error.message, error),
+            cookieSource = if (isEnabled()) CookieSource.AUTOMATIC else CookieSource.NONE,
+            sessionTried = false,
+            steps = steps,
+            reasonOverride = reason,
+        )
+
     private fun failure(
         error: Exception,
         cookieSource: CookieSource,
         sessionTried: Boolean,
         steps: List<String>,
+        reasonOverride: FailureReason? = null,
     ): DownloadFailure {
-        val reason = FailureReason.classify(error.message, sessionTried)
+        val reason = reasonOverride ?: FailureReason.classify(error.message, sessionTried)
         val context = App.context
         val diagnostic = buildString {
             appendLine(context.getString(R.string.failure_reason_line, reason.label(context)))
@@ -350,6 +373,7 @@ fun FailureReason.label(context: Context): String =
             FailureReason.NETWORK -> R.string.reason_network
             FailureReason.STORAGE -> R.string.reason_storage
             FailureReason.ALREADY_DOWNLOADED -> R.string.reason_already_downloaded
+            FailureReason.VIDEO_NOT_FOUND -> R.string.reason_video_not_found
             FailureReason.OTHER -> R.string.status_error
         }
     )

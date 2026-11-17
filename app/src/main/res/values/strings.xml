@@ -104,6 +104,16 @@
     <string name="template_import_risky_msg">It contains %1$s, which can run programs on your phone. Only import it if you trust whoever sent it.</string>
     <string name="template_import_anyway">Import anyway</string>
     <string name="aria2_paused_security">Paused for safety until yt-dlp updates to 2026.06.09 or newer. Downloads still work without it, and it turns back on by itself.</string>
+    <string name="video_finder">Video finder</string>
+    <string name="video_finder_desc">If a site isn\'t supported, open the page in a hidden built-in browser and download the video its player loads. Copy-protected videos still can\'t be downloaded.</string>
+    <string name="reason_video_not_found">Video not found: open the page and press play</string>
+    <string name="site_check_video_found">Video found ✓ Tap Done to download it</string>
+    <string name="step_finder_start">yt-dlp couldn\'t read the page (%1$s): looked for the video with the video finder</string>
+    <string name="step_finder_nothing">The video finder saw no video on the page (it may need you to press play)</string>
+    <string name="step_finder_found">The video finder found a %1$s</string>
+    <string name="step_finder_failed">yt-dlp couldn\'t download the stream the video finder found</string>
+    <string name="step_finder_used">This video was found by the video finder</string>
+    <string name="step_network_retry">Network problem: waited 20 seconds and tried again in smaller pieces</string>
     <string name="page_content_title">If the page has more than one video</string>
     <string name="page_content_main_only">Main video only</string>
     <string name="page_content_everything">Everything on the page</string>
@@ -145,7 +155,7 @@
     <string name="needs_you_open">Open</string>
     <string name="needs_you_view">View</string>
     <string name="needs_you_notification_discreet">Some downloads are waiting for you</string>
-    <string name="site_check_hint">Pass the check or log in, then tap Done</string>
+    <string name="site_check_hint">Pass the check, log in, or press play on the video. Then tap Done</string>
     <string name="site_check_done">Done</string>
     <string name="reason_already_downloaded">Already downloaded</string>
     <string name="duplicate_skipped_msg">Skipped: this video is already in your download history. Tap Retry to download it again anyway.</string>

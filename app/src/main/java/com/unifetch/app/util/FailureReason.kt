@@ -20,6 +20,11 @@ enum class FailureReason {
     STORAGE,
     /** Skipped: this video is already in the download history. */
     ALREADY_DOWNLOADED,
+    /**
+     * yt-dlp couldn't read the page and the video finder saw no video: the user can open the
+     * page and press play ("Action needed"). Never returned by [classify].
+     */
+    VIDEO_NOT_FOUND,
     OTHER;
 
     companion object {

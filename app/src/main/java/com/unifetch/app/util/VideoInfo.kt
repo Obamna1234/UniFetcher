@@ -76,6 +76,11 @@ data class VideoInfo(
      * [PageMedia.Kind] name per item on the page, in yt-dlp's order (item i is playlist item i + 1).
      */
     @SerialName("unifetch_page_kinds") val pageKinds: List<String>? = null,
+    /**
+     * UniFetcher: set when this video was found by the video finder ([StreamFinder]) on this
+     * page. The video's own link is then in [originalUrl].
+     */
+    @SerialName("unifetch_finder_page") val finderPageUrl: String? = null,
 ) : YoutubeDLInfo {
     /** yt-dlp playlist item number of the page's main video, or null if this isn't a page with extras. */
     val pageMainItem: Int?

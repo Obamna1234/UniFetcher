@@ -1,5 +1,7 @@
 package com.unifetch.app.ui.page.settings.network
 
+import androidx.compose.material.icons.outlined.Search
+import com.unifetch.app.util.VIDEO_FINDER
 import com.unifetch.app.util.YtdlpUpdateManager
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Row
@@ -75,6 +77,7 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
     var proxy by PROXY.booleanState
     var isCookiesEnabled by COOKIES.booleanState
     var autoSessions by remember { mutableStateOf(AUTO_SESSIONS.getBoolean()) }
+    var videoFinder by remember { mutableStateOf(VIDEO_FINDER.getBoolean()) }
     var sessionSites by remember { mutableStateOf(SiteSessions.savedSites()) }
     var showSessionSitesDialog by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
@@ -196,6 +199,18 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
                         onClick = {
                             autoSessions = !autoSessions
                             AUTO_SESSIONS.updateBoolean(autoSessions)
+                        },
+                    )
+                }
+                item {
+                    PreferenceSwitch(
+                        title = stringResource(R.string.video_finder),
+                        description = stringResource(R.string.video_finder_desc),
+                        icon = Icons.Outlined.Search,
+                        isChecked = videoFinder,
+                        onClick = {
+                            videoFinder = !videoFinder
+                            VIDEO_FINDER.updateBoolean(videoFinder)
                         },
                     )
                 }

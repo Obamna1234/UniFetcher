@@ -137,6 +137,8 @@ const val NOTIFICATION_DISCREET = "notification_discreet"
 const val STORAGE_MIN_FREE = "storage_min_free"
 const val TEMP_LOCATION = "temp_location"
 const val AUTO_SESSIONS = "auto_sessions"
+/** Video finder: look for the video a page's player loads when yt-dlp can't read the page. */
+const val VIDEO_FINDER = "video_finder"
 const val SKIP_DUPLICATES = "skip_duplicates"
 /** On pages with several videos: download everything (sorted into folders) instead of only the main video. */
 const val PAGE_EVERYTHING = "page_everything"
@@ -245,6 +247,7 @@ private val BooleanPreferenceDefaults =
     mapOf(
         SECURE_SCREEN to true,
         AUTO_SESSIONS to true,
+        VIDEO_FINDER to true,
         SKIP_DUPLICATES to true,
         FORMAT_SELECTION to true,
         CONFIGURE to true,

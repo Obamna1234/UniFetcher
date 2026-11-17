@@ -46,6 +46,9 @@ import java.io.File
 import android.media.MediaScannerConnection
 
 object DownloadUtil {
+    /** Pause before the one extra attempt after a network problem. */
+    private const val NETWORK_RETRY_DELAY_MS = 20_000L
+
 
     object CookieScheme {
         const val NAME = "name"
@@ -176,6 +179,8 @@ object DownloadUtil {
         playlistIndex: Int? = null,
         taskKey: String? = null,
         preferences: DownloadPreferences = DownloadPreferences.createFromPreferences(),
+        /** False once the download was cancelled (checked before the video finder goes on). */
+        shouldContinue: () -> Boolean = { true },
     ): Result<VideoInfo> {
         with(preferences) {
             val request =
@@ -216,8 +221,86 @@ object DownloadUtil {
                     addOption("--no-playlist")
                     addOption("--socket-timeout", "5")
                 }
-            return getVideoInfo(url, request, taskKey)
+            val result = getVideoInfo(url, request, taskKey)
+            val error = result.exceptionOrNull() ?: return result
+            if (
+                error is YoutubeDL.CanceledException ||
+                    playlistIndex != null ||
+                    !StreamFinder.isEnabled() ||
+                    error.failureReason() !in FINDER_REASONS ||
+                    !shouldContinue()
+            )
+                return result
+            return findVideoOnPage(url, error, this, taskKey, shouldContinue)
         }
+    }
+
+    /** Failures where the page itself may still have a playable video (see [StreamFinder]). */
+    private val FINDER_REASONS = setOf(FailureReason.SITE_NOT_SUPPORTED, FailureReason.OTHER)
+
+    /**
+     * yt-dlp couldn't read [pageUrl]: looks for the video the page's own player loads and, if
+     * there is one, reads that instead. If nothing is found, the download goes to "Action needed"
+     * so the user can open the page and press play.
+     */
+    private fun findVideoOnPage(
+        pageUrl: String,
+        error: Throwable,
+        preferences: DownloadPreferences,
+        taskKey: String?,
+        shouldContinue: () -> Boolean,
+    ): Result<VideoInfo> {
+        val rawError = (error as? SiteSessions.DownloadFailure)?.cause ?: error
+        val steps =
+            mutableListOf(
+                context.getString(R.string.step_finder_start, error.failureReason().label(context))
+            )
+        val found = StreamFinder.find(pageUrl)
+        if (found == null) {
+            steps += context.getString(R.string.step_finder_nothing)
+            return Result.failure(
+                SiteSessions.failureWith(FailureReason.VIDEO_NOT_FOUND, rawError, steps)
+            )
+        }
+        if (!shouldContinue()) return Result.failure(YoutubeDL.CanceledException())
+        val stream = found.candidate.url
+        steps += context.getString(R.string.step_finder_found, StreamPicker.describe(found.candidate))
+        val request =
+            YoutubeDLRequest(stream).apply {
+                addOption("-o", BASENAME)
+                if (preferences.restrictFilenames) addOption("--restrict-filenames")
+                if (preferences.extractAudio) addOption("-x")
+                if (preferences.proxy) enableProxy(preferences.proxyUrl)
+                if (preferences.forceIpv4) addOption("-4")
+                addOption("--referer", pageUrl)
+                if (SiteSessions.isEnabled()) SiteSessions.applySessionTo(this)
+                else if (preferences.cookies) enableCookies(preferences.userAgentString)
+                addOption("--dump-single-json")
+                addOption("-R", "2")
+                addOption("--no-playlist")
+                addOption("--socket-timeout", "10")
+            }
+        return getVideoInfo(stream, request, taskKey)
+            .map { info ->
+                info.copy(
+                    // Its own ID, so two found videos never share a temporary folder.
+                    id = "found-" + Integer.toHexString(pageUrl.hashCode()),
+                    title = found.pageTitle ?: info.title,
+                    originalUrl = stream,
+                    webpageUrl = pageUrl,
+                    finderPageUrl = pageUrl,
+                )
+            }
+            .recoverCatching { e ->
+                if (e is YoutubeDL.CanceledException) throw e
+                val inner = (e as? SiteSessions.DownloadFailure)?.cause ?: e
+                steps += context.getString(R.string.step_finder_failed)
+                throw SiteSessions.failureWith(
+                    FailureReason.classify(inner.message),
+                    inner,
+                    steps,
+                )
+            }
     }
 
     @Serializable
@@ -710,6 +793,8 @@ object DownloadUtil {
         taskId: String,
         downloadPreferences: DownloadPreferences,
         progressCallback: ((Float, Long, String) -> Unit)?,
+        /** False once the download was cancelled (checked before waiting retries). */
+        shouldContinue: () -> Boolean = { true },
     ): Result<List<String>> {
         if (videoInfo == null)
             return Result.failure(Throwable(context.getString(R.string.fetch_info_error_msg)))
@@ -747,6 +832,28 @@ object DownloadUtil {
             request
                 .apply {
                     addOption("--no-mtime")
+                    // Tougher retries for slow or flaky sites: more attempts, and a growing pause
+                    // between them (up to 30 s) instead of retrying instantly.
+                    addOption("--retries", "15")
+                    addOption("--fragment-retries", "20")
+                    addOption("--extractor-retries", "5")
+                    addOption("--retry-sleep", "http:exp=1:30")
+                    addOption("--retry-sleep", "fragment:exp=1:30")
+                    addOption("--retry-sleep", "extractor:exp=1:10")
+                    // A video found by the video finder: download it the way the page's player
+                    // did (same page as referer, same browser identity and cookies).
+                    videoInfo.finderPageUrl?.let { page ->
+                        addOption("--referer", page)
+                        if (SiteSessions.isEnabled()) SiteSessions.applySessionTo(this)
+                        addCommands(
+                            listOf(
+                                "--replace-in-metadata",
+                                "title",
+                                ".+",
+                                videoInfo.title.replace("\\", "\\\\"),
+                            )
+                        )
+                    }
                     //                addOption("-v")
                     if (cookies) {
                         enableCookies(userAgentString)
@@ -763,7 +870,9 @@ object DownloadUtil {
                     if (debug) {
                         addOption("-v")
                     }
-                    if (useDownloadArchive) {
+                    // The download archive works by yt-dlp's video ID, which for a found stream is
+                    // just its file name (e.g. "master"), so it's not used for those.
+                    if (useDownloadArchive && videoInfo.finderPageUrl == null) {
                         val archiveFile = context.getArchiveFile()
                         val archiveFileContent = archiveFile.readText()
                         if (archiveFileContent.contains("${videoInfo.extractor} ${videoInfo.id}")) {
@@ -887,13 +996,36 @@ object DownloadUtil {
                 }
                 .runCatching {
                     val request = this
-                    SiteSessions.run(url, request, taskId = taskId) {
-                        YoutubeDL.getInstance()
-                            .execute(
-                                request = request,
-                                processId = taskId,
-                                callback = progressCallback,
-                            )
+                    val firstSteps =
+                        if (videoInfo.finderPageUrl != null)
+                            listOf(context.getString(R.string.step_finder_used))
+                        else emptyList()
+                    fun runOnce(steps: List<String>) =
+                        SiteSessions.run(url, request, taskId = taskId, firstSteps = steps) {
+                            YoutubeDL.getInstance()
+                                .execute(
+                                    request = request,
+                                    processId = taskId,
+                                    callback = progressCallback,
+                                )
+                        }
+                    try {
+                        runOnce(firstSteps)
+                    } catch (e: Exception) {
+                        // A network problem: wait a little, then try once more in smaller
+                        // pieces (helps on sites that slow down or drop big downloads).
+                        // yt-dlp carries on from where it stopped.
+                        if (
+                            e is YoutubeDL.CanceledException ||
+                                e.failureReason() != FailureReason.NETWORK ||
+                                !shouldContinue()
+                        )
+                            throw e
+                        Log.i(TAG, "network problem, retrying once in smaller chunks")
+                        Thread.sleep(NETWORK_RETRY_DELAY_MS)
+                        if (!shouldContinue()) throw YoutubeDL.CanceledException()
+                        request.addOption("--http-chunk-size", "10M")
+                        runOnce(firstSteps + context.getString(R.string.step_network_retry))
                     }
                 }
                 .onFailure { th ->

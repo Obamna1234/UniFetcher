@@ -43,6 +43,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 
@@ -65,6 +66,7 @@ private val USER_REASONS =
         FailureReason.BLOCKED_BY_SECURITY,
         FailureReason.NEEDS_LOGIN,
         FailureReason.SESSION_REJECTED,
+        FailureReason.VIDEO_NOT_FOUND,
     )
 
 fun DownloadState.needsUser(): Boolean = this is Error && failureReason() in USER_REASONS
@@ -355,18 +357,22 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
         val playlistIndex = if (taskInfo is TypeInfo.Playlist) taskInfo.index else null
         scope
             .launch(Dispatchers.Default) {
+                val job = this
                 DownloadUtil.fetchVideoInfoFromUrl(
                         url = url,
                         playlistIndex = playlistIndex,
                         preferences = preferences,
                         taskKey = id,
+                        shouldContinue = { job.isActive },
                     )
                     .onSuccess {
+                        if (!isActive) return@onSuccess // cancelled meanwhile
                         info = it
                         downloadState = ReadyWithInfo
                         viewState = Task.ViewState.fromVideoInfo(it)
                     }
                     .onFailure { throwable ->
+                        if (!isActive) return@onFailure // cancelled meanwhile
                         if (throwable is YoutubeDL.CanceledException) {
                             return@onFailure
                         }
@@ -405,10 +411,12 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
         }
         scope
             .launch(Dispatchers.Default) {
+                val job = this
                 DownloadUtil.downloadVideo(
                         videoInfo = info,
                         taskId = id,
                         downloadPreferences = preferences,
+                        shouldContinue = { job.isActive },
                         progressCallback = { progressPercentage, _, text ->
                             val progress = progressPercentage / 100f
                             when (val preState = downloadState) {
@@ -434,6 +442,7 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                         },
                     )
                     .onSuccess { pathList ->
+                        if (!isActive) return@onSuccess // cancelled meanwhile
                         downloadState = Completed(pathList.firstOrNull())
 
                         val text =
@@ -459,6 +468,7 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                         }
                     }
                     .onFailure { throwable ->
+                        if (!isActive) return@onFailure // cancelled meanwhile
                         if (throwable is YoutubeDL.CanceledException) {
                             return@onFailure
                         }
@@ -477,15 +487,15 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
     private fun Task.cancelImpl(): Boolean {
         when (val preState = downloadState) {
             is DownloadState.Cancelable -> {
-                val res = YoutubeDL.destroyProcessById(preState.taskId)
-                if (res) {
-                    preState.job.cancel()
-                    val progress = if (preState is Running) preState.progress else null
-                    NotificationUtil.cancelNotification(notificationId)
-                    downloadState =
-                        DownloadState.Canceled(action = preState.action, progress = progress)
-                }
-                return res
+                // No yt-dlp process may be running right now (e.g. waiting to retry, or the
+                // video finder is looking at the page): cancel anyway.
+                YoutubeDL.destroyProcessById(preState.taskId)
+                preState.job.cancel()
+                val progress = if (preState is Running) preState.progress else null
+                NotificationUtil.cancelNotification(notificationId)
+                downloadState =
+                    DownloadState.Canceled(action = preState.action, progress = progress)
+                return true
             }
             Idle -> {
                 downloadState = DownloadState.Canceled(action = FetchInfo)
