@@ -11,5 +11,7 @@ public interface IYtdlpExecutableService : IDependencyExecutableService
 {
     IReadOnlyList<string> GetDiscoveryProcessArguments(Uri url, Credential? credential);
     IReadOnlyList<string> GetDiscoveryProcessArguments(Uri url, Credential? credential, string? cookieProfile);
+    /// <summary>UniFetcher: discovery for a stream found by the video finder (same referer, cookies and identity as its page).</summary>
+    IReadOnlyList<string> GetDiscoveryProcessArguments(Uri url, Credential? credential, string? cookieProfile, FoundVideo? found);
     Process GetDownloadProcess(DownloadOptions downloadOptions);
 }

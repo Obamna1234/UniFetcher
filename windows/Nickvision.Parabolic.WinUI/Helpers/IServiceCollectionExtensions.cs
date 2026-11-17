@@ -17,6 +17,9 @@ public static class IServiceCollectionExtensions
             collection.AddTransient<SettingsPage>();
             collection.AddSingleton<AboutDialog>();
             collection.AddTransient<DownloadRow>();
+            // UniFetcher video finder (WebView2); replaces the "no browser" finder registered by the shared code
+            collection.AddSingleton<WebViewVideoFinder>();
+            collection.AddSingleton<Nickvision.Parabolic.Shared.Services.IVideoFinder>(sp => sp.GetRequiredService<WebViewVideoFinder>());
             return collection;
         }
     }

@@ -152,6 +152,21 @@ public sealed partial class SettingsPage : Page
         RowSessionsList.Header = string.Empty;
         CmbCookiesBrowser.ItemsSource = _controller.Browsers.ToBindableSelectonItems();
         LblAria.Text = _translationService._("aria2c");
+        RowVideoFinder.Header = _translationService._("Video finder");
+        RowVideoFinder.Description = _translationService._("If a site isn't supported, open the page in a hidden built-in browser and download the video its player loads. Copy-protected videos still can't be downloaded.");
+        TglVideoFinder.OnContent = _translationService._("On");
+        TglVideoFinder.OffContent = _translationService._("Off");
+        LblVpn.Text = _translationService._("VPN");
+        BtnTestVpn.Content = _translationService._("Test VPN");
+        ToolTipService.SetToolTip(BtnTestVpn, _translationService._("Shows the IP address and country websites see from UniFetcher. Asks am.i.mullvad.net, only when you click here."));
+        RowPauseWithoutVpn.Header = _translationService._("Pause downloads when no VPN is active");
+        RowPauseWithoutVpn.Description = _translationService._("Stops downloads straight away if the VPN drops, and carries on when it's back. For a system-wide kill switch, use your VPN app's own kill switch setting.");
+        TglPauseWithoutVpn.OnContent = _translationService._("On");
+        TglPauseWithoutVpn.OffContent = _translationService._("Off");
+        UpdateVpnStatus();
+        EventHandler<bool> vpnChanged = (_, _) => DispatcherQueue.TryEnqueue(UpdateVpnStatus);
+        _controller.VpnChanged += vpnChanged;
+        Unloaded += (_, _) => _controller.VpnChanged -= vpnChanged;
         RowUseAria.Header = _translationService._("Use aria2c");
         RowUseAria.Description = _translationService._("An alternative downloader that may be faster in some regions compared to yt-dlp's native downloader");
         TglUseAria.OnContent = _translationService._("On");
@@ -225,6 +240,8 @@ public sealed partial class SettingsPage : Page
         TglSubfolderPerSite.IsOn = _controller.SubfolderPerSite;
         UpdateTempFolderLabel();
         TglSkipAlreadyDownloaded.IsOn = _controller.SkipAlreadyDownloaded;
+        TglVideoFinder.IsOn = _controller.VideoFinder;
+        TglPauseWithoutVpn.IsOn = _controller.PauseWithoutVpn;
         TglBrowserExtension.IsOn = _controller.BrowserExtensionEnabled;
         CmbFreeSpaceLimit.SelectSelectionItem();
         TglIncognito.IsOn = _controller.Incognito;
@@ -524,6 +541,30 @@ public sealed partial class SettingsPage : Page
 
     private async void Tgl_Toggled(object? sender, RoutedEventArgs e) => await ApplyChangesAsync();
 
+    /// <summary>UniFetcher (spec 4h): "VPN: On / Off" from Windows' own network adapters (nothing is contacted).</summary>
+    private void UpdateVpnStatus()
+    {
+        RowVpnStatus.Header = _controller.IsVpnOn ? _translationService._("VPN: On") : _translationService._("VPN: Off");
+        RowVpnStatus.Description = _translationService._("From Windows' own network information. Nothing is contacted to check this.");
+    }
+
+    private async void TestVpn(object? sender, RoutedEventArgs e)
+    {
+        BtnTestVpn.IsEnabled = false;
+        var text = await _controller.TestVpnAsync();
+        BtnTestVpn.IsEnabled = true;
+        var dialog = new ContentDialog
+        {
+            Title = _translationService._("Test VPN"),
+            Content = new TextBlock { Text = text, TextWrapping = TextWrapping.Wrap, IsTextSelectionEnabled = true },
+            CloseButtonText = _translationService._("OK"),
+            DefaultButton = ContentDialogButton.Close,
+            XamlRoot = XamlRoot,
+            RequestedTheme = ActualTheme
+        };
+        await dialog.ShowAsync();
+    }
+
     private async void Txt_TextChanged(object? sender, TextChangedEventArgs e) => await ApplyChangesAsync();
 
     private async Task ApplyChangesAsync()
@@ -542,6 +583,8 @@ public sealed partial class SettingsPage : Page
         _controller.MaxNumberOfActiveDownloads = (int)NumActiveDownloads.Value;
         _controller.SubfolderPerSite = TglSubfolderPerSite.IsOn;
         _controller.SkipAlreadyDownloaded = TglSkipAlreadyDownloaded.IsOn;
+        _controller.VideoFinder = TglVideoFinder.IsOn;
+        _controller.PauseWithoutVpn = TglPauseWithoutVpn.IsOn;
         _controller.BrowserExtensionEnabled = TglBrowserExtension.IsOn;
         _controller.FreeSpaceLimit = (CmbFreeSpaceLimit.SelectedItem as BindableSelectionItem)!.ToSelectionItem<int>()!;
         _controller.Incognito = TglIncognito.IsOn;

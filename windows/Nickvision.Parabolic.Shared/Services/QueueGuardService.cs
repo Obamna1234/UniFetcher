@@ -23,7 +23,9 @@ public enum QueuePauseReason
     DriveMissing,
     DriveFull,
     /// <summary>The temporary files folder you chose isn't available (drive unplugged).</summary>
-    TempMissing
+    TempMissing,
+    /// <summary>"Pause downloads when no VPN is active" is on and the VPN is off (spec 4h).</summary>
+    NoVpn
 }
 
 /// <summary>Why a download failed, as far as the queue is concerned.</summary>
@@ -77,6 +79,7 @@ public partial class QueueGuardService : IQueueGuardService, IDisposable
     private readonly IConfigurationService _configurationService;
     private readonly INotificationService _notificationService;
     private readonly ITranslationService _translationService;
+    private readonly IVpnService _vpn;
     private readonly object _sync;
     private Timer? _monitor;
     private DownloadOptions? _blockedOptions;
@@ -88,8 +91,9 @@ public partial class QueueGuardService : IQueueGuardService, IDisposable
 
     public bool IsPaused => PauseReason != QueuePauseReason.None;
 
-    public QueueGuardService(ILogger<QueueGuardService> logger, IConfigurationService configurationService, INotificationService notificationService, ITranslationService translationService)
+    public QueueGuardService(ILogger<QueueGuardService> logger, IConfigurationService configurationService, INotificationService notificationService, ITranslationService translationService, IVpnService vpn)
     {
+        _vpn = vpn;
         _logger = logger;
         _configurationService = configurationService;
         _notificationService = notificationService;
@@ -125,6 +129,11 @@ public partial class QueueGuardService : IQueueGuardService, IDisposable
     {
         if (PauseReason == QueuePauseReason.NoInternet)
         {
+            return false;
+        }
+        if (!_vpn.CanDownload)
+        {
+            Pause(QueuePauseReason.NoVpn, options);
             return false;
         }
         // Find the drive: same letter with the same serial, or the drive with that serial under a new letter
@@ -261,6 +270,7 @@ public partial class QueueGuardService : IQueueGuardService, IDisposable
             QueuePauseReason.NoInternet => _translationService._("No internet connection. Downloads are paused and will carry on by themselves when the connection is back."),
             QueuePauseReason.DriveMissing => _translationService._("Download drive not connected ({0}). Downloads are paused and will carry on when the drive is plugged back in.", Path.GetPathRoot(options.SaveFolder) ?? options.SaveFolder),
             QueuePauseReason.TempMissing => _translationService._("The temporary files folder isn't available ({0}). Downloads are paused and will carry on when its drive is back. You can change it in Settings → Downloads.", _configurationService.TempFolder),
+            QueuePauseReason.NoVpn => _translationService._("Paused: VPN is off. Downloads carry on by themselves when your VPN is back on. You can change this in Settings → Downloader."),
             _ => _translationService._("The download drive is full ({0}). Downloads are paused; free up some space and they will carry on.", Path.GetPathRoot(options.SaveFolder) ?? options.SaveFolder)
         };
         _logger.LogWarning($"Queue paused: {reason}");
@@ -286,6 +296,7 @@ public partial class QueueGuardService : IQueueGuardService, IDisposable
             QueuePauseReason.DriveMissing => DriveIsBack(blocked),
             QueuePauseReason.DriveFull => FreeSpace(blocked.SaveFolder) is long free && free >= Math.Max(MinimumFreeBytes, 50L * 1024 * 1024) && (TempFree() is not long tempFree || tempFree >= MinimumFreeBytes),
             QueuePauseReason.TempMissing => TempOk(),
+            QueuePauseReason.NoVpn => _vpn.CanDownload,
             _ => true
         };
         if (!ok)
@@ -304,7 +315,12 @@ public partial class QueueGuardService : IQueueGuardService, IDisposable
             _monitor = null;
         }
         _logger.LogInformation($"Queue resumed after {reason}.");
-        _notificationService.Send(new AppNotification(reason == QueuePauseReason.NoInternet ? _translationService._("Connection is back. Downloads have resumed.") : _translationService._("Download drive is ready. Downloads have resumed."), NotificationSeverity.Success));
+        _notificationService.Send(new AppNotification(reason switch
+        {
+            QueuePauseReason.NoInternet => _translationService._("Connection is back. Downloads have resumed."),
+            QueuePauseReason.NoVpn => _translationService._("VPN is back on. Downloads have resumed."),
+            _ => _translationService._("Download drive is ready. Downloads have resumed.")
+        }, NotificationSeverity.Success));
         Resumed?.Invoke(this, EventArgs.Empty);
     }
 

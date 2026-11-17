@@ -40,6 +40,22 @@ public static class IConfigurationServiceExtensions
             set => configurationService.Set("FreeSpaceLimitMb", value);
         }
 
+        /// <summary>UniFetcher: when yt-dlp can't read a page, look for the video its player loads (hidden built-in browser). Default on.</summary>
+        public bool VideoFinder
+        {
+            get => configurationService.Get("VideoFinder", true);
+
+            set => configurationService.Set("VideoFinder", value);
+        }
+
+        /// <summary>UniFetcher: pause the queue while no VPN is active (Android spec 4h). Default off.</summary>
+        public bool PauseWithoutVpn
+        {
+            get => configurationService.Get("PauseWithoutVpn", false);
+
+            set => configurationService.Set("PauseWithoutVpn", value);
+        }
+
         /// <summary>UniFetcher: skip (untick) videos you've already downloaded. Default on.</summary>
         public bool SkipAlreadyDownloaded
         {

@@ -25,14 +25,16 @@ public class DiscoveryService : IDiscoveryService
     private readonly IYtdlpExecutableService _ytdlpExecutableService;
     private readonly IToolUpdateService _toolUpdateService;
     private readonly ISiteSessionService _sessions;
+    private readonly IVideoFinder _videoFinder;
 
     static DiscoveryService()
     {
         BatchFileDelimiter = '|';
     }
 
-    public DiscoveryService(ILogger<DiscoveryService> logger, IConfigurationService configurationService, IThumbnailService thumbnailService, ITranslationService translationService, IYtdlpExecutableService ytdlpExecutableService, IToolUpdateService toolUpdateService, ISiteSessionService sessions)
+    public DiscoveryService(ILogger<DiscoveryService> logger, IConfigurationService configurationService, IThumbnailService thumbnailService, ITranslationService translationService, IYtdlpExecutableService ytdlpExecutableService, IToolUpdateService toolUpdateService, ISiteSessionService sessions, IVideoFinder videoFinder)
     {
+        _videoFinder = videoFinder;
         _logger = logger;
         _configurationService = configurationService;
         _thumbnailService = thumbnailService;
@@ -99,7 +101,26 @@ public class DiscoveryService : IDiscoveryService
         if (processResult.ExitCode != 0 && (string.IsNullOrEmpty(processResult.Output) || processResult.Output[0] != '{'))
         {
             _logger.LogError($"Failed to discover media for {url}: {processResult.Error.TrimEnd()}");
-            throw new YtdlpException(processResult.Error);
+            // UniFetcher video finder: yt-dlp can't read the page, so look for the video the page's own player loads
+            var reason = FailureReasons.ClassifyLog(processResult.Error, false);
+            if (!_configurationService.VideoFinder || !_videoFinder.IsAvailable || reason is not (FailureReason.SiteNotSupported or FailureReason.Other) || _videoFinder.ForStream(url) is not null)
+            {
+                throw new YtdlpException(processResult.Error);
+            }
+            _logger.LogInformation($"Looking for the video on {url} with the video finder...");
+            var found = await _videoFinder.FindAsync(url, cancellationToken);
+            if (found is null)
+            {
+                throw new YtdlpException($"{FailureReasons.VideoNotFoundNote} (it may need you to press play).\n\n{processResult.Error}");
+            }
+            var described = StreamPicker.Describe(new StreamPicker.Candidate(found.Stream.ToString(), found.Kind));
+            _logger.LogInformation($"The video finder found a {described}");
+            processResult = await _ytdlpExecutableService.ExecuteAsync(_ytdlpExecutableService.GetDiscoveryProcessArguments(found.Stream, credential, null, found), cancellationToken);
+            if (processResult.ExitCode != 0 && (string.IsNullOrEmpty(processResult.Output) || processResult.Output[0] != '{'))
+            {
+                throw new YtdlpException($"UniFetcher: the video finder found a {described}, but yt-dlp couldn't read it.\n\n{processResult.Error}");
+            }
+            url = found.Stream;
         }
         cancellationToken.ThrowIfCancellationRequested();
         using var json = JsonDocument.Parse(processResult.Output);

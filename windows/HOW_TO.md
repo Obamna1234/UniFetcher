@@ -256,6 +256,23 @@ Nothing there expires, and the list is still there after you close UniFetcher. Y
 
 If moving a finished video into your download folder fails (for example the drive was unplugged at that moment), the video is kept in the temporary folder and the download says where.
 
+## Sites that are hard to download from
+
+- **Video finder** (Settings → Downloader, on by default). If yt-dlp can't read a page, UniFetcher opens it in a hidden built-in browser for up to about 45 seconds, notes the video stream the page's own player loads, and downloads that.
+- If no video shows up, you'll see **"Video not found"**:
+  1. Click **Find the video** (or **Open** next to the site under **Action needed**).
+  2. In the window that opens, pass any check or log in if asked, then press play on the video.
+  3. When it says **"Video found ✓"**, click **Use this video**.
+- Copy-protected (DRM) videos and members-only videos without a membership can't be downloaded. Nothing is clicked, solved or bypassed for you.
+- Slow or unreliable sites get more retries, with a growing pause between them.
+
+## Using a VPN
+
+- **Settings → Downloader → VPN** shows **VPN: On / Off** (from Windows' own network adapters; nothing is contacted).
+- **Pause downloads when no VPN is active** (off by default): if the VPN drops, downloads stop straight away and carry on when it's back.
+- **Test VPN** shows the IP address and country websites see. Check it's your VPN server's location. It asks am.i.mullvad.net, only when you click it.
+- For a system-wide kill switch, turn on your VPN app's own **kill switch** (in PIA: Settings → Privacy → VPN Kill Switch) and make sure UniFetcher isn't excluded by split tunnelling.
+
 ## Copy an error log and report a bug
 
 1. For a failed download: click **Copy diagnostic** on it. That copies the reason, whether cookies were used, what UniFetcher tried and yt-dlp's error, with cookies, link tokens and your Windows user name removed. (Or click **Log** to see everything.)

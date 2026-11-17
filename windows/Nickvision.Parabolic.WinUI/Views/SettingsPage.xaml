@@ -433,6 +433,34 @@
                                 </community:SettingsExpander.Items>
                             </community:SettingsExpander>
 
+                            <!-- UniFetcher: video finder for pages yt-dlp can't read -->
+                            <community:SettingsCard x:Name="RowVideoFinder">
+                                <community:SettingsCard.HeaderIcon>
+                                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE721;"/>
+                                </community:SettingsCard.HeaderIcon>
+
+                                <ToggleSwitch x:Name="TglVideoFinder" Toggled="Tgl_Toggled"/>
+                            </community:SettingsCard>
+
+                            <!-- UniFetcher (spec 4h): VPN status, test and pausing -->
+                            <TextBlock x:Name="LblVpn" Margin="0,12,0,0" Style="{StaticResource NavigationViewItemHeaderTextStyle}"/>
+
+                            <community:SettingsCard x:Name="RowVpnStatus">
+                                <community:SettingsCard.HeaderIcon>
+                                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE705;"/>
+                                </community:SettingsCard.HeaderIcon>
+
+                                <Button x:Name="BtnTestVpn" Click="TestVpn"/>
+                            </community:SettingsCard>
+
+                            <community:SettingsCard x:Name="RowPauseWithoutVpn">
+                                <community:SettingsCard.HeaderIcon>
+                                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE769;"/>
+                                </community:SettingsCard.HeaderIcon>
+
+                                <ToggleSwitch x:Name="TglPauseWithoutVpn" Toggled="Tgl_Toggled"/>
+                            </community:SettingsCard>
+
                             <TextBlock x:Name="LblAria" Visibility="Collapsed" Margin="0,12,0,0" Style="{StaticResource NavigationViewItemHeaderTextStyle}"/>
 
                             <community:SettingsCard x:Name="RowBrowserExtension">

@@ -27,6 +27,7 @@ public class YtdlpExecutableService : DependencyExecutableService, IYtdlpExecuta
     private readonly IDenoExecutableService _denoExecutableService;
     private readonly IToolUpdateService _toolUpdateService;
     private readonly IQueueGuardService _queueGuard;
+    private readonly IVideoFinder _videoFinder;
 
     static YtdlpExecutableService()
     {
@@ -57,12 +58,13 @@ public class YtdlpExecutableService : DependencyExecutableService, IYtdlpExecuta
         PartialDownloadFilePatterns = ["*.part*", "*.vtt", "*.srt", "*.ass", "*.lrc"];
     }
 
-    public YtdlpExecutableService(ILogger<YtdlpExecutableService> logger, ILogger<UpdaterService> updaterLogger, IConfigurationService configurationService, IDenoExecutableService denoExecutableService, IToolUpdateService toolUpdateService, IQueueGuardService queueGuard, IHttpClientFactory httpClientFactory)
+    public YtdlpExecutableService(ILogger<YtdlpExecutableService> logger, ILogger<UpdaterService> updaterLogger, IConfigurationService configurationService, IDenoExecutableService denoExecutableService, IToolUpdateService toolUpdateService, IQueueGuardService queueGuard, IVideoFinder videoFinder, IHttpClientFactory httpClientFactory)
         : base(logger, "yt-dlp", YtdlpBundledVersion, YtdlpAssetName, configurationService, new UpdaterService(updaterLogger, "yt-dlp", "yt-dlp", httpClientFactory.CreateClient()), new UpdaterService(updaterLogger, "yt-dlp", "yt-dlp-nightly-builds", httpClientFactory.CreateClient()))
     {
         _denoExecutableService = denoExecutableService;
         _toolUpdateService = toolUpdateService;
         _queueGuard = queueGuard;
+        _videoFinder = videoFinder;
     }
 
     /// <summary>UniFetcher: yt-dlp is chosen by the tool update service (installed update, or the bundled copy).</summary>
@@ -70,8 +72,11 @@ public class YtdlpExecutableService : DependencyExecutableService, IYtdlpExecuta
 
     public IReadOnlyList<string> GetDiscoveryProcessArguments(Uri url, Credential? credential) => GetDiscoveryProcessArguments(url, credential, null);
 
-    public IReadOnlyList<string> GetDiscoveryProcessArguments(Uri url, Credential? credential, string? cookieProfile)
+    public IReadOnlyList<string> GetDiscoveryProcessArguments(Uri url, Credential? credential, string? cookieProfile) => GetDiscoveryProcessArguments(url, credential, cookieProfile, null);
+
+    public IReadOnlyList<string> GetDiscoveryProcessArguments(Uri url, Credential? credential, string? cookieProfile, FoundVideo? found)
     {
+        found ??= _videoFinder.ForStream(url);
         var pluginsDir = Path.Combine(Desktop.System.Environment.ExecutingDirectory, "plugins");
         var arguments = new List<string>(23)
         {
@@ -117,7 +122,11 @@ public class YtdlpExecutableService : DependencyExecutableService, IYtdlpExecuta
                 arguments.Add(credential.Password);
             }
         }
-        if (_configurationService.CookiesBrowser != Browser.None)
+        if (found is not null)
+        {
+            AddFinderArguments(arguments, found);
+        }
+        else if (_configurationService.CookiesBrowser != Browser.None)
         {
             arguments.Add("--cookies-from-browser");
             arguments.Add(CookiesFromBrowserArgument);
@@ -152,8 +161,51 @@ public class YtdlpExecutableService : DependencyExecutableService, IYtdlpExecuta
         return path;
     }
 
+    /// <summary>
+    /// UniFetcher video finder: fetch the found stream the way the page's player did (same page as referer, the built-in
+    /// browser's cookies and identity).
+    /// </summary>
+    private static void AddFinderArguments(List<string> arguments, FoundVideo found)
+    {
+        arguments.Add("--referer");
+        arguments.Add(found.Page.ToString());
+        if (!string.IsNullOrEmpty(found.CookieFile) && File.Exists(found.CookieFile))
+        {
+            arguments.Add("--cookies");
+            arguments.Add(found.CookieFile);
+        }
+        if (!string.IsNullOrEmpty(found.UserAgent))
+        {
+            arguments.Add("--add-header");
+            arguments.Add($"User-Agent:{found.UserAgent}");
+        }
+        if (!string.IsNullOrWhiteSpace(found.Title))
+        {
+            // The page's title instead of the stream's file name (e.g. "master")
+            arguments.Add("--replace-in-metadata");
+            arguments.Add("title");
+            arguments.Add(".+");
+            arguments.Add(found.Title.Replace("\\", "\\\\"));
+        }
+    }
+
+    /// <summary>
+    /// UniFetcher: tougher retries for slow or flaky sites: more attempts, and a growing pause between them (up to 30 s)
+    /// instead of retrying instantly.
+    /// </summary>
+    public static readonly string[] RetryArguments =
+    [
+        "--retries", "15",
+        "--fragment-retries", "20",
+        "--extractor-retries", "5",
+        "--retry-sleep", "http:exp=1:30",
+        "--retry-sleep", "fragment:exp=1:30",
+        "--retry-sleep", "extractor:exp=1:10"
+    ];
+
     public Process GetDownloadProcess(DownloadOptions downloadOptions)
     {
+        var found = _videoFinder.ForStream(downloadOptions.Url);
         var pluginsDir = Path.Combine(Desktop.System.Environment.ExecutingDirectory, "plugins");
         Directory.CreateDirectory(downloadOptions.SaveFolder);
         var arguments = new List<string>(128)
@@ -192,6 +244,13 @@ public class YtdlpExecutableService : DependencyExecutableService, IYtdlpExecuta
             "--print",
             "after_move:filepath"
         };
+        arguments.AddRange(RetryArguments);
+        if (downloadOptions.SmallChunks)
+        {
+            // UniFetcher: after a network failure, the retry fetches in smaller pieces (helps on sites that drop big downloads)
+            arguments.Add("--http-chunk-size");
+            arguments.Add("10M");
+        }
         if (downloadOptions.RequiresPlaylistItems && downloadOptions.PlaylistPosition != -1)
         {
             arguments.Add("--playlist-items");
@@ -323,7 +382,11 @@ public class YtdlpExecutableService : DependencyExecutableService, IYtdlpExecuta
             arguments.Add("--proxy");
             arguments.Add(_configurationService.ProxyUrl);
         }
-        if (_configurationService.CookiesBrowser != Browser.None)
+        if (found is not null)
+        {
+            AddFinderArguments(arguments, found);
+        }
+        else if (_configurationService.CookiesBrowser != Browser.None)
         {
             arguments.Add("--cookies-from-browser");
             arguments.Add(CookiesFromBrowserArgument);

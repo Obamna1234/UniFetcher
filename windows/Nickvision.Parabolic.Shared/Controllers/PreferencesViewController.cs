@@ -23,6 +23,7 @@ public class PreferencesViewController
     private readonly IHistoryService _historyService;
     private readonly IDownloadRegistryService _registry;
     private readonly IBulkImportService _bulkImportService;
+    private readonly IVpnService _vpn;
 
     public IReadOnlyList<SelectionItem<AudioCodec>> AudioCodecs { get; }
     public IReadOnlyList<SelectionItem<string>> AvailableTranslationLanguages { get; }
@@ -40,8 +41,9 @@ public class PreferencesViewController
     public IReadOnlyList<SelectionItem<NotificationMode>> NotificationModes { get; }
     public IReadOnlyList<SelectionItem<int>> FreeSpaceLimits { get; }
 
-    public PreferencesViewController(IConfigurationService configurationService, ITranslationService translationService, IToolUpdateService toolUpdateService, ISiteSessionService sessions, IFirefoxProfileService profile, IHistoryService historyService, IDownloadRegistryService registry, IBulkImportService bulkImportService)
+    public PreferencesViewController(IConfigurationService configurationService, ITranslationService translationService, IToolUpdateService toolUpdateService, ISiteSessionService sessions, IFirefoxProfileService profile, IHistoryService historyService, IDownloadRegistryService registry, IBulkImportService bulkImportService, IVpnService vpn)
     {
+        _vpn = vpn;
         _configurationService = configurationService;
         _translationService = translationService;
         _toolUpdateService = toolUpdateService;
@@ -543,6 +545,53 @@ public class PreferencesViewController
         get => _configurationService.Get("BrowserExtensionEnabled", false);
 
         set => _configurationService.Set("BrowserExtensionEnabled", value);
+    }
+
+    /// <summary>UniFetcher video finder: look for the video a page's player loads when yt-dlp can't read the page.</summary>
+    public bool VideoFinder
+    {
+        get => _configurationService.VideoFinder;
+
+        set => _configurationService.VideoFinder = value;
+    }
+
+    /// <summary>UniFetcher (spec 4h): pause the queue while no VPN is active.</summary>
+    public bool PauseWithoutVpn
+    {
+        get => _configurationService.PauseWithoutVpn;
+
+        set => _configurationService.PauseWithoutVpn = value;
+    }
+
+    public bool IsVpnOn => _vpn.IsVpnOn;
+
+    public event EventHandler<bool>? VpnChanged
+    {
+        add => _vpn.Changed += value;
+        remove => _vpn.Changed -= value;
+    }
+
+    /// <summary>"Test VPN": the IP address and place websites see, as one plain sentence.</summary>
+    public async Task<string> TestVpnAsync()
+    {
+        try
+        {
+            var r = await _vpn.TestAsync();
+            var place = string.Join(", ", new[] { r.City, r.Country }.Where(x => !string.IsNullOrEmpty(x)));
+            var text = _translationService._("Websites see you at {0} ({1}).", r.Ip ?? "?", string.IsNullOrEmpty(place) ? "?" : place);
+            if (!string.IsNullOrEmpty(r.Organization))
+            {
+                text += "\n" + _translationService._("Network: {0}", r.Organization);
+            }
+            text += "\n\n" + (_vpn.IsVpnOn
+                ? _translationService._("If that's your VPN server's location, not your real one, the VPN is working for UniFetcher.")
+                : _translationService._("Windows says no VPN is active, so this is probably your real address."));
+            return text;
+        }
+        catch (Exception e)
+        {
+            return _translationService._("Couldn't check: {0}", e.Message);
+        }
     }
 
     public bool SkipAlreadyDownloaded

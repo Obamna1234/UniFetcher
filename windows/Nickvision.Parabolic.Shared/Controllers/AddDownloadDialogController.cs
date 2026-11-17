@@ -441,7 +441,8 @@ public class AddDownloadDialogController
                 : _translationService._("An error occurred while discovering media");
             _notificationService.Send(new AppNotification(message, reason.NeedsAction() ? NotificationSeverity.Warning : NotificationSeverity.Error)
             {
-                Action = reason.NeedsAction() ? "needs-action" : "error",
+                // UniFetcher video finder: "Video not found" opens the page in the finder window so you can press play
+                Action = reason == FailureReason.VideoNotFound ? "find-video" : reason.NeedsAction() ? "needs-action" : "error",
                 ActionParam = reason.NeedsAction() ? url.ToString() : e.ToString()
             });
             return null;

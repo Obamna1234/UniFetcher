@@ -1,6 +1,16 @@
 # Changelog
 
 ## Unreleased
+### Better on hard sites
+- **Video finder** (Settings → Downloader, on by default): when yt-dlp can't read a page, UniFetcher opens it in a hidden built-in browser (WebView2, its own private profile), notes the video stream the page's player loads, and downloads that. Previews and adverts are avoided; pop-ups and page-started downloads are blocked.
+- If no video shows up you get **"Video not found"** with a **Find the video** button (or **Open** in Action needed): press play in the window that opens, then **Use this video**. Nothing is clicked or solved for you; copy-protected (DRM) videos still can't be downloaded.
+- **Tougher retries**: more attempts with a growing pause between them, and after a network problem one more try 20 seconds later in smaller pieces.
+
+### VPN
+- **VPN: On / Off** in Settings → Downloader, from Windows' own network adapters (nothing is contacted).
+- **Pause downloads when no VPN is active** (off by default): stops downloads straight away if the VPN drops and carries on when it's back.
+- **Test VPN**: shows the IP address and country websites see (asks am.i.mullvad.net, only when you click it).
+
 ### Fixed: downloads failing with "Something else went wrong"
 - The Smart quality rule used a format filter yt-dlp doesn't accept, so every Smart-quality download stopped before starting (YouTube included). The rule now uses yt-dlp's own resolution sorting (best up to 1080p, portrait videos too).
 - Copy diagnostic now includes the real error line (tracebacks and "error:" lines) and always the last lines of the log.

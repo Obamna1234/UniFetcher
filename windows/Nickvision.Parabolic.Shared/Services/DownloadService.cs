@@ -6,6 +6,7 @@ using Nickvision.Parabolic.Shared.Events;
 using Nickvision.Parabolic.Shared.Helpers;
 using Nickvision.Parabolic.Shared.Models;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
@@ -28,6 +29,7 @@ public partial class DownloadService : IDisposable, IDownloadService
     private readonly ISiteSessionService _sessions;
     private readonly IActionNeededService _actionNeeded;
     private readonly INotificationService _notificationService;
+    private readonly IVpnService _vpn;
     // Session retries per download (first session + one refresh at most)
     private readonly Dictionary<string, int> _sessionRetries = new Dictionary<string, int>();
     private readonly object _queueLock = new object();
@@ -49,7 +51,7 @@ public partial class DownloadService : IDisposable, IDownloadService
     public int QueuedCount => _queued.Count;
     public int CompletedCount => _completed.Count;
 
-    public DownloadService(ILogger<DownloadService> logger, IConfigurationService configurationService, IHistoryService historyService, IRecoveryService recoveryService, ITranslationService translationService, IYtdlpExecutableService ytdlpService, IToolUpdateService toolUpdateService, IDownloadRegistryService downloadRegistryService, IQueueGuardService queueGuard, ISiteSessionService sessions, INotificationService notificationService, IActionNeededService actionNeeded)
+    public DownloadService(ILogger<DownloadService> logger, IConfigurationService configurationService, IHistoryService historyService, IRecoveryService recoveryService, ITranslationService translationService, IYtdlpExecutableService ytdlpService, IToolUpdateService toolUpdateService, IDownloadRegistryService downloadRegistryService, IQueueGuardService queueGuard, ISiteSessionService sessions, INotificationService notificationService, IActionNeededService actionNeeded, IVpnService vpn)
     {
         _logger = logger;
         _configurationService = configurationService;
@@ -64,6 +66,20 @@ public partial class DownloadService : IDisposable, IDownloadService
         _actionNeeded = actionNeeded;
         _notificationService = notificationService;
         _queueGuard.Resumed += (_, _) => StartNextQueued();
+        _vpn = vpn;
+        // UniFetcher (spec 4h): if the VPN drops while "Pause downloads when no VPN is active" is on, stop what's running
+        // straight away and put it back in the queue; the queue carries on when the VPN is back
+        _vpn.Changed += async (_, on) =>
+        {
+            if (!on && _configurationService.PauseWithoutVpn)
+            {
+                await PauseRunningForVpnAsync();
+            }
+            else if (on)
+            {
+                StartNextQueued();
+            }
+        };
         _retriedAfterUpdate = new HashSet<string>();
         _downloading = new Dictionary<int, Download>();
         _queued = new Dictionary<int, Download>();
@@ -495,6 +511,19 @@ public partial class DownloadService : IDisposable, IDownloadService
                 await RequeueAsync(download);
                 return;
             }
+            // UniFetcher: a network problem while the internet is up: wait 20 seconds and try once more in smaller pieces
+            // (yt-dlp carries on where it stopped)
+            if (FailureReasons.ClassifyLog(download.Log, false) == FailureReason.Network && !download.Options.SmallChunks)
+            {
+                download.Options.SmallChunks = true;
+                download.Options.Steps.Add("Network problem: waited 20 seconds and tried again in smaller pieces");
+                DownloadCompleted?.Invoke(this, e);
+                _logger.LogInformation($"Network problem on download ({e.Id}); retrying in 20 seconds in smaller pieces.");
+                await Task.Delay(TimeSpan.FromSeconds(20));
+                await RetryAsync(e.Id);
+                StartNextQueued();
+                return;
+            }
             // UniFetcher: if moving the finished video into the download folder failed, the file is still in the temporary
             // folder: never delete it, and say where it is
             if (MoveFailedRegex().IsMatch(download.Log))
@@ -624,6 +653,26 @@ public partial class DownloadService : IDisposable, IDownloadService
     }
 
     /// <summary>Puts an interrupted download back in the queue as a fresh item (partial files are kept, so yt-dlp continues where it stopped).</summary>
+    private async Task PauseRunningForVpnAsync()
+    {
+        List<Download> running;
+        lock (_queueLock)
+        {
+            running = _downloading.Values.ToList();
+            foreach (var download in running)
+            {
+                _downloading.Remove(download.Id);
+            }
+        }
+        foreach (var download in running)
+        {
+            _logger.LogInformation($"VPN dropped: stopping download ({download.Id}) and putting it back in the queue.");
+            download.Stop();
+            await RequeueAsync(download);
+        }
+        StartNextQueued();
+    }
+
     private async Task RequeueAsync(Download old)
     {
         _completed.Remove(old.Id);

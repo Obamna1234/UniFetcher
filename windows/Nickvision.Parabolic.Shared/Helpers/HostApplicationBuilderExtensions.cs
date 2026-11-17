@@ -42,6 +42,9 @@ public static class HostApplicationBuilderExtensions
             builder.Services.AddSingleton<IThumbnailService, ThumbnailService>();
             builder.Services.AddSingleton<IToolUpdateService, ToolUpdateService>();
             builder.Services.AddSingleton<IQueueGuardService, QueueGuardService>();
+            builder.Services.AddSingleton<IVpnService, VpnService>();
+            // Replaced by the WebView2 video finder in the Windows app (no built-in browser elsewhere)
+            builder.Services.AddSingleton<IVideoFinder, NullVideoFinder>();
             builder.Services.AddSingleton<IFirefoxProfileService, FirefoxProfileService>();
             builder.Services.AddSingleton<ISiteSessionService, SiteSessionService>();
             builder.Services.AddSingleton<IYtdlpExecutableService, YtdlpExecutableService>();

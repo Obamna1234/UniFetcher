@@ -313,6 +313,18 @@ public sealed partial class MainWindow : Window
             };
             BtnInfoBar.Click += _notificationClickHandler;
         }
+        else if (e.Notification.Action == "find-video" && !string.IsNullOrEmpty(e.Notification.ActionParam))
+        {
+            // UniFetcher video finder: open the page so you can press play, then add it again with the video you played
+            BtnInfoBar.Content = _translationService._("Find the video");
+            var url = e.Notification.ActionParam;
+            _notificationClickHandler = (_, _) =>
+            {
+                InfoBar.IsOpen = false;
+                OpenVideoFinder(url, page => AddDownloadAsync(page));
+            };
+            BtnInfoBar.Click += _notificationClickHandler;
+        }
         else if (e.Notification.Action == "bulk-report" && !string.IsNullOrEmpty(e.Notification.ActionParam))
         {
             BtnInfoBar.Content = _translationService._("Open report");
@@ -633,6 +645,17 @@ public sealed partial class MainWindow : Window
     }
 
     /// <summary>UniFetcher: opens (or brings back) the Bulk Import window.</summary>
+    /// <summary>UniFetcher video finder: shows the page in the finder's own browser so you can press play yourself.</summary>
+    private void OpenVideoFinder(string url, Func<Uri, Task> onUse)
+    {
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var page))
+        {
+            return;
+        }
+        var finder = _serviceProvider.GetRequiredService<Nickvision.Parabolic.WinUI.Helpers.WebViewVideoFinder>();
+        new VideoFinderWindow(finder, _translationService, page, onUse).Activate();
+    }
+
     private BulkImportWindow GetBulkImportWindow()
     {
         if (_bulkImportWindow is null)
@@ -841,7 +864,22 @@ public sealed partial class MainWindow : Window
             var buttons = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 6, VerticalAlignment = VerticalAlignment.Center };
             var open = new Button { Content = _translationService._("Open") };
             ToolTipService.SetToolTip(open, _translationService._("Opens the site in the UniFetcher browser (not your everyday browser)"));
-            open.Click += async (_, _) => await _controller.OpenInProfileAsync(group.FirstUrl);
+            open.Click += async (_, _) =>
+            {
+                if (group.Reason == FailureReason.VideoNotFound)
+                {
+                    // Press play in the video finder window; "Use this video" then retries this site's waiting videos
+                    OpenVideoFinder(group.FirstUrl, async _ =>
+                    {
+                        await _controller.DoneForSiteAsync(group.Site);
+                        UpdateDownloadsList();
+                    });
+                }
+                else
+                {
+                    await _controller.OpenInProfileAsync(group.FirstUrl);
+                }
+            };
             var done = new Button { Content = _translationService._("Done"), Style = Application.Current.Resources["AccentButtonStyle"] as Style };
             ToolTipService.SetToolTip(done, _translationService._("Retry every waiting video from this site"));
             done.Click += async (_, _) =>

@@ -26,7 +26,10 @@ public enum FailureReason
     Storage,
     /// <summary>Skipped: already downloaded (neutral, not an error).</summary>
     AlreadyDownloaded,
-    Other
+    Other,
+    /// <summary>yt-dlp couldn't read the page and the video finder saw no video: open the page and press play.
+    /// (Added last: reasons are saved as numbers.)</summary>
+    VideoNotFound
 }
 
 public static class FailureReasons
@@ -112,6 +115,11 @@ public static class FailureReasons
         {
             return FailureReason.SessionRejected;
         }
+        // UniFetcher's own note: the video finder saw no video on the page
+        if (m.Contains(VideoNotFoundNote.ToLowerInvariant()))
+        {
+            return FailureReason.VideoNotFound;
+        }
         if (Has(m, Storage))
         {
             return FailureReason.Storage;
@@ -156,7 +164,10 @@ public static class FailureReasons
     }
 
     /// <summary>Needs you (open the site, log in, or try another VPN server), not a plain retry.</summary>
-    public static bool NeedsAction(this FailureReason reason) => reason is FailureReason.BlockedBySecurity or FailureReason.NeedsLogin or FailureReason.SessionRejected;
+    public static bool NeedsAction(this FailureReason reason) => reason is FailureReason.BlockedBySecurity or FailureReason.NeedsLogin or FailureReason.SessionRejected or FailureReason.VideoNotFound;
+
+    /// <summary>The note UniFetcher adds when the video finder saw no video (recognised by <see cref="Classify"/>).</summary>
+    public const string VideoNotFoundNote = "UniFetcher: the video finder saw no video on this page";
 
     public static string Label(this FailureReason reason, ITranslationService? t) => reason switch
     {
@@ -169,6 +180,7 @@ public static class FailureReasons
         FailureReason.Network => T(t, "Network problem"),
         FailureReason.Storage => T(t, "Not enough space"),
         FailureReason.AlreadyDownloaded => T(t, "Already downloaded"),
+        FailureReason.VideoNotFound => T(t, "Video not found"),
         _ => T(t, "Download failed")
     };
 
@@ -183,6 +195,7 @@ public static class FailureReasons
         FailureReason.Network => T(t, "The connection dropped or the site didn't answer. Retry later."),
         FailureReason.Storage => T(t, "The download drive is full, or the video is too big for it (FAT32 drives can't hold files over 4 GB)."),
         FailureReason.AlreadyDownloaded => T(t, "You already have this video."),
+        FailureReason.VideoNotFound => T(t, "UniFetcher's video finder didn't see a video on this page. Open it, press play on the video, then press Done."),
         _ => T(t, "Something else went wrong. The log has yt-dlp's message.")
     };
 
