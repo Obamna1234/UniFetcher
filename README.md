@@ -27,7 +27,7 @@ UniFetcher is a personal Android app for downloading video and audio from the ma
 
 - **No tracking of any kind.** No analytics, crash reporting, telemetry, ads, Firebase or Google Play Services.
 - **Everything stays on your phone.** There are no UniFetcher accounts or servers.
-- **The only internet connections** are to sites you choose to visit or download from, the official yt-dlp GitHub releases (to keep yt-dlp up to date), and this repository's Releases page (to check for UniFetcher updates).
+- **The only internet connections** are to sites you choose to visit or download from, the official yt-dlp GitHub releases (to keep yt-dlp up to date), and this repository's Releases page (to check for UniFetcher updates). "Test VPN" also asks am.i.mullvad.net which IP address it sees, only when you tap it.
 - Crash reports are shown on your phone only. Nothing is sent unless you copy it and report it yourself.
 - Optional extras that contact a third party, such as yt-dlp's SponsorBlock option, are off unless you turn them on.
 

@@ -1,5 +1,9 @@
 package com.unifetch.app.ui.page.downloadv2
 
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.outlined.VpnKeyOff
+import androidx.compose.material.icons.outlined.VpnLock
+import com.unifetch.app.util.VpnGuard
 import android.content.Intent
 import android.content.res.Configuration
 import androidx.compose.animation.core.AnimationState
@@ -360,6 +364,7 @@ fun DownloadPageImplV2(
 ) {
     var activeFilter by remember { mutableStateOf(Filter.All) }
     val storagePaused by StorageGuard.paused.collectAsState()
+    val vpnOn by VpnGuard.vpnOn.collectAsState()
     // Sites with downloads waiting for the user, e.g. "example.com" -> its waiting tasks.
     val needsYouSites by remember {
         derivedStateOf {
@@ -518,6 +523,9 @@ fun DownloadPageImplV2(
                     if (storagePaused) {
                         item(span = { GridItemSpan(maxLineSpan) }) { StorageLowBanner() }
                     }
+                    if (!vpnOn && VpnGuard.isRequired()) {
+                        item(span = { GridItemSpan(maxLineSpan) }) { VpnPausedBanner() }
+                    }
                     if (needsYouSites.isNotEmpty() && activeFilter == Filter.All) {
                         item(span = { GridItemSpan(maxLineSpan) }) {
                             NeedsYouBanner(
@@ -650,7 +658,10 @@ fun Header(modifier: Modifier = Modifier, onMenuOpen: () -> Unit = {}) {
 @Composable
 private fun HeaderCompact(modifier: Modifier = Modifier, onMenuOpen: () -> Unit) {
 
-    Row(modifier = modifier.height(64.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier = modifier.fillMaxWidth().height(64.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
         IconButton(onClick = onMenuOpen, modifier = Modifier) {
             Icon(
                 imageVector = Icons.Outlined.Menu,
@@ -667,17 +678,62 @@ private fun HeaderCompact(modifier: Modifier = Modifier, onMenuOpen: () -> Unit)
                     fontWeight = FontWeight.Medium,
                 ),
         )
+        Spacer(Modifier.weight(1f))
+        VpnChip()
+    }
+}
+
+/** "VPN on" / "VPN off" (spec 4h), from Android's own network information. */
+@Composable
+private fun VpnChip() {
+    val on by VpnGuard.vpnOn.collectAsState()
+    val warn = !on && VpnGuard.isRequired()
+    Surface(
+        shape = CircleShape,
+        color =
+            when {
+                warn -> MaterialTheme.colorScheme.errorContainer
+                on -> MaterialTheme.colorScheme.secondaryContainer
+                else -> MaterialTheme.colorScheme.surfaceVariant
+            },
+        contentColor =
+            when {
+                warn -> MaterialTheme.colorScheme.onErrorContainer
+                on -> MaterialTheme.colorScheme.onSecondaryContainer
+                else -> MaterialTheme.colorScheme.onSurfaceVariant
+            },
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Icon(
+                imageVector = if (on) Icons.Outlined.VpnLock else Icons.Outlined.VpnKeyOff,
+                contentDescription = null,
+                modifier = Modifier.size(16.dp),
+            )
+            Spacer(Modifier.width(6.dp))
+            Text(
+                stringResource(if (on) R.string.vpn_chip_on else R.string.vpn_chip_off),
+                style = MaterialTheme.typography.labelMedium,
+            )
+        }
     }
 }
 
 @Composable
 private fun HeaderExpanded(modifier: Modifier = Modifier) {
-    Row(modifier = modifier.height(64.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier = modifier.fillMaxWidth().height(64.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
         Spacer(modifier = Modifier.width(4.dp))
         Text(
             stringResource(R.string.download_queue),
             style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Medium),
         )
+        Spacer(Modifier.weight(1f))
+        VpnChip()
     }
     Spacer(Modifier.height(4.dp))
 }
@@ -886,6 +942,29 @@ enum class BulkAction(
     RetryFailed(R.string.menu_retry_failed),
     ClearFinished(R.string.menu_clear_finished),
     ClearFailed(R.string.menu_clear_failed, true, R.string.menu_clear_failed_confirm),
+}
+
+@Composable
+private fun VpnPausedBanner() {
+    Surface(
+        modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
+        shape = MaterialTheme.shapes.medium,
+        color = MaterialTheme.colorScheme.errorContainer,
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = stringResource(R.string.vpn_paused_title),
+                style = MaterialTheme.typography.titleSmall,
+                color = MaterialTheme.colorScheme.onErrorContainer,
+            )
+            Text(
+                text = stringResource(R.string.vpn_paused_msg),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onErrorContainer,
+                modifier = Modifier.padding(top = 4.dp),
+            )
+        }
+    }
 }
 
 @Composable

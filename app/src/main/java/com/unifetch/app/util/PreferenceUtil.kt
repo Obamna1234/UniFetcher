@@ -139,6 +139,8 @@ const val TEMP_LOCATION = "temp_location"
 const val AUTO_SESSIONS = "auto_sessions"
 /** Video finder: look for the video a page's player loads when yt-dlp can't read the page. */
 const val VIDEO_FINDER = "video_finder"
+/** Spec 4h: stop the queue while no VPN is active (off by default). */
+const val PAUSE_WITHOUT_VPN = "pause_without_vpn"
 const val SKIP_DUPLICATES = "skip_duplicates"
 /** On pages with several videos: download everything (sorted into folders) instead of only the main video. */
 const val PAGE_EVERYTHING = "page_everything"

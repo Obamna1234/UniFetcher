@@ -242,3 +242,30 @@ Some video pages also play short, silent preview clips. Before a download starts
 
 Your choice is remembered for next time and also applies to bulk imports and quick downloads. Only the main video is added to the download history. Real playlists and channels aren't affected by this setting.
 
+## 13. Sites that are hard to download from
+
+UniFetcher uses yt-dlp, which knows about 1,800 sites and updates itself. For other sites:
+
+- **Video finder** (Settings → Network, on by default). If yt-dlp can't read a page, UniFetcher opens it in its hidden built-in browser for up to about 45 seconds, notes the video stream the page's own player loads, and downloads that. Preview clips and adverts are avoided.
+- If no video shows up, the download goes to **Action needed** with **"Video not found: open the page and press play"**:
+  1. Tap the orange **Action needed** tab, then **Open** next to the site.
+  2. Press play on the video (pass a check or log in first if the page asks).
+  3. When **"Video found ✓"** appears at the top, tap **Done**. The download starts with the video you played.
+- **Retries:** slow or unreliable sites get more attempts, with a growing pause between them. After a network failure, UniFetcher waits 20 seconds and tries once more in smaller pieces, carrying on where it stopped.
+- **What can't be downloaded:** copy-protected (DRM) videos, and members-only videos without a membership. Nothing is clicked, solved or bypassed for you.
+- If a site still fails, tap the failed download → **Copy diagnostic**, and include it when you report the problem. It lists every step UniFetcher tried.
+
+## 14. Using a VPN
+
+UniFetcher doesn't touch your VPN. Everything it does (downloads, the built-in browser, updates) uses your phone's normal connection, so when your VPN is on, it goes through the VPN.
+
+- **VPN on / off** chip on the downloads screen, and **Settings → Network → VPN**. This comes from Android's own network information; nothing is contacted.
+- **Pause downloads when no VPN is active** (off by default): if the VPN drops, UniFetcher stops its downloads straight away and carries on when the VPN is back.
+- **Test VPN**: shows the IP address and country websites see from UniFetcher. Check it's your VPN server's location, not your real one. It asks am.i.mullvad.net, only when you tap it.
+
+**Phone-wide kill switch (recommended).** Android itself can block all internet when the VPN drops, which is stronger than any app setting:
+
+1. In your VPN app (e.g. PIA), open **Per App Settings** (or "split tunnelling") and make sure UniFetcher is **not** excluded.
+2. Samsung: **Settings → Connections → More connection settings → VPN**. Xiaomi/Redmi: **Settings → Connection & sharing → VPN**.
+3. Tap the ⚙ next to your VPN and turn on **Always-on VPN** and **Block connections without VPN**.
+

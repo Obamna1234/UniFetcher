@@ -1,5 +1,14 @@
 package com.unifetch.app.ui.page.settings.network
 
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.material.icons.outlined.TravelExplore
+import androidx.compose.material.icons.outlined.PauseCircle
+import androidx.compose.material.icons.outlined.VpnKeyOff
+import androidx.compose.material.icons.outlined.VpnLock
+import com.unifetch.app.util.PAUSE_WITHOUT_VPN
+import com.unifetch.app.util.VpnGuard
 import androidx.compose.material.icons.outlined.Search
 import com.unifetch.app.util.VIDEO_FINDER
 import com.unifetch.app.util.YtdlpUpdateManager
@@ -78,6 +87,9 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
     var isCookiesEnabled by COOKIES.booleanState
     var autoSessions by remember { mutableStateOf(AUTO_SESSIONS.getBoolean()) }
     var videoFinder by remember { mutableStateOf(VIDEO_FINDER.getBoolean()) }
+    val vpnOn by VpnGuard.vpnOn.collectAsState()
+    var pauseWithoutVpn by remember { mutableStateOf(PAUSE_WITHOUT_VPN.getBoolean()) }
+    var showVpnTest by remember { mutableStateOf(false) }
     var sessionSites by remember { mutableStateOf(SiteSessions.savedSites()) }
     var showSessionSitesDialog by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
@@ -214,6 +226,36 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
                         },
                     )
                 }
+                // Spec 4h: VPN status and test.
+                item { PreferenceSubtitle(text = stringResource(R.string.vpn)) }
+                item {
+                    PreferenceItem(
+                        title =
+                            stringResource(if (vpnOn) R.string.vpn_status_on else R.string.vpn_status_off),
+                        description = stringResource(R.string.vpn_status_desc),
+                        icon = if (vpnOn) Icons.Outlined.VpnLock else Icons.Outlined.VpnKeyOff,
+                    )
+                }
+                item {
+                    PreferenceSwitch(
+                        title = stringResource(R.string.vpn_pause),
+                        description = stringResource(R.string.vpn_pause_desc),
+                        icon = Icons.Outlined.PauseCircle,
+                        isChecked = pauseWithoutVpn,
+                        onClick = {
+                            pauseWithoutVpn = !pauseWithoutVpn
+                            PAUSE_WITHOUT_VPN.updateBoolean(pauseWithoutVpn)
+                        },
+                    )
+                }
+                item {
+                    PreferenceItem(
+                        title = stringResource(R.string.vpn_test),
+                        description = stringResource(R.string.vpn_test_desc),
+                        icon = Icons.Outlined.TravelExplore,
+                        onClick = { showVpnTest = true },
+                    )
+                }
                 item {
                     PreferenceItem(
                         title = stringResource(R.string.session_sites),
@@ -241,6 +283,8 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
             }
         },
     )
+
+    if (showVpnTest) VpnTestDialog(onDismiss = { showVpnTest = false })
 
     if (showSessionSitesDialog) {
         AlertDialog(
@@ -303,4 +347,50 @@ fun NetworkPreferences(navigateToCookieProfilePage: () -> Unit = {}, onNavigateB
     if (showProxyDialog) {
         ProxyConfigurationDialog { showProxyDialog = false }
     }
+}
+
+/** "Test VPN" (spec 4h): asks one service which IP address and country it sees. */
+@Composable
+private fun VpnTestDialog(onDismiss: () -> Unit) {
+    val context = LocalContext.current
+    var result by remember { mutableStateOf<Result<VpnGuard.TestResult>?>(null) }
+    LaunchedEffect(Unit) {
+        result = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { VpnGuard.test() }
+    }
+    val vpnOn by VpnGuard.vpnOn.collectAsState()
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        icon = { Icon(Icons.Outlined.TravelExplore, null) },
+        title = { Text(stringResource(R.string.vpn_test)) },
+        text = {
+            val r = result
+            Text(
+                when {
+                    r == null -> stringResource(R.string.vpn_test_running)
+                    r.isFailure ->
+                        stringResource(R.string.vpn_test_failed, r.exceptionOrNull()?.message.orEmpty())
+                    else -> {
+                        val t = r.getOrThrow()
+                        buildString {
+                            append(
+                                context.getString(
+                                    R.string.vpn_test_result,
+                                    t.ip ?: "?",
+                                    listOfNotNull(t.city, t.country).joinToString(", ").ifEmpty { "?" },
+                                )
+                            )
+                            t.organization?.let { append("\n").append(context.getString(R.string.vpn_test_org, it)) }
+                            append("\n\n")
+                            append(
+                                context.getString(
+                                    if (vpnOn) R.string.vpn_test_hint_on else R.string.vpn_test_hint_off
+                                )
+                            )
+                        }
+                    }
+                }
+            )
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text(stringResource(R.string.got_it)) } },
+    )
 }

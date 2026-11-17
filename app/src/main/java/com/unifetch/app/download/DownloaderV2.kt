@@ -1,5 +1,6 @@
 package com.unifetch.app.download
 
+import com.unifetch.app.util.VpnGuard
 import android.app.PendingIntent
 import android.content.Context
 import android.util.Log
@@ -173,6 +174,9 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
     /** Downloads skipped as already downloaded, and those the user then retried anyway. */
     private val flaggedDuplicates = java.util.concurrent.ConcurrentHashMap.newKeySet<String>()
     private val retriedDuplicates = java.util.concurrent.ConcurrentHashMap.newKeySet<String>()
+
+    /** Downloads stopped because the VPN dropped; restarted when it's back (spec 4h). */
+    private val pausedForVpn = java.util.concurrent.ConcurrentHashMap.newKeySet<String>()
     private val snapshotFlow = snapshotFlow { taskStateMap.toMap() }
 
     init {
@@ -190,6 +194,30 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
                 .map { map -> map.values.count { it.downloadState.needsUser() } }
                 .distinctUntilChanged()
                 .collect { NotificationUtil.updateNeedsYou(it) }
+        }
+
+        // Spec 4h: if the VPN drops while "Pause downloads when no VPN is active" is on, stop
+        // what's running straight away and carry on with it when the VPN is back.
+        scope.launch(Dispatchers.Default) {
+            VpnGuard.vpnOn.collect { on ->
+                if (!on && VpnGuard.isRequired()) {
+                    taskStateMap.toMap()
+                        .filter { (_, state) ->
+                            state.downloadState is Running || state.downloadState is FetchingInfo
+                        }
+                        .keys
+                        .forEach { task ->
+                            if (task.cancelImpl()) pausedForVpn += task.id
+                        }
+                } else if (on) {
+                    val paused = pausedForVpn.toSet()
+                    pausedForVpn.clear()
+                    taskStateMap.keys
+                        .filter { it.id in paused }
+                        .forEach { task -> runCatching { restart(task) } }
+                    doYourWork()
+                }
+            }
         }
 
         // While paused for storage, check every 30 seconds and carry on once space is freed.
@@ -324,6 +352,8 @@ class DownloaderV2Impl(private val appContext: Context) : DownloaderV2, KoinComp
             taskStateMap.values.any { it.downloadState == ReadyWithInfo || it.downloadState == Idle }
         // Nearly out of space: don't start anything new (the storage check re-runs this).
         if (hasWaiting && !StorageGuard.canStartDownload()) return
+        // Spec 4h: "Pause downloads when no VPN is active" (re-run when the VPN comes back).
+        if (hasWaiting && !VpnGuard.canDownload()) return
 
         taskStateMap.entries
             .sortedBy { (_, state) -> state.downloadState }

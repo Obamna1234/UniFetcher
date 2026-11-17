@@ -1,5 +1,6 @@
 package com.unifetch.app
 
+import com.unifetch.app.util.VpnGuard
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.ClipboardManager
@@ -112,6 +113,7 @@ class App : Application() {
         }
         if (Build.VERSION.SDK_INT >= 26) NotificationUtil.createNotificationChannel()
         YtdlpUpdateWorker.schedule(this)
+        VpnGuard.init(this)
         // Last: reading settings loads the database code, which needs context and applicationScope.
         AppLock.init(this)
 

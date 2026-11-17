@@ -4,6 +4,22 @@ All notable changes to UniFetcher (called UniFetch before v0.1.2) are listed her
 
 ## Unreleased
 
+- **Better on hard sites.**
+  - **Video finder** (Settings → Network, on by default): when yt-dlp can't read a page, UniFetcher opens it in
+    its hidden built-in browser, notes the video stream the page's own player loads, and downloads that.
+    Previews and adverts are avoided. If no video shows up (some players only start after a tap), the download
+    goes to **Action needed**: open it, press play, tap **Done**, and the video you played is used. Nothing is
+    clicked or solved for you, and copy-protected (DRM) videos still can't be downloaded.
+  - **Tougher retries:** more attempts with a growing pause between them, and after a network failure one more
+    try 20 seconds later in smaller pieces, carrying on where it stopped.
+  - **Copy diagnostic** now lists the video finder and retry steps tried.
+  - **Cancel** now works at any moment, including while waiting to retry.
+- **VPN** (Settings → Network → VPN, and a "VPN on / off" chip on the downloads screen):
+  - **VPN status** from Android's own network information (nothing is contacted).
+  - **Pause downloads when no VPN is active** (off by default): stops downloads straight away if the VPN
+    drops and carries on when it's back.
+  - **Test VPN**: shows the IP address and country websites see from UniFetcher (asks am.i.mullvad.net, only
+    when you tap it).
 - **Pages with more than one video.** Some pages also play short, silent preview clips (often "GIFs" saved as
   small videos), and UniFetcher used to download all of them. Before downloading you can now choose
   **Main video only** (the default: just the video the link is for) or **Everything on the page**, which puts
