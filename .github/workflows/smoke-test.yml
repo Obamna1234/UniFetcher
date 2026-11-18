@@ -1,10 +1,15 @@
-# Opens UniFetcher on an Android emulator and checks it starts without crashing.
-# Tests the signed release build (the same kind of APK people install from Releases).
+# Release gate for Android, on the oldest supported Android (7.0, API 24) and the newest (15, API 35):
+# updates over the last release keeping data, opens without crashing, and really downloads (a test
+# clip made here, and a freely licensed file from Wikimedia Commons), checking the files play and
+# weren't re-encoded. Tests the signed release build (the same kind of APK people install).
+# Also runs every day, so a yt-dlp or site change that breaks downloads is caught without a push.
 name: Smoke test
 
 on:
   push:
     branches: ["main", "release-check"]
+  schedule:
+    - cron: "41 20 * * *" # daily
   workflow_dispatch:
 
 concurrency:
@@ -16,8 +21,13 @@ permissions:
 
 jobs:
   smoke-test:
+    name: Android ${{ matrix.api-level }}
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      matrix:
+        api-level: [24, 35]
 
     steps:
       - uses: actions/checkout@v7
@@ -45,12 +55,37 @@ jobs:
             echo "UNIFETCH_KEYSTORE_FILE=$RUNNER_TEMP/unifetch.jks" >> "$GITHUB_ENV"
           fi
 
+      - name: Get the last release (for the update test)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/last"
+          tag="$(gh release list --exclude-drafts --limit 1 --json tagName --jq '.[0].tagName' 2>/dev/null || true)"
+          echo "Last release: ${tag:-none}"
+          if [ -n "$tag" ]; then
+            gh release download "$tag" --pattern '*-x86_64.apk' --dir "$RUNNER_TEMP/last" || true
+            # Build the new APK with a higher version than the last release, as a real update would have
+            v="${tag#v}"; v="${v%%-*}"
+            IFS=. read -r ma mi pa <<< "$v"
+            echo "SMOKE_VERSION=v$ma.$mi.$((pa + 1))-beta.1" >> "$GITHUB_ENV"
+          fi
+          echo "LAST_APK=$(ls "$RUNNER_TEMP"/last/*-x86_64.apk 2>/dev/null | head -n 1)" >> "$GITHUB_ENV"
+
       - name: Build release APK
         env:
           UNIFETCH_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
           UNIFETCH_KEY_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
           UNIFETCH_KEY_PASSWORD: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
-        run: ./gradlew assembleGenericRelease --stacktrace
+        run: ./gradlew assembleGenericRelease -PappVersion="${SMOKE_VERSION:-}" --stacktrace
+
+      - name: Make and serve a test video
+        run: |
+          mkdir -p "$RUNNER_TEMP/serve"
+          ffmpeg -loglevel error -f lavfi -i testsrc=duration=8:size=640x360:rate=25 -f lavfi -i sine=frequency=440:duration=8 \
+            -c:v libx264 -pix_fmt yuv420p -c:a aac -shortest "$RUNNER_TEMP/serve/unifetcher-smoke-test.mp4"
+          (cd "$RUNNER_TEMP/serve" && nohup python3 -m http.server 8000 > "$RUNNER_TEMP/http.log" 2>&1 &)
+          sleep 2
+          curl -sfI http://127.0.0.1:8000/unifetcher-smoke-test.mp4 | head -n 1
 
       - name: Remove signing key
         if: always()
@@ -62,19 +97,19 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: Start emulator and open UniFetcher
+      - name: Start emulator and test UniFetcher
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 34
+          api-level: ${{ matrix.api-level }}
           target: google_apis
           arch: x86_64
-          script: bash .github/scripts/smoke-test.sh "$(ls app/build/outputs/apk/generic/release/*-x86_64.apk | head -n 1)" com.unifetch.app
+          script: bash .github/scripts/smoke-test.sh "$(ls app/build/outputs/apk/generic/release/*-x86_64.apk | head -n 1)" com.unifetch.app "$LAST_APK" ${{ github.event_name == 'schedule' }}
 
       - name: Upload logs and screenshot
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: smoke-test-logs
+          name: smoke-test-logs-android-${{ matrix.api-level }}
           path: smoke-test-logs/
           if-no-files-found: ignore
           retention-days: 7

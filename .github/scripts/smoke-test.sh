@@ -1,43 +1,189 @@
 #!/usr/bin/env bash
-# Installs a UniFetcher APK on the running emulator, opens it, and checks it is still running
-# 25 seconds later. Prints the crash log if it isn't. Usage: smoke-test.sh <apk> <package>
+# UniFetcher smoke test on a running Android emulator. Usage:
+#   smoke-test.sh <new apk> <package> [last release apk] [strict real-site check: true|false]
+#
+# 1. Update test: installs the last release (if given), opens it, then installs the new build over
+#    it and checks Android kept the app's data (same first-install time) instead of reinstalling.
+# 2. Start-up test: opens the new build and checks it's still running 25 seconds later.
+# 3. Download test: shares a test video to UniFetcher (a clip made on the CI machine and served at
+#    http://10.0.2.2:8000), taps Download, and checks the file arrives, plays (video + audio) and
+#    wasn't re-encoded (same codecs and size as the original).
+# 4. Real-site test: the same with a freely licensed file on Wikimedia Commons. A failure here is a
+#    warning on normal pushes (the site may be down) and an error on the daily run.
 set -u
 APK="$1"
 PKG="$2"
+OLD_APK="${3:-}"
+STRICT_REAL="${4:-false}"
 OUT="smoke-test-logs"
+DL="/sdcard/Download/UniFetcher"
 mkdir -p "$OUT"
+FAILED=0
+
+note() { # level title message
+  local msg="${3//'%'/'%25'}"
+  msg="${msg//$'\r'/}"
+  msg="${msg//$'\n'/'%0A'}"
+  echo "::$1 title=$2::$msg"
+}
+
+first_install_time() {
+  adb shell dumpsys package "$PKG" | grep -m1 firstInstallTime | tr -d '\r' | sed 's/.*firstInstallTime=//'
+}
+
+crash_lines() {
+  adb logcat -d > "$OUT/logcat.txt" || true
+  grep -n -A60 -E "FATAL EXCEPTION|Process: $PKG|>>> $PKG <<<" "$OUT/logcat.txt" > "$OUT/crash.txt" || true
+}
+
+is_running() { # pidof is missing on old Android versions
+  adb shell pidof "$PKG" > /dev/null 2>&1 && return 0
+  adb shell ps 2>/dev/null | tr -d '\r' | grep -q " $PKG$"
+}
+
+screenshot() {
+  adb shell screencap -p /sdcard/screen.png && adb pull /sdcard/screen.png "$OUT/$1.png" > /dev/null 2>&1 || true
+}
 
 adb wait-for-device
+adb shell 'while [ "$(getprop sys.boot_completed | tr -d "\r")" != "1" ]; do sleep 2; done'
 adb logcat -c || true
-echo "Installing $(basename "$APK")"
-adb install -r -g "$APK"
 
-echo "Opening $PKG"
-adb shell monkey -p "$PKG" -c android.intent.category.LAUNCHER 1
-sleep 25
-
-adb logcat -d > "$OUT/logcat.txt" || true
-adb shell dumpsys activity activities > "$OUT/activities.txt" 2>&1 || true
-adb shell screencap -p /sdcard/screen.png && adb pull /sdcard/screen.png "$OUT/screen.png" || true
-
-# Crash lines for this app (Java crashes and native crashes).
-grep -n -A60 -E "FATAL EXCEPTION|Process: $PKG|>>> $PKG <<<" "$OUT/logcat.txt" > "$OUT/crash.txt" || true
-
-if adb shell pidof "$PKG" > /dev/null 2>&1 && [ ! -s "$OUT/crash.txt" ]; then
-  echo "PASS: $PKG is running and no crash was logged."
-  exit 0
+# ---------- 1. Update test ----------
+if [ -n "$OLD_APK" ] && [ -f "$OLD_APK" ]; then
+  echo "Installing the last release: $(basename "$OLD_APK")"
+  if adb install -g "$OLD_APK"; then
+    adb shell monkey -p "$PKG" -c android.intent.category.LAUNCHER 1 > /dev/null
+    sleep 15
+    adb shell am force-stop "$PKG"
+    before="$(first_install_time)"
+    echo "Installing the new build over it"
+    if ! adb install -r -g "$APK" > "$OUT/update-install.txt" 2>&1; then
+      note error "Update test" "The new build wouldn't install over the last release: $(cat "$OUT/update-install.txt")"
+      FAILED=1
+    else
+      after="$(first_install_time)"
+      if [ -n "$before" ] && [ "$before" = "$after" ]; then
+        echo "PASS: updated over the last release and the app's data was kept (first installed $before)."
+      else
+        note error "Update test" "The app was reinstalled instead of updated (first install time $before -> $after), so data would be lost."
+        FAILED=1
+      fi
+    fi
+  else
+    note warning "Update test" "Couldn't install the last release on this Android version; update test skipped."
+    adb install -r -g "$APK"
+  fi
+else
+  echo "No last release given; installing the new build fresh."
+  adb install -r -g "$APK"
 fi
 
-echo "FAIL: $PKG crashed or is not running."
-# Also report the crash as a GitHub error note, so it shows on the run's summary page.
-summary="$( (cat "$OUT/crash.txt"; echo; grep -E "AndroidRuntime|$PKG" "$OUT/logcat.txt" | tail -n 40) | head -c 3500)"
-[ -z "$summary" ] && summary="No crash lines found. The app is not running."
-summary="${summary//'%'/'%25'}"
-summary="${summary//$'\r'/}"
-summary="${summary//$'\n'/'%0A'}"
-echo "::error title=UniFetcher crashed on the emulator::$summary"
-echo "----- crash log -----"
-cat "$OUT/crash.txt"
-echo "----- UniFetcher log lines -----"
-grep -E "AndroidRuntime|$PKG|UniFetcher|unifetch" "$OUT/logcat.txt" | tail -n 120
-exit 1
+# ---------- 2. Start-up test ----------
+adb logcat -c || true
+echo "Opening $PKG"
+adb shell monkey -p "$PKG" -c android.intent.category.LAUNCHER 1 > /dev/null
+sleep 25
+adb shell dumpsys activity activities > "$OUT/activities.txt" 2>&1 || true
+screenshot start
+crash_lines
+if is_running && [ ! -s "$OUT/crash.txt" ]; then
+  echo "PASS: $PKG is running and no crash was logged."
+else
+  summary="$( (cat "$OUT/crash.txt"; echo; grep -E "AndroidRuntime|$PKG" "$OUT/logcat.txt" | tail -n 40) | head -c 3500)"
+  [ -z "$summary" ] && summary="No crash lines found. The app is not running."
+  note error "UniFetcher crashed on the emulator" "$summary"
+  echo "----- crash log -----"; cat "$OUT/crash.txt"
+  exit 1
+fi
+
+# ---------- 3 + 4. Download tests ----------
+# Shares <url> to UniFetcher, taps Download, waits for a new file whose name contains <match>.
+download_test() {
+  local name="$1" url="$2" match="$3" timeout="$4"
+  echo "Download test ($name): $url"
+  adb shell am force-stop "$PKG"
+  adb shell am start -a android.intent.action.SEND -t text/plain \
+    --es android.intent.extra.TEXT "'$url'" -n "$PKG/.QuickDownloadActivity" > /dev/null
+  # Wait for the download sheet, then tap its Download button (the lowest "Download" text on screen)
+  local tapped=0
+  for _ in $(seq 1 20); do
+    sleep 3
+    adb shell uiautomator dump /sdcard/ui.xml > /dev/null 2>&1 || continue
+    adb pull /sdcard/ui.xml "$OUT/ui-$name.xml" > /dev/null 2>&1 || continue
+    local bounds
+    bounds="$(python3 - "$OUT/ui-$name.xml" <<'PY'
+import re, sys
+xml = open(sys.argv[1], encoding="utf-8", errors="ignore").read()
+best = None
+for m in re.finditer(r'<node [^>]*?text="Download"[^>]*?bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', xml):
+    x1, y1, x2, y2 = map(int, m.groups())
+    if best is None or y1 > best[1]:
+        best = ((x1 + x2) // 2, (y1 + y2) // 2)
+if best:
+    print(best[0], best[1])
+PY
+)"
+    if [ -n "$bounds" ]; then
+      adb shell input tap $bounds
+      tapped=1
+      break
+    fi
+  done
+  screenshot "sheet-$name"
+  if [ "$tapped" != 1 ]; then
+    echo "No Download button seen for $name (it may have started straight away); waiting for the file."
+  fi
+  for _ in $(seq 1 $((timeout / 5))); do
+    sleep 5
+    local f
+    f="$(adb shell ls "$DL" 2>/dev/null | tr -d '\r' | grep -i "$match" | grep -v -E '\.part$|\.ytdl$|\.temp' | head -n 1)"
+    if [ -n "$f" ]; then
+      sleep 3
+      adb pull "$DL/$f" "$OUT/$f" > /dev/null 2>&1
+      echo "Downloaded: $f ($(stat -c %s "$OUT/$f" 2>/dev/null) bytes)"
+      DOWNLOADED="$OUT/$f"
+      return 0
+    fi
+  done
+  screenshot "after-$name"
+  echo "No file for $name after ${timeout}s."
+  return 1
+}
+
+DOWNLOADED=""
+if download_test local "http://10.0.2.2:8000/unifetcher-smoke-test.mp4" "unifetcher-smoke-test" 180; then
+  probe="$(ffprobe -v error -show_entries stream=codec_type,codec_name,width,height -show_entries format=duration -of compact "$DOWNLOADED" 2>&1)"
+  echo "$probe"
+  if echo "$probe" | grep -q "codec_name=h264|codec_type=video|width=640|height=360" && echo "$probe" | grep -q "codec_name=aac|codec_type=audio"; then
+    echo "PASS: the test video downloaded, has video and audio, and wasn't re-encoded."
+  else
+    note error "Download test" "The test video downloaded but isn't the same as the original (re-encoded or missing a stream): $probe"
+    FAILED=1
+  fi
+else
+  crash_lines
+  note error "Download test" "Sharing a test video to UniFetcher didn't produce a downloaded file. See the screenshots in smoke-test-logs. $(grep -E "$PKG|yt-dlp|DownloadUtil" "$OUT/logcat.txt" | tail -n 15)"
+  FAILED=1
+fi
+
+DOWNLOADED=""
+if download_test commons "https://commons.wikimedia.org/wiki/File:Example.ogg" "example" 180; then
+  if ffprobe -v error -show_entries stream=codec_type -of csv=p=0 "$DOWNLOADED" | grep -q audio; then
+    echo "PASS: a real freely licensed file from Wikimedia Commons downloaded and plays."
+  else
+    note error "Real-site test" "The Wikimedia Commons file downloaded but has no audio."
+    FAILED=1
+  fi
+else
+  level=warning
+  [ "$STRICT_REAL" = "true" ] && level=error && FAILED=1
+  note "$level" "Real-site test" "Downloading a freely licensed file from Wikimedia Commons failed (the site may be down, or yt-dlp needs an update)."
+fi
+
+crash_lines
+if [ -s "$OUT/crash.txt" ]; then
+  note error "UniFetcher crashed during the download tests" "$(head -c 3000 "$OUT/crash.txt")"
+  FAILED=1
+fi
+exit $FAILED
