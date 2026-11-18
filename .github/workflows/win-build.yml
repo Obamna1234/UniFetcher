@@ -2,6 +2,8 @@
 # Installer, portable zip and extensions are attached to each run as artifacts.
 name: Build (Windows)
 on:
+  schedule:
+    - cron: "11 21 * * *" # daily: catches yt-dlp or site changes without a push
   push:
     branches: [ "**" ]
     paths: [ "windows/**", ".github/workflows/win-build.yml" ]
@@ -15,8 +17,16 @@ env:
   PROJECT_NAME: Nickvision.Parabolic.WinUI
 jobs:
   build:
-    name: "Build (x64)"
+    name: "Build (${{ matrix.arch }})"
     runs-on: windows-2025-vs2026
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x64
+            platform: x64
+          - arch: arm64
+            platform: ARM64
     defaults:
       run:
         working-directory: windows
@@ -44,14 +54,18 @@ jobs:
           $vsInstallPath = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
           Import-Module "$vsInstallPath\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
           Enter-VsDevShell -VsInstallPath $vsInstallPath -SkipAutomaticLocation
-          dotnet restore ${{ env.PROJECT_NAME }} --runtime win-x64 /p:PublishReadyToRun=true
+          dotnet restore ${{ env.PROJECT_NAME }} --runtime win-${{ matrix.arch }} /p:PublishReadyToRun=true
           if ($LASTEXITCODE -ne 0) { exit 1 }
-          dotnet publish ${{ env.PROJECT_NAME }} -c Release --no-restore --runtime win-x64 /p:Platform=x64 /p:Version=$("${{ env.VERSION }}".Split('-')[0]) /p:InformationalVersion=${{ env.VERSION }}
+          dotnet publish ${{ env.PROJECT_NAME }} -c Release --no-restore --runtime win-${{ matrix.arch }} /p:Platform=${{ matrix.platform }} /p:Version=$("${{ env.VERSION }}".Split('-')[0]) /p:InformationalVersion=${{ env.VERSION }}
           if ($LASTEXITCODE -ne 0) { exit 1 }
+          $pub = Get-ChildItem "${{ env.PROJECT_NAME }}\bin" -Recurse -Directory -Filter publish | Where-Object { $_.FullName -like "*win-${{ matrix.arch }}*" } | Select-Object -First 1
+          if (-not $pub) { echo "::error title=Build::No publish folder for win-${{ matrix.arch }}"; exit 1 }
+          echo "PUBLISH_DIR=$($pub.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
           # Helper the browser extension talks to; it goes next to UniFetcher.exe
-          dotnet publish UniFetcher.NativeHost -c Release --runtime win-x64 -o "${{ env.PROJECT_NAME }}/bin/x64/Release/net10.0-windows10.0.19041.0/win-x64/publish"
+          dotnet publish UniFetcher.NativeHost -c Release --runtime win-${{ matrix.arch }} -o $pub.FullName
           if ($LASTEXITCODE -ne 0) { exit 1 }
       - name: "Unit tests"
+        if: matrix.arch == 'x64'
         shell: pwsh
         run: |
           dotnet test UniFetcher.Tests -c Release --logger "console;verbosity=normal" 2>&1 | Tee-Object -Variable out
@@ -62,55 +76,52 @@ jobs:
           }
       - name: "Package installer, portable zip and extensions"
         shell: pwsh
-        run: scripts/package.ps1 -Arch x64 -Version ${{ env.VERSION }} -ExtensionVersion 0.0.${{ github.run_number }} -PublishDir "${{ env.PROJECT_NAME }}/bin/x64/Release/net10.0-windows10.0.19041.0/win-x64/publish" -OutDir out
+        run: scripts/package.ps1 -Arch ${{ matrix.arch }} -Version ${{ env.VERSION }} -ExtensionVersion 0.0.${{ github.run_number }} -PublishDir $env:PUBLISH_DIR -OutDir out
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4
         with:
-          name: UniFetcher-Windows-${{ env.VERSION }}-x64
+          name: UniFetcher-Windows-${{ env.VERSION }}-${{ matrix.arch }}
           path: windows/out/*
-      - name: "Start-up test: install, open, close, open again"
-        # Catches "UniFetcher doesn't open" problems that a successful build can't show.
+
+  smoke:
+    # Release gate: update over the last release, start-up, real downloads with the bundled tools,
+    # uninstall. Windows Server 2022 is built on Windows 10 (21H2), Server 2025 on Windows 11 (24H2).
+    name: "Smoke test (${{ matrix.os }})"
+    needs: build
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2022
+            arch: x64
+          - os: windows-2025
+            arch: x64
+          - os: windows-11-arm
+            arch: arm64
+    defaults:
+      run:
+        working-directory: windows
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: 0.0.${{ github.run_number }}-dev
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803  # v6
+      - uses: actions/download-artifact@v4
+        with:
+          name: UniFetcher-Windows-${{ env.VERSION }}-${{ matrix.arch }}
+          path: windows/new
+      - name: "Smoke test"
         shell: pwsh
         run: |
-          $ErrorActionPreference = "Continue"
-          $setup = Get-ChildItem out -Filter "*Setup-x64.exe" | Select-Object -First 1
-          Start-Process $setup.FullName -ArgumentList "/VERYSILENT","/SUPPRESSMSGBOXES","/NORESTART","/LOG=$env:RUNNER_TEMP\install.log" -Wait
-          $exe = Join-Path $env:LOCALAPPDATA "Programs\UniFetcher\Release\UniFetcher.exe"
-          $data = Join-Path $env:LOCALAPPDATA "UniFetcher"
-          if (-not (Test-Path $exe)) { Get-Content "$env:RUNNER_TEMP\install.log" -Tail 40; echo "::error title=Installer::UniFetcher.exe was not installed to $exe"; exit 1 }
-          function Annotate($title, $lines) {
-            if ($lines) { $text = ($lines | Select-Object -Last 40) -join "%0A"; echo "::warning title=$title::$text" }
-          }
-          function Show-Logs {
-            Annotate "crash.log" (Get-Content (Join-Path $data "crash.log") -ErrorAction SilentlyContinue)
-            Annotate "app.log (errors)" (Get-Content (Join-Path $data "app.log") -ErrorAction SilentlyContinue | Select-String -Pattern "fail|crit|error|exception|   at " | ForEach-Object { $_.Line })
-            Annotate "Windows events" (Get-WinEvent -FilterHashtable @{LogName='Application'; StartTime=(Get-Date).AddMinutes(-10)} -ErrorAction SilentlyContinue | Where-Object { $_.ProviderName -in 'Application Error','.NET Runtime' } | Select-Object -First 3 | ForEach-Object { $_.Message -split "`r?`n" })
-            foreach ($f in "app.log", "crash.log") {
-              $p = Join-Path $data $f
-              if (Test-Path $p) { echo "----- $f -----"; Get-Content $p -Tail 60 }
-            }
-            Get-WinEvent -FilterHashtable @{LogName='Application'; StartTime=(Get-Date).AddMinutes(-10)} -ErrorAction SilentlyContinue |
-              Where-Object { $_.ProviderName -in 'Application Error','.NET Runtime','Windows Error Reporting' } |
-              Select-Object -First 5 | ForEach-Object { echo "----- Windows event: $($_.ProviderName) -----"; $_.Message }
-          }
-          $failed = $false
-          foreach ($round in 1, 2, 3) {
-            $p = Start-Process $exe -PassThru
-            Start-Sleep -Seconds 25
-            if ($p.HasExited) {
-              echo "::error title=UniFetcher crashed on start (round $round)::Exit code $($p.ExitCode). See the log below."
-              Show-Logs; $failed = $true; break
-            }
-            echo "Round ${round}: UniFetcher is running."
-            $null = $p.CloseMainWindow()
-            if (-not $p.WaitForExit(30000)) {
-              echo "::error title=UniFetcher kept running after closing (round $round)::The process was still alive 30 s after its window was closed."
-              Show-Logs; $p.Kill($true); $failed = $true; break
-            }
-            echo "Round ${round}: UniFetcher closed properly."
-            if (Get-Process UniFetcher -ErrorAction SilentlyContinue) {
-              echo "::error title=UniFetcher left a background process (round $round)::"
-              $failed = $true; break
-            }
-          }
-          Show-Logs
-          if ($failed) { exit 1 }
+          $setup = Get-ChildItem new -Filter "*Setup-${{ matrix.arch }}.exe" | Select-Object -First 1
+          if ('${{ github.event_name }}' -eq 'schedule') { scripts/smoke.ps1 -Arch ${{ matrix.arch }} -NewSetup $setup.FullName -StrictRealSite }
+          else { scripts/smoke.ps1 -Arch ${{ matrix.arch }} -NewSetup $setup.FullName }
+          exit $LASTEXITCODE
+      - name: "Upload logs"
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4
+        with:
+          name: smoke-logs-${{ matrix.os }}
+          path: ${{ runner.temp }}/smoke-logs
+          if-no-files-found: ignore

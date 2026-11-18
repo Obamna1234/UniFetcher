@@ -1,6 +1,7 @@
 # Publishes a release when the RELEASE_REQUEST file changes on main (e.g. its text becomes "v0.1.10").
 # This lets a release be made by a commit (Claude can push commits but not tags). It:
-#   1. checks the version looks like v1.2.3 (or v1.2.3-beta1 for a pre-release) and isn't already released;
+#   1. checks the version looks like v1.2.3 (or v1.2.3-beta.1 / -rc.1 for a pre-release), isn't already
+#      released, and (beta first) that a stable version had a beta or release candidate before it;
 #   2. waits for this commit's other checks (build, unit tests, crash tests) and stops if any failed;
 #   3. creates the version tag and starts the Android and Windows release workflows for it,
 #      exactly as publishing a release on GitHub's website does.
@@ -33,9 +34,16 @@ jobs:
         id: version
         run: |
           tag="$(tr -d ' \r\n' < RELEASE_REQUEST)"
-          if ! echo "$tag" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9.]+)?$'; then
-            echo "::error title=Release request::'$tag' isn't a version like v1.2.3"
+          if ! echo "$tag" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+(-(alpha|beta|rc)\.[0-9])?$'; then
+            echo "::error title=Release request::'$tag' isn't a version like v1.2.3 or v1.2.3-beta.1"
             exit 1
+          fi
+          # Beta first: a stable version only goes out after a beta (or release candidate) of it
+          if ! echo "$tag" | grep -q -- '-'; then
+            if ! git ls-remote --tags origin "refs/tags/$tag-beta.*" "refs/tags/$tag-rc.*" | grep -q .; then
+              echo "::error title=Release request::Beta first: release $tag-beta.1 and test it before $tag."
+              exit 1
+            fi
           fi
           if git ls-remote --exit-code --tags origin "refs/tags/$tag" > /dev/null; then
             echo "::notice title=Release request::$tag is already released; nothing to do."
