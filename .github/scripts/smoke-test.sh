@@ -116,13 +116,13 @@ download_test() {
     --es android.intent.extra.TEXT "'$url'" -n "$PKG/.QuickDownloadActivity" > /dev/null
   # Wait for the download sheet, then tap its Download button (the lowest "Download" text on screen).
   # In "Configure before download" mode the sheet shows Continue first, then the format screen's button.
-  local tapped=0 continued=0
+  local tapped=0 continued=0 picked=""
   for _ in $(seq 1 20); do
     sleep 3
     adb shell uiautomator dump /sdcard/ui.xml > /dev/null 2>&1 || continue
     adb pull /sdcard/ui.xml "$OUT/ui-$name.xml" > /dev/null 2>&1 || continue
     local found
-    found="$(python3 - "$OUT/ui-$name.xml" "$continued" <<'PY'
+    found="$(python3 - "$OUT/ui-$name.xml" "$continued" "$picked" <<'PY'
 import re, sys
 xml = open(sys.argv[1], encoding="utf-8", errors="ignore").read()
 def lowest(label):
@@ -132,12 +132,15 @@ def lowest(label):
         if best is None or y1 > best[1]:
             best = ((x1 + x2) // 2, (y1 + y2) // 2)
     return best
-for kind, label in (("download", "Download"), ("download", "Start download"), ("continue", "Continue")):
+# Preset gives a direct Download button; on the format screen, Suggested makes its Download button appear
+for kind, label in (("download", "Download"), ("download", "Start"), ("pick", "Preset"), ("pick", "Suggested"), ("continue", "Continue")):
     if kind == "continue" and int(sys.argv[2]) >= 2:
+        continue
+    if kind == "pick" and label in sys.argv[3].split(","):
         continue
     b = lowest(label)
     if b:
-        print(kind, b[0], b[1])
+        print(kind, b[0], b[1], label)
         break
 PY
 )"
@@ -145,6 +148,7 @@ PY
       set -- $found
       adb shell input tap "$2" "$3"
       if [ "$1" = download ]; then tapped=1; break; fi
+      if [ "$1" = pick ]; then picked="$picked,$4"; echo "Picked $4"; continue; fi
       continued=$((continued + 1)); echo "Tapped Continue ($continued)"; continue
     fi
     # The button can be below the bottom of a small screen: scroll the sheet up
