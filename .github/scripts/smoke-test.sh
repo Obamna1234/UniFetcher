@@ -148,6 +148,15 @@ PY
   done
   screenshot "after-$name"
   echo "No file for $name after ${timeout}s."
+  # What was on screen and on disk, as a note on the run's summary (the full logs are an artifact)
+  adb shell uiautomator dump /sdcard/ui2.xml > /dev/null 2>&1 && adb pull /sdcard/ui2.xml "$OUT/ui-after-$name.xml" > /dev/null 2>&1
+  local texts files lines
+  texts="$(grep -o 'text="[^"]\+"' "$OUT/ui-$name.xml" 2>/dev/null | sort -u | head -n 25 | tr '\n' ' ')"
+  texts2="$(grep -o 'text="[^"]\+"' "$OUT/ui-after-$name.xml" 2>/dev/null | sort -u | head -n 25 | tr '\n' ' ')"
+  files="$(adb shell ls -R /sdcard/Download 2>&1 | tr -d '\r' | head -n 20 | tr '\n' ' ')"
+  adb logcat -d > "$OUT/logcat.txt" 2>/dev/null
+  lines="$(grep -E "DownloadUtil|DownloaderV2|YoutubeDL|yt-dlp|QuickDownload|SiteSessions|StreamFinder" "$OUT/logcat.txt" | tail -n 12)"
+  note warning "Download test details ($name)" "Tapped Download: $tapped. Screen before: $texts. Screen after: $texts2. Files: $files. Log: $lines"
   return 1
 }
 
