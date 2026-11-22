@@ -99,27 +99,27 @@ Still stuck? [Report a bug](#6-copy-an-error-log-and-report-a-bug) and say which
 
 ## 7. Set up the signing key (one time)
 
-Release APKs must be "signed" with a private key so Android knows updates really come from you. Every release must use **the same key**, otherwise updates can't install over the old version.
+Release APKs must be "signed" with a private key so Android knows updates really come from you.
 
-The key is stored in **GitHub Secrets**: hidden values that only the build can use and nobody (not even you) can read back. It is never saved in the code.
+The keys are stored in GitHub as **environment secrets** in a locked environment called **release**: hidden values that only release builds of version tags (and main's smoke test) can use. Test builds of other branches and pull requests never get them. Nobody, not even you, can read a secret back, and keys are never saved in the code.
 
-**What you need:** a keystore file encoded as text (base64), its password, the key's name (alias) and the key's password. Claude can create these for you in a session and give you the four values.
+**Two keys (since the November 2026 key rotation).** Releases are signed with the **original** key and the **new** key together: Android 7 and 8 check the original key; Android 9 and later check the new key, with proof that the original key approved it. That's why updates still install over the old app without uninstalling. Keep both.
 
-**Add them to GitHub:**
+| Name | Value |
+|---|---|
+| `UNIFETCH_KEYSTORE_BASE64` | original key: the long base64 text of the keystore |
+| `UNIFETCH_KEYSTORE_PASSWORD` | original key: the keystore password |
+| `UNIFETCH_KEY_ALIAS` | original key: the key name |
+| `UNIFETCH_KEY_PASSWORD` | original key: the key password |
+| `UNIFETCH_NEW_KEYSTORE_BASE64` | new key: the long base64 text (`UNIFETCH_NEW_KEYSTORE_BASE64.txt`) |
+| `UNIFETCH_NEW_KEY_ALIAS` | new key: `unifetcher-2026` |
+| `UNIFETCH_NEW_KEYSTORE_PASSWORD` | new key: the password (its key password is the same) |
 
-1. Open **https://github.com/Obamna1234/UniFetcher/settings/secrets/actions**
-2. Tap **New repository secret**, and add each of these (name exactly as shown, then paste the value):
+**Where they go:** **Settings → Environments → release → Environment secrets → Add environment secret**. The **release** environment's **Deployment branches and tags** setting should be **Selected branches and tags**, allowing the branch `main` and tags `v*`.
 
-   | Name | Value |
-   |---|---|
-   | `UNIFETCH_KEYSTORE_BASE64` | the long base64 text of the keystore |
-   | `UNIFETCH_KEYSTORE_PASSWORD` | the keystore password |
-   | `UNIFETCH_KEY_ALIAS` | the key name |
-   | `UNIFETCH_KEY_PASSWORD` | the key password |
+**Back up both keystores and their passwords** somewhere private and safe, such as a password manager. If they're lost, future versions can't update the installed app.
 
-3. **Back up the keystore file and passwords** somewhere private and safe, such as a password manager. If they're lost, future versions can't update the installed app. You'd have to uninstall and lose UniFetcher's data.
-
-⚠️ Never put the keystore or passwords in the code, an issue, or any public place.
+⚠️ Never put a keystore or password in the code, an issue, a workflow artifact or any public place.
 
 ## 8. Release a new version
 

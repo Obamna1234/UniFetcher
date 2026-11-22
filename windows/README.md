@@ -18,7 +18,7 @@ Working now (inherited from Parabolic):
 - Download video and audio from the thousands of sites yt-dlp supports
 - Choose quality, format, subtitles, and save folder; queue several downloads
 - Download history, playlists, and keeping yt-dlp up to date
-- Small browser extension for Firefox and Chrome/Brave to send a page to UniFetcher
+- Small browser extension for Brave, Chrome and Edge to send a page to UniFetcher (a Firefox version is included unsigned: Firefox only loads it temporarily, or in Developer Edition/Nightly with signature checks off; see HOW_TO.md)
 
 Being added (see [STATUS.md](STATUS.md) for progress):
 - Automatic yt-dlp/ffmpeg updates (Nightly by default) with retry and roll-back

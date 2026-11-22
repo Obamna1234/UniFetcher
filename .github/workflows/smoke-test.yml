@@ -7,7 +7,7 @@ name: Smoke test
 
 on:
   push:
-    branches: ["main", "release-check"]
+    branches: ["main"]
   schedule:
     - cron: "41 20 * * *" # daily
   workflow_dispatch:
@@ -22,6 +22,9 @@ permissions:
 jobs:
   smoke-test:
     name: Android ${{ matrix.api-level }}
+    # Security: uses the real signing key (for the update test), so only for main
+    if: github.ref == 'refs/heads/main'
+    environment: release
     runs-on: ubuntu-latest
     timeout-minutes: 75
     strategy:
@@ -80,6 +83,7 @@ jobs:
 
       - name: Make and serve a test video
         run: |
+          command -v ffmpeg > /dev/null || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null; }
           mkdir -p "$RUNNER_TEMP/serve"
           ffmpeg -loglevel error -f lavfi -i testsrc=duration=8:size=640x360:rate=25 -f lavfi -i sine=frequency=440:duration=8 \
             -c:v libx264 -pix_fmt yuv420p -c:a aac -shortest "$RUNNER_TEMP/serve/unifetcher-smoke-test.mp4"
@@ -87,9 +91,24 @@ jobs:
           sleep 2
           curl -sfI http://127.0.0.1:8000/unifetcher-smoke-test.mp4 | head -n 1
 
+      - name: Key rotation (only when the new key is set up, as releases do)
+        env:
+          NEW_KEYSTORE_BASE64: ${{ secrets.UNIFETCH_NEW_KEYSTORE_BASE64 }}
+          NEW_KEY_ALIAS: ${{ secrets.UNIFETCH_NEW_KEY_ALIAS }}
+          NEW_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_NEW_KEYSTORE_PASSWORD }}
+          OLD_KEY_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
+          OLD_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
+          OLD_KEY_PASSWORD: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
+        run: |
+          if [ -n "$NEW_KEYSTORE_BASE64" ] && [ -n "$NEW_KEY_ALIAS" ] && [ -n "$NEW_KEYSTORE_PASSWORD" ] && [ -s "$RUNNER_TEMP/unifetch.jks" ]; then
+            echo "$NEW_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/unifetch-new.jks"
+            export NEW_KEYSTORE="$RUNNER_TEMP/unifetch-new.jks" OLD_KEYSTORE="$RUNNER_TEMP/unifetch.jks"
+          fi
+          bash .github/scripts/sign-rotated.sh app/build/outputs/apk/generic/release
+
       - name: Remove signing key
         if: always()
-        run: rm -f "$RUNNER_TEMP/unifetch.jks"
+        run: rm -f "$RUNNER_TEMP/unifetch.jks" "$RUNNER_TEMP/unifetch-new.jks"
 
       - name: Enable hardware acceleration for the emulator
         run: |

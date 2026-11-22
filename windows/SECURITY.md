@@ -38,6 +38,10 @@ GitHub-prefix-locked, and SHA-256 verified.
   library) could also check the installer's SHA-256 against GitHub's asset digest, like the tool updater
   already does.
 
+### 23 November 2026: AMO API key revoked; Firefox signing removed
+
+The Firefox add-on (AMO) API key was revoked by the owner after the 1 Nov key-backup exposure, and Firefox extension signing was removed for good: no workflow uses `AMO_JWT_ISSUER` / `AMO_JWT_SECRET` any more, and the Firefox extension ships unsigned.
+
 ## Reporting a problem
 
 Open an issue on GitHub (without personal data), or contact the repository owner.

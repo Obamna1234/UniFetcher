@@ -1,0 +1,63 @@
+# Tests the signing-key rotation script with two throwaway keys made here (no real secrets used):
+# Android 7-8 must see the old key, Android 9+ the new key, and the lineage must list both with the
+# old key's "installed data" capability off.
+name: Key rotation test
+
+on:
+  push:
+    branches: ["main"]
+    paths: [".github/scripts/sign-rotated.sh", ".github/workflows/key-rotation-test.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: android-actions/setup-android@v4
+      - name: Throwaway keys and an APK to sign
+        run: |
+          t="$RUNNER_TEMP/rot"; mkdir -p "$t/apks"
+          for k in old new; do
+            keytool -genkeypair -noprompt -keystore "$t/$k.jks" -storetype PKCS12 -alias "$k" \
+              -keyalg RSA -keysize 2048 -validity 365 -dname "CN=throwaway-$k" \
+              -storepass "pass-$k-123" -keypass "pass-$k-123"
+            keytool -exportcert -keystore "$t/$k.jks" -alias "$k" -storepass "pass-$k-123" -rfc > "$t/$k.pem"
+            openssl x509 -in "$t/$k.pem" -outform der | sha256sum | cut -d' ' -f1 > "$t/$k.sha256"
+          done
+          gh release download --pattern '*-x86_64.apk' --dir "$t/apks"
+          apk="$(ls "$t"/apks/*.apk | head -n 1)"
+          # Stand-in for Gradle's output: the APK signed with the OLD key only
+          bt=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          "$bt/apksigner" sign --ks "$t/old.jks" --ks-key-alias old --ks-pass pass:pass-old-123 --key-pass pass:pass-old-123 "$apk"
+          echo "T=$t" >> "$GITHUB_ENV"
+          echo "BT=$bt" >> "$GITHUB_ENV"
+      - name: Rotate with the script
+        run: |
+          OLD_KEYSTORE="$T/old.jks" OLD_KEY_ALIAS=old OLD_KEYSTORE_PASSWORD=pass-old-123 OLD_KEY_PASSWORD=pass-old-123 \
+          NEW_KEYSTORE="$T/new.jks" NEW_KEY_ALIAS=new NEW_KEYSTORE_PASSWORD=pass-new-123 \
+            bash .github/scripts/sign-rotated.sh "$T/apks"
+      - name: Check the result
+        run: |
+          apk="$(ls "$T"/apks/*.apk | head -n 1)"
+          old="$(cat "$T/old.sha256")"; new="$(cat "$T/new.sha256")"
+          fail=0
+          pre="$("$BT/apksigner" verify --print-certs --min-sdk-version 24 --max-sdk-version 27 "$apk")"
+          post="$("$BT/apksigner" verify --print-certs --min-sdk-version 28 "$apk")"
+          echo "--- Android 7-8 sees ---"; echo "$pre" | grep -i "SHA-256"
+          echo "--- Android 9+ sees ---"; echo "$post" | grep -i "SHA-256"
+          if echo "$pre" | grep -qi "$old" && ! echo "$pre" | grep -qi "$new"; then echo "PASS: Android 7-8 see only the old key"; else echo "::error::Android 7-8 should see only the old key"; fail=1; fi
+          if echo "$post" | grep -qi "$new"; then echo "PASS: Android 9+ see the new key"; else echo "::error::Android 9+ should see the new key"; fail=1; fi
+          lin="$("$BT/apksigner" lineage --in "$apk" --print-certs -v)"
+          echo "--- lineage ---"; echo "$lin"
+          if echo "$lin" | grep -qi "$old" && echo "$lin" | grep -qi "$new"; then echo "PASS: the lineage lists both keys"; else echo "::error::The lineage should list both keys"; fail=1; fi
+          # The old key (signer #1) must have its installed-data capability off
+          first="$(echo "$lin" | awk '/Signer #1/{f=1} /Signer #2/{f=0} f')"
+          if echo "$first" | grep -i "installed data" | grep -qi "false"; then echo "PASS: the old key's installed data = false"; else echo "::error::The old key's installed-data capability should be false"; fail=1; fi
+          exit $fail

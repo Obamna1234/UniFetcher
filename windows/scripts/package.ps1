@@ -6,9 +6,7 @@ param(
     [Parameter(Mandatory = $true)][string]$PublishDir,
     [Parameter(Mandatory = $true)][string]$OutDir,
     # Extension version (browsers need plain numbers); defaults to the app version
-    [string]$ExtensionVersion = "",
-    # Signed Firefox extension (.xpi) to ship inside UniFetcher, if the release workflow made one
-    [string]$FirefoxXpi = ""
+    [string]$ExtensionVersion = ""
 )
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
@@ -18,14 +16,10 @@ New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
 if (-not $ExtensionVersion) { $ExtensionVersion = ($Version -split "-")[0] }
 
-# 0. Browser extension: built from extension/src; a signed Firefox copy ships inside the app so it can be
-#    added to the UniFetcher Firefox profile automatically
+# 0. Browser extension: built from extension/src. Firefox signing (AMO) was dropped, so the Firefox
+#    version ships unsigned (see HOW_TO.md) and nothing is bundled into the app
 $extDir = Join-Path $env:RUNNER_TEMP "unifetcher-ext-$Arch"
 & (Join-Path $PSScriptRoot "build-extension.ps1") -Version $ExtensionVersion -OutDir $extDir
-if ($FirefoxXpi -and (Test-Path $FirefoxXpi)) {
-    New-Item -ItemType Directory -Force -Path (Join-Path $PublishDir "extension") | Out-Null
-    Copy-Item $FirefoxXpi (Join-Path $PublishDir "extension\unifetcher-firefox.xpi") -Force
-}
 
 # 1. Bundled programs (yt-dlp, ffmpeg, deno) go next to the installer script
 & (Join-Path $PSScriptRoot "fetch-tools.ps1") -Arch $Arch -OutDir (Join-Path $root "inno")
@@ -55,9 +49,6 @@ Compress-Archive -Path "$portable\*" -DestinationPath (Join-Path $OutDir "UniFet
 if ($Arch -eq "x64") {
     Compress-Archive -Path (Join-Path $extDir "firefox\*") -DestinationPath (Join-Path $OutDir "UniFetcher-Extension-$Version-Firefox-unsigned.zip") -Force
     Compress-Archive -Path (Join-Path $extDir "chrome\*") -DestinationPath (Join-Path $OutDir "UniFetcher-Extension-$Version-Chrome-Brave-Edge.zip") -Force
-    if ($FirefoxXpi -and (Test-Path $FirefoxXpi)) {
-        Copy-Item $FirefoxXpi (Join-Path $OutDir "UniFetcher-Extension-$Version-Firefox.xpi") -Force
-    }
 }
 
 Get-ChildItem $OutDir | Format-Table Name, Length

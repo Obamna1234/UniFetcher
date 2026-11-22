@@ -124,11 +124,12 @@ The **Send to UniFetcher** extension adds:
 
 It sends only links — no cookies, no history — and only to UniFetcher on your own PC (through a small helper, `UniFetcher.NativeHost.exe`, that the browser starts; no internet involved). **Open UniFetcher once after installing or updating it**, so it can introduce the helper to your browsers.
 
-### In the UniFetcher Firefox profile (default)
-Nothing to do once Firefox signing is set up (below): each UniFetcher release includes the signed extension and puts it into the UniFetcher profile by itself. Close and reopen the UniFetcher browser window to see the button.
+### In Firefox (limited: the extension isn't signed)
+Normal Firefox only installs extensions that Mozilla has signed, and UniFetcher's Firefox extension isn't signed (Firefox signing was dropped). So in Firefox you can only:
+- **Load it temporarily** (it's removed when Firefox closes): extract `UniFetcher-Extension-<version>-Firefox-unsigned.zip`, open `about:debugging` → **This Firefox** → **Load Temporary Add-on…**, and pick `manifest.json` in the extracted folder. Repeat after every Firefox restart.
+- Or use **Firefox Developer Edition** or **Nightly** with signature checks off: open `about:config`, set `xpinstall.signatures.required` to `false`, then **☰ → Add-ons and themes → ⚙ → Install Add-on From File…** and pick the zip.
 
-### In your main Firefox (optional)
-Download `UniFetcher-Extension-<version>-Firefox.xpi` from the release, then in Firefox open **☰ → Add-ons and themes → ⚙ (gear) → Install Add-on From File…** and pick the file. Sending a link from your main Firefox shares nothing else with UniFetcher.
+For everyday use, the **Brave, Chrome or Edge** version below is the one to use. (The UniFetcher Firefox profile used for site sessions works as before; it just doesn't get the button.)
 
 ### In Brave, Chrome or Edge (optional)
 1. Download `UniFetcher-Extension-<version>-Chrome-Brave-Edge.zip` and extract it to a folder you'll keep (e.g. `Documents\UniFetcher Extension`). The browser loads it from there, so don't delete the folder.
@@ -138,18 +139,6 @@ Download `UniFetcher-Extension-<version>-Firefox.xpi` from the release, then in 
 5. To update later: replace the folder's contents with the new zip and click the **⟳** reload button on the extension.
 
 Brave may show a "developer mode extensions" notice; that's expected for extensions you load yourself.
-
-### Setting up Firefox signing (one time)
-Firefox only keeps extensions signed by Mozilla. Signing is free and the extension stays private ("unlisted": not published on the add-ons site). You need to do this once:
-1. Go to https://addons.mozilla.org and **Log in** (create a free Mozilla account if you don't have one).
-2. Open https://addons.mozilla.org/developers/addon/api/key/ , accept the developer agreement if asked, and click **Generate new credentials**.
-3. You'll see a **JWT issuer** (looks like `user:12345:678`) and a **JWT secret** (a long code). Keep this page open.
-4. In another tab, open https://github.com/Obamna1234/UniFetcher-Windows/settings/secrets/actions and click **New repository secret**:
-   - Name `AMO_JWT_ISSUER`, value = the JWT issuer → **Add secret**.
-   - Again: name `AMO_JWT_SECRET`, value = the JWT secret → **Add secret**.
-5. That's it. The next release (see "Release a new version") signs the Firefox extension automatically. Never paste these values anywhere else.
-
-Without these secrets, releases still work; the Firefox extension just isn't signed (you can only try it temporarily via `about:debugging` → **This Firefox** → **Load Temporary Add-on…**).
 
 ## Bulk Import (150+ links)
 

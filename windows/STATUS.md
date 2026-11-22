@@ -11,7 +11,7 @@ Base project: **Parabolic** by Nickvision (MIT, C# / WinUI 3, .NET 10). Internal
 | 2 | yt-dlp and ffmpeg updating, auto-retry | Done (build passing) |
 | 3 | Queue improvements, pause on connection loss, external drive, duplicate detection, quality preset, batch downloads | Done (build passing) |
 | 4 | Dedicated "UniFetcher" Firefox profile sessions, VPN handling | Done (build passing) |
-| 5 | Browser extension (native messaging, video detection, send all tabs, Firefox signing) | Done (build passing) |
+| 5 | Browser extension (native messaging, video detection, send all tabs; Firefox version unsigned) | Done (build passing) |
 | 6 | Bulk import (paste, file, drag-and-drop, send all tabs, end report) | Done (build passing) |
 | 7 | Organising downloads, incognito, discreet notifications, clear history | Done (build passing) |
 
@@ -48,4 +48,4 @@ Base project: **Parabolic** by Nickvision (MIT, C# / WinUI 3, .NET 10). Internal
 - All 7 stages are built. Next: test on your PC, then make the first release by pushing a version tag (HOW_TO.md → "Release a new version").
 
 ## Waiting on you
-- Nothing. (Firefox extension signing was skipped: you said the browser extension isn't needed. It still builds unsigned; nothing else depends on it.)
+- Nothing. (Firefox extension signing was removed for good on 23 Nov 2026; the Firefox version still builds unsigned and nothing depends on it.)

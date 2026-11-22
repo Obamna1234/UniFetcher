@@ -1,14 +1,13 @@
 # Builds signed release APKs when a version tag (e.g. v1.0.0) is pushed, and publishes them
 # on the GitHub Releases page with automatically written release notes.
 #
-# Practice run: pushing to the "release-check" branch does everything except publishing, and
-# attaches the signed APKs to the run instead. Used to check the release build still works.
+# Security: the signing secrets live in the "release" environment and this job only runs for
+# version tags. If new-key secrets exist, the APKs are re-signed for key rotation (sign-rotated.sh).
 name: Release
 
 on:
   push:
     tags: ["v*"]
-    branches: ["release-check"]
   # Started on a version tag by the "Release request" workflow
   workflow_dispatch:
 
@@ -17,6 +16,8 @@ permissions:
 
 jobs:
   release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    environment: release
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
@@ -71,9 +72,24 @@ jobs:
           APP_VERSION: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || '' }}
         run: ./gradlew assembleGenericRelease -PappVersion="$APP_VERSION" --stacktrace
 
+      - name: Key rotation (only when the new key is set up)
+        env:
+          NEW_KEYSTORE_BASE64: ${{ secrets.UNIFETCH_NEW_KEYSTORE_BASE64 }}
+          NEW_KEY_ALIAS: ${{ secrets.UNIFETCH_NEW_KEY_ALIAS }}
+          NEW_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_NEW_KEYSTORE_PASSWORD }}
+          OLD_KEY_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
+          OLD_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
+          OLD_KEY_PASSWORD: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
+        run: |
+          if [ -n "$NEW_KEYSTORE_BASE64" ] && [ -n "$NEW_KEY_ALIAS" ] && [ -n "$NEW_KEYSTORE_PASSWORD" ] && [ -s "$RUNNER_TEMP/unifetch.jks" ]; then
+            echo "$NEW_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/unifetch-new.jks"
+            export NEW_KEYSTORE="$RUNNER_TEMP/unifetch-new.jks" OLD_KEYSTORE="$RUNNER_TEMP/unifetch.jks"
+          fi
+          bash .github/scripts/sign-rotated.sh app/build/outputs/apk/generic/release
+
       - name: Remove signing key
         if: always()
-        run: rm -f "$RUNNER_TEMP/unifetch.jks"
+        run: rm -f "$RUNNER_TEMP/unifetch.jks" "$RUNNER_TEMP/unifetch-new.jks"
 
       - name: Check the APKs are signed
         run: |
@@ -83,17 +99,7 @@ jobs:
             echo "Signed OK: $(basename "$apk")"
           done
 
-      - name: Upload APKs (practice run only)
-        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
-        uses: actions/upload-artifact@v7
-        with:
-          name: release-check-apks
-          path: app/build/outputs/apk/generic/release/*.apk
-          if-no-files-found: error
-          retention-days: 3
-
       - name: Publish GitHub Release
-        if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v3
         with:
           # The in-app update check reads the version from this title.

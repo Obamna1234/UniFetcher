@@ -37,25 +37,10 @@ jobs:
           # GitHub's own cache only (the default "enhanced" mode uses an outside service)
           cache-provider: basic
 
-      # Optional: if the signing key is set up in GitHub Secrets, test builds use it too, so a
-      # newer test build installs over an older one. Without it, each test build gets a new key.
-      - name: Load signing key (if set up)
-        env:
-          KEYSTORE_BASE64: ${{ secrets.UNIFETCH_KEYSTORE_BASE64 }}
-        run: |
-          if [ -n "$KEYSTORE_BASE64" ]; then
-            echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/unifetch.jks"
-            echo "UNIFETCH_KEYSTORE_FILE=$RUNNER_TEMP/unifetch.jks" >> "$GITHUB_ENV"
-            echo "Signing key found: test build will use it."
-          else
-            echo "No signing key in GitHub Secrets yet: using a temporary debug key."
-          fi
-
+      # Security: test builds run for every branch and pull request, so they never get the real
+      # signing key (only release tags and main's smoke test do, through the "release" environment).
+      # Test builds use a temporary debug key.
       - name: Build debug APKs and run unit tests
-        env:
-          UNIFETCH_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
-          UNIFETCH_KEY_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
-          UNIFETCH_KEY_PASSWORD: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
         run: |
           set -o pipefail
           ./gradlew assembleGenericDebug testGenericDebugUnitTest --stacktrace 2>&1 | tee build.log
