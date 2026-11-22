@@ -122,6 +122,9 @@ jobs:
           api-level: ${{ matrix.api-level }}
           target: google_apis
           arch: x86_64
+          # A normal-sized phone screen, so the download sheet's buttons fit like on a real phone
+          profile: pixel_6
+          disable-animations: true
           script: bash .github/scripts/smoke-test.sh "$(ls app/build/outputs/apk/generic/release/*-x86_64.apk | head -n 1)" com.unifetch.app "$LAST_APK" ${{ github.event_name == 'schedule' }}
 
       - name: Upload logs and screenshot
