@@ -138,6 +138,12 @@ PY
       tapped=1
       break
     fi
+    # The Download button can be below the bottom of a small screen: scroll the sheet up
+    size="$(adb shell wm size | tr -d '\r' | grep -o '[0-9]*x[0-9]*' | tail -n 1)"
+    w="${size%x*}"; h="${size#*x}"
+    if [ -n "$w" ] && [ -n "$h" ]; then
+      adb shell input swipe $((w / 2)) $((h * 85 / 100)) $((w / 2)) $((h * 25 / 100)) 400
+    fi
   done
   screenshot "sheet-$name"
   if [ "$tapped" != 1 ]; then
