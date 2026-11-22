@@ -143,6 +143,20 @@ for kind, label in (("dismiss", "Wait"), ("download", "Download"), ("download", 
     if b:
         print(kind, b[0], b[1], label)
         break
+else:
+    # Format screen: its Download button is an icon-only round button in the bottom-right corner until
+    # the list is scrolled. Tap the clickable item nearest that corner.
+    if "Suggested" in sys.argv[3].split(",") and 'text="Format selection"' in xml:
+        best = None
+        for m in re.finditer(r'<node [^>]*?clickable="true"[^>]*?bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', xml):
+            x1, y1, x2, y2 = map(int, m.groups())
+            if x2 - x1 > 400:  # skip full-width rows
+                continue
+            c = ((x1 + x2) // 2, (y1 + y2) // 2)
+            if best is None or c[0] + c[1] > best[0] + best[1]:
+                best = c
+        if best:
+            print("download", best[0], best[1], "corner-button")
 PY
 )"
     if [ -n "$found" ]; then
