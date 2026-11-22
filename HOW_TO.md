@@ -103,17 +103,16 @@ Release APKs must be "signed" with a private key so Android knows updates really
 
 The keys are stored in GitHub as **environment secrets** in a locked environment called **release**: hidden values that only release builds of version tags (and main's smoke test) can use. Test builds of other branches and pull requests never get them. Nobody, not even you, can read a secret back, and keys are never saved in the code.
 
-**Two keys (since the November 2026 key rotation).** Releases are signed with the **original** key and the **new** key together: Android 7 and 8 check the original key; Android 9 and later check the new key, with proof that the original key approved it. That's why updates still install over the old app without uninstalling. Keep both.
+**One key, the new one (since November 2026).** The original key was exposed on 1 Nov 2026 and retired. Releases are signed only with the new key, `unifetcher-2026`. Phones that had a version signed with the old key need to **uninstall UniFetcher once and install the new version** (settings and history on that phone are lost). Fresh installs, including Android 7 and 8, just work.
 
 | Name | Value |
 |---|---|
-| `UNIFETCH_KEYSTORE_BASE64` | original key: the long base64 text of the keystore |
-| `UNIFETCH_KEYSTORE_PASSWORD` | original key: the keystore password |
-| `UNIFETCH_KEY_ALIAS` | original key: the key name |
-| `UNIFETCH_KEY_PASSWORD` | original key: the key password |
-| `UNIFETCH_NEW_KEYSTORE_BASE64` | new key: the long base64 text (`UNIFETCH_NEW_KEYSTORE_BASE64.txt`) |
-| `UNIFETCH_NEW_KEY_ALIAS` | new key: `unifetcher-2026` |
-| `UNIFETCH_NEW_KEYSTORE_PASSWORD` | new key: the password (its key password is the same) |
+| `UNIFETCH_KEYSTORE_BASE64` | the whole contents of `UNIFETCH_NEW_KEYSTORE_BASE64.txt` |
+| `UNIFETCH_KEYSTORE_PASSWORD` | the password in `NEW_SIGNING_KEY_SECRETS.txt` |
+| `UNIFETCH_KEY_ALIAS` | `unifetcher-2026` |
+| `UNIFETCH_KEY_PASSWORD` | the same password again (the key's password is the same as the keystore's) |
+
+Don't set `UNIFETCH_NEW_*` secrets: they're only for a key *rotation* (`.github/scripts/sign-rotated.sh`), which keeps an old key working alongside a new one. That isn't used now.
 
 **Where they go:** **Settings → Environments → release → Environment secrets → Add environment secret**. The **release** environment's **Deployment branches and tags** setting should be **Selected branches and tags**, allowing the branch `main` and tags `v*`.
 

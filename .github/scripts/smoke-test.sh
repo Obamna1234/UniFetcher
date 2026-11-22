@@ -51,6 +51,15 @@ adb logcat -c || true
 
 # ---------- 1. Update test ----------
 if [ -n "$OLD_APK" ] && [ -f "$OLD_APK" ]; then
+  # If the signing key changed (the Nov 2026 key retirement), Android can't update the old app:
+  # people uninstall once. Then there is nothing to test until the next release.
+  certs() { "$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)/apksigner" verify --print-certs "$1" 2>/dev/null | grep -i "certificate SHA-256" | sort -u; }
+  if [ -n "${ANDROID_HOME:-}" ] && [ "$(certs "$OLD_APK")" != "$(certs "$APK")" ]; then
+    note notice "Update test" "The last release is signed with a different key than this build (key retired in Nov 2026), so it can't be updated in place; update test skipped until the next release."
+    OLD_APK=""
+  fi
+fi
+if [ -n "$OLD_APK" ] && [ -f "$OLD_APK" ]; then
   echo "Installing the last release: $(basename "$OLD_APK")"
   if adb install -g "$OLD_APK"; then
     adb shell monkey -p "$PKG" -c android.intent.category.LAUNCHER 1 > /dev/null

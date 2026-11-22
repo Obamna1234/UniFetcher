@@ -64,12 +64,13 @@ On 1 Nov a one-off "Key backup" workflow on the `keys-backup` branch packed the 
 downloaded it for about 24 hours. The password's strength can't be confirmed, so both are treated as
 exposed. Response:
 
-- **Android signing key rotated** with APK Signature Scheme v3 (`.github/scripts/sign-rotated.sh`,
-  tested with throwaway keys by the *Key rotation test* workflow). Releases are still built with the
-  original key, then re-signed: Android 7-8 see the original key, Android 9+ the new key with a proof
-  of rotation, and the original key loses its "installed data" capability, so an APK signed only with
-  the old key can no longer update the app on Android 9+. Existing users update without uninstalling.
-  Android 7-8 can't do v3 rotation, so on those versions the original key remains the trust anchor.
+- **Android signing key retired.** Releases are now signed only with a new key (`unifetcher-2026`); the
+  exposed key isn't used any more. Because the only installs were the owner's own phones, a one-time
+  reinstall was chosen over v3 key rotation, which would have kept the exposed key trusted on Android
+  7-8. The rotation script (`.github/scripts/sign-rotated.sh`, tested with throwaway keys by the *Key
+  rotation test* workflow) stays available for a future rotation and only runs when `UNIFETCH_NEW_*`
+  secrets exist. The in-app updater refuses an update signed with a different key, so phones with the
+  old version update by uninstalling once.
 - **AMO API key revoked; Firefox signing removed.** The owner revoked the Firefox add-on (AMO) API key
   and won't make a new one; no workflow uses `AMO_JWT_ISSUER` / `AMO_JWT_SECRET` any more, and the
   Firefox extension ships unsigned.
