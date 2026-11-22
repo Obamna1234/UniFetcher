@@ -74,6 +74,7 @@ jobs:
           NEW_B64: ${{ secrets.UNIFETCH_NEW_KEYSTORE_BASE64 }}
           NEW_PW: ${{ secrets.UNIFETCH_NEW_KEYSTORE_PASSWORD }}
           NEW_ALIAS: ${{ secrets.UNIFETCH_NEW_KEY_ALIAS }}
+          ROTATE_FROM_OLD_KEY: ${{ vars.ROTATE_FROM_OLD_KEY }}
         run: bash .github/scripts/choose-signing-key.sh optional
 
       - name: Build release APK

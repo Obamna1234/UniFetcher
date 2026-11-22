@@ -3,13 +3,19 @@
 # (through $GITHUB_ENV). Usage: choose-signing-key.sh required|optional
 #   - only UNIFETCH_NEW_* set      -> sign with the new key (the key retired in Nov 2026 isn't used)
 #   - only UNIFETCH_* set          -> sign with that key
-#   - both set                     -> sign with UNIFETCH_* and rotate to UNIFETCH_NEW_* (sign-rotated.sh)
+#   - both set                     -> the new key only, unless ROTATE_FROM_OLD_KEY=true (repository
+#                                     variable): then UNIFETCH_* plus rotation to UNIFETCH_NEW_* (sign-rotated.sh)
 # Inputs (env): OLD_B64 OLD_PW OLD_ALIAS OLD_KPW NEW_B64 NEW_PW NEW_ALIAS
 set -euo pipefail
 mode="${1:-required}"
 have_old=""; [ -n "${OLD_B64:-}" ] && [ -n "${OLD_PW:-}" ] && [ -n "${OLD_ALIAS:-}" ] && [ -n "${OLD_KPW:-}" ] && have_old=1
 have_new=""; [ -n "${NEW_B64:-}" ] && [ -n "${NEW_PW:-}" ] && [ -n "${NEW_ALIAS:-}" ] && have_new=1
 out="$RUNNER_TEMP/unifetch.jks"
+# The old key was exposed: never use it while the new one exists, unless rotation is asked for explicitly
+if [ -n "$have_old" ] && [ -n "$have_new" ] && [ "${ROTATE_FROM_OLD_KEY:-}" != "true" ]; then
+  echo "::notice title=Signing::Old UNIFETCH_* signing secrets are still set but ignored (new key used). They can be deleted."
+  have_old=""
+fi
 if [ -n "$have_old" ]; then
   echo "$OLD_B64" | base64 --decode > "$out"
   { echo "UNIFETCH_KEYSTORE_FILE=$out"; echo "UNIFETCH_KEYSTORE_PASSWORD=$OLD_PW"; echo "UNIFETCH_KEY_ALIAS=$OLD_ALIAS"; echo "UNIFETCH_KEY_PASSWORD=$OLD_KPW"; } >> "$GITHUB_ENV"
