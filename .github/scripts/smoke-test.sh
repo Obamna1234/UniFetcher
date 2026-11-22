@@ -133,7 +133,8 @@ def lowest(label):
             best = ((x1 + x2) // 2, (y1 + y2) // 2)
     return best
 # Preset gives a direct Download button; on the format screen, Suggested makes its Download button appear
-for kind, label in (("download", "Download"), ("download", "Start"), ("pick", "Preset"), ("pick", "Suggested"), ("continue", "Continue")):
+# "X isn't responding" pop-ups from the emulator itself: tap Wait
+for kind, label in (("dismiss", "Wait"), ("download", "Download"), ("download", "Start"), ("pick", "Preset"), ("pick", "Suggested"), ("continue", "Continue")):
     if kind == "continue" and int(sys.argv[2]) >= 2:
         continue
     if kind == "pick" and label in sys.argv[3].split(","):
@@ -148,6 +149,7 @@ PY
       set -- $found
       adb shell input tap "$2" "$3"
       if [ "$1" = download ]; then tapped=1; break; fi
+      if [ "$1" = dismiss ]; then echo "Dismissed a not-responding pop-up"; continue; fi
       if [ "$1" = pick ]; then picked="$picked,$4"; echo "Picked $4"; continue; fi
       continued=$((continued + 1)); echo "Tapped Continue ($continued)"; continue
     fi
