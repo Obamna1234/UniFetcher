@@ -68,8 +68,8 @@ exposed. Response:
   exposed key isn't used any more. Because the only installs were the owner's own phones, a one-time
   reinstall was chosen over v3 key rotation, which would have kept the exposed key trusted on Android
   7-8. The rotation script (`.github/scripts/sign-rotated.sh`, tested with throwaway keys by the *Key
-  rotation test* workflow) stays available for a future rotation and only runs when `UNIFETCH_NEW_*`
-  secrets exist. The in-app updater refuses an update signed with a different key, so phones with the
+  rotation test* workflow) stays available for a future rotation and only runs when both the old `UNIFETCH_*` and the
+  `UNIFETCH_NEW_*` secrets exist; with only `UNIFETCH_NEW_*` (the setup now) the new key is used directly. The in-app updater refuses an update signed with a different key, so phones with the
   old version update by uninstalling once.
 - **AMO API key revoked; Firefox signing removed.** The owner revoked the Firefox add-on (AMO) API key
   and won't make a new one; no workflow uses `AMO_JWT_ISSUER` / `AMO_JWT_SECRET` any more, and the

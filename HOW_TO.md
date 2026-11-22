@@ -107,12 +107,11 @@ The keys are stored in GitHub as **environment secrets** in a locked environment
 
 | Name | Value |
 |---|---|
-| `UNIFETCH_KEYSTORE_BASE64` | the whole contents of `UNIFETCH_NEW_KEYSTORE_BASE64.txt` |
-| `UNIFETCH_KEYSTORE_PASSWORD` | the password in `NEW_SIGNING_KEY_SECRETS.txt` |
-| `UNIFETCH_KEY_ALIAS` | `unifetcher-2026` |
-| `UNIFETCH_KEY_PASSWORD` | the same password again (the key's password is the same as the keystore's) |
+| `UNIFETCH_NEW_KEYSTORE_BASE64` | the whole contents of `UNIFETCH_NEW_KEYSTORE_BASE64.txt` |
+| `UNIFETCH_NEW_KEY_ALIAS` | `unifetcher-2026` |
+| `UNIFETCH_NEW_KEYSTORE_PASSWORD` | the password in `NEW_SIGNING_KEY_SECRETS.txt` (the key's own password is the same) |
 
-Don't set `UNIFETCH_NEW_*` secrets: they're only for a key *rotation* (`.github/scripts/sign-rotated.sh`), which keeps an old key working alongside a new one. That isn't used now.
+Don't add the old `UNIFETCH_KEYSTORE_*` / `UNIFETCH_KEY_*` secrets back: if both sets exist, releases are signed with the old key and *rotated* to the new one (`.github/scripts/sign-rotated.sh`), which keeps the old key trusted on Android 7 and 8. With only the `NEW` ones, the new key is used directly (`.github/scripts/choose-signing-key.sh`).
 
 **Where they go:** **Settings → Environments → release → Environment secrets → Add environment secret**. The **release** environment's **Deployment branches and tags** setting should be **Selected branches and tags**, allowing the branch `main` and tags `v*`.
 

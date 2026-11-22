@@ -49,15 +49,6 @@ jobs:
         with:
           cache-provider: basic
 
-      - name: Load signing key (if set up)
-        env:
-          KEYSTORE_BASE64: ${{ secrets.UNIFETCH_KEYSTORE_BASE64 }}
-        run: |
-          if [ -n "$KEYSTORE_BASE64" ]; then
-            echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/unifetch.jks"
-            echo "UNIFETCH_KEYSTORE_FILE=$RUNNER_TEMP/unifetch.jks" >> "$GITHUB_ENV"
-          fi
-
       - name: Get the last release (for the update test)
         env:
           GH_TOKEN: ${{ github.token }}
@@ -74,11 +65,18 @@ jobs:
           fi
           echo "LAST_APK=$(ls "$RUNNER_TEMP"/last/*-x86_64.apk 2>/dev/null | head -n 1)" >> "$GITHUB_ENV"
 
-      - name: Build release APK
+      - name: Choose the signing key
         env:
-          UNIFETCH_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
-          UNIFETCH_KEY_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
-          UNIFETCH_KEY_PASSWORD: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
+          OLD_B64: ${{ secrets.UNIFETCH_KEYSTORE_BASE64 }}
+          OLD_PW: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
+          OLD_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
+          OLD_KPW: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
+          NEW_B64: ${{ secrets.UNIFETCH_NEW_KEYSTORE_BASE64 }}
+          NEW_PW: ${{ secrets.UNIFETCH_NEW_KEYSTORE_PASSWORD }}
+          NEW_ALIAS: ${{ secrets.UNIFETCH_NEW_KEY_ALIAS }}
+        run: bash .github/scripts/choose-signing-key.sh optional
+
+      - name: Build release APK
         run: ./gradlew assembleGenericRelease -PappVersion="${SMOKE_VERSION:-}" --stacktrace
 
       - name: Make and serve a test video
@@ -91,20 +89,9 @@ jobs:
           sleep 2
           curl -sfI http://127.0.0.1:8000/unifetcher-smoke-test.mp4 | head -n 1
 
-      - name: Key rotation (only when the new key is set up, as releases do)
-        env:
-          NEW_KEYSTORE_BASE64: ${{ secrets.UNIFETCH_NEW_KEYSTORE_BASE64 }}
-          NEW_KEY_ALIAS: ${{ secrets.UNIFETCH_NEW_KEY_ALIAS }}
-          NEW_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_NEW_KEYSTORE_PASSWORD }}
-          OLD_KEY_ALIAS: ${{ secrets.UNIFETCH_KEY_ALIAS }}
-          OLD_KEYSTORE_PASSWORD: ${{ secrets.UNIFETCH_KEYSTORE_PASSWORD }}
-          OLD_KEY_PASSWORD: ${{ secrets.UNIFETCH_KEY_PASSWORD }}
-        run: |
-          if [ -n "$NEW_KEYSTORE_BASE64" ] && [ -n "$NEW_KEY_ALIAS" ] && [ -n "$NEW_KEYSTORE_PASSWORD" ] && [ -s "$RUNNER_TEMP/unifetch.jks" ]; then
-            echo "$NEW_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/unifetch-new.jks"
-            export NEW_KEYSTORE="$RUNNER_TEMP/unifetch-new.jks" OLD_KEYSTORE="$RUNNER_TEMP/unifetch.jks"
-          fi
-          bash .github/scripts/sign-rotated.sh app/build/outputs/apk/generic/release
+      - name: Key rotation (only when both keys are set)
+        if: env.ROTATE == '1'
+        run: bash .github/scripts/sign-rotated.sh app/build/outputs/apk/generic/release
 
       - name: Remove signing key
         if: always()
